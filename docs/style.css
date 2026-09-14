@@ -105,18 +105,21 @@ body.dark .brand-symbol{filter:brightness(1.3) saturate(1.05)}
 .month-scroll{overflow-x:auto;scrollbar-gutter:stable}
 .month-scroll .weekdays,.month-grid{min-width:700px}
 .month-scroll .weekdays{font-size:13px;font-weight:600;padding:11px 0}
-.month-grid .day{display:flex;flex-direction:column;align-items:stretch;padding:12px 10px;min-height:165px}
-.month-grid .day.selected{background:var(--surface);box-shadow:inset 0 0 0 2px var(--accent)}
-.month-grid .day-number{flex:none;align-self:flex-start;width:30px;height:30px;margin-bottom:8px;font-size:15px;font-weight:600}
-.month-events{flex:1}
-.month-grid .month-event{display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:var(--accent-light);color:var(--text);border:0;border-left:3px solid var(--accent);border-radius:5px;padding:8px;margin:0 0 7px;font-size:13px;line-height:1.55}
-.month-event-title{width:100%;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;white-space:normal;text-align:left;overflow-wrap:anywhere;font-weight:550}
-.month-event-time{color:var(--secondary);font-size:11px;font-variant-numeric:tabular-nums}
-.month-grid .month-event:hover{background:var(--accent-light);color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
-.month-grid .more{margin:0 0 8px;padding:4px;font-size:12px;background:transparent;color:var(--accent)}
-.weekly-count{width:100%;flex:none;justify-content:space-between;gap:4px;margin-top:10px;padding:7px 8px;min-height:34px;border:1px solid var(--border);border-radius:6px;background:var(--surface2);color:var(--secondary);font-size:12px;white-space:nowrap}
-.weekly-count strong{margin-left:auto;font-weight:650;color:var(--text);font-variant-numeric:tabular-nums}
-.weekly-count>span:last-child{margin-left:3px;font-size:16px;line-height:1}
+.month-grid .day{display:flex;flex-direction:column;align-items:stretch;padding:10px;min-height:0;height:248px}
+.month-grid .day.selected{background:var(--accent-light);box-shadow:none}
+.month-grid .day-number{flex:none;align-self:flex-start;width:30px;height:30px;margin-bottom:7px;font-size:15px;font-weight:600}
+.month-events{display:grid;grid-auto-rows:64px;gap:4px}
+.month-grid .month-event{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:3px;background:transparent;color:var(--text);border:0;border-radius:5px;padding:3px 3px 3px 13px;margin:0;font-size:13px;line-height:1.5;min-width:0}
+.month-event:before{content:'';position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.month-event-title{width:100%;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;white-space:normal;text-align:left;overflow-wrap:anywhere;font-weight:500}
+.month-event-time{color:var(--secondary);font-size:11px;line-height:16px;font-variant-numeric:tabular-nums}
+.month-grid .month-event:hover{background:var(--surface2);color:var(--accent);box-shadow:none}
+.month-day-footer{margin-top:auto;display:flex;flex-direction:column;gap:3px}
+.month-grid .more{align-self:flex-start;height:22px;margin:0;padding:1px 3px;font-size:11px;background:transparent;color:var(--accent);border:0}
+.more-placeholder{height:22px}
+.weekly-count{width:100%;flex:none;justify-content:space-between;gap:4px;margin:0;padding:5px 2px;min-height:28px;border:0;border-top:1px solid var(--border);border-radius:0;background:transparent;color:var(--secondary);font-size:11px;white-space:nowrap}
+.weekly-count strong{margin-left:auto;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.weekly-count>span:last-child{margin-left:3px;font-size:15px;line-height:1}
 .weekly-count:hover strong{color:var(--accent)}
 .day-kind-controls{display:flex;gap:6px;margin-top:14px}
 .day-kind-controls button{flex:1;padding:8px 6px;font-size:12px}
@@ -131,8 +134,8 @@ body.dark .brand-symbol{filter:brightness(1.3) saturate(1.05)}
 @media(max-width:1150px){.month-guide span{display:block;margin-top:4px;font-size:12px}}
 @media(max-width:560px){
   .month-guide{padding:0 12px 14px;font-size:12px}
-  .month-grid .day{padding:9px 6px;min-height:155px}
-  .month-grid .month-event{font-size:12px;padding:6px}
+  .month-grid .day{padding:9px 6px;height:248px;min-height:0}
+  .month-grid .month-event{font-size:12px;padding:3px 2px 3px 12px}
   .weekly-count{font-size:11px;padding:7px 5px;gap:3px}
   .weekly-count>span:last-child{display:none}
   .day-panel{scroll-margin-top:12px}
