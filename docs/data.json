@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-14T21:18:02+00:00",
+"updated_at": "2026-09-14T21:37:20+00:00",
 "sources": [
 {
 "id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y",
@@ -17,7 +17,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-14T21:18:02+00:00"
+"data_at": "2026-09-14T21:37:20+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -32,7 +32,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-14T21:18:02+00:00"
+"data_at": "2026-09-14T21:37:20+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -47,7 +47,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-14T21:18:02+00:00"
+"data_at": "2026-09-14T21:37:20+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -62,7 +62,7 @@
 ],
 "warnings": [],
 "count": 27,
-"data_at": "2026-09-14T21:18:02+00:00"
+"data_at": "2026-09-14T21:37:20+00:00"
 }
 ],
 "events": [
@@ -77,6 +77,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "01d938f3ed8e1a54ddf688eb",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -91,6 +92,7 @@
 "time": "",
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
+"slots": [],
 "id": "0ec0b3579952209f3a6ae7db",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -105,6 +107,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "e4d4dae1629184b7fc958351",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -119,6 +122,12 @@
 "time": "09:00",
 "place": "거진고",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
 "id": "39f83750c797a0de30af6fd8",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -133,6 +142,12 @@
 "time": "10:00",
 "place": "거진중, 거진고",
 "owner": "김제현",
+"slots": [
+{
+"time": "10:00",
+"place": "거진중, 거진고"
+}
+],
 "id": "39381eedd2532ecf4e3c306a",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -147,6 +162,12 @@
 "time": "10:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
 "id": "f9bce018441830d24eccd7b6",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -161,6 +182,12 @@
 "time": "15:30",
 "place": "고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "1f3bcc464938564e54a6899a",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -175,6 +202,12 @@
 "time": "18:30",
 "place": "토성청소년문회의집",
 "owner": "신선일",
+"slots": [
+{
+"time": "18:30",
+"place": "토성청소년문회의집"
+}
+],
 "id": "07275e5e70808252234aa839",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -189,6 +222,7 @@
 "time": "",
 "place": "",
 "owner": "조동우",
+"slots": [],
 "id": "8b07d26ebc28b9d8e0561357",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -203,6 +237,12 @@
 "time": "09:00",
 "place": "동광초, 거진초",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
 "id": "cb127215a5ea4b05e3971ad4",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -217,6 +257,12 @@
 "time": "09:00",
 "place": "거진고",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
 "id": "78564f6bd0901a9804d605e9",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -231,6 +277,12 @@
 "time": "09:00",
 "place": "보건환경연구원 및 관내",
 "owner": "이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "보건환경연구원 및 관내"
+}
+],
 "id": "6e69c22e41e5aa2f5a0c5877",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -245,6 +297,12 @@
 "time": "09:20",
 "place": "대진초",
 "owner": "김강진",
+"slots": [
+{
+"time": "09:20",
+"place": "대진초"
+}
+],
 "id": "3df480c9f71a5fc359421a27",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -259,6 +317,7 @@
 "time": "10:00",
 "place": "대회의실",
 "owner": "임예지",
+"slots": [],
 "id": "9e8a58aa1e4a3ad1200fcf85",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -273,6 +332,12 @@
 "time": "10:00",
 "place": "3층 대회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 대회의실"
+}
+],
 "id": "002ff9e094b7cdb3b1b38b7e",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -287,6 +352,12 @@
 "time": "10:00",
 "place": "3층 대회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 대회의실"
+}
+],
 "id": "b5d909814c91792d13fb924f",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -301,6 +372,12 @@
 "time": "10:00",
 "place": "3층 대회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 대회의실"
+}
+],
 "id": "2517e5779df456daa08f970c",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -315,6 +392,12 @@
 "time": "10:00",
 "place": "3층 대회의실",
 "owner": "임예지",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 대회의실"
+}
+],
 "id": "f0c1d96b9c12d7cebf665eaf",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -329,6 +412,12 @@
 "time": "11:00",
 "place": "",
 "owner": "조동우",
+"slots": [
+{
+"time": "11:00",
+"place": ""
+}
+],
 "id": "de74a3497823dba73a49e5ea",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -343,6 +432,12 @@
 "time": "13:20",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:20",
+"place": "대진초"
+}
+],
 "id": "9b6e6ea7ca2547d0a6ae2af7",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -357,6 +452,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "정명훈, 김강진, 김정호, 정승환, 서명원",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "523d77ceb71b78f7525ebe39",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -371,6 +472,7 @@
 "time": "18:30",
 "place": "토성청소년문화의집",
 "owner": "신선일",
+"slots": [],
 "id": "ca0210acdb08476c9c522d66",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -385,6 +487,7 @@
 "time": "",
 "place": "교육연수원(강릉)",
 "owner": "",
+"slots": [],
 "id": "cf1eb302bc8fc6f4416c04da",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -399,6 +502,7 @@
 "time": "",
 "place": "교육연수원(강릉)",
 "owner": "심은경",
+"slots": [],
 "id": "d2ae84908c6bdf469184540d",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -413,6 +517,7 @@
 "time": "",
 "place": "교육연수원(강릉)",
 "owner": "이현숙",
+"slots": [],
 "id": "f03a945e72c4a65d65cb16cf",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -427,6 +532,12 @@
 "time": "09:10",
 "place": "인흥초",
 "owner": "김강진",
+"slots": [
+{
+"time": "09:10",
+"place": "인흥초"
+}
+],
 "id": "8aa578debce92b8dfcef00c1",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -441,6 +552,12 @@
 "time": "09:30",
 "place": "고성고, 간성초",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
 "id": "dcc0aea114862381fd685882",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -455,6 +572,12 @@
 "time": "10:00",
 "place": "강원특별자치도교육청",
 "owner": "이경영, 이모란",
+"slots": [
+{
+"time": "10:00",
+"place": "강원특별자치도교육청"
+}
+],
 "id": "94b2a08e97d56b666e270f40",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -469,6 +592,12 @@
 "time": "13:00",
 "place": "아야진초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "13:00",
+"place": "아야진초"
+}
+],
 "id": "aa2fe469882476993c18fd8c",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -483,6 +612,12 @@
 "time": "14:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "위센터"
+}
+],
 "id": "1cd39562585b59d5b7560612",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -497,6 +632,12 @@
 "time": "15:30",
 "place": "고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "0b28247c1c772c9edc101e2a",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -511,6 +652,12 @@
 "time": "09:00",
 "place": "대진초, 고성중",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
 "id": "a7e7597a0e785affc0a52859",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -525,6 +672,12 @@
 "time": "09:00",
 "place": "동광초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초"
+}
+],
 "id": "580b0ad66d1e9c3ea797970e",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -539,6 +692,12 @@
 "time": "09:00",
 "place": "인흥초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "인흥초"
+}
+],
 "id": "450ff7bbd18b2d7a7aabd185",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -553,6 +712,12 @@
 "time": "14:00",
 "place": "대진초",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "대진초"
+}
+],
 "id": "404cd71f1e5a6e650c568dad",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -567,6 +732,12 @@
 "time": "14:10",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "14:10",
+"place": "대진초"
+}
+],
 "id": "37acd504d1a7874806283a51",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -581,6 +752,7 @@
 "time": "15:30",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "f2d79e9b95eeb09729304f81",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -595,6 +767,12 @@
 "time": "15:30",
 "place": "3층 대회의실",
 "owner": "이분현",
+"slots": [
+{
+"time": "15:30",
+"place": "3층 대회의실"
+}
+],
 "id": "97e66efd5914b7b87effb162",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -609,6 +787,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "조성광",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "6bee73037f841f62a12c87d4",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -623,6 +807,12 @@
 "time": "16:30",
 "place": "꿈동산지역아동센터",
 "owner": "신선일",
+"slots": [
+{
+"time": "16:30",
+"place": "꿈동산지역아동센터"
+}
+],
 "id": "a00ca41c13baa5c7d40df2a1",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -637,6 +827,7 @@
 "time": "16:30",
 "place": "꿈동산지역아동센터",
 "owner": "신선일",
+"slots": [],
 "id": "76780442760a2418bed4548e",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -651,6 +842,12 @@
 "time": "09:00",
 "place": "광산초, 고성중",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "광산초, 고성중"
+}
+],
 "id": "0f0ca4eb6dec8e9de06c9ccf",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -665,6 +862,12 @@
 "time": "09:00",
 "place": "대진초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초"
+}
+],
 "id": "0acb23f502cdc1ad51580ece",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -679,6 +882,12 @@
 "time": "09:55",
 "place": "고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "09:55",
+"place": "고성중"
+}
+],
 "id": "3fbe02a6e51ba20a3bb81ef4",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -693,6 +902,12 @@
 "time": "10:50",
 "place": "천초",
 "owner": "김강진",
+"slots": [
+{
+"time": "10:50",
+"place": "천초"
+}
+],
 "id": "10d46f1ed7ae21c8818799f2",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -707,6 +922,12 @@
 "time": "14:00",
 "place": "중회의실",
 "owner": "이정인",
+"slots": [
+{
+"time": "14:00",
+"place": "중회의실"
+}
+],
 "id": "d55fc37a50c8280e3d1d9e7c",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -721,6 +942,7 @@
 "time": "",
 "place": "속초시 외 3개 지역",
 "owner": "",
+"slots": [],
 "id": "579a0e03a19f6a8443524cc2",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -735,6 +957,7 @@
 "time": "10:00",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "9fe135e270e36d0476590043",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -749,6 +972,12 @@
 "time": "10:00",
 "place": "3층 대회의실",
 "owner": "이분현",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 대회의실"
+}
+],
 "id": "ae0b4070cffaf6bef1f9e021",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -763,6 +992,7 @@
 "time": "",
 "place": "천진초 외 15교",
 "owner": "김우정, 이정옥",
+"slots": [],
 "id": "2cefac1a0b53438ac1a2ebd8",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -777,6 +1007,7 @@
 "time": "",
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
+"slots": [],
 "id": "5af6113fd5e3f53209684ad4",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -791,6 +1022,12 @@
 "time": "09:00",
 "place": "위센터",
 "owner": "이은혜",
+"slots": [
+{
+"time": "09:00",
+"place": "위센터"
+}
+],
 "id": "6a57a8b28e7152c9f786857b",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -805,6 +1042,12 @@
 "time": "09:00",
 "place": "대진중",
 "owner": "이현숙",
+"slots": [
+{
+"time": "09:00",
+"place": "대진중"
+}
+],
 "id": "cfb6dfb4ceab87a7accce68b",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -819,6 +1062,12 @@
 "time": "10:00",
 "place": "거진중, 거진고",
 "owner": "김제현",
+"slots": [
+{
+"time": "10:00",
+"place": "거진중, 거진고"
+}
+],
 "id": "f6a181baab623815413852ca",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -833,6 +1082,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "88bcd1ff42b6226b13b5259c",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -847,6 +1102,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "cb1650f0a6aa92a62ea1585d",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -861,6 +1122,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "a607fb1c510881651f6368f7",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -875,6 +1142,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "cf968524f658e4f65010dbff",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -889,6 +1162,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "64aa22a0b26ed82cf18f3e71",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -903,6 +1182,12 @@
 "time": "10:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
 "id": "98985e5e682edc339141afc0",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -917,6 +1202,12 @@
 "time": "10:30",
 "place": "고성소방서",
 "owner": "",
+"slots": [
+{
+"time": "10:30",
+"place": "고성소방서"
+}
+],
 "id": "7c9eec986ef7bae6b2e07dd4",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -931,6 +1222,12 @@
 "time": "11:00",
 "place": "조동우",
 "owner": "",
+"slots": [
+{
+"time": "11:00",
+"place": "조동우"
+}
+],
 "id": "8c7f409f970e175064ae7b0f",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -945,6 +1242,12 @@
 "time": "11:00",
 "place": "조동우",
 "owner": "",
+"slots": [
+{
+"time": "11:00",
+"place": "조동우"
+}
+],
 "id": "51319065866b48344cdc0516",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -959,6 +1262,12 @@
 "time": "13:00",
 "place": "대진고",
 "owner": "이완옥",
+"slots": [
+{
+"time": "13:00",
+"place": "대진고"
+}
+],
 "id": "9e307da5f4b536d67956725e",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -973,6 +1282,12 @@
 "time": "13:30",
 "place": "고성군의회",
 "owner": "",
+"slots": [
+{
+"time": "13:30",
+"place": "고성군의회"
+}
+],
 "id": "f05729f1bef275c434876614",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -987,6 +1302,12 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "대회의실"
+}
+],
 "id": "1457b6f2c025b922e08a70e6",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1001,6 +1322,12 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "대회의실"
+}
+],
 "id": "e552985490108748818fb45b",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1015,6 +1342,12 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "대회의실"
+}
+],
 "id": "dcba888c24f214d4ed64f28b",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1029,6 +1362,12 @@
 "time": "15:30",
 "place": "천진 카페",
 "owner": "소희",
+"slots": [
+{
+"time": "15:30",
+"place": "천진 카페"
+}
+],
 "id": "7664914dc84b2ee30098b13c",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1043,6 +1382,12 @@
 "time": "15:30",
 "place": "천진 카페",
 "owner": "소희, 김강진",
+"slots": [
+{
+"time": "15:30",
+"place": "천진 카페"
+}
+],
 "id": "fdd72e13ef45595e196c3393",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1057,6 +1402,12 @@
 "time": "15:30",
 "place": "고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "53159678c9e07922369a8a81",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1071,6 +1422,12 @@
 "time": "16:30",
 "place": "22사단",
 "owner": "",
+"slots": [
+{
+"time": "16:30",
+"place": "22사단"
+}
+],
 "id": "9be49d213227e617b9b4a38b",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1085,6 +1442,12 @@
 "time": "17:00",
 "place": "재미난지역아동센터",
 "owner": "신선일",
+"slots": [
+{
+"time": "17:00",
+"place": "재미난지역아동센터"
+}
+],
 "id": "c6088cb0b3805c044c130b20",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1099,6 +1462,12 @@
 "time": "09:00",
 "place": "거진초",
 "owner": "이현숙",
+"slots": [
+{
+"time": "09:00",
+"place": "거진초"
+}
+],
 "id": "0fd23705324c9623c1da1627",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1113,6 +1482,7 @@
 "time": "09:00",
 "place": "거진초",
 "owner": "이현숙",
+"slots": [],
 "id": "cf0011a541170dede0f2bf49",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1127,6 +1497,12 @@
 "time": "09:00",
 "place": "동광초, 거진초",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
 "id": "cbc64d7730a150f90fb4451f",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1141,6 +1517,12 @@
 "time": "09:00",
 "place": "도학초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "도학초"
+}
+],
 "id": "68a3130b8b84458860ee7581",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1155,6 +1537,12 @@
 "time": "09:00",
 "place": "거진고",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
 "id": "fd3882c96eb9c8e3a97ca044",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1169,6 +1557,12 @@
 "time": "10:00",
 "place": "도교육청",
 "owner": "임예지",
+"slots": [
+{
+"time": "10:00",
+"place": "도교육청"
+}
+],
 "id": "503c2a0f4fbdf49c919ccd0e",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1183,6 +1577,12 @@
 "time": "10:00",
 "place": "2층 소회의실",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "2층 소회의실"
+}
+],
 "id": "c28cdcde53261950713a5a66",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1197,6 +1597,12 @@
 "time": "10:00",
 "place": "2층 소회의실",
 "owner": "조영익, 심은경, 남궁연, 김강진, 소희",
+"slots": [
+{
+"time": "10:00",
+"place": "2층 소회의실"
+}
+],
 "id": "1a6517f424f1a0941f2ca80a",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1209,8 +1615,18 @@
 "kind": "weekly",
 "team": "교육장",
 "time": "10:00",
-"place": "거진초, 거성초",
+"place": "거진초, 거성초, 광산초, 간성초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "거진초, 거성초"
+},
+{
+"time": "13:30",
+"place": "광산초, 간성초"
+}
+],
 "id": "cab3cdfbeddab9bd2e2c64f1",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1223,8 +1639,18 @@
 "kind": "weekly",
 "team": "예산팀",
 "time": "10:00",
-"place": "거진초, 거성초",
+"place": "거진초, 거성초, 광산초, 간성초",
 "owner": "박기철",
+"slots": [
+{
+"time": "10:00",
+"place": "거진초, 거성초"
+},
+{
+"time": "13:30",
+"place": "광산초, 간성초"
+}
+],
 "id": "b51e35a1aae4d14ebbb611ae",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1239,6 +1665,12 @@
 "time": "13:00",
 "place": "광산초",
 "owner": "변고은",
+"slots": [
+{
+"time": "13:00",
+"place": "광산초"
+}
+],
 "id": "51336ee3d13e23b7438252a3",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1253,6 +1685,12 @@
 "time": "13:30",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
 "id": "7b0cf5be5039b290738d4abf",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1267,6 +1705,12 @@
 "time": "14:00",
 "place": "3층 대회의실",
 "owner": "이분현",
+"slots": [
+{
+"time": "14:00",
+"place": "3층 대회의실"
+}
+],
 "id": "d361534b6c1a2d02d654dd26",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1281,6 +1725,7 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "ab1795647f0804c4a5e55305",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1295,6 +1740,7 @@
 "time": "15:00",
 "place": "중회의실",
 "owner": "이현숙",
+"slots": [],
 "id": "d821d0c62506d8164e5b46cf",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1309,6 +1755,12 @@
 "time": "15:00",
 "place": "중회의실",
 "owner": "이현숙",
+"slots": [
+{
+"time": "15:00",
+"place": "중회의실"
+}
+],
 "id": "90549d72221a710174b5f1ee",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1323,6 +1775,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "진수연, 김강진",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "4eed72355f0b60c5c711dd38",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1337,6 +1795,12 @@
 "time": "16:00",
 "place": "토성청소년문화의집",
 "owner": "신선일",
+"slots": [
+{
+"time": "16:00",
+"place": "토성청소년문화의집"
+}
+],
 "id": "3a056c87bdf75fc3c07d39e2",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1351,6 +1815,7 @@
 "time": "",
 "place": "",
 "owner": "심은경",
+"slots": [],
 "id": "dfc4e4c243515a8d50d3f14c",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1365,6 +1830,7 @@
 "time": "",
 "place": "휘닉스평창",
 "owner": "소희",
+"slots": [],
 "id": "b4d2d6ea223d61e26f28c5e4",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1379,6 +1845,12 @@
 "time": "09:00",
 "place": "강릉세인트존스",
 "owner": "이현숙",
+"slots": [
+{
+"time": "09:00",
+"place": "강릉세인트존스"
+}
+],
 "id": "b2f60ef1a804589d2c8558a8",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1393,6 +1865,12 @@
 "time": "09:10",
 "place": "인흥초",
 "owner": "김강진",
+"slots": [
+{
+"time": "09:10",
+"place": "인흥초"
+}
+],
 "id": "1190718fe86cd91c10e6e291",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1407,6 +1885,12 @@
 "time": "09:30",
 "place": "고성고, 간성초",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
 "id": "8c2dd08ba7157776120991e2",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1419,8 +1903,18 @@
 "kind": "weekly",
 "team": "교육장",
 "time": "10:00",
-"place": "동광초, 동광중, 동광산과고",
+"place": "동광초, 동광중, 동광산과고, 아야진초, 오호초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "동광초, 동광중, 동광산과고"
+},
+{
+"time": "13:30",
+"place": "아야진초, 오호초"
+}
+],
 "id": "5cae8ec2edd5952ac3ffe87c",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1433,8 +1927,18 @@
 "kind": "weekly",
 "team": "예산팀",
 "time": "10:00",
-"place": "동광초, 동광중, 동광산과고",
+"place": "동광초, 동광중, 동광산과고, 아야진초, 오호초",
 "owner": "박기철",
+"slots": [
+{
+"time": "10:00",
+"place": "동광초, 동광중, 동광산과고"
+},
+{
+"time": "13:30",
+"place": "아야진초, 오호초"
+}
+],
 "id": "9b84c0a7f4773f1206bf9e93",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1449,6 +1953,7 @@
 "time": "10:20",
 "place": "사임당교육원",
 "owner": "이분현",
+"slots": [],
 "id": "81e16f9a2e4685c8f4f50974",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1463,6 +1968,12 @@
 "time": "10:20",
 "place": "사임당교육원",
 "owner": "",
+"slots": [
+{
+"time": "10:20",
+"place": "사임당교육원"
+}
+],
 "id": "e3246558f7b7451d83d70d37",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1477,6 +1988,7 @@
 "time": "13:00",
 "place": "평창 휘닉스",
 "owner": "소희, 심은경",
+"slots": [],
 "id": "91f7828234dd4da520e255cf",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1491,6 +2003,12 @@
 "time": "13:00",
 "place": "아야진초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "13:00",
+"place": "아야진초"
+}
+],
 "id": "5c61dbed425855af8ad5d144",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1505,6 +2023,12 @@
 "time": "14:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "위센터"
+}
+],
 "id": "c2766aa041db3d14251ec5e1",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1519,6 +2043,12 @@
 "time": "15:00",
 "place": "인흥초",
 "owner": "김미경",
+"slots": [
+{
+"time": "15:00",
+"place": "인흥초"
+}
+],
 "id": "7f079b675d8aba2f468a03c7",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1533,6 +2063,7 @@
 "time": "15:00",
 "place": "도학소",
 "owner": "이현숙",
+"slots": [],
 "id": "e7799047b7379782d1184f92",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1547,6 +2078,12 @@
 "time": "15:30",
 "place": "동광초",
 "owner": "이건영",
+"slots": [
+{
+"time": "15:30",
+"place": "동광초"
+}
+],
 "id": "89c93c1747999cabefca2625",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1561,6 +2098,12 @@
 "time": "15:30",
 "place": "고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "dffd63b568bf4c2c2ab4bf37",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1575,6 +2118,7 @@
 "time": "",
 "place": "피스앤파크컨벤션(서울)",
 "owner": "",
+"slots": [],
 "id": "158c995a0bd70aa978b38564",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1589,6 +2133,7 @@
 "time": "",
 "place": "평창 모나 용평",
 "owner": "김대식",
+"slots": [],
 "id": "fbfb7f15eb1a8c04a371c108",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1603,6 +2148,7 @@
 "time": "",
 "place": "평창 모나 용평",
 "owner": "최창원, 임예지",
+"slots": [],
 "id": "51327026c81638b23da96cc4",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1617,6 +2163,7 @@
 "time": "",
 "place": "강릉 신라모노그램",
 "owner": "",
+"slots": [],
 "id": "b1fd5bbe6827d5e5834f8413",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1631,6 +2178,7 @@
 "time": "",
 "place": "강릉 신라모노그램",
 "owner": "이현숙",
+"slots": [],
 "id": "0cbf0508e174f0b75020ec62",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1645,6 +2193,7 @@
 "time": "",
 "place": "",
 "owner": "이모란",
+"slots": [],
 "id": "6843529fc8b98cb710bb46ea",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1659,6 +2208,7 @@
 "time": "09:00",
 "place": "평창 휘닉스",
 "owner": "소희, 심은경",
+"slots": [],
 "id": "0ea5ecd0c7760de54eaae8a0",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1673,6 +2223,12 @@
 "time": "09:00",
 "place": "대진초, 고성중",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
 "id": "b77d329031a94436b6205eb6",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1687,6 +2243,12 @@
 "time": "09:00",
 "place": "오호초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "오호초"
+}
+],
 "id": "fa70e6ef663c8f3d1b277532",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1701,6 +2263,12 @@
 "time": "09:00",
 "place": "인흥초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "인흥초"
+}
+],
 "id": "12f1cc8e867845b785fb7060",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1715,6 +2283,7 @@
 "time": "10:00",
 "place": "아야진초",
 "owner": "이분현",
+"slots": [],
 "id": "7907f260aac9cf5102d89ae6",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1727,8 +2296,18 @@
 "kind": "weekly",
 "team": "교육장",
 "time": "10:00",
-"place": "대진중, 대진고, 거진중",
+"place": "대진중, 대진고, 거진중, 거진고, 고성중, 고성고",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "대진중, 대진고, 거진중"
+},
+{
+"time": "13:30",
+"place": "거진고, 고성중, 고성고"
+}
+],
 "id": "2cc90f74ecff5c9933dc91a7",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1741,8 +2320,18 @@
 "kind": "weekly",
 "team": "행정과장",
 "time": "10:00",
-"place": "대진중, 대진고, 거진중",
+"place": "대진중, 대진고, 거진중, 거진고, 고성중, 고성고",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "대진중, 대진고, 거진중"
+},
+{
+"time": "13:30",
+"place": "거진고, 고성중, 고성고"
+}
+],
 "id": "f8e8406a07519de8930fe46a",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1755,8 +2344,18 @@
 "kind": "weekly",
 "team": "예산팀",
 "time": "10:00",
-"place": "대진중, 대진고, 거진중",
+"place": "대진중, 대진고, 거진중, 거진고, 고성중, 고성고",
 "owner": "박기철",
+"slots": [
+{
+"time": "10:00",
+"place": "대진중, 대진고, 거진중"
+},
+{
+"time": "13:30",
+"place": "거진고, 고성중, 고성고"
+}
+],
 "id": "25043875c9ff005ba90a91ca",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1771,6 +2370,12 @@
 "time": "10:00",
 "place": "아야진초",
 "owner": "이분현",
+"slots": [
+{
+"time": "10:00",
+"place": "아야진초"
+}
+],
 "id": "f6ea454995637b07e3dce4ba",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1785,6 +2390,12 @@
 "time": "11:00",
 "place": "거진초",
 "owner": "김강진",
+"slots": [
+{
+"time": "11:00",
+"place": "거진초"
+}
+],
 "id": "71f8d76390ebc7903c869e78",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1799,6 +2410,12 @@
 "time": "13:30",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
 "id": "55291feeed965d9a44b6dc03",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1813,6 +2430,12 @@
 "time": "14:00",
 "place": "3층 대회의실",
 "owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "3층 대회의실"
+}
+],
 "id": "32f086aa613746164a6995eb",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1827,6 +2450,12 @@
 "time": "15:00",
 "place": "대진초",
 "owner": "변고은",
+"slots": [
+{
+"time": "15:00",
+"place": "대진초"
+}
+],
 "id": "ec85e203baec706ff05011d1",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1841,6 +2470,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "조성광",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "006fe95a9a1649190e6648f6",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1855,6 +2490,12 @@
 "time": "16:00",
 "place": "꿈동산지역아동센터",
 "owner": "신선일",
+"slots": [
+{
+"time": "16:00",
+"place": "꿈동산지역아동센터"
+}
+],
 "id": "2f770bed187656562e8ef0c5",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1869,6 +2510,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "d87cc09aaf345ae483a30b36",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1883,6 +2525,12 @@
 "time": "09:00",
 "place": "광산초, 고성중",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "광산초, 고성중"
+}
+],
 "id": "6af3a9b9bf95277b69d2b4fa",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1897,6 +2545,12 @@
 "time": "09:00",
 "place": "대진초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초"
+}
+],
 "id": "036b2962d7bc08521b00e1f0",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1911,6 +2565,12 @@
 "time": "09:00",
 "place": "고성중",
 "owner": "남궁연",
+"slots": [
+{
+"time": "09:00",
+"place": "고성중"
+}
+],
 "id": "145752541c263cb4a62fba29",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1925,6 +2585,7 @@
 "time": "10:00",
 "place": "",
 "owner": "유승희",
+"slots": [],
 "id": "ca2c01b356ed6acbc449f341",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1939,6 +2600,7 @@
 "time": "10:00",
 "place": "중회의실",
 "owner": "임금선",
+"slots": [],
 "id": "0ed34f3faa4b9756222d7e3b",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1953,6 +2615,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "임금선",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "15614f40b00d5b0949dbd5bc",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1967,6 +2635,7 @@
 "time": "11:00",
 "place": "한국여성수련원",
 "owner": "이분현",
+"slots": [],
 "id": "e43c0e71fecbb74f18973d7e",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -1981,6 +2650,12 @@
 "time": "11:00",
 "place": "한국여성수련원",
 "owner": "이분현",
+"slots": [
+{
+"time": "11:00",
+"place": "한국여성수련원"
+}
+],
 "id": "487a645b9a84f56076d258ee",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -1995,6 +2670,12 @@
 "time": "11:10~12:30",
 "place": "거진초(원니스밴드)",
 "owner": "남궁연",
+"slots": [
+{
+"time": "11:10~12:30",
+"place": "거진초(원니스밴드)"
+}
+],
 "id": "f0d39f632782308ae50bd483",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -2009,6 +2690,12 @@
 "time": "13:30",
 "place": "고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "고성중"
+}
+],
 "id": "d423da43fabde74b2dc1f6e3",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -2023,6 +2710,12 @@
 "time": "14:30",
 "place": "대회의실",
 "owner": "이경영, 이모란",
+"slots": [
+{
+"time": "14:30",
+"place": "대회의실"
+}
+],
 "id": "8a970fdd4240186be9418d50",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -2037,6 +2730,7 @@
 "time": "09:00",
 "place": "한국여성수련원",
 "owner": "이분현",
+"slots": [],
 "id": "a7e93f6f90ef3abcf576a054",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2051,6 +2745,12 @@
 "time": "09:00",
 "place": "한국여성수련원",
 "owner": "이분현",
+"slots": [
+{
+"time": "09:00",
+"place": "한국여성수련원"
+}
+],
 "id": "fffff59b0d8d4333eabe03bc",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -2065,6 +2765,7 @@
 "time": "09:30",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "bbb99661f64d35471474b666",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -2079,6 +2780,7 @@
 "time": "10:00",
 "place": "속초 공방",
 "owner": "신선일",
+"slots": [],
 "id": "d15a6de7ddc7c7fff51d1f2d",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2093,6 +2795,12 @@
 "time": "10:00",
 "place": "속초 공방",
 "owner": "신선일",
+"slots": [
+{
+"time": "10:00",
+"place": "속초 공방"
+}
+],
 "id": "fcbb2d4b33731b5ef5684127",
 "source_id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk"
 },
@@ -2107,6 +2815,7 @@
 "time": "",
 "place": "관내 초·중·고·대학교",
 "owner": "김우정, 이영비",
+"slots": [],
 "id": "24888c99f45bf67b3fa27c5d",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2121,6 +2830,7 @@
 "time": "",
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
+"slots": [],
 "id": "503d571e4eb221857da2edfa",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2135,6 +2845,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "04d33eb329149acd4b69fe58",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2149,6 +2860,12 @@
 "time": "09:00",
 "place": "거진고",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
 "id": "72122a341692204459880021",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2163,6 +2880,7 @@
 "time": "10:00",
 "place": "중회의실",
 "owner": "이분현",
+"slots": [],
 "id": "ba4f7821115e70e990a32efb",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2177,6 +2895,12 @@
 "time": "10:00",
 "place": "3층 중회의실",
 "owner": "이분현",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 중회의실"
+}
+],
 "id": "79e911c3c1d3c4855dd775ad",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2191,6 +2915,12 @@
 "time": "10:00",
 "place": "거진중, 거진고",
 "owner": "김제현",
+"slots": [
+{
+"time": "10:00",
+"place": "거진중, 거진고"
+}
+],
 "id": "8e48bdd48ab9226ae90620ff",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2203,8 +2933,18 @@
 "kind": "weekly",
 "team": "교육장",
 "time": "10:00",
-"place": "인흥초, 천진초",
+"place": "인흥초, 천진초, 도학초, 죽왕초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "인흥초, 천진초"
+},
+{
+"time": "13:30",
+"place": "도학초, 죽왕초"
+}
+],
 "id": "daaa9619404fc8233dfcded7",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2217,8 +2957,18 @@
 "kind": "weekly",
 "team": "교육과장",
 "time": "10:00",
-"place": "인흥초, 천진초",
+"place": "인흥초, 천진초, 도학초, 죽왕초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "인흥초, 천진초"
+},
+{
+"time": "13:30",
+"place": "도학초, 죽왕초"
+}
+],
 "id": "6f4afca415529e8f194edc0a",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2231,8 +2981,18 @@
 "kind": "weekly",
 "team": "행정과장",
 "time": "10:00",
-"place": "인흥초, 천진초",
+"place": "인흥초, 천진초, 도학초, 죽왕초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "인흥초, 천진초"
+},
+{
+"time": "13:30",
+"place": "도학초, 죽왕초"
+}
+],
 "id": "2980b5d2115dc2ecb4f3d754",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2247,6 +3007,12 @@
 "time": "10:30",
 "place": "교육과학정보원",
 "owner": "소희",
+"slots": [
+{
+"time": "10:30",
+"place": "교육과학정보원"
+}
+],
 "id": "8173904e9aa9a99525f00344",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2261,6 +3027,12 @@
 "time": "11:00~12:20",
 "place": "대진초",
 "owner": "남궁연",
+"slots": [
+{
+"time": "11:00~12:20",
+"place": "대진초"
+}
+],
 "id": "24e323b036d5d235f6af200e",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2275,6 +3047,12 @@
 "time": "13:20~14:00",
 "place": "죽왕초",
 "owner": "남궁연",
+"slots": [
+{
+"time": "13:20~14:00",
+"place": "죽왕초"
+}
+],
 "id": "d8965ee909230a45072d398c",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2289,6 +3067,7 @@
 "time": "14:00",
 "place": "교육과학정보원",
 "owner": "심은경",
+"slots": [],
 "id": "dd711d10940964424ea36c5d",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2301,8 +3080,18 @@
 "kind": "weekly",
 "team": "학습종합클리닉센터",
 "time": "14:00",
-"place": "동광초",
+"place": "동광초, 고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "dd4701bb125d1a1918ccfec2",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2317,6 +3106,12 @@
 "time": "14:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "위센터"
+}
+],
 "id": "186d0a0b2bfafa697ebcc3de",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2331,6 +3126,12 @@
 "time": "15:00",
 "place": "초계종합교육센터",
 "owner": "심은경",
+"slots": [
+{
+"time": "15:00",
+"place": "초계종합교육센터"
+}
+],
 "id": "375de61f89cb8cba82c7de38",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2345,6 +3146,12 @@
 "time": "15:00",
 "place": "거성초",
 "owner": "김미경, 이현숙",
+"slots": [
+{
+"time": "15:00",
+"place": "거성초"
+}
+],
 "id": "ce0abd8e3c3ad18d1fd25435",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2359,6 +3166,12 @@
 "time": "16:00",
 "place": "재미난지역아동센터",
 "owner": "신선일",
+"slots": [
+{
+"time": "16:00",
+"place": "재미난지역아동센터"
+}
+],
 "id": "71a38079a0005778b21c510c",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2373,6 +3186,7 @@
 "time": "",
 "place": "",
 "owner": "박성진",
+"slots": [],
 "id": "b2eb3dfd74a57d48b88b8499",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2387,6 +3201,7 @@
 "time": "",
 "place": "",
 "owner": "연로사, 이정인",
+"slots": [],
 "id": "32bb743062c03a5f5203588e",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2401,6 +3216,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "c60ac8ba3f07ba4496cd2703",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2415,6 +3231,12 @@
 "time": "09:00",
 "place": "동광초, 거진초",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
 "id": "60b17b5d3247da4a0f0326e1",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2429,6 +3251,12 @@
 "time": "09:00",
 "place": "도학초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "도학초"
+}
+],
 "id": "2b4e3aba5fc84f331d2817c5",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2443,6 +3271,12 @@
 "time": "09:00",
 "place": "거진고",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
 "id": "f4793cd9b26d2aabfab028a2",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2457,6 +3291,12 @@
 "time": "09:00",
 "place": "고성중·고",
 "owner": "조태현",
+"slots": [
+{
+"time": "09:00",
+"place": "고성중·고"
+}
+],
 "id": "b56c6966c717adac9d1cc185",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2471,6 +3311,12 @@
 "time": "09:00",
 "place": "대진초",
 "owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초"
+}
+],
 "id": "337a9ae33e1d6cfbd01a79c8",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2485,6 +3331,12 @@
 "time": "10:00",
 "place": "교육과학정보원(원주)",
 "owner": "심은경",
+"slots": [
+{
+"time": "10:00",
+"place": "교육과학정보원(원주)"
+}
+],
 "id": "84a5d05523f34942c5516c3a",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2499,6 +3351,12 @@
 "time": "10:00",
 "place": "동광초",
 "owner": "김미경, 이건영",
+"slots": [
+{
+"time": "10:00",
+"place": "동광초"
+}
+],
 "id": "78539e42e49fa5407a33fbd8",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2513,6 +3371,12 @@
 "time": "10:00",
 "place": "대진초, 공현진초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "대진초, 공현진초"
+}
+],
 "id": "7ca3ba6c3266e409346ffc05",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2527,6 +3391,12 @@
 "time": "10:00",
 "place": "대진초, 공현진초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "대진초, 공현진초"
+}
+],
 "id": "fe1d45953bbda0f103dd3133",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2541,6 +3411,12 @@
 "time": "10:00",
 "place": "대진초, 공현진초",
 "owner": "조영익",
+"slots": [
+{
+"time": "10:00",
+"place": "대진초, 공현진초"
+}
+],
 "id": "78a0dbff1246fb83d41e8b67",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2555,6 +3431,12 @@
 "time": "10:00",
 "place": "대진초, 공현진초",
 "owner": "",
+"slots": [
+{
+"time": "10:00",
+"place": "대진초, 공현진초"
+}
+],
 "id": "9065ee65fb192cf43d7f72b6",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2569,6 +3451,7 @@
 "time": "10:00",
 "place": "대회의실",
 "owner": "이현숙",
+"slots": [],
 "id": "8e5bb6e10659eef3469c34ca",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2583,6 +3466,12 @@
 "time": "10:00",
 "place": "대회의실",
 "owner": "이현숙, 조범준",
+"slots": [
+{
+"time": "10:00",
+"place": "대회의실"
+}
+],
 "id": "9cc1ce2585996fdb7d01cf83",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2597,6 +3486,12 @@
 "time": "13:30",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
 "id": "92dc09b644870b3599b8d0ed",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2611,6 +3506,7 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "a8fc286b5152e5a82a8eb3b3",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2625,6 +3521,12 @@
 "time": "14:00",
 "place": "3층 대회의실",
 "owner": "이분현",
+"slots": [
+{
+"time": "14:00",
+"place": "3층 대회의실"
+}
+],
 "id": "48f19e9eed6287b543557423",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2639,6 +3541,12 @@
 "time": "14:00",
 "place": "광산초",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "광산초"
+}
+],
 "id": "64a55383dc4d42ab38d49a37",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2653,6 +3561,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "김강진, 정승환",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "c89f383c3345caf10e400f5e",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2667,6 +3581,7 @@
 "time": "",
 "place": "",
 "owner": "이정인",
+"slots": [],
 "id": "363225ceab2190b541d482d6",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2681,6 +3596,7 @@
 "time": "",
 "place": "",
 "owner": "이정인",
+"slots": [],
 "id": "60b0bb8818c7b58abf25f00c",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2695,6 +3611,7 @@
 "time": "",
 "place": "",
 "owner": "박기철, 최창원",
+"slots": [],
 "id": "9ec12e7336c2773d0f3309e9",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2709,6 +3626,7 @@
 "time": "",
 "place": "동광초",
 "owner": "권영극, 최창원, 이건영",
+"slots": [],
 "id": "0d33fd804acb741ef5e61217",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2723,6 +3641,12 @@
 "time": "09:00",
 "place": "인흥초",
 "owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "인흥초"
+}
+],
 "id": "76010fe7daefdd8c8b07124b",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2737,6 +3661,12 @@
 "time": "09:00",
 "place": "대진중",
 "owner": "이현숙",
+"slots": [
+{
+"time": "09:00",
+"place": "대진중"
+}
+],
 "id": "9d212b1816d741eabc9eb82d",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2751,6 +3681,12 @@
 "time": "09:30",
 "place": "고성고, 간성초",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
 "id": "5aab1c8dbf9afc3c6e060c7a",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2765,6 +3701,12 @@
 "time": "13:30",
 "place": "아야진초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "13:30",
+"place": "아야진초"
+}
+],
 "id": "f173b300e1eaf6e4838cd519",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2779,6 +3721,7 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "f8d6e779d38671afac0f5e93",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2793,6 +3736,12 @@
 "time": "14:00",
 "place": "3층 대회의실",
 "owner": "이분현",
+"slots": [
+{
+"time": "14:00",
+"place": "3층 대회의실"
+}
+],
 "id": "0033df785294422253bfa8c8",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2805,8 +3754,18 @@
 "kind": "weekly",
 "team": "학습종합클리닉센터",
 "time": "14:00",
-"place": "동광초",
+"place": "동광초, 고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "114679670f4db4ac740d7cdb",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2821,6 +3780,12 @@
 "time": "14:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "위센터"
+}
+],
 "id": "893e28954a5e4254517c1a7a",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2835,6 +3800,12 @@
 "time": "15:00",
 "place": "중회의실",
 "owner": "이현숙",
+"slots": [
+{
+"time": "15:00",
+"place": "중회의실"
+}
+],
 "id": "1b338a3d30bd705795c51390",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2849,6 +3820,7 @@
 "time": "15:00",
 "place": "중회의실",
 "owner": "이현숙",
+"slots": [],
 "id": "11f25d3b48c288bdf9f97658",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2863,6 +3835,12 @@
 "time": "18:00",
 "place": "하늘땅지역아동센터",
 "owner": "신선일",
+"slots": [
+{
+"time": "18:00",
+"place": "하늘땅지역아동센터"
+}
+],
 "id": "1399fc6a6c97b262aa002833",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2877,6 +3855,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "1503ff45533462d5c4150587",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2891,6 +3870,7 @@
 "time": "",
 "place": "강릉",
 "owner": "이현숙",
+"slots": [],
 "id": "1d21973c4c23af0e15fed731",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2905,6 +3885,7 @@
 "time": "",
 "place": "",
 "owner": "박기철, 최창원",
+"slots": [],
 "id": "5002c230c37b714326dc99fb",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2919,6 +3900,7 @@
 "time": "",
 "place": "동광초",
 "owner": "권영극,최창원,이건영",
+"slots": [],
 "id": "ea5f5855689b933bf4e18874",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2933,6 +3915,7 @@
 "time": "",
 "place": "",
 "owner": "연로사, 이정인",
+"slots": [],
 "id": "0fe4e175f95266e7ee680d91",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2947,6 +3930,12 @@
 "time": "09:00",
 "place": "천진초",
 "owner": "이현숙",
+"slots": [
+{
+"time": "09:00",
+"place": "천진초"
+}
+],
 "id": "e6e189c976812ea4b53110f6",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2961,6 +3950,7 @@
 "time": "09:00",
 "place": "천진초",
 "owner": "이현숙",
+"slots": [],
 "id": "34312bbbc7ae371b706c05df",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -2975,6 +3965,12 @@
 "time": "09:00",
 "place": "대진초, 고성중",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
 "id": "c8809d4ed55aab53cd341803",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -2989,6 +3985,12 @@
 "time": "09:00",
 "place": "동광초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초"
+}
+],
 "id": "308dbf376b3396efa08d4c42",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3003,6 +4005,12 @@
 "time": "09:00",
 "place": "인흥초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "인흥초"
+}
+],
 "id": "d1b50ae84bfcf64b07799825",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3017,6 +4025,12 @@
 "time": "09:00",
 "place": "고성고",
 "owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "고성고"
+}
+],
 "id": "42bd270816520b1544909828",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3031,6 +4045,12 @@
 "time": "09:10",
 "place": "천진초",
 "owner": "김강진",
+"slots": [
+{
+"time": "09:10",
+"place": "천진초"
+}
+],
 "id": "7c45934063540f9b229a319d",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3045,6 +4065,12 @@
 "time": "11:20",
 "place": "간성초병설유",
 "owner": "김미경",
+"slots": [
+{
+"time": "11:20",
+"place": "간성초병설유"
+}
+],
 "id": "93df040178b6018a73da98c7",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3059,6 +4085,12 @@
 "time": "13:30",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
 "id": "f75e7159e89ace73c4635ff4",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3073,6 +4105,12 @@
 "time": "15:00",
 "place": "대진초",
 "owner": "변고은",
+"slots": [
+{
+"time": "15:00",
+"place": "대진초"
+}
+],
 "id": "2d435b7f4f893924eb4f918a",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3087,6 +4125,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "김두현",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "61e3fd4a0186ffa4e0190fdc",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3101,6 +4145,12 @@
 "time": "16:00",
 "place": "꿈동산지역아동센터",
 "owner": "신선일",
+"slots": [
+{
+"time": "16:00",
+"place": "꿈동산지역아동센터"
+}
+],
 "id": "0d1e35d314c3687862d36310",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3115,6 +4165,7 @@
 "time": "18:40",
 "place": "도학초",
 "owner": "이분현",
+"slots": [],
 "id": "45519b5601cf57fe64010325",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3129,6 +4180,12 @@
 "time": "18:40",
 "place": "도학초",
 "owner": "이분현",
+"slots": [
+{
+"time": "18:40",
+"place": "도학초"
+}
+],
 "id": "e749fe735335eb89bac726a6",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3143,6 +4200,7 @@
 "time": "",
 "place": "",
 "owner": "박기철, 최창원",
+"slots": [],
 "id": "50e0ac60a63945807abaae3a",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3157,6 +4215,7 @@
 "time": "",
 "place": "동광초",
 "owner": "권영극,최창원,이건영",
+"slots": [],
 "id": "4cd307b15b58174804c27c22",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3171,6 +4230,12 @@
 "time": "09:00",
 "place": "광산초, 고성중",
 "owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "광산초, 고성중"
+}
+],
 "id": "e561175c486ba18b3eda549c",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3185,6 +4250,12 @@
 "time": "09:30",
 "place": "강릉 일원",
 "owner": "김미경",
+"slots": [
+{
+"time": "09:30",
+"place": "강릉 일원"
+}
+],
 "id": "10e90524acd3abf3e64a2292",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3197,8 +4268,22 @@
 "kind": "weekly",
 "team": "장학행정",
 "time": "13:00",
-"place": "단체 줄넘기",
+"place": "단체 줄넘기, 사물놀이 경연대회, 청소년 페스티벌",
 "owner": "조영익",
+"slots": [
+{
+"time": "13:00",
+"place": "단체 줄넘기"
+},
+{
+"time": "14:30",
+"place": "사물놀이 경연대회"
+},
+{
+"time": "15:00",
+"place": "청소년 페스티벌"
+}
+],
 "id": "efa29d77aacaa2785cd5a6fd",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3213,6 +4298,12 @@
 "time": "13:00",
 "place": "정선군립도서관",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:00",
+"place": "정선군립도서관"
+}
+],
 "id": "24ce5b4bb963035c7bccbad1",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3227,6 +4318,7 @@
 "time": "14:00",
 "place": "고성고",
 "owner": "이분현",
+"slots": [],
 "id": "3cac8c5a19f4f884295c17fd",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3241,6 +4333,12 @@
 "time": "14:00",
 "place": "고성고",
 "owner": "이분현",
+"slots": [
+{
+"time": "14:00",
+"place": "고성고"
+}
+],
 "id": "44ff81d79896b781a77e6ce6",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3255,6 +4353,12 @@
 "time": "14:30",
 "place": "카시아속초",
 "owner": "소희",
+"slots": [
+{
+"time": "14:30",
+"place": "카시아속초"
+}
+],
 "id": "58bc4b05ce89b2d052bff8d6",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3269,6 +4373,12 @@
 "time": "15:00",
 "place": "9. 18.  ~9. 19., 카시아속초",
 "owner": "김미경",
+"slots": [
+{
+"time": "15:00",
+"place": "9. 18.  ~9. 19., 카시아속초"
+}
+],
 "id": "54e89e8ec88bc0870c829c47",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3283,6 +4393,12 @@
 "time": "09:00",
 "place": "초계종합교육센터",
 "owner": "김강진, 김진영",
+"slots": [
+{
+"time": "09:00",
+"place": "초계종합교육센터"
+}
+],
 "id": "47bb54bf27f4f4992adbae5c",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3297,6 +4413,7 @@
 "time": "09:00",
 "place": "초계종합교육센터",
 "owner": "김강진",
+"slots": [],
 "id": "4f0c726e32a600721dca7956",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3311,6 +4428,12 @@
 "time": "09:30",
 "place": "카시아속초",
 "owner": "소희",
+"slots": [
+{
+"time": "09:30",
+"place": "카시아속초"
+}
+],
 "id": "adeeabd059b393cdfc452851",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3325,6 +4448,12 @@
 "time": "10:30",
 "place": "고성종합운동장 외 부대시설",
 "owner": "",
+"slots": [
+{
+"time": "10:30",
+"place": "고성종합운동장 외 부대시설"
+}
+],
 "id": "43d52afbf1653766b9acc2fd",
 "source_id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA"
 },
@@ -3339,6 +4468,7 @@
 "time": "",
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
+"slots": [],
 "id": "ceb733acb9e4ce6f52da4943",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3353,6 +4483,12 @@
 "time": "10:00",
 "place": "2층 소회의실",
 "owner": "고연호",
+"slots": [
+{
+"time": "10:00",
+"place": "2층 소회의실"
+}
+],
 "id": "5e719afed7807bbdd73d4450",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3367,6 +4503,12 @@
 "time": "10:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
 "id": "a5d091c0e63c9eaacc88c758",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3381,6 +4523,12 @@
 "time": "13:00",
 "place": "대진고",
 "owner": "이완옥",
+"slots": [
+{
+"time": "13:00",
+"place": "대진고"
+}
+],
 "id": "e39e5912828ba17b4cb95db9",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3395,6 +4543,12 @@
 "time": "13:30",
 "place": "도교육청 6층 대강당",
 "owner": "문지환",
+"slots": [
+{
+"time": "13:30",
+"place": "도교육청 6층 대강당"
+}
+],
 "id": "a70de29a72a7df964fe91031",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3409,6 +4563,12 @@
 "time": "14:00",
 "place": "청소년수련관 3층 대강당",
 "owner": "조영익",
+"slots": [
+{
+"time": "14:00",
+"place": "청소년수련관 3층 대강당"
+}
+],
 "id": "79de46d18ff57719d079cc41",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3421,8 +4581,18 @@
 "kind": "weekly",
 "team": "학습종합클리닉센터",
 "time": "14:00",
-"place": "동광초",
+"place": "동광초, 고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "0cc43462d73290239226be66",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3437,6 +4607,12 @@
 "time": "14:30",
 "place": "도교육청 3층 대회의실",
 "owner": "",
+"slots": [
+{
+"time": "14:30",
+"place": "도교육청 3층 대회의실"
+}
+],
 "id": "fe867d25e1576f073f765587",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3451,6 +4627,12 @@
 "time": "14:30",
 "place": "간성읍 및 거진읍 전통시장",
 "owner": "",
+"slots": [
+{
+"time": "14:30",
+"place": "간성읍 및 거진읍 전통시장"
+}
+],
 "id": "74545e656733db13f7f8b088",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3465,6 +4647,12 @@
 "time": "17:00",
 "place": "거진읍 시장",
 "owner": "",
+"slots": [
+{
+"time": "17:00",
+"place": "거진읍 시장"
+}
+],
 "id": "aa194fb9be5ea60ffc061fb6",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3479,6 +4667,12 @@
 "time": "08:00",
 "place": "도학초",
 "owner": "이완옥",
+"slots": [
+{
+"time": "08:00",
+"place": "도학초"
+}
+],
 "id": "496fc6736805a99eab6b3922",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3493,6 +4687,12 @@
 "time": "09:00",
 "place": "거진고",
 "owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
 "id": "dd78be3cbb993e60528f04b4",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3507,6 +4707,12 @@
 "time": "09:30",
 "place": "고성군청",
 "owner": "",
+"slots": [
+{
+"time": "09:30",
+"place": "고성군청"
+}
+],
 "id": "14677f24e1ca5839236d9549",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3521,6 +4727,12 @@
 "time": "09:30",
 "place": "고성군청 2층 회의실",
 "owner": "조영익",
+"slots": [
+{
+"time": "09:30",
+"place": "고성군청 2층 회의실"
+}
+],
 "id": "516c1915e1ddbc1816e66d02",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3535,6 +4747,12 @@
 "time": "13:30",
 "place": "대진초",
 "owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
 "id": "8330b22bf0a9b22f597437af",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3549,6 +4767,7 @@
 "time": "14:00",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "0df20fb048a653db79248447",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3563,6 +4782,12 @@
 "time": "14:00",
 "place": "강원과학고 교장실",
 "owner": "조영익",
+"slots": [
+{
+"time": "14:00",
+"place": "강원과학고 교장실"
+}
+],
 "id": "1e458625f8f7161a8e817977",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3577,6 +4802,12 @@
 "time": "14:00",
 "place": "광산초",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "광산초"
+}
+],
 "id": "655878e09fcc2dba88f2f22f",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3591,6 +4822,12 @@
 "time": "14:30",
 "place": "간성읍 및 거진읍 시장",
 "owner": "",
+"slots": [
+{
+"time": "14:30",
+"place": "간성읍 및 거진읍 시장"
+}
+],
 "id": "2a0eb743aaf166bd744c6be3",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3605,6 +4842,12 @@
 "time": "14:30",
 "place": "간성읍 및 거진읍 전통시장",
 "owner": "",
+"slots": [
+{
+"time": "14:30",
+"place": "간성읍 및 거진읍 전통시장"
+}
+],
 "id": "e13f64d4d532656cb267407b",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3619,6 +4862,12 @@
 "time": "15:40",
 "place": "초계종합교육센터",
 "owner": "이지원, 정승환",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
 "id": "37360cc541150b4b2d3fe9cf",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3633,6 +4882,12 @@
 "time": "16:00",
 "place": "간성전통시장",
 "owner": "임금선",
+"slots": [
+{
+"time": "16:00",
+"place": "간성전통시장"
+}
+],
 "id": "193e6ec6408b4212ebe05d67",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3647,6 +4902,12 @@
 "time": "18:30",
 "place": "미정",
 "owner": "",
+"slots": [
+{
+"time": "18:30",
+"place": "미정"
+}
+],
 "id": "edb08d5b44bf1c0d79ee2ec6",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3661,6 +4922,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "4471afd8cbeea78d15732868",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3675,6 +4937,7 @@
 "time": "09:00",
 "place": "동광초",
 "owner": "이현숙",
+"slots": [],
 "id": "dec7fa779a03dcf6eda0d26d",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3689,6 +4952,12 @@
 "time": "09:20",
 "place": "양양 조산초",
 "owner": "김강진",
+"slots": [
+{
+"time": "09:20",
+"place": "양양 조산초"
+}
+],
 "id": "9a0e40acc5d2b6c8f88ac134",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3703,6 +4972,12 @@
 "time": "13:00",
 "place": "아야진초",
 "owner": "윤미송",
+"slots": [
+{
+"time": "13:00",
+"place": "아야진초"
+}
+],
 "id": "1eb6d8488ac8fc4985beaf9e",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3715,8 +4990,18 @@
 "kind": "weekly",
 "team": "학습종합클리닉센터",
 "time": "14:00",
-"place": "동광초",
+"place": "동광초, 고성중",
 "owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
 "id": "70e49162a3135f873781a950",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3731,6 +5016,12 @@
 "time": "14:00",
 "place": "위센터",
 "owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "위센터"
+}
+],
 "id": "dca544f0f4a3ca0f82d6d11d",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
@@ -3745,6 +5036,7 @@
 "time": "",
 "place": "",
 "owner": "",
+"slots": [],
 "id": "f5eca32ca0c2be5b1a798f54",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3759,6 +5051,7 @@
 "time": "18:30",
 "place": "대회의실",
 "owner": "이분현",
+"slots": [],
 "id": "ffa867f2055755b2613c2954",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
@@ -3773,6 +5066,7 @@
 "time": "19:00",
 "place": "대회의실",
 "owner": "심은경",
+"slots": [],
 "id": "0c70817dac4161fa0c21018d",
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 }

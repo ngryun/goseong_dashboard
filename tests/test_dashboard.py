@@ -63,6 +63,13 @@ class ParserTests(unittest.TestCase):
         # a lone place-like line is not mistaken for a person; the time line without a place leaves place empty
         self.assertEqual((wee['time'], wee['place'], wee['owner']), ('14:00', '', ''))
 
+    def test_weekly_multiple_time_lines_keep_each_pair(self):
+        rows = [['2026. 9. 7. ~ 9. 11.'], [], ['담당', '교육장'],
+                ['9.8.(화)', '○ 학교 방문\n- 10:00, 거진초, 거성초\n- 13:30, 광산초, 간성초\n- 박기철']]
+        e, _, _ = importer.parse_workbook(workbook([('주간', rows)]))
+        self.assertEqual((e[0]['time'], e[0]['place'], e[0]['owner']), ('10:00', '거진초, 거성초, 광산초, 간성초', '박기철'))
+        self.assertEqual(e[0]['slots'], [dict(time='10:00', place='거진초, 거성초'), dict(time='13:30', place='광산초, 간성초')])
+
     def test_time_normalization(self):
         self.assertEqual(importer.normalize_time('9:00, 강당')[0], '09:00')
         self.assertEqual(importer.normalize_time('9:30 - 11:00 회의')[0], '09:30~11:00')

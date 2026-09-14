@@ -107,16 +107,27 @@ def looks_like_names(text):
 
 
 def read_details(lines):
-    """Read time, place and owner from the '-' lines of a weekly task block."""
-    time, place, owner = '', '', ''
+    """Read time, place and owner from the '-' lines of a weekly task block.
+
+    Every line with a clock time becomes a slot {time, place}, so a task such as
+    "- 10:00, 인흥초, 천진초 / - 13:30, 도학초, 죽왕초" keeps both visits. `time` is the first
+    slot's time (used for ordering) and `place` joins the distinct slot places.
+    """
+    slots, owner = [], ''
     details = [re.sub(r'^\s*-\s*', '', ln).strip() for ln in lines if ln.strip().startswith('-')]
     for detail in details:
-        if not time and TIME_RE.search(detail):
+        if TIME_RE.search(detail):
             time, rest = normalize_time(detail)
-            place = place or clean_place(rest)
+            slots.append(dict(time=time, place=clean_place(rest)))
         elif not owner and looks_like_names(detail):
             owner = ', '.join(NAME_SPLIT_RE.split(detail))
-    if not place:
+    time = slots[0]['time'] if slots else ''
+    places = []
+    for slot in slots:
+        if slot['place'] and slot['place'] not in places:
+            places.append(slot['place'])
+    place = ', '.join(places)
+    if not slots:
         for detail in details:
             m = DATE_TOKEN_RE.match(detail)
             if m:
@@ -124,7 +135,7 @@ def read_details(lines):
                 if candidate and not looks_like_names(candidate):
                     place = candidate
                     break
-    return time, place, owner
+    return time, place, owner, slots
 
 
 def col_name(index):
@@ -144,8 +155,8 @@ def parse_workbook(blob, year=None):
         yr = int(ym[1]) if ym else year
         if not yr:
             warnings.append(f'{name}: 연도를 확인할 수 없어 제외했습니다.'); continue
-        def add(date, title, raw, row, col, kind, team='', time='', place='', owner=''):
-            events.append(dict(date=date, title=title.strip(), description=raw, tab=name, cell=f'{col_name(col)}{row}', kind=kind, team=team, time=time, place=place, owner=owner))
+        def add(date, title, raw, row, col, kind, team='', time='', place='', owner='', slots=None):
+            events.append(dict(date=date, title=title.strip(), description=raw, tab=name, cell=f'{col_name(col)}{row}', kind=kind, team=team, time=time, place=place, owner=owner, slots=slots or []))
         if '월중' in name:
             mm = re.search(r'(\d{1,2})\s*월', name)
             if not mm: continue
@@ -199,10 +210,10 @@ def parse_workbook(blob, year=None):
                             if line.strip().startswith('-'): break
                             title_parts.append(line.strip())
                         title = ' '.join(title_parts) or lines[0]
-                        time, place, owner = read_details(lines)
+                        time, place, owner, slots = read_details(lines)
                         if not time:
                             time = normalize_time(block)[0]
-                        add(date, title, block, rn, ci+1, 'weekly', team=team, time=time, place=place, owner=owner)
+                        add(date, title, block, rn, ci+1, 'weekly', team=team, time=time, place=place, owner=owner, slots=slots)
     if not recognized: raise ValueError('지원하는 월중행사 또는 주간업무 표를 찾지 못했습니다. 기존 데이터는 유지됩니다.')
     if not events: raise ValueError('가져올 일정이 없습니다. 빈 시트로 기존 데이터를 덮어쓰지 않았습니다.')
     return events, warnings, [t['name'] for t in tabs]
