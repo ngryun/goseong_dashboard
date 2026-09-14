@@ -182,3 +182,6 @@ body.dark .brand-symbol{filter:brightness(1.3) saturate(1.05)}
 .registry-box .button{width:100%;padding:11px 14px;font-weight:600}
 .registry-box .muted{margin-top:12px}
 .registry-box code{font:inherit;background:var(--bg);padding:1px 5px;border-radius:4px}
+
+/* Intro holds only the today card, aligned left under the header. */
+.intro{justify-content:flex-start;margin-bottom:22px}.today-card{text-align:left}
