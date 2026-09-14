@@ -46,6 +46,38 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(e[2]['date'], '2026-09-01')
         self.assertIn('- 담당', e[0]['description'])
 
+    def test_weekly_details_time_range_place_and_owner(self):
+        rows = [['2026. 9. 14. ~ 9. 18.'], [], ['담당', '문화체육특수', '시설팀', '학교지원팀', 'Wee센터'],
+                ['9.15.(화)',
+                 '○ 지역연계 찾아가는\n   문화예술교육 (루센앙상블)\n- 11:00~12:20, 대진초\n- 남궁연',
+                 '○ 학교시설 점검\n- 8.31(월)~9.03(목), 도학초 외 9교\n- 박구원, 윤동열',
+                 '○ 순회 컨설팅\n- 10:00, 거진중, 거진고\n- 담당',
+                 '○ 위기학생 상담\n- 위센터\n- 14:00']]
+        e, _, _ = importer.parse_workbook(workbook([('주간', rows)]))
+        self.assertEqual(len(e), 4)
+        arts, facilities, consulting, wee = e
+        self.assertEqual(arts['title'], '지역연계 찾아가는 문화예술교육 (루센앙상블)')
+        self.assertEqual((arts['time'], arts['place'], arts['owner']), ('11:00~12:20', '대진초', '남궁연'))
+        self.assertEqual((facilities['time'], facilities['place'], facilities['owner']), ('', '도학초 외 9교', '박구원, 윤동열'))
+        self.assertEqual((consulting['time'], consulting['place'], consulting['owner']), ('10:00', '거진중, 거진고', ''))
+        # a lone place-like line is not mistaken for a person; the time line without a place leaves place empty
+        self.assertEqual((wee['time'], wee['place'], wee['owner']), ('14:00', '', ''))
+
+    def test_time_normalization(self):
+        self.assertEqual(importer.normalize_time('9:00, 강당')[0], '09:00')
+        self.assertEqual(importer.normalize_time('9:30 - 11:00 회의')[0], '09:30~11:00')
+        self.assertEqual(importer.normalize_time('오전 회의')[0], '')
+        self.assertTrue(importer.looks_like_names('정명훈, 김강진, 서명원'))
+        self.assertFalse(importer.looks_like_names('참석'))
+        self.assertFalse(importer.looks_like_names('아야진초'))
+        self.assertFalse(importer.looks_like_names('학습종합클리닉센터'))
+
+    def test_monthly_time_range_is_normalized(self):
+        rows = [['2026년 9월 월중행사'], [], ['', '일', '요일', '시간', '행사명', '', '장소', '담당자'],
+                ['', '3', '목', '9:30~11:00', '', '연수', '대회의실', '김담당']]
+        e, _, _ = importer.parse_workbook(workbook([('9월 월중행사', rows)]))
+        self.assertEqual(e[0]['time'], '09:30~11:00')
+
     def test_year_rollover(self):
         b = workbook([('행정과', [['2026. 12. 28. ~ 2027. 1. 2.'], [], ['담당', '총무'], ['12.31.(목)', '○ 회의'], ['1.1.(금)', '○ 신년']])])
         self.assertEqual(importer.parse_workbook(b)[0][1]['date'], '2027-01-01')

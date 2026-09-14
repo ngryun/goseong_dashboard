@@ -30,7 +30,7 @@
 .category-dot{display:inline-block;width:6px;height:6px;background:var(--category);border-radius:50%;flex-shrink:0}
 .week-guide{display:flex;justify-content:space-between;gap:10px;padding:0 22px 12px;font-size:12px;color:var(--secondary)}
 .week-guide>span:first-child{font-weight:600;color:var(--text)}
-.week-table-scroll{position:relative;overflow:auto;max-height:72vh;isolation:isolate;scrollbar-gutter:stable;border-top:1px solid var(--border)}
+.week-table-scroll{position:relative;overflow-x:auto;overflow-y:visible;max-height:none;isolation:isolate;border-top:1px solid var(--border)}
 .week-table{width:100%;min-width:1250px;border-collapse:separate;border-spacing:0;table-layout:fixed;text-align:left}
 .week-table th,.week-table td{border-right:1px solid var(--border);border-bottom:1px solid var(--border);vertical-align:top}
 .week-table tr>*:last-child{border-right:0}
@@ -63,7 +63,7 @@
 .week-task .task-place{display:block;font-size:11px;color:var(--secondary);margin-top:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:850px){.is-week .side{grid-template-columns:1fr}.is-week #day-events{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.week-group-controls{padding:0 12px 12px;gap:6px}.week-group-controls button{font-size:11px;padding:6px 9px}.week-guide{padding:0 12px 12px;flex-direction:column;gap:2px}.week-table{min-width:1270px}.week-table .team-column{width:134px;padding:14px 10px}.team-name{font-size:12px}.week-table thead .team-column{padding:13px 10px}.week-table-scroll{max-height:68vh}.is-week #day-events{grid-template-columns:1fr}.is-week .date-nav h2{font-size:16px;margin-right:0}}
+@media(max-width:560px){.week-group-controls{padding:0 12px 12px;gap:6px}.week-group-controls button{font-size:11px;padding:6px 9px}.week-guide{padding:0 12px 12px;flex-direction:column;gap:2px}.week-table{min-width:1270px}.week-table .team-column{width:134px;padding:14px 10px}.team-name{font-size:12px}.week-table thead .team-column{padding:13px 10px}.week-table-scroll{max-height:none;overflow-x:auto}.is-week #day-events{grid-template-columns:1fr}.is-week .date-nav h2{font-size:16px;margin-right:0}}
 
 .dot.weekly{background:linear-gradient(90deg,#267cad 25%,#a06b24 25% 50%,#27836c 50% 75%,#7c60ac 75%)}
 
@@ -149,3 +149,10 @@ body.dark .brand-symbol{filter:brightness(1.3) saturate(1.05)}
   .panel-top{flex-wrap:wrap;gap:8px}
   .calendar-actions{width:100%;justify-content:flex-end;gap:12px}
 }
+
+/* Week view: the table flows with the page (no inner scroll) and the Daily Brief is hidden. */
+.is-week .side{display:none}
+.is-week .workspace{grid-template-columns:minmax(0,1fr)}
+@media(max-width:850px){.is-week .side{display:none}}
+/* Wide screens: the table fits, so let it flow and keep the weekday header pinned to the viewport. */
+@media(min-width:1330px){.week-table-scroll{overflow:visible}.is-week .calendar-panel{overflow:visible}.week-table thead th{top:0}}

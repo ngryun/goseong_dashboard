@@ -57,6 +57,76 @@ def read_workbook(blob):
             result.append({'name': s.attrib['name'], 'rows': rows})
         return result
 
+# --- detail-line reading for weekly tasks -------------------------------------------
+# A weekly task block looks like:
+#   지역연계 찾아가는 문화예술교육 (루센앙상블)
+#   - 11:00~12:20, 대진초
+#   - 남궁연
+# The first line(s) are the title; "- " lines carry time (optionally a range), places and names.
+TIME_RE = re.compile(r'(?<!\d)([0-2]?\d):([0-5]\d)(?!\d)')
+RANGE_RE = re.compile(r'(?<!\d)([0-2]?\d:[0-5]\d)\s*[~∼～\-–—]\s*([0-2]?\d:[0-5]\d)(?!\d)')
+DATE_TOKEN_RE = re.compile(r'^\d{1,2}\s*\.\s*\d{1,2}\s*\.?\s*(?:\([^)]*\))?(?:\s*[~∼～\-–—]\s*\d{1,2}\s*\.\s*\d{1,2}\s*\.?\s*(?:\([^)]*\))?)?')
+NAME_LIST_RE = re.compile(r'^[가-힣]{2,4}(?:\s*[,，·/]\s*[가-힣]{2,4})*$')
+NAME_SPLIT_RE = re.compile(r'\s*[,，·/]\s*')
+PLACE_LIKE_RE = re.compile(r'(초|중|고|교|센터|회의실|교육청|지원청|연수원|연구원|도서관|체육관|학교|유치원|사무실|강당|문화의집)$')
+NOT_A_NAME = {'담당', '참석', '출장', '협의', '회의', '연수', '점검', '지원', '운영', '미정', '추후', '예정', '진행', '실시', '준비',
+              '확인', '검토', '보고', '제출', '발송', '안내', '접수', '배부', '방문', '상담', '교육', '행사', '대회', '시험', '평가',
+              '선정', '공고', '심사', '면접', '현장', '관내', '전체', '학교', '학생', '교사', '교원', '학부모', '직원', '관계자',
+              '전원', '각자', '별도', '동일', '상동', '해당', '기타', '없음', '취소', '연기', '변경',
+              # region names that appear alone as a place
+              '고성', '강릉', '속초', '양양', '평창', '춘천', '원주', '동해', '삼척', '태백', '정선', '영월', '홍천', '횡성',
+              '철원', '화천', '양구', '인제', '서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종', '경기', '강원',
+              '충북', '충남', '전북', '전남', '경북', '경남', '제주', '간성', '거진', '토성', '죽왕', '현내', '수동', '관외'}
+SEPARATOR_EDGES_RE = re.compile(r'^[\s,，·/:\-–—~]+|[\s,，·/:\-–—~]+$')
+
+
+def normalize_time(text):
+    """Return ('HH:MM' or 'HH:MM~HH:MM', text with that token removed). ('' , text) when none."""
+    m = RANGE_RE.search(text)
+    if m:
+        token = f'{m[1].zfill(5)}~{m[2].zfill(5)}'
+    else:
+        m = TIME_RE.search(text)
+        if not m:
+            return '', text
+        token = f'{m[1]}:{m[2]}'.zfill(5)
+    return token, text[:m.start()] + ' ' + text[m.end():]
+
+
+def clean_place(text):
+    return SEPARATOR_EDGES_RE.sub('', text).strip()
+
+
+def looks_like_names(text):
+    if not NAME_LIST_RE.fullmatch(text):
+        return False
+    for token in NAME_SPLIT_RE.split(text):
+        if token in NOT_A_NAME or (len(token) >= 3 and PLACE_LIKE_RE.search(token)):
+            return False
+    return True
+
+
+def read_details(lines):
+    """Read time, place and owner from the '-' lines of a weekly task block."""
+    time, place, owner = '', '', ''
+    details = [re.sub(r'^\s*-\s*', '', ln).strip() for ln in lines if ln.strip().startswith('-')]
+    for detail in details:
+        if not time and TIME_RE.search(detail):
+            time, rest = normalize_time(detail)
+            place = place or clean_place(rest)
+        elif not owner and looks_like_names(detail):
+            owner = ', '.join(NAME_SPLIT_RE.split(detail))
+    if not place:
+        for detail in details:
+            m = DATE_TOKEN_RE.match(detail)
+            if m:
+                candidate = clean_place(detail[m.end():])
+                if candidate and not looks_like_names(candidate):
+                    place = candidate
+                    break
+    return time, place, owner
+
+
 def col_name(index):
     out = ''
     while index:
@@ -95,6 +165,8 @@ def parse_workbook(blob, year=None):
                 time = r[3]
                 if re.fullmatch(r'0?\.\d+', time):
                     mins = round(float(time)*1440); time = f'{mins//60:02}:{mins%60:02}'
+                else:
+                    time = normalize_time(time)[0] or time.strip()
                 add(date, title, raw, rn, 6 if r[5] else 5, 'monthly', time=time, place=r[6], owner=r[7])
         else:
             header = next(((n, r) for n, r in rows if r and r[0] == '담당'), None)
@@ -127,8 +199,10 @@ def parse_workbook(blob, year=None):
                             if line.strip().startswith('-'): break
                             title_parts.append(line.strip())
                         title = ' '.join(title_parts) or lines[0]
-                        tm = re.search(r'(?<!\d)([0-2]?\d:[0-5]\d)', block)
-                        add(date, title, block, rn, ci+1, 'weekly', team=team, time=tm[1].zfill(5) if tm else '')
+                        time, place, owner = read_details(lines)
+                        if not time:
+                            time = normalize_time(block)[0]
+                        add(date, title, block, rn, ci+1, 'weekly', team=team, time=time, place=place, owner=owner)
     if not recognized: raise ValueError('지원하는 월중행사 또는 주간업무 표를 찾지 못했습니다. 기존 데이터는 유지됩니다.')
     if not events: raise ValueError('가져올 일정이 없습니다. 빈 시트로 기존 데이터를 덮어쓰지 않았습니다.')
     return events, warnings, [t['name'] for t in tabs]
