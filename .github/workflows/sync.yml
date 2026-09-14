@@ -42,6 +42,10 @@ jobs:
             git push
           fi
 
+      - name: 화면 파일 캐시 버전 갱신
+        if: always()
+        run: python3 tools/version_assets.py
+
       - name: Pages 배포 준비
         if: always()
         uses: actions/configure-pages@v5
