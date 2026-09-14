@@ -1,0 +1,40 @@
+name: 시트 동기화
+
+on:
+  schedule:
+    - cron: '0 * * * *'        # 매시 정각(UTC). 한국 시간으로도 매시 정각입니다.
+  workflow_dispatch:           # Actions 탭에서 "Run workflow"로 즉시 실행
+  push:
+    paths:
+      - sources.json
+      - importer.py
+      - build_data.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 시트 읽어 data.json 생성
+        run: python3 build_data.py
+
+      - name: 변경된 data.json 커밋
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "데이터 동기화 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+            git push
+          fi
