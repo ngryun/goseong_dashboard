@@ -172,6 +172,20 @@ class BuildTests(unittest.TestCase):
             reg = workbook([('등록', [[URL2, '시트', '2026']])])
             self.assertEqual([e['label'] for e in build_data.load_registry(p, fetch=lambda sid: reg)], ['파일', '시트'])
 
+    def test_registry_url_is_recorded_and_changes_count_as_content(self):
+        first, _ = build_data.build(self.ENTRIES, {}, fetch=self.FETCH_MONTH, now='t1', registry='')
+        self.assertEqual(first['registry_sheet'], '')
+        again, _ = build_data.build(self.ENTRIES, first, fetch=self.FETCH_MONTH, now='t2', registry=URL2)
+        self.assertEqual((again['registry_sheet'], again['updated_at']), (URL2, 't2'))
+        same, _ = build_data.build(self.ENTRIES, again, fetch=self.FETCH_MONTH, now='t3', registry=URL2)
+        self.assertIs(same, again)
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / 'sources.json'
+            p.write_text(json.dumps(dict(registry_sheet=URL + '?gid=0#gid=0', sources=[])), encoding='utf-8')
+            self.assertEqual(build_data.registry_url(p), URL)
+            p.write_text('{"sources": []}', encoding='utf-8')
+            self.assertEqual(build_data.registry_url(p), '')
+
     def test_main_writes_status_every_run_and_data_only_on_change(self):
         with tempfile.TemporaryDirectory() as d:
             p, out = Path(d) / 'sources.json', Path(d) / 'site' / 'data.json'

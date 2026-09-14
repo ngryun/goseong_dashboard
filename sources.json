@@ -1,10 +1,26 @@
 {
-  "_도움말": "sources 목록에 시트를 추가하거나, registry_sheet에 등록용 Google 시트 주소를 넣으면 그 시트의 각 행(주소·표시 이름·기준 연도)을 함께 읽습니다. 중지 또는 제외라고 적힌 행은 건너뜁니다.",
-  "registry_sheet": "",
+  "_도움말": "registry_sheet에 적힌 등록용 Google 시트의 각 행(주소·표시이름·기준연도·사용)을 15분마다 읽어 sources 목록에 더합니다. 사용 칸에 중지 또는 제외라고 적힌 행은 건너뜁니다. sources 배열은 코드로 고정 등록할 때만 씁니다.",
+  "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
   "sources": [
-    {"url": "https://docs.google.com/spreadsheets/d/1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y/edit", "label": "2026년 9월 1주 · 월중행사", "year": 2026},
-    {"url": "https://docs.google.com/spreadsheets/d/1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk/edit", "label": "2026년 9월 2주", "year": 2026},
-    {"url": "https://docs.google.com/spreadsheets/d/1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA/edit", "label": "2026년 9월 3주", "year": 2026},
-    {"url": "https://docs.google.com/spreadsheets/d/1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o/edit", "label": "2026년 9월 4주", "year": 2026}
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y/edit",
+      "label": "2026년 9월 1주 · 월중행사",
+      "year": 2026
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk/edit",
+      "label": "2026년 9월 2주",
+      "year": 2026
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA/edit",
+      "label": "2026년 9월 3주",
+      "year": 2026
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o/edit",
+      "label": "2026년 9월 4주",
+      "year": 2026
+    }
   ]
 }

@@ -54,6 +54,13 @@ def load_registry(path=SOURCES_FILE, fetch=download):
     return entries
 
 
+def registry_url(path=SOURCES_FILE):
+    """Canonical URL of the registry sheet, or '' when none is configured."""
+    config = json.loads(Path(path).read_text(encoding='utf-8'))
+    url = config.get('registry_sheet') or ''
+    return f'https://docs.google.com/spreadsheets/d/{sheet_id(url)}/edit' if url else ''
+
+
 def _content(source):
     return {k: source.get(k) for k in CONTENT_KEYS}
 
@@ -83,7 +90,7 @@ def collect(sid, blob, year, previous_events):
     return items, warnings, tabs
 
 
-def build(entries, previous, fetch=download, now=None):
+def build(entries, previous, fetch=download, now=None, registry=''):
     """Return (data, status).
 
     data: schedule content plus data_at/updated_at stamps; equals `previous` when nothing changed.
@@ -149,10 +156,10 @@ def build(entries, previous, fetch=download, now=None):
 
     events.sort(key=lambda e: (e['date'], e['time'], e['title']))
     unchanged = ([_content(s) for s in previous.get('sources', [])] == [_content(s) for s in sources]
-                 and previous.get('events', []) == events)
+                 and previous.get('events', []) == events and previous.get('registry_sheet', '') == registry)
     if unchanged and previous.get('updated_at'):
         return previous, status
-    return dict(updated_at=now, sources=sources, events=events), status
+    return dict(updated_at=now, registry_sheet=registry, sources=sources, events=events), status
 
 
 def dump(value):
@@ -173,7 +180,7 @@ def main():
     except Exception as ex:
         print(f'등록 목록을 읽지 못했습니다: {ex}', file=sys.stderr)
         return 1
-    data, status = build(entries, previous)
+    data, status = build(entries, previous, registry=registry_url(args.sources))
     output.parent.mkdir(parents=True, exist_ok=True)
     serialized = dump(data)
     changed = not output.exists() or output.read_text(encoding='utf-8') != serialized
