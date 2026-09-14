@@ -65,7 +65,7 @@ function renderWeek(events) {
   const allWeek=data.events.filter(e=>e.date>=dateKey(start)&&e.date<=dateKey(end));
   const unknown=[...new Set(allWeek.filter(e=>e.kind==='weekly'&&groupFor(e)==='other').map(e=>e.team||'담당 미기재'))];
   const groups=[...TEAM_GROUPS,...(unknown.length?[{id:'other',label:'기타 담당',teams:unknown}]:[]),{id:'monthly',label:'월중행사',teams:['월중행사']}];
-  const controls=`<div class="week-group-controls" role="group" aria-label="업무 묶음 필터"><button data-group="" aria-pressed="${!activeGroup}" class="${!activeGroup?'active':''}">전체 담당</button>${groups.map(g=>`<button data-group="${g.id}" aria-pressed="${activeGroup===g.id}" class="category-${g.id} ${activeGroup===g.id?'active':''}"><span class="category-dot"></span>${esc(g.label)}</button>`).join('')}</div><div class="week-guide"><span>담당 분야별로 한 주의 업무를 비교하세요.</span><span>↔ 가로 이동 · 담당명과 요일 고정</span></div>`;
+  const controls=`<div class="week-group-controls" role="group" aria-label="업무 묶음 필터"><button data-group="" aria-pressed="${!activeGroup}" class="${!activeGroup?'active':''}">전체 담당</button>${groups.map(g=>`<button data-group="${g.id}" aria-pressed="${activeGroup===g.id}" class="category-${g.id} ${activeGroup===g.id?'active':''}"><span class="category-dot"></span>${esc(g.label)}</button>`).join('')}</div><div class="week-guide"><span>담당별 주간업무</span><span>좌우로 이동 · 담당과 요일 고정</span></div>`;
   let html='<div class="week-table-scroll" tabindex="0" role="region" aria-label="담당별 주간업무 표, 가로 스크롤 가능"><table class="week-table"><caption class="sr-only">담당 분야별 주간업무, '+esc($('#period-title').textContent)+'</caption><thead><tr><th scope="col" class="team-column">담당 분야 <small>주간 업무 건수</small></th>';
   html+=days.map(d=>`<th scope="col" class="${dateKey(d)===todayKey?'is-today':''}"><button data-date="${dateKey(d)}" aria-pressed="${selected===dateKey(d)}"><span>${['일','월','화','수','목','금','토'][d.getDay()]}</span><strong>${d.getMonth()+1}.${d.getDate()}</strong>${dateKey(d)===todayKey?'<em>오늘</em>':''}</button></th>`).join('')+'</tr></thead>';
   let rowCount=0;
@@ -84,7 +84,7 @@ function renderWeek(events) {
       html+=`<tr class="team-row"><th scope="row" class="team-column"><span class="team-name">${esc(team)}</span><small>${items.length}건</small></th>`;
       html+=days.map(d=>{
         const daily=items.filter(e=>e.date===dateKey(d));
-        return `<td class="${dateKey(d)===todayKey?'is-today':''}">${daily.map(e=>`<button class="week-task" data-event="${e.id}"><span class="task-time">${esc(e.time||'시간 미기재')}</span><strong>${esc(e.title)}</strong>${e.place?`<span class="task-place">${esc(e.place)}</span>`:''}</button>`).join('')||'<span class="no-task" aria-label="등록된 업무 없음">—</span>'}</td>`;
+        return `<td class="${dateKey(d)===todayKey?'is-today':''}">${daily.map(e=>`<button class="week-task" data-event="${e.id}" title="${esc(e.title)}"><span class="task-time">${esc(e.time||'시간 미기재')}</span><strong>${esc(e.title)}</strong>${e.place?`<span class="task-place">${esc(e.place)}</span>`:''}</button>`).join('')||'<span class="sr-only">등록된 업무 없음</span>'}</td>`;
       }).join('')+'</tr>';
     }
     html+='</tbody>';
