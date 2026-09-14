@@ -1,11 +1,11 @@
 # 고성교육지원청 업무 대시보드
 
-Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 매시 정각에 시트를 읽어 `docs/data.json` 하나로 합쳐 두고, GitHub Pages가 `docs/` 폴더를 그대로 서빙합니다. 방문자의 브라우저는 JSON 파일 하나만 읽습니다.
+Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 15분마다 시트를 읽어 `docs/data.json` 하나로 합쳐 두고, GitHub Pages가 `docs/` 폴더를 그대로 서빙합니다. 방문자의 브라우저는 JSON 파일 하나만 읽습니다.
 
 ```
 sources.json ──▶ build_data.py ──▶ docs/data.json ──▶ docs/index.html
  (시트 목록)   (GitHub Actions,     (합쳐진 일정)       (GitHub Pages)
-                매시 정각 실행)
+                15분마다 실행)
 ```
 
 ## 구성 파일
@@ -13,7 +13,7 @@ sources.json ──▶ build_data.py ──▶ docs/data.json ──▶ docs/ind
 - `sources.json`: 읽을 시트 목록. 시트를 추가·제거하는 곳입니다.
 - `importer.py`: Google 시트를 XLSX로 받아 월중행사·주간업무 표를 해석합니다. 표준 라이브러리만 사용합니다.
 - `build_data.py`: 목록의 시트를 모두 읽어 `docs/data.json`을 만듭니다. 실패한 시트는 마지막 데이터를 유지하고 오류를 기록합니다.
-- `.github/workflows/sync.yml`: 매시 정각 실행, 수동 실행, `sources.json` 변경 시 실행.
+- `.github/workflows/sync.yml`: 15분 간격 실행, 수동 실행, `sources.json` 변경 시 실행.
 - `docs/`: 화면(`index.html`, `app.js`, `style.css`, 로고 이미지)과 데이터(`data.json`).
 - `tests/test_dashboard.py`: 표 해석 규칙과 빌드 동작 검증.
 - `_legacy/`: 이전 Python 서버 방식의 파일. 사용하지 않으며 Git에도 올라가지 않습니다. 확인 후 삭제하세요.
@@ -32,7 +32,7 @@ sources.json ──▶ build_data.py ──▶ docs/data.json ──▶ docs/ind
    ```
 
 3. 저장소 **Settings → Pages**에서 Source를 *Deploy from a branch*, Branch를 `main`, 폴더를 `/docs`로 지정합니다. 1~2분 후 `https://<계정>.github.io/<저장소>/` 주소로 열립니다.
-4. **Actions** 탭에서 "시트 동기화" 워크플로를 열고 *Run workflow*를 눌러 첫 동기화를 실행합니다. 이후에는 매시 정각에 자동 실행됩니다.
+4. **Actions** 탭에서 "시트 동기화" 워크플로를 열고 *Run workflow*를 눌러 첫 동기화를 실행합니다. 이후에는 15분마다 자동 실행됩니다.
 5. 실행이 `git push` 단계에서 403으로 실패하면 **Settings → Actions → General → Workflow permissions**를 *Read and write permissions*로 바꿉니다.
 
 ## 시트 추가·제거
@@ -51,12 +51,12 @@ GitHub을 다루지 않는 관리자가 시트 목록을 관리해야 한다면 
 
 ## 동작 기준
 
-- 시트는 매시 정각에 읽습니다. GitHub 사정으로 몇 분에서 수십 분 늦어질 수 있습니다. 즉시 반영하려면 Actions에서 수동 실행합니다.
+- 시트는 15분마다(매시 4·19·34·49분) 읽습니다. GitHub 사정으로 몇 분에서 수십 분 늦어질 수 있습니다. 즉시 반영하려면 Actions에서 수동 실행합니다.
 - 화면은 열려 있는 동안 5분마다 `data.json`을 다시 읽습니다.
 - 다운로드·해석에 실패한 시트는 마지막으로 성공한 데이터를 유지하고, 화면 오른쪽 "연결된 업무계획" 아래 확인 사항에 오류를 표시합니다. 실패가 있으면 워크플로 실행이 실패로 표시되어 저장소 소유자에게 GitHub 알림이 갑니다.
 - 같은 시트를 두 번 등록하면 한 번만 읽습니다. 월중행사와 주간업무의 동일 업무는 출처별로 각각 표시되며, 숫자는 기재된 항목 수입니다.
 - 원본 시트에는 쓰기 작업을 하지 않습니다. 완료·진행 상태는 원본에 없으므로 표시하지 않습니다.
-- 60일간 저장소에 아무 커밋이 없으면 GitHub이 예약 실행을 끕니다. 데이터 변경이 매시간 커밋되므로 평소에는 해당되지 않습니다.
+- 60일간 저장소에 아무 커밋이 없으면 GitHub이 예약 실행을 끕니다. 데이터 변경이 수시로 커밋되므로 평소에는 해당되지 않습니다.
 
 ## 지원하는 시트 형식
 

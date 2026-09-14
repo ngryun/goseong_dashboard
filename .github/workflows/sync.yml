@@ -2,7 +2,7 @@ name: 시트 동기화
 
 on:
   schedule:
-    - cron: '0 * * * *'        # 매시 정각(UTC). 한국 시간으로도 매시 정각입니다.
+    - cron: '4,19,34,49 * * * *'   # 15분 간격. 정각 혼잡을 피해 4분씩 어긋나게 실행합니다.
   workflow_dispatch:           # Actions 탭에서 "Run workflow"로 즉시 실행
   push:
     paths:
