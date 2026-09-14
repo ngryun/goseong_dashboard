@@ -68,3 +68,7 @@
 #sync-warnings summary{cursor:pointer;color:var(--accent)}#sync-warnings ul{padding-left:16px;margin:6px 0 0}#sync-warnings li{overflow-wrap:anywhere}
 
 #sources{width:min(600px,calc(100vw - 32px))}#sources h2{margin:14px 0 6px}#sources .source-link{padding:12px 0;font-size:13px}#sources .muted{margin-top:14px}
+/* Daily Brief follows the calendar panel height; overflow scrolls inside the panel. */
+.workspace{align-items:stretch}.side{position:relative;top:auto;min-height:0}.day-panel{position:absolute;inset:0;display:flex;flex-direction:column}.day-panel .side-heading{flex:none}#day-events{flex:1 1 auto;min-height:0;max-height:none}
+.is-week .side,.is-week .day-panel{position:static}.is-week #day-events{max-height:420px}
+@media(max-width:850px){.side,.day-panel{position:static}#day-events{max-height:none}}
