@@ -57,31 +57,70 @@ class ParserTests(unittest.TestCase):
 
 
 class BuildTests(unittest.TestCase):
-    def test_build_is_deterministic_and_failure_keeps_previous_data(self):
-        entries = [dict(url=URL, label='9월', year=2026)]
-        first, failures = build_data.build(entries, {}, fetch=lambda sid: MONTH, now='t1')
-        self.assertEqual(failures, [])
+    ENTRIES = [dict(url=URL, label='9월', year=2026)]
+    FETCH_MONTH = staticmethod(lambda sid: MONTH)
+
+    def test_unchanged_content_returns_previous_and_stamps_only_on_change(self):
+        first, status = build_data.build(self.ENTRIES, {}, fetch=self.FETCH_MONTH, now='t1')
+        self.assertTrue(status['ok'])
+        self.assertEqual(status['checked_at'], 't1')
         self.assertEqual(len(first['events']), 2)
-        self.assertEqual(first['sources'][0]['count'], 2)
+        self.assertEqual((first['updated_at'], first['sources'][0]['data_at'], first['sources'][0]['count']), ('t1', 't1', 2))
         self.assertTrue(all(e['source_id'] == importer.SEEDS[0] and e['id'] for e in first['events']))
-        self.assertEqual(first, build_data.build(entries, first, fetch=lambda sid: MONTH, now='t1')[0])
+        again, status = build_data.build(self.ENTRIES, first, fetch=self.FETCH_MONTH, now='t2')
+        self.assertIs(again, first)
+        self.assertEqual(status['checked_at'], 't2')
+
+    def test_download_failure_keeps_previous_data_and_reports_status(self):
+        first, _ = build_data.build(self.ENTRIES, {}, fetch=self.FETCH_MONTH, now='t1')
 
         def broken(sid):
             raise ValueError('network')
-        second, failures = build_data.build(entries, first, fetch=broken, now='t2')
-        self.assertEqual(len(failures), 1)
-        self.assertEqual(second['events'], first['events'])
-        source = second['sources'][0]
-        self.assertEqual((source['error'], source['synced_at'], source['count']), ('network', 't1', 2))
-        unsupported, _ = build_data.build(entries, first, fetch=lambda sid: workbook([('unsupported', [['nothing']])]), now='t3')
-        self.assertEqual(unsupported['events'], first['events'])
-        self.assertTrue(unsupported['sources'][0]['error'])
+        second, status = build_data.build(self.ENTRIES, first, fetch=broken, now='t2')
+        self.assertIs(second, first)
+        self.assertFalse(status['ok'])
+        self.assertEqual(status['sources'][importer.SEEDS[0]], dict(ok=False, error='network'))
+        self.assertEqual(status['failures'], ['9월: network'])
+        third, status = build_data.build(self.ENTRIES, first, fetch=lambda sid: workbook([('unsupported', [['nothing']])]), now='t3')
+        self.assertIs(third, first)
+        self.assertFalse(status['ok'])
 
-    def test_invalid_entries_and_duplicates_are_reported(self):
-        entries = [dict(url='http://localhost/x'), dict(url=URL, year=2026), dict(url=URL + '#gid=5', year=2026), dict(url=URL2, year=1999)]
-        data, failures = build_data.build(entries, {}, fetch=lambda sid: MONTH, now='t')
+    def test_config_error_keeps_previous_data(self):
+        first, _ = build_data.build(self.ENTRIES, {}, fetch=self.FETCH_MONTH, now='t1')
+        bad = [dict(url=URL, label='9월', year=1999)]
+        second, status = build_data.build(bad, first, fetch=self.FETCH_MONTH, now='t2')
+        self.assertEqual(second['events'], first['events'])
+        self.assertEqual(second['sources'][0]['data_at'], 't1')
+        self.assertFalse(status['ok'])
+        self.assertIn('기준 연도', status['sources'][importer.SEEDS[0]]['error'])
+        second, status = build_data.build([dict(url=URL, label='9월', year='abc')], first, fetch=self.FETCH_MONTH, now='t3')
+        self.assertEqual(second['events'], first['events'])
+        self.assertFalse(status['ok'])
+
+    def test_tab_that_stops_yielding_events_keeps_previous_events_with_warning(self):
+        both = workbook([('9월 월중행사', [['2026년 9월 월중행사'], [], ['', '일', '요일', '시간', '행사명', '', '장소', '담당자'], ['', '1', '화', '10:00', '', '취임식', '대회의실', '홍길동']]),
+                         ('교육과', [['2026. 8. 31. ~ 9. 5.'], [], ['담당', '교육장'], ['9.1.(화)', '○ 연수']])])
+        first, _ = build_data.build(self.ENTRIES, {}, fetch=lambda sid: both, now='t1')
+        self.assertEqual(sorted(e['tab'] for e in first['events']), ['9월 월중행사', '교육과'])
+        # 교육과 tab now has a header the importer no longer recognizes
+        changed = workbook([('9월 월중행사', [['2026년 9월 월중행사'], [], ['', '일', '요일', '시간', '행사명', '', '장소', '담당자'], ['', '1', '화', '10:00', '', '취임식', '대회의실', '홍길동']]),
+                            ('교육과', [['2026. 8. 31. ~ 9. 5.'], [], ['부서', '교육장'], ['9.1.(화)', '○ 연수']])])
+        second, status = build_data.build(self.ENTRIES, first, fetch=lambda sid: changed, now='t2')
+        self.assertTrue(status['ok'])
+        self.assertEqual(sorted(e['tab'] for e in second['events']), ['9월 월중행사', '교육과'])
+        self.assertTrue(any('교육과' in w and '이전 데이터 1건을 유지' in w for w in second['sources'][0]['warnings']))
+        # tab removed entirely: still kept, different wording, tab listed
+        removed = workbook([('9월 월중행사', [['2026년 9월 월중행사'], [], ['', '일', '요일', '시간', '행사명', '', '장소', '담당자'], ['', '1', '화', '10:00', '', '취임식', '대회의실', '홍길동']])])
+        third, _ = build_data.build(self.ENTRIES, first, fetch=lambda sid: removed, now='t3')
+        self.assertIn('교육과', third['sources'][0]['tabs'])
+        self.assertTrue(any('탭이 사라져' in w for w in third['sources'][0]['warnings']))
+
+    def test_invalid_url_and_duplicates_are_reported(self):
+        entries = [dict(url='http://localhost/x'), dict(url=URL, year=2026), dict(url=URL + '#gid=5', year=2026)]
+        data, status = build_data.build(entries, {}, fetch=self.FETCH_MONTH, now='t')
         self.assertEqual(len(data['sources']), 1)
-        self.assertEqual(len(failures), 2)
+        self.assertEqual(len(status['failures']), 1)
+        self.assertFalse(status['ok'])
 
     def test_registry_sheet_rows(self):
         reg = workbook([('등록', [['주소', '표시 이름', '기준 연도', '사용'], [URL, '9월 1주', '2026', ''], [URL2, '옛 시트', '2025', '중지'], ['메모만 있는 행']])])
@@ -94,13 +133,18 @@ class BuildTests(unittest.TestCase):
             reg = workbook([('등록', [[URL2, '시트', '2026']])])
             self.assertEqual([e['label'] for e in build_data.load_registry(p, fetch=lambda sid: reg)], ['파일', '시트'])
 
-    def test_main_writes_output_for_empty_registry(self):
+    def test_main_writes_status_every_run_and_data_only_on_change(self):
         with tempfile.TemporaryDirectory() as d:
             p, out = Path(d) / 'sources.json', Path(d) / 'site' / 'data.json'
             p.write_text('{"sources": []}', encoding='utf-8')
             sys.argv = ['build_data.py', '--sources', str(p), '--output', str(out)]
             self.assertEqual(build_data.main(), 0)
             self.assertEqual(json.loads(out.read_text(encoding='utf-8'))['events'], [])
+            first_mtime = out.stat().st_mtime_ns
+            status = json.loads((out.parent / 'status.json').read_text(encoding='utf-8'))
+            self.assertTrue(status['ok'])
+            self.assertEqual(build_data.main(), 0)
+            self.assertEqual(out.stat().st_mtime_ns, first_mtime)
 
 
 if __name__ == '__main__':

@@ -3,15 +3,14 @@ name: 시트 동기화
 on:
   schedule:
     - cron: '4,19,34,49 * * * *'   # 15분 간격. 정각 혼잡을 피해 4분씩 어긋나게 실행합니다.
-  workflow_dispatch:           # Actions 탭에서 "Run workflow"로 즉시 실행
+  workflow_dispatch:               # Actions 탭에서 "Run workflow"로 즉시 실행
   push:
-    paths:
-      - sources.json
-      - importer.py
-      - build_data.py
+    branches: [main]               # 화면·설정·코드 변경도 같은 흐름으로 배포
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: sync
@@ -20,21 +19,46 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: 시트 읽어 data.json 생성
+      - name: 시트 읽어 data.json·status.json 생성
+        id: build
         run: python3 build_data.py
 
-      - name: 변경된 data.json 커밋
+      - name: 일정이 바뀐 경우에만 data.json 커밋
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data.json
           if git diff --cached --quiet; then
-            echo "변경 없음"
+            echo "일정 변경 없음"
           else
-            git commit -m "데이터 동기화 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+            git commit -m "데이터 변경 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
             git push
           fi
+
+      - name: Pages 배포 준비
+        if: always()
+        uses: actions/configure-pages@v5
+
+      - name: docs 폴더 업로드
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Pages 배포
+        if: always()
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: 수집 실패 알림
+        if: always() && steps.build.outcome == 'failure'
+        run: |
+          echo "일부 시트를 읽지 못했습니다. 화면은 마지막 성공 데이터를 유지합니다." >&2
+          exit 1

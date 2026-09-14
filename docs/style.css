@@ -72,3 +72,4 @@
 .workspace{align-items:stretch}.side{position:relative;top:auto;min-height:0}.day-panel{position:absolute;inset:0;display:flex;flex-direction:column}.day-panel .side-heading{flex:none}#day-events{flex:1 1 auto;min-height:0;max-height:none}
 .is-week .side,.is-week .day-panel{position:static}.is-week #day-events{max-height:420px}
 @media(max-width:850px){.side,.day-panel{position:static}#day-events{max-height:none}}
+.source-link.has-error small b{color:#b65c31;font-weight:600}

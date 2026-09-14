@@ -1,16 +1,11 @@
 {
-"generated_at": "2026-09-14T12:35:58+00:00",
+"updated_at": "2026-09-14T13:07:30+00:00",
 "sources": [
 {
 "id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y",
 "url": "https://docs.google.com/spreadsheets/d/1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y/edit",
 "label": "2026년 9월 1주 · 월중행사",
 "year": 2026,
-"synced_at": "2026-09-14T12:35:58+00:00",
-"error": null,
-"warnings": [
-"9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
-],
 "tabs": [
 "9월 월중행사",
 "교육과1(9월1주)",
@@ -18,55 +13,56 @@
 "교육과3(9월1주)",
 "행정과(9월1주)"
 ],
-"count": 79
+"warnings": [
+"9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
+],
+"count": 79,
+"data_at": "2026-09-14T13:07:30+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
 "url": "https://docs.google.com/spreadsheets/d/1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk/edit",
 "label": "2026년 9월 2주",
 "year": 2026,
-"synced_at": "2026-09-14T12:35:58+00:00",
-"error": null,
-"warnings": [],
 "tabs": [
 "교육과1(9월2주)",
 "교육과2(9월2주)",
 "교육과3(9월2주)",
 "행정과(9월2주)"
 ],
-"count": 84
+"warnings": [],
+"count": 84,
+"data_at": "2026-09-14T13:07:30+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
 "url": "https://docs.google.com/spreadsheets/d/1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA/edit",
 "label": "2026년 9월 3주",
 "year": 2026,
-"synced_at": "2026-09-14T12:35:58+00:00",
-"error": null,
-"warnings": [],
 "tabs": [
 "교육과1(9월3주)",
 "교육과2(9월3주)",
 "교육과3(9월3주)",
 "행정과(9월3주)"
 ],
-"count": 75
+"warnings": [],
+"count": 75,
+"data_at": "2026-09-14T13:07:30+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
 "url": "https://docs.google.com/spreadsheets/d/1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o/edit",
 "label": "2026년 9월 4주",
 "year": 2026,
-"synced_at": "2026-09-14T12:35:58+00:00",
-"error": null,
-"warnings": [],
 "tabs": [
 "교육과1(9월4주)",
 "교육과2(9월4주)",
 "교육과3(9월4주)",
 "행정과(9월4주)"
 ],
-"count": 27
+"warnings": [],
+"count": 27,
+"data_at": "2026-09-14T13:07:30+00:00"
 }
 ],
 "events": [

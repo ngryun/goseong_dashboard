@@ -1,10 +1,10 @@
 # 고성교육지원청 업무 대시보드
 
-Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 15분마다 시트를 읽어 `docs/data.json` 하나로 합쳐 두고, GitHub Pages가 `docs/` 폴더를 그대로 서빙합니다. 방문자의 브라우저는 JSON 파일 하나만 읽습니다.
+Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 15분마다 시트를 읽어 `docs/data.json` 하나로 합치고, 같은 실행에서 `docs/` 폴더를 GitHub Pages에 직접 배포합니다. 방문자의 브라우저는 JSON 파일 두 개(`data.json` 일정, `status.json` 수집 상태)만 읽습니다.
 
 ```
-sources.json ──▶ build_data.py ──▶ docs/data.json ──▶ docs/index.html
- (시트 목록)   (GitHub Actions,     (합쳐진 일정)       (GitHub Pages)
+sources.json ──▶ build_data.py ──▶ docs/data.json + status.json ──▶ GitHub Pages 배포
+ (시트 목록)   (GitHub Actions,     (일정 · 이번 실행 상태)        (같은 워크플로에서)
                 15분마다 실행)
 ```
 
@@ -12,9 +12,9 @@ sources.json ──▶ build_data.py ──▶ docs/data.json ──▶ docs/ind
 
 - `sources.json`: 읽을 시트 목록. 시트를 추가·제거하는 곳입니다.
 - `importer.py`: Google 시트를 XLSX로 받아 월중행사·주간업무 표를 해석합니다. 표준 라이브러리만 사용합니다.
-- `build_data.py`: 목록의 시트를 모두 읽어 `docs/data.json`을 만듭니다. 실패한 시트는 마지막 데이터를 유지하고 오류를 기록합니다.
-- `.github/workflows/sync.yml`: 15분 간격 실행, 수동 실행, `sources.json` 변경 시 실행.
-- `docs/`: 화면(`index.html`, `app.js`, `style.css`, 로고 이미지)과 데이터(`data.json`).
+- `build_data.py`: 목록의 시트를 모두 읽어 `docs/data.json`(일정)과 `docs/status.json`(이번 실행의 확인 시각과 시트별 성공·오류)을 만듭니다. 다운로드·해석·설정 오류가 난 시트는 마지막 데이터를 유지합니다.
+- `.github/workflows/sync.yml`: 15분 간격 실행, 수동 실행, `main` push 시 실행. 일정이 바뀐 경우에만 `data.json`을 커밋하고, 매 실행마다 `docs/`를 Pages에 배포합니다.
+- `docs/`: 화면(`index.html`, `app.js`, `style.css`, 로고 이미지)과 데이터(`data.json`). `status.json`은 실행 때마다 새로 만들어 배포만 하고 Git에는 넣지 않습니다.
 - `tests/test_dashboard.py`: 표 해석 규칙과 빌드 동작 검증.
 - `_legacy/`: 이전 Python 서버 방식의 파일. 사용하지 않으며 Git에도 올라가지 않습니다. 확인 후 삭제하세요.
 
@@ -31,13 +31,13 @@ sources.json ──▶ build_data.py ──▶ docs/data.json ──▶ docs/ind
    git push -u origin main
    ```
 
-3. 저장소 **Settings → Pages**에서 Source를 *Deploy from a branch*, Branch를 `main`, 폴더를 `/docs`로 지정합니다. 1~2분 후 `https://<계정>.github.io/<저장소>/` 주소로 열립니다.
-4. **Actions** 탭에서 "시트 동기화" 워크플로를 열고 *Run workflow*를 눌러 첫 동기화를 실행합니다. 이후에는 15분마다 자동 실행됩니다.
+3. 저장소 **Settings → Pages**에서 Source를 *GitHub Actions*로 지정합니다. 브랜치 방식(*Deploy from a branch*)은 쓰지 않습니다. GitHub Actions가 `GITHUB_TOKEN`으로 만든 커밋은 브랜치 방식의 Pages 빌드를 일으키지 않기 때문에, 자동 동기화 결과가 사이트에 반영되지 않습니다.
+4. push 직후 "시트 동기화" 워크플로가 실행되어 첫 수집과 배포를 마칩니다. 1~2분 후 `https://<계정>.github.io/<저장소>/` 주소로 열립니다. 이후에는 15분마다 자동 실행됩니다.
 5. 실행이 `git push` 단계에서 403으로 실패하면 **Settings → Actions → General → Workflow permissions**를 *Read and write permissions*로 바꿉니다.
 
 ## 시트 추가·제거
 
-`sources.json`의 `sources` 배열에 한 줄을 추가하고 커밋하면 됩니다. 커밋되는 즉시 동기화가 실행됩니다.
+`sources.json`의 `sources` 배열에 한 줄을 추가하고 push하면 됩니다. push 직후 동기화와 배포가 실행됩니다.
 
 ```json
 {"url": "https://docs.google.com/spreadsheets/d/…/edit", "label": "2026년 10월 1주", "year": 2026}
@@ -52,11 +52,13 @@ GitHub을 다루지 않는 관리자가 시트 목록을 관리해야 한다면 
 ## 동작 기준
 
 - 시트는 15분마다(매시 4·19·34·49분) 읽습니다. GitHub 사정으로 몇 분에서 수십 분 늦어질 수 있습니다. 즉시 반영하려면 Actions에서 수동 실행합니다.
-- 화면은 열려 있는 동안 5분마다 `data.json`을 다시 읽습니다.
-- 다운로드·해석에 실패한 시트는 마지막으로 성공한 데이터를 유지하고, 화면 오른쪽 "연결된 업무계획" 아래 확인 사항에 오류를 표시합니다. 실패가 있으면 워크플로 실행이 실패로 표시되어 저장소 소유자에게 GitHub 알림이 갑니다.
+- 화면은 열려 있는 동안 5분마다, 그리고 탭으로 돌아올 때 데이터를 다시 읽고 한국 시간 기준 "오늘"을 다시 계산합니다.
+- 화면 상단의 "최근 확인"은 마지막 실행 시각, "데이터 기준"은 일정 내용이 마지막으로 바뀐 시각입니다. 마지막 실행이 3시간을 넘으면 자동 동기화가 멈춘 것으로 보고 경고를 띄웁니다.
+- 다운로드·해석·설정(연도 등) 오류가 난 시트는 마지막으로 성공한 데이터를 유지하고, "연결된 계획표" 팝업에 실패 표시와 확인 사항을 보여줍니다. 실패가 있으면 워크플로 실행이 실패로 표시되어 저장소 소유자에게 GitHub 알림이 갑니다. 배포는 실패 여부와 관계없이 진행됩니다.
+- 어떤 탭이 이전에는 일정을 갖고 있었는데 이번 수집에서 하나도 나오지 않으면(양식 변경 또는 탭 삭제) 그 탭의 이전 일정을 유지하고 확인 사항에 경고를 남깁니다. 실제로 탭을 비운 것이라면 경고를 보고 `sources.json`에서 해당 시트를 잠시 `"active": false`로 두었다가 다시 켜면 초기화됩니다.
 - 같은 시트를 두 번 등록하면 한 번만 읽습니다. 월중행사와 주간업무의 동일 업무는 출처별로 각각 표시되며, 숫자는 기재된 항목 수입니다.
 - 원본 시트에는 쓰기 작업을 하지 않습니다. 완료·진행 상태는 원본에 없으므로 표시하지 않습니다.
-- 60일간 저장소에 아무 커밋이 없으면 GitHub이 예약 실행을 끕니다. 데이터 변경이 수시로 커밋되므로 평소에는 해당되지 않습니다.
+- 일정 내용이 바뀐 실행에서만 `data.json`을 커밋하므로 커밋 이력은 실제 변경만 남습니다. 60일간 저장소에 아무 커밋이 없으면 GitHub이 예약 실행을 끄는데, 새 주간 시트가 매주 등록되는 운영에서는 해당되지 않습니다. 방학처럼 오래 변동이 없을 때는 Actions 탭에서 수동 실행 한 번으로 다시 켤 수 있습니다.
 
 ## 지원하는 시트 형식
 
@@ -77,7 +79,7 @@ python3 build_data.py
 python3 -m http.server -d docs 8080
 ```
 
-`http://127.0.0.1:8080`에서 확인합니다. `index.html`을 파일로 직접 열면 브라우저 보안 정책 때문에 `data.json`을 읽지 못하므로 위처럼 정적 서버가 필요합니다.
+`http://127.0.0.1:8080`에서 확인합니다. `index.html`을 파일로 직접 열면 브라우저 보안 정책 때문에 `data.json`을 읽지 못하므로 위처럼 정적 서버가 필요합니다. `status.json`은 로컬에서 `build_data.py`를 실행해야 생기며 없어도 화면은 동작합니다.
 
 ```bash
 python3 -m unittest discover -s tests -v
