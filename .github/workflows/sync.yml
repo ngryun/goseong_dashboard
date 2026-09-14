@@ -2,7 +2,7 @@ name: 시트 동기화
 
 on:
   schedule:
-    - cron: '4,19,34,49 * * * *'   # 15분 간격. 정각 혼잡을 피해 4분씩 어긋나게 실행합니다.
+    - cron: '7,22,37,52 * * * *'   # 15분 간격. 예약 재등록 및 정각 혼잡 회피.
   workflow_dispatch:               # Actions 탭에서 "Run workflow"로 즉시 실행
   push:
     branches: [main]               # 화면·설정·코드 변경도 같은 흐름으로 배포
