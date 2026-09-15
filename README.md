@@ -1,4 +1,4 @@
-# 고성교육지원청 업무 대시보드
+# 고성교육 캘린더
 
 Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주고, 관내 초·중·고의 학사일정과 시간표를 NEIS에서 가져와 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 15분마다 시트를 읽어 `docs/data.json` 하나로 합치고, 6시간마다 NEIS 학사일정을 `docs/schools.json`으로 만들며, 같은 실행에서 `docs/` 폴더를 GitHub Pages에 직접 배포합니다. 방문자의 브라우저는 JSON 파일(`data.json` 일정, `status.json` 수집 상태, `schools.json` 학교·학사일정)을 읽고, 시간표만 NEIS 개방 API에서 바로 읽습니다.
 
