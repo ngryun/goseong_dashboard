@@ -35,3 +35,33 @@ assert.equal(split.weekly[0].members.length,2);
 assert.equal(vm.runInContext('monthItems(input.filter(e=>e.kind==="monthly"),"2026-09-18").weekly.length',context),0);
 assert.equal(vm.runInContext('monthItems(input,"2026-09-20").monthly.length',context),0);
 console.log('Monthly titles and weekly counts stay separate; filters and empty dates verified.');
+
+// School view: same date + same event name across schools is one entry; filters follow level and school.
+context.input = {schools:[
+  {code:'a',name:'간성초등학교',short:'간성초',level:'elementary'},
+  {code:'b',name:'거진중학교',short:'거진중',level:'middle'},
+  {code:'c',name:'고성고등학교',short:'고성고',level:'high'}
+],events:[
+  {school:'a',date:'2026-09-24',title:'추석',type:'공휴일',grades:[]},
+  {school:'b',date:'2026-09-24',title:'추 석',type:'공휴일',grades:[]},
+  {school:'c',date:'2026-09-24',title:'추석',type:'공휴일',grades:[]},
+  {school:'b',date:'2026-09-30',title:'1회고사',type:'',grades:[2,3]},
+  {school:'c',date:'2026-09-30',title:'1회고사',type:'',grades:[]}
+]};
+vm.runInContext('schools=input', context);
+const schoolGroups = vm.runInContext('groupSchoolEvents(schools.events)', context);
+assert.equal(schoolGroups.length, 2);
+assert.equal(schoolGroups[0].members.length, 3, 'whitespace differences in the event name are ignored');
+assert.equal(schoolGroups[1].members.length, 2);
+assert.equal(JSON.stringify(vm.runInContext('[typeClass("공휴일"),typeClass("휴업일"),typeClass("")]', context)), JSON.stringify(['holiday','closed','event']));
+assert.equal(JSON.stringify(vm.runInContext('[gradesText([2,3]),gradesText([]),gradesText(undefined)]', context)), JSON.stringify(['2·3학년','','']));
+vm.runInContext('schoolLevel="middle";schoolCode=""', context);
+assert.equal(vm.runInContext('schoolsShown().map(s=>s.short).join()', context), '거진중');
+vm.runInContext('schoolLevel="";schoolCode="c"', context);
+assert.equal(vm.runInContext('schoolsShown().map(s=>s.short).join()', context), '고성고');
+vm.runInContext('schoolLevel="";schoolCode=""', context);
+assert.equal(vm.runInContext('schoolsShown().length', context), 3);
+const real = JSON.parse(fs.readFileSync('docs/schools.json','utf8'));
+assert.ok(real.schools.length >= 20 && real.events.every(e => real.schools.some(s => s.code === e.school)), 'every event belongs to a listed school');
+assert.ok(real.events.every(e => !e.title.includes('토요휴업일')), 'Saturday closures are not shipped');
+console.log('School grouping and filters verified:', {schools: real.schools.length, events: real.events.length});
