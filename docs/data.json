@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-15T07:39:37+00:00",
+"updated_at": "2026-09-17T01:20:20+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-15T07:39:37+00:00"
+"data_at": "2026-09-17T01:20:20+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-15T07:39:37+00:00"
+"data_at": "2026-09-17T01:20:20+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-15T07:39:37+00:00"
+"data_at": "2026-09-17T01:20:20+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -62,8 +62,8 @@
 "행정과(9월4주)"
 ],
 "warnings": [],
-"count": 39,
-"data_at": "2026-09-15T07:39:37+00:00"
+"count": 44,
+"data_at": "2026-09-17T01:20:20+00:00"
 }
 ],
 "events": [
@@ -4470,7 +4470,7 @@
 "place": "간성초 외 12교",
 "owner": "",
 "slots": [],
-"id": "381a75cbcd3d22141e6e5d9f",
+"id": "b4b0996373e643f8cd92d9bc",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4485,7 +4485,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "ed945f8005c0d94600a2434f",
+"id": "e0126c5491208a12701b71d4",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4505,7 +4505,7 @@
 "place": "2층 소회의실"
 }
 ],
-"id": "247c27ebcc89a3803e782094",
+"id": "d5432a3cbd6b6371779067e9",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4525,7 +4525,7 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "5e4edaf1dcf3b25ced43a506",
+"id": "cb65585866b4a6decc073c65",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4585,7 +4585,7 @@
 "place": "위센터"
 }
 ],
-"id": "0968f2a5e876acb907ddcb0a",
+"id": "1092837d2d0faf724961253c",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4605,7 +4605,7 @@
 "place": "조동우"
 }
 ],
-"id": "4603b81a72146c7cb60bfca4",
+"id": "3e94f5070ff5c976b94672c3",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4625,7 +4625,27 @@
 "place": "대진고"
 }
 ],
-"id": "a8b69a7a4365e3a02d20c228",
+"id": "23b268e9b0e27d819b17fac0",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-21",
+"title": "2026년 하반기 다문화교육 업무 담당자 협의회",
+"description": "2026년 하반기 다문화교육 업무 담당자 협의회\n- 13:30, 줌(ZOOM) 온라인 화상회의\n- 김미경",
+"tab": "교육과1(9월4주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "유초등교육(초등)",
+"time": "13:30",
+"place": "줌(ZOOM) 온라인 화상회의",
+"owner": "김미경",
+"slots": [
+{
+"time": "13:30",
+"place": "줌(ZOOM) 온라인 화상회의"
+}
+],
+"id": "31fcb476bf225f169e1b7c29",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4645,7 +4665,7 @@
 "place": "도교육청 6층 대강당"
 }
 ],
-"id": "086f93aefa66a4bae100b0ee",
+"id": "55c0cd951087ba3bb2acad5b",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4709,7 +4729,7 @@
 "place": "고성중"
 }
 ],
-"id": "1912fde948c2f0f0e66f6e1c",
+"id": "59475dc79e424f0dac0dfcb5",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4734,6 +4754,26 @@
 },
 {
 "date": "2026-09-21",
+"title": "청렴 전통시장 장보기",
+"description": "청렴 전통시장 장보기\n- 14:30, 간성읍 및 거진읍 시장\n- 김미경",
+"tab": "교육과1(9월4주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "유초등교육(초등)",
+"time": "14:30",
+"place": "간성읍 및 거진읍 시장",
+"owner": "김미경",
+"slots": [
+{
+"time": "14:30",
+"place": "간성읍 및 거진읍 시장"
+}
+],
+"id": "06422d4e376461fa1441e315",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-21",
 "title": "청렴+(Plus) 나눔 추석 명절 전통시장 장보기",
 "description": "청렴+(Plus) 나눔 추석 명절 전통시장 장보기\n- 14:30, 간성읍 및 거진읍 전통시장",
 "tab": "행정과(9월4주)",
@@ -4749,7 +4789,7 @@
 "place": "간성읍 및 거진읍 전통시장"
 }
 ],
-"id": "2c0f0915bbebf61531a19ac6",
+"id": "46b60e55934d88abeca65324",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4769,7 +4809,7 @@
 "place": "고성중"
 }
 ],
-"id": "07840e9954ec731cf27a3207",
+"id": "9b6ca87388a8b4067da7b46c",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4789,7 +4829,7 @@
 "place": "고성중"
 }
 ],
-"id": "2cd4e5923f2cd8ec2788b83c",
+"id": "605040d276ea2013726f5a64",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4809,7 +4849,7 @@
 "place": "거진읍 시장"
 }
 ],
-"id": "98c5343f21d87b46d9ed78cd",
+"id": "cef7416f6d4b5e7c87acbb00",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4829,7 +4869,7 @@
 "place": "도학초"
 }
 ],
-"id": "e9ec7aaa05b98b04779889e5",
+"id": "802899055d4c11783e22e43d",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4849,7 +4889,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "3500320cab17ce0b36c60331",
+"id": "ae7bb31c047b6961ef95e377",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4869,7 +4909,7 @@
 "place": "거진고"
 }
 ],
-"id": "73e7384261d2534667d9c801",
+"id": "2075d6e8ad6712957b9a21f0",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4889,7 +4929,7 @@
 "place": "고성군청"
 }
 ],
-"id": "e97d6cd150fc8af9e1a2555e",
+"id": "26f8ea5ecff7606d9117d430",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4909,7 +4949,7 @@
 "place": "고성군청"
 }
 ],
-"id": "f87ada3540d9d7f7ce9025f0",
+"id": "9f988eaaf5ef52c9fe99b6be",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4929,7 +4969,7 @@
 "place": "고성군청 2층 회의실"
 }
 ],
-"id": "f2b3fbeb53130ad697f61ae6",
+"id": "d345c29f0f0f6ca0141e975e",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4949,7 +4989,7 @@
 "place": "대진초"
 }
 ],
-"id": "c25561efeec21e88404f17d3",
+"id": "91c6f7216cacb9e709cd6944",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4984,7 +5024,7 @@
 "place": "강원과학고 교장실"
 }
 ],
-"id": "d8d33cb81638d7c16f69603d",
+"id": "f047179d8c3c0fd6bd96e683",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5004,7 +5044,7 @@
 "place": "광산초"
 }
 ],
-"id": "fe19dfb1d5661f6e10f3dbba",
+"id": "11c2c8f879dc66798b298c97",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5024,7 +5064,7 @@
 "place": "간성읍 및 거진읍 시장"
 }
 ],
-"id": "40d25faa91eb11cdb23cc914",
+"id": "aa9ea576334d7cb8cb62d5bf",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5044,7 +5084,7 @@
 "place": "간성읍 및 거진읍 시장"
 }
 ],
-"id": "923b1c2f837d5da673d3a54d",
+"id": "8ad69e1fdd26b96898ae9d3e",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5064,7 +5104,27 @@
 "place": "간성읍 및 거진읍 전통시장"
 }
 ],
-"id": "cee2e796b4922b91bcd65151",
+"id": "045bcbcab7bb85f879e5d340",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-22",
+"title": "작은학교 입전학 설명회 협의회",
+"description": "작은학교 입전학 설명회 협의회\n- 15:00, 3층 중회의실\n- 김미경",
+"tab": "교육과1(9월4주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "유초등교육(초등)",
+"time": "15:00",
+"place": "3층 중회의실",
+"owner": "김미경",
+"slots": [
+{
+"time": "15:00",
+"place": "3층 중회의실"
+}
+],
+"id": "c3414d3da49a8115a8a47147",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5084,7 +5144,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "df5bc8c66eeea6706ae1fe67",
+"id": "cf465a61062e6df3185b17a0",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5104,7 +5164,7 @@
 "place": "간성전통시장"
 }
 ],
-"id": "024aa95dbd6c081020f127aa",
+"id": "70417857c137757c0b6fdd56",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5124,7 +5184,7 @@
 "place": "미정"
 }
 ],
-"id": "26f8ea5ecff7606d9117d430",
+"id": "e83d9cdb5a0026f603910c59",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5139,7 +5199,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "36f21b57fd68629a9b7dcb61",
+"id": "fc36f05cb8b71821056127c0",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5174,7 +5234,7 @@
 "place": "양양 조산초"
 }
 ],
-"id": "e2ab508acf0d52a4fc4c7e2c",
+"id": "2855c65f34a5778ee6706665",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5194,7 +5254,7 @@
 "place": "아야진초"
 }
 ],
-"id": "ef87111c620d8247a008858e",
+"id": "03f3bb62758dfffa30bc9119",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5218,7 +5278,7 @@
 "place": "고성중"
 }
 ],
-"id": "181c2c33d4335ac8e1b40f81",
+"id": "981627a520b9d5e92e395c39",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5238,7 +5298,47 @@
 "place": "위센터"
 }
 ],
-"id": "c78badca08d877d3a830e38d",
+"id": "0880cf0b262bc3d74b13300d",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-23",
+"title": "초등 책임장학",
+"description": "초등 책임장학\n- 14:30, 거진초\n- 이건영",
+"tab": "교육과1(9월4주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "유초등교육(초등)",
+"time": "14:30",
+"place": "거진초",
+"owner": "이건영",
+"slots": [
+{
+"time": "14:30",
+"place": "거진초"
+}
+],
+"id": "29ffe3c1347bbba35e03d0a7",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-23",
+"title": "초등 책임장학",
+"description": "초등 책임장학\n- 14:30, 거진초\n- 이현숙",
+"tab": "교육과2(9월4주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "인성생활",
+"time": "14:30",
+"place": "거진초",
+"owner": "이현숙",
+"slots": [
+{
+"time": "14:30",
+"place": "거진초"
+}
+],
+"id": "2a819f1278754f97427fdaa2",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5258,7 +5358,7 @@
 "place": "하늘땅지역아동센터"
 }
 ],
-"id": "3b2a9c904cdd288ea955588b",
+"id": "653933c7552d81b53fdec1ab",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
