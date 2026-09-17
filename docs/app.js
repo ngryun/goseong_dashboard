@@ -109,6 +109,7 @@ const levelLabel = id => LEVELS.find(l=>l.id===id)?.label||'';
 const typeClass = t => t==='공휴일'?'holiday':t==='휴업일'?'closed':'event';
 const gradesText = g => g&&g.length?g.join('·')+'학년':'';
 const shortDate = d => `${d.getMonth()+1}.${d.getDate()}`;
+const LEVEL_MARK = {elementary:'초', middle:'중', high:'고'};
 function schoolsShown(){return schools.schools.filter(s=>(!schoolLevel||s.level===schoolLevel)&&(!schoolCode||s.code===schoolCode));}
 function filterSchoolEvents(){const q=$('#search').value.trim().toLowerCase(),codes=new Set(schoolsShown().map(s=>s.code));return schools.events.filter(e=>codes.has(e.school)&&(!q||[e.title,e.content,schoolById(e.school)?.name].join(' ').toLowerCase().includes(q)));}
 // Same date and event name (ignoring whitespace) across schools become one entry, so 추석 shows once for every school.
@@ -118,28 +119,37 @@ function groupSchoolEvents(events){
   return [...groups.values()];
 }
 function schoolChip(g){
-  const one=g.members.length===1?schoolById(g.members[0].school):null,grades=[...new Set(g.members.map(m=>gradesText(m.grades)).filter(Boolean))];
-  const who=schoolCode?'':one?`<b class="level-${one.level}">${esc(one.short)}</b> `:'';
-  const tail=!schoolCode&&g.members.length>1?` <small>${g.members.length}교</small>`:grades.length===1?` <small>${esc(grades[0])}</small>`:'';
-  return `<button class="school-event type-${typeClass(g.type)}" data-school-group="${esc(g.key)}" title="${esc(g.title)}">${who}${esc(g.title)}${tail}</button>`;
+  const one=g.members.length===1?schoolById(g.members[0].school):null,grades=[...new Set(g.members.map(m=>gradesText(m.grades)).filter(Boolean))],grade=grades.length===1?grades[0]:'';
+  const who=schoolCode?(grade||'전 학년'):one?one.short:`${g.members.length}개교`;
+  const tail=!schoolCode&&grade?` <small>${esc(grade)}</small>`:'';
+  return `<button class="school-event ${one?'level-'+one.level:'level-mixed'}" data-school-group="${esc(g.key)}" title="${esc(g.title)}"><span class="school-event-who">${esc(who)}</span><span class="school-event-title">${esc(g.title)}${tail}</span></button>`;
+}
+// 공휴일·휴업일 are day-wide, so they sit under the date as tags rather than in the event list.
+function schoolFlag(g){
+  const n=!schoolCode&&g.members.length>1?`<small>${g.members.length}교</small>`:'';
+  return `<button class="day-flag type-${typeClass(g.type)}" data-school-group="${esc(g.key)}" title="${esc(g.title)}">${esc(g.title)}${n}</button>`;
 }
 function renderSchool(){
   $('#period-title').textContent=`${cursor.getFullYear()}년 ${cursor.getMonth()+1}월`;
   if(!schools.schools.length){schoolGroups=[];$('#calendar').innerHTML='<div class="empty"><strong>학교 정보를 아직 불러오지 못했습니다</strong>동기화가 한 번 실행되면 관내 학교의 학사일정이 표시됩니다.</div>';return [];}
   const month=dateKey(cursor).slice(0,7),groups=groupSchoolEvents(filterSchoolEvents());schoolGroups=groups;
   const allActive=!schoolLevel&&!schoolCode;
-  const controls=`<div class="week-group-controls school-controls" role="group" aria-label="학교 선택"><button data-level="" aria-pressed="${allActive}" class="${allActive?'active':''}">전체 학교 <small>${schools.schools.length}</small></button>${LEVELS.map(l=>{const on=schoolLevel===l.id&&!schoolCode;return `<button data-level="${l.id}" aria-pressed="${on}" class="level-${l.id} ${on?'active':''}"><span class="category-dot"></span>${l.label} <small>${schools.schools.filter(s=>s.level===l.id).length}</small></button>`;}).join('')}<select id="school-select" aria-label="학교 선택"><option value="">학교 선택 · 시간표 보기</option>${LEVELS.map(l=>`<optgroup label="${l.label}">${schools.schools.filter(s=>s.level===l.id).map(s=>`<option value="${s.code}"${s.code===schoolCode?' selected':''}>${esc(s.name)}</option>`).join('')}</optgroup>`).join('')}</select></div>`;
   const school=schoolById(schoolCode);
-  const info=school?`<div class="school-info level-${school.level}"><strong>${esc(school.name)}</strong><span>${esc([school.level_label,school.kind].filter(Boolean).join(' · '))}</span>${school.tel?`<span>☏ ${esc(school.tel)}</span>`:''}${school.address?`<span>${esc(school.address)}</span>`:''}${school.homepage?`<a href="${esc(school.homepage)}" target="_blank" rel="noopener">홈페이지 ↗</a>`:''}</div>`:'<p class="month-guide school-guide">학교를 고르면 그 학교의 학사일정과 주간 시간표를 볼 수 있습니다. 같은 날 같은 행사는 하나로 묶어 학교 수를 표시합니다.<span>달력을 좌우로 밀어 다른 요일을 확인하세요.</span></p>';
+  const segments=`<div class="school-segments" role="group" aria-label="학교급 선택"><button data-level="" aria-pressed="${allActive}" class="${allActive?'active':''}">전체 <small>${schools.schools.length}</small></button>${LEVELS.map(l=>{const on=schoolLevel===l.id&&!schoolCode;return `<button data-level="${l.id}" aria-pressed="${on}" class="level-${l.id} ${on?'active':''}"><span class="category-dot"></span>${l.label} <small>${schools.schools.filter(s=>s.level===l.id).length}</small></button>`;}).join('')}</div>`;
+  const picker=`<label class="school-picker${school?' has-school level-'+school.level:''}"><select id="school-select" aria-label="학교 선택"><option value="">학교 선택 · 시간표 보기</option>${LEVELS.map(l=>`<optgroup label="${l.label}">${schools.schools.filter(s=>s.level===l.id).map(s=>`<option value="${s.code}"${s.code===schoolCode?' selected':''}>${esc(s.name)}</option>`).join('')}</optgroup>`).join('')}</select></label>`;
+  const controls=`<div class="school-bar">${segments}${picker}</div>`;
+  const meta=school?[school.tel&&`<span>☏ ${esc(school.tel)}</span>`,school.address&&`<span>${esc(school.address)}</span>`,school.homepage&&`<a href="${esc(school.homepage)}" target="_blank" rel="noopener">홈페이지 ↗</a>`].filter(Boolean).join(''):'';
+  const info=school?`<div class="school-card level-${school.level}"><span class="school-card-mark" aria-hidden="true">${LEVEL_MARK[school.level]||'학'}</span><div class="school-card-body"><div class="school-card-title"><h3>${esc(school.name)}</h3><span class="badge">${esc([school.level_label,school.kind].filter(Boolean).join(' · '))}</span></div>${meta?`<div class="school-card-meta">${meta}</div>`:''}</div><button type="button" class="school-clear" data-level="">전체 학교 보기</button></div>`
+    :'<div class="school-guide"><span>학교를 고르면 그 학교의 학사일정과 주간 시간표를 볼 수 있습니다. 같은 날 같은 행사는 하나로 묶어 학교 수를 표시합니다.</span><span class="school-legend"><span><i class="type-holiday"></i>공휴일</span><span><i class="type-closed"></i>휴업일</span></span></div>';
   const first=new Date(cursor.getFullYear(),cursor.getMonth(),1),start=plus(first,-first.getDay());
   const cells=Math.ceil((first.getDay()+new Date(cursor.getFullYear(),cursor.getMonth()+1,0).getDate())/7)*7;
   let html='<div class="month-scroll school-month" tabindex="0" role="region" aria-label="관내 학교 학사일정 달력"><div class="weekdays">'+WEEKDAY.map(x=>`<span>${x}</span>`).join('')+'</div><div class="month-grid">';
   for(let i=0;i<cells;i++){
-    const d=plus(start,i),key=dateKey(d),items=groups.filter(g=>g.date===key);
-    html+=`<div class="day ${d.getMonth()!==cursor.getMonth()?'outside':''} ${selected===key?'selected':''}" data-day="${key}"><button class="day-number ${key===todayKey?'today':''}" data-date="${key}" aria-pressed="${selected===key}" aria-label="${key} 학사일정 ${items.length}건">${d.getDate()}</button><div class="month-events">${items.slice(0,3).map(schoolChip).join('')}</div><div class="month-day-footer">${items.length>3?`<button class="more" data-date="${key}">+${items.length-3}건 더 보기</button>`:''}</div></div>`;
+    const d=plus(start,i),key=dateKey(d),items=groups.filter(g=>g.date===key),flags=items.filter(g=>typeClass(g.type)!=='event'),plain=items.filter(g=>typeClass(g.type)==='event');
+    html+=`<div class="day ${d.getMonth()!==cursor.getMonth()?'outside':''} ${selected===key?'selected':''} ${flags.some(g=>typeClass(g.type)==='holiday')?'holiday':''}" data-day="${key}"><button class="day-number ${key===todayKey?'today':''}" data-date="${key}" aria-pressed="${selected===key}" aria-label="${key} 학사일정 ${items.length}건">${d.getDate()}</button>${flags.length?`<div class="day-flags">${flags.map(schoolFlag).join('')}</div>`:''}<div class="month-events">${plain.slice(0,3).map(schoolChip).join('')}</div><div class="month-day-footer">${plain.length>3?`<button class="more" data-date="${key}">+${plain.length-3}건 더 보기</button>`:''}</div></div>`;
   }
   html+='</div></div>';
-  const timetable=school?`<section class="timetable-section"><div class="week-guide"><span>주간 시간표 · ${esc(school.name)}</span><span id="timetable-week"></span></div><div id="timetable"></div></section>`:'';
+  const timetable=school?`<section class="timetable-section"><div class="timetable-head"><h3>주간 시간표</h3><span id="timetable-week"></span></div><div id="timetable"></div></section>`:'';
   $('#calendar').innerHTML=controls+info+html+timetable;
   if(school)renderTimetable(school);
   return groups.filter(g=>g.date.startsWith(month));
