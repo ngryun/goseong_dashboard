@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-17T01:20:20+00:00",
+"updated_at": "2026-09-18T06:03:00+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-17T01:20:20+00:00"
+"data_at": "2026-09-18T06:03:00+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-17T01:20:20+00:00"
+"data_at": "2026-09-18T06:03:00+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-17T01:20:20+00:00"
+"data_at": "2026-09-18T06:03:00+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -62,8 +62,8 @@
 "행정과(9월4주)"
 ],
 "warnings": [],
-"count": 44,
-"data_at": "2026-09-17T01:20:20+00:00"
+"count": 48,
+"data_at": "2026-09-18T06:03:00+00:00"
 }
 ],
 "events": [
@@ -4461,7 +4461,7 @@
 {
 "date": "2026-09-21",
 "title": "3분기 학교 불용물품 수거 처리",
-"description": "3분기 학교 불용물품 수거 처리\n- 9.21(월)~9.23(수), 간성초 외 12교",
+"description": "3분기 학교 불용물품 수거 처리\n- 9.21.~9.23, 간성초 외 12교",
 "tab": "행정과(9월4주)",
 "cell": "G4",
 "kind": "weekly",
@@ -4470,13 +4470,28 @@
 "place": "간성초 외 12교",
 "owner": "",
 "slots": [],
-"id": "b4b0996373e643f8cd92d9bc",
+"id": "ba7afd03ba6aaea33c11662d",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-21",
+"title": "공사감독",
+"description": "공사감독\n- 대진초 장애인편의시설 및 드라이비트 \n   개선공사 외 3건",
+"tab": "행정과(9월4주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "시설팀",
+"time": "",
+"place": "",
+"owner": "",
+"slots": [],
+"id": "63db05a6fb2f0563ea11fdb6",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
 "date": "2026-09-21",
 "title": "시설관리 미배치교 순회점검",
-"description": "시설관리 미배치교 순회점검\n- 9.21(월)~9.23(수), 도학초 외 9교\n- 박구원, 윤동열",
+"description": "시설관리 미배치교 순회점검\n- 9.21.~9.23, 도학초 외 9교\n- 박구원, 윤동열",
 "tab": "행정과(9월4주)",
 "cell": "G4",
 "kind": "weekly",
@@ -4485,7 +4500,37 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "e0126c5491208a12701b71d4",
+"id": "d7df3bf4800d5bf8dfd478e2",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-21",
+"title": "용역감독",
+"description": "용역감독\n- 2026년 고성교육지원청사 외 4개교 \n   정밀안전점검용역 외 4건",
+"tab": "행정과(9월4주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "시설팀",
+"time": "",
+"place": "",
+"owner": "",
+"slots": [],
+"id": "b99928fcd04cb5ee4044481d",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-21",
+"title": "추석명절 공직기강 점검",
+"description": "추석명절 공직기강 점검\n- 총무팀장 외 1명",
+"tab": "행정과(9월4주)",
+"cell": "C4",
+"kind": "weekly",
+"team": "총무팀",
+"time": "",
+"place": "",
+"owner": "",
+"slots": [],
+"id": "46b60e55934d88abeca65324",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4505,7 +4550,7 @@
 "place": "2층 소회의실"
 }
 ],
-"id": "d5432a3cbd6b6371779067e9",
+"id": "233f55c762b6e696991f80a4",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4525,24 +4570,24 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "cb65585866b4a6decc073c65",
+"id": "282dec8ee25181fe04fab9ea",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
 "date": "2026-09-21",
-"title": "출판기념회 참석",
-"description": "출판기념회 참석\n- 10:00, 광산초등학교",
+"title": "출판기념회",
+"description": "출판기념회 \n- 10:00, 광산초",
 "tab": "교육과1(9월4주)",
 "cell": "C4",
 "kind": "weekly",
 "team": "교육과장",
 "time": "10:00",
-"place": "광산초등학교",
+"place": "광산초",
 "owner": "",
 "slots": [
 {
 "time": "10:00",
-"place": "광산초등학교"
+"place": "광산초"
 }
 ],
 "id": "379f12e1055eabb28066cb48",
@@ -4550,19 +4595,19 @@
 },
 {
 "date": "2026-09-21",
-"title": "출판기념회 참석",
-"description": "출판기념회 참석\n- 10:00, 광산초등학교\n- 조영익",
+"title": "출판기념회",
+"description": "출판기념회 \n- 10:00, 광산초\n- 조영익",
 "tab": "교육과1(9월4주)",
 "cell": "D4",
 "kind": "weekly",
 "team": "장학행정",
 "time": "10:00",
-"place": "광산초등학교",
+"place": "광산초",
 "owner": "조영익",
 "slots": [
 {
 "time": "10:00",
-"place": "광산초등학교"
+"place": "광산초"
 }
 ],
 "id": "84c3d38ae20125594e7cd223",
@@ -4585,13 +4630,13 @@
 "place": "위센터"
 }
 ],
-"id": "1092837d2d0faf724961253c",
+"id": "900761110b9c3c36d0c90b43",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
 "date": "2026-09-21",
 "title": "2026년 수목전정공사 소액수의 견적제출 공고 개찰",
-"description": "2026년 수목전정공사 소액수의 견적제출 공고 개찰\n- 11:00, 조동우",
+"description": "2026년 수목전정공사 소액수의 \n    견적제출 공고 개찰\n- 11:00, 조동우",
 "tab": "행정과(9월4주)",
 "cell": "E4",
 "kind": "weekly",
@@ -4631,7 +4676,7 @@
 {
 "date": "2026-09-21",
 "title": "2026년 하반기 다문화교육 업무 담당자 협의회",
-"description": "2026년 하반기 다문화교육 업무 담당자 협의회\n- 13:30, 줌(ZOOM) 온라인 화상회의\n- 김미경",
+"description": "2026년 하반기 다문화교육 업무 \n    담당자 협의회\n- 13:30, 줌(ZOOM) 온라인 화상회의\n- 김미경",
 "tab": "교육과1(9월4주)",
 "cell": "E4",
 "kind": "weekly",
@@ -4651,7 +4696,7 @@
 {
 "date": "2026-09-21",
 "title": "도교육청 기록관리 정보공개 담당자 교육",
-"description": "도교육청 기록관리 정보공개 담당자 교육\n- 13:30, 도교육청 6층 대강당\n- 문지환",
+"description": "도교육청 기록관리 정보공개 \n    담당자 교육\n- 13:30, 도교육청 6층 대강당\n- 문지환",
 "tab": "행정과(9월4주)",
 "cell": "C4",
 "kind": "weekly",
@@ -4665,7 +4710,7 @@
 "place": "도교육청 6층 대강당"
 }
 ],
-"id": "55c0cd951087ba3bb2acad5b",
+"id": "d5432a3cbd6b6371779067e9",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4754,28 +4799,8 @@
 },
 {
 "date": "2026-09-21",
-"title": "청렴 전통시장 장보기",
-"description": "청렴 전통시장 장보기\n- 14:30, 간성읍 및 거진읍 시장\n- 김미경",
-"tab": "교육과1(9월4주)",
-"cell": "E4",
-"kind": "weekly",
-"team": "유초등교육(초등)",
-"time": "14:30",
-"place": "간성읍 및 거진읍 시장",
-"owner": "김미경",
-"slots": [
-{
-"time": "14:30",
-"place": "간성읍 및 거진읍 시장"
-}
-],
-"id": "06422d4e376461fa1441e315",
-"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
-},
-{
-"date": "2026-09-21",
 "title": "청렴+(Plus) 나눔 추석 명절 전통시장 장보기",
-"description": "청렴+(Plus) 나눔 추석 명절 전통시장 장보기\n- 14:30, 간성읍 및 거진읍 전통시장",
+"description": "청렴+(Plus) 나눔 추석 명절 \n    전통시장 장보기\n- 14:30, 간성읍 및 거진읍 전통시장\n- 우리청 직원 25명",
 "tab": "행정과(9월4주)",
 "cell": "C4",
 "kind": "weekly",
@@ -4789,13 +4814,13 @@
 "place": "간성읍 및 거진읍 전통시장"
 }
 ],
-"id": "46b60e55934d88abeca65324",
+"id": "55c0cd951087ba3bb2acad5b",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
 "date": "2026-09-21",
 "title": "2026학년도 중등 책임장학",
-"description": "2026학년도 중등 책임장학\n- 15:00~, 고성중\n- 소희",
+"description": "2026학년도 중등 책임장학\n- 15:00, 고성중\n- 소희",
 "tab": "교육과2(9월4주)",
 "cell": "C4",
 "kind": "weekly",
@@ -4809,13 +4834,13 @@
 "place": "고성중"
 }
 ],
-"id": "9b6ca87388a8b4067da7b46c",
+"id": "68fa435bf2e568ae66226a99",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
 "date": "2026-09-21",
 "title": "2026학년도 중등 책임장학",
-"description": "2026학년도 중등 책임장학\n- 15:00~, 고성중\n- 남궁연",
+"description": "2026학년도 중등 책임장학\n- 15:00, 고성중\n- 남궁연",
 "tab": "교육과2(9월4주)",
 "cell": "D4",
 "kind": "weekly",
@@ -4829,27 +4854,7 @@
 "place": "고성중"
 }
 ],
-"id": "605040d276ea2013726f5a64",
-"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
-},
-{
-"date": "2026-09-21",
-"title": "청렴 전통시장 장보기",
-"description": "청렴 전통시장 장보기\n- 17:00, 거진읍 시장",
-"tab": "교육과3(9월4주)",
-"cell": "C4",
-"kind": "weekly",
-"team": "보건교육",
-"time": "17:00",
-"place": "거진읍 시장",
-"owner": "",
-"slots": [
-{
-"time": "17:00",
-"place": "거진읍 시장"
-}
-],
-"id": "cef7416f6d4b5e7c87acbb00",
+"id": "2fbc3105124df718319da88d",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4869,7 +4874,7 @@
 "place": "도학초"
 }
 ],
-"id": "802899055d4c11783e22e43d",
+"id": "826dc23aa357b81501928e66",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4889,7 +4894,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "ae7bb31c047b6961ef95e377",
+"id": "27b1e3d1e49c6ea634467cd0",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4909,7 +4914,7 @@
 "place": "거진고"
 }
 ],
-"id": "2075d6e8ad6712957b9a21f0",
+"id": "bc6f3a5d221986a6e568dffc",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4929,7 +4934,7 @@
 "place": "고성군청"
 }
 ],
-"id": "26f8ea5ecff7606d9117d430",
+"id": "40d25faa91eb11cdb23cc914",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -4974,6 +4979,46 @@
 },
 {
 "date": "2026-09-22",
+"title": "지역언론사 간담회",
+"description": "지역언론사 간담회\n- 12:00, 죽왕면 음식점",
+"tab": "교육과1(9월4주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "교육장",
+"time": "12:00",
+"place": "죽왕면 음식점",
+"owner": "",
+"slots": [
+{
+"time": "12:00",
+"place": "죽왕면 음식점"
+}
+],
+"id": "26f8ea5ecff7606d9117d430",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-22",
+"title": "지역언론사 간담회",
+"description": "지역언론사 간담회\n- 12:00, 죽왕면 음식점",
+"tab": "행정과(9월4주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "행정과장",
+"time": "12:00",
+"place": "죽왕면 음식점",
+"owner": "",
+"slots": [
+{
+"time": "12:00",
+"place": "죽왕면 음식점"
+}
+],
+"id": "583c60a3f16eadc49d83bdf1",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-22",
 "title": "학습클리닉 순회지도",
 "description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
 "tab": "교육과3(9월4주)",
@@ -4989,7 +5034,7 @@
 "place": "대진초"
 }
 ],
-"id": "91c6f7216cacb9e709cd6944",
+"id": "1db43ba19976090396aa3dfa",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5044,7 +5089,7 @@
 "place": "광산초"
 }
 ],
-"id": "11c2c8f879dc66798b298c97",
+"id": "2075d6e8ad6712957b9a21f0",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5089,8 +5134,28 @@
 },
 {
 "date": "2026-09-22",
+"title": "청렴 전통시장 장보기",
+"description": "청렴 전통시장 장보기\n- 14:30, 간성읍 및 거진읍 시장",
+"tab": "행정과(9월4주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "행정과장",
+"time": "14:30",
+"place": "간성읍 및 거진읍 시장",
+"owner": "",
+"slots": [
+{
+"time": "14:30",
+"place": "간성읍 및 거진읍 시장"
+}
+],
+"id": "b5166e8d2967934eb92ed7ab",
+"source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
+},
+{
+"date": "2026-09-22",
 "title": "청렴+(Plus) 나눔 추석 명절 전통시장 장보기",
-"description": "청렴+(Plus) 나눔 추석 명절 전통시장 장보기\n- 14:30, 간성읍 및 거진읍 전통시장",
+"description": "청렴+(Plus) 나눔 추석 명절 \n    전통시장 장보기\n- 14:30, 간성읍 및 거진읍 전통시장\n- 우리청 직원 30명",
 "tab": "행정과(9월4주)",
 "cell": "C5",
 "kind": "weekly",
@@ -5104,7 +5169,7 @@
 "place": "간성읍 및 거진읍 전통시장"
 }
 ],
-"id": "045bcbcab7bb85f879e5d340",
+"id": "6be1e65f6371c3731d77bdcf",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5144,7 +5209,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "cf465a61062e6df3185b17a0",
+"id": "cead44b85ffe0d87765febbb",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5164,7 +5229,7 @@
 "place": "간성전통시장"
 }
 ],
-"id": "70417857c137757c0b6fdd56",
+"id": "91c6f7216cacb9e709cd6944",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5190,14 +5255,14 @@
 {
 "date": "2026-09-23",
 "title": "공가",
-"description": "공가",
+"description": "공가\n- 조영익",
 "tab": "교육과1(9월4주)",
 "cell": "D6",
 "kind": "weekly",
 "team": "장학행정",
 "time": "",
 "place": "",
-"owner": "",
+"owner": "조영익",
 "slots": [],
 "id": "fc36f05cb8b71821056127c0",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
@@ -5254,7 +5319,7 @@
 "place": "아야진초"
 }
 ],
-"id": "03f3bb62758dfffa30bc9119",
+"id": "83a22eddfd60bb4e27e5812f",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5278,7 +5343,7 @@
 "place": "고성중"
 }
 ],
-"id": "981627a520b9d5e92e395c39",
+"id": "9cd4d55a93160af891d6d8bb",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5298,17 +5363,17 @@
 "place": "위센터"
 }
 ],
-"id": "0880cf0b262bc3d74b13300d",
+"id": "03f3bb62758dfffa30bc9119",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
 "date": "2026-09-23",
 "title": "초등 책임장학",
 "description": "초등 책임장학\n- 14:30, 거진초\n- 이건영",
-"tab": "교육과1(9월4주)",
-"cell": "E6",
+"tab": "교육과2(9월4주)",
+"cell": "B6",
 "kind": "weekly",
-"team": "유초등교육(초등)",
+"team": "초등인사",
 "time": "14:30",
 "place": "거진초",
 "owner": "이건영",
@@ -5318,7 +5383,7 @@
 "place": "거진초"
 }
 ],
-"id": "29ffe3c1347bbba35e03d0a7",
+"id": "eac5dbb77d6cec2609d71fbd",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
@@ -5344,7 +5409,7 @@
 {
 "date": "2026-09-23",
 "title": "교육복지 지역네트워크 (함께 하는 힘) 운영",
-"description": "교육복지 지역네트워크 (함께 하는 힘) 운영\n- 15:00, 하늘땅지역아동센터\n- 신선일",
+"description": "교육복지 지역네트워크 \n    (함께 하는 힘) 운영\n- 15:00, 하늘땅지역아동센터\n- 신선일",
 "tab": "교육과3(9월4주)",
 "cell": "D6",
 "kind": "weekly",
@@ -5358,7 +5423,7 @@
 "place": "하늘땅지역아동센터"
 }
 ],
-"id": "653933c7552d81b53fdec1ab",
+"id": "afc0b13fce76cb19a92175d8",
 "source_id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o"
 },
 {
