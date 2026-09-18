@@ -319,3 +319,9 @@ body.dark .form-error{background:#4a2325;color:#ffb4b4}
 .day:hover .day-add,.day:focus-within .day-add{opacity:1}
 .day-add:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 @media(hover:none){.day-add{opacity:.55;width:22px;height:22px;font-size:14px;top:4px;right:4px}}
+/* 주간 업무 표: 담당×요일 칸에 마우스를 올리면 우측 상단에 일정 추가 버튼 */
+.week-table td{position:relative}
+.cell-add{position:absolute;top:5px;right:5px;width:22px;height:22px;padding:0;border-radius:50%;font-size:15px;line-height:1;color:var(--accent);background:var(--surface);border-color:var(--border);opacity:0;transition:opacity .12s,background .15s,border-color .15s;z-index:1}
+.week-table td:hover .cell-add,.week-table td:focus-within .cell-add{opacity:1}
+.cell-add:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+@media(hover:none){.cell-add{opacity:.55;width:20px;height:20px;font-size:13px;top:4px;right:4px}}
