@@ -60,7 +60,8 @@ NEIS 개방 API ──▶ build_schools.py ──▶ docs/schools.json
 
 - Firebase 프로젝트 `goseong-calendar`(서울 `asia-northeast3`)의 Firestore `events` 컬렉션에 저장합니다. 호스팅은 계속 GitHub Pages이고, 브라우저가 Firestore SDK(CDN)로 직접 읽고 씁니다. 연결 정보는 `docs/app.js` 하단 `FIREBASE` 상수에 있으며, 웹 API 키는 공개용이라 저장소에 두어도 됩니다.
 - 문서 필드는 시트 일정과 같은 `date`·`title`·`kind`·`team`·`time`·`place`·`owner`·`description`에 `createdAt`·`updatedAt`·`deleted`·`client`(브라우저 식별용 난수)를 더한 것입니다. 화면은 `source_id: 'firestore'`로 구분하며 상세 화면에 원문 링크 대신 "이 일정 수정" 버튼을 보여줍니다.
-- 로그인 없이 쓰기를 허용하는 대신 `firestore.rules`가 날짜 형식, 제목 1~100자, 구분 값, 각 항목의 최대 길이, 허용 필드 목록, 서버 시각 사용을 검사합니다. 실제 삭제는 규칙에서 막고 `deleted: true`로 숨기기만 하므로 Firebase 콘솔에서 되돌릴 수 있습니다.
+- 담당은 새로 만들 수 없고 `docs/app.js` 상단 `TEAM_GROUPS`의 23개 담당 중에서만 고릅니다. 주간업무는 담당이 필수, 월중행사는 담당 없이 저장합니다. 같은 목록이 `firestore.rules`에도 있으므로 담당을 바꾸면 두 곳을 함께 고치고 규칙을 다시 배포합니다.
+- 로그인 없이 쓰기를 허용하는 대신 `firestore.rules`가 날짜 형식, 제목 1~100자, 구분 값, 담당 목록, 각 항목의 최대 길이, 허용 필드 목록, 서버 시각 사용을 검사합니다. 실제 삭제는 규칙에서 막고 `deleted: true`로 숨기기만 하므로 Firebase 콘솔에서 되돌릴 수 있습니다.
 - 규칙을 고친 뒤에는 `firebase deploy --only firestore:rules`로 올립니다(Firebase CLI 로그인 필요). `firebase.json`, `.firebaserc`, `firestore.indexes.json`이 CLI 설정입니다.
 - Firestore에 연결하지 못하면 시트 일정만 표시하고, 일정 추가 버튼을 누를 때 안내합니다.
 - 무료(Spark) 요금제 기준 하루 쓰기 2만 건·읽기 5만 건까지 무료입니다. 공개 사이트라 누구나 쓸 수 있으므로 장난 입력이 잦아지면 Firebase App Check나 로그인 제한을 추가합니다.

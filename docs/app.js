@@ -274,24 +274,28 @@ async function connectFirestore(){
     },err=>{fbError=err.message;console.error('Firestore 구독 실패',err);});
   }catch(e){fbError=e.message||'연결 실패';console.error('Firestore 연결 실패',e);}
 }
-const editor=$('#editor'), editorForm=$('#editor-form');
+const editor=$('#editor'), editorForm=$('#editor-form'), TEAMS=TEAM_GROUPS.flatMap(g=>g.teams);
 const showEditorError=msg=>{$('#editor-error').textContent=msg;$('#editor-error').hidden=!msg;};
+const syncTeamField=()=>{$('#team-field').hidden=editorForm.elements.kind.value==='monthly';};
+editorForm.elements.kind.addEventListener('change',syncTeamField);
 function openEditor(id=null,preset=null){
   if(!fb){alert('일정 저장소에 연결하지 못했습니다.'+(fbError?' ('+fbError+')':'')+' 네트워크 연결을 확인한 뒤 새로고침해 주세요.');return;}
   const e=id?data.events.find(x=>x.id===id&&isOwn(x)):null;if(id&&!e)return;
   editingId=e?e.id:null;
   $('#editor-eyebrow').textContent=e?'일정 수정':'일정 추가';$('#editor-title').textContent=e?e.title:'새 일정';
   const f=editorForm.elements;
+  // 담당은 정해진 목록에서만 고른다(새 담당 이름은 만들 수 없음). 월중행사는 담당 없이 저장한다.
+  if(f.team.options.length<=1)f.team.innerHTML='<option value="">담당 선택</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('');
   f.date.value=e?e.date:selected;f.kind.value=e?e.kind:(preset?.kind||$('#kind').value||(view==='month'?dayKind:'weekly'));
   f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));f.time.value=e?e.time:'';f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
-  $('#team-list').innerHTML=[...new Set([...TEAM_GROUPS.flatMap(g=>g.teams),...data.events.map(x=>x.team).filter(Boolean)])].map(t=>`<option value="${esc(t)}">`).join('');
+  if(!TEAMS.includes(f.team.value))f.team.value='';syncTeamField();
   $('#editor-delete').hidden=!e;showEditorError('');$('#editor-save').disabled=false;
   editor.showModal();f.title.focus();
 }
 editorForm.addEventListener('submit',async ev=>{
   ev.preventDefault();const f=editorForm.elements,v=k=>f[k].value.trim();
-  const rec={date:v('date'),kind:v('kind'),title:v('title'),team:v('team'),time:v('time'),place:v('place'),owner:v('owner'),description:v('description')};
-  const problem=!/^\d{4}-\d{2}-\d{2}$/.test(rec.date)?'날짜를 선택해 주세요.':!rec.title?'제목을 입력해 주세요.':rec.title.length>100?'제목은 100자 이내로 적어 주세요.':!['monthly','weekly'].includes(rec.kind)?'구분을 선택해 주세요.':'';
+  const rec={date:v('date'),kind:v('kind'),title:v('title'),team:v('kind')==='monthly'?'':v('team'),time:v('time'),place:v('place'),owner:v('owner'),description:v('description')};
+  const problem=!/^\d{4}-\d{2}-\d{2}$/.test(rec.date)?'날짜를 선택해 주세요.':!rec.title?'제목을 입력해 주세요.':rec.title.length>100?'제목은 100자 이내로 적어 주세요.':!['monthly','weekly'].includes(rec.kind)?'구분을 선택해 주세요.':rec.kind==='weekly'&&!TEAMS.includes(rec.team)?'담당을 목록에서 선택해 주세요.':'';
   if(problem){showEditorError(problem);return;}
   $('#editor-save').disabled=true;showEditorError('');
   try{

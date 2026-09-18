@@ -6,6 +6,14 @@ service cloud.firestore {
     function optText(d, key, max) {
       return !(key in d) || (d[key] is string && d[key].size() <= max);
     }
+    // 담당은 화면(docs/app.js TEAM_GROUPS)과 같은 목록에서만 고를 수 있다. 목록을 바꾸면 두 곳을 함께 고친다.
+    function knownTeam(t) {
+      return t in ['교육장', '교육과장', '장학행정', '유초등교육(초등)', '중등교육(중등)', '행정과장', '총무팀', '예산팀', '재정팀', '시설팀', '학교지원팀', '학습종합클리닉센터', '보건교육', '교육복지센터', 'Wee센터', '특수교육지원센터', '학부모지원센터', '초등인사', '중등인사', '문화체육특수', '인성생활', '급식지원', '초계종합교육센터'];
+    }
+    function validTeam(d) {
+      return (d.kind == 'monthly' && (!('team' in d) || d.team == ''))
+        || (d.kind == 'weekly' && 'team' in d && knownTeam(d.team));
+    }
     function validEvent(d) {
       return d.keys().hasOnly(['date', 'title', 'description', 'kind', 'team', 'time', 'place', 'owner', 'createdAt', 'updatedAt', 'deleted', 'client'])
         && d.keys().hasAll(['date', 'title', 'kind', 'createdAt', 'updatedAt', 'deleted'])
@@ -13,7 +21,7 @@ service cloud.firestore {
         && d.title is string && d.title.trim().size() >= 1 && d.title.size() <= 100
         && d.kind in ['monthly', 'weekly']
         && optText(d, 'description', 2000)
-        && optText(d, 'team', 40)
+        && optText(d, 'team', 40) && validTeam(d)
         && optText(d, 'time', 40)
         && optText(d, 'place', 100)
         && optText(d, 'owner', 100)
