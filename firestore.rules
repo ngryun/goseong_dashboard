@@ -1,0 +1,38 @@
+rules_version = '2';
+// 화면에서 직접 입력하는 일정 저장소. 로그인 없이 누구나 읽고 쓸 수 있으므로
+// 입력값의 형식과 길이를 규칙에서 엄격히 검사하고, 실제 삭제는 막는다(숨김 처리만 허용).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function optText(d, key, max) {
+      return !(key in d) || (d[key] is string && d[key].size() <= max);
+    }
+    function validEvent(d) {
+      return d.keys().hasOnly(['date', 'title', 'description', 'kind', 'team', 'time', 'place', 'owner', 'createdAt', 'updatedAt', 'deleted', 'client'])
+        && d.keys().hasAll(['date', 'title', 'kind', 'createdAt', 'updatedAt', 'deleted'])
+        && d.date is string && d.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && d.title is string && d.title.trim().size() >= 1 && d.title.size() <= 100
+        && d.kind in ['monthly', 'weekly']
+        && optText(d, 'description', 2000)
+        && optText(d, 'team', 40)
+        && optText(d, 'time', 40)
+        && optText(d, 'place', 100)
+        && optText(d, 'owner', 100)
+        && optText(d, 'client', 40)
+        && d.deleted is bool
+        && d.createdAt is timestamp
+        && d.updatedAt == request.time;
+    }
+    match /events/{id} {
+      allow read: if true;
+      allow create: if validEvent(request.resource.data)
+        && request.resource.data.createdAt == request.time
+        && request.resource.data.deleted == false;
+      allow update: if validEvent(request.resource.data)
+        && request.resource.data.createdAt == resource.data.createdAt;
+      allow delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

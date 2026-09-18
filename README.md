@@ -54,6 +54,17 @@ NEIS 개방 API ──▶ build_schools.py ──▶ docs/schools.json
 
 등록용 Google 시트(`registry_sheet`)가 연결되어 있습니다. 대시보드의 "연결된 계획표" 팝업에서 "계획표 추가"를 누르면 그 시트가 열리고, 한 줄을 추가하면 다음 동기화에 반영됩니다. 이 시트를 편집할 수 있는 사람이 관리자입니다. 그 시트 첫 탭의 각 행에서 시트 주소, 표시 이름, 네 자리 기준 연도를 읽으며, `중지` 또는 `제외`라고 적힌 행은 건너뜁니다. 이 시트를 편집할 수 있는 사람이 관리자가 됩니다.
 
+## 화면에서 직접 입력하는 일정 (Firebase Firestore)
+
+시트와 별개로, 달력 상단의 **＋ 일정 추가** 버튼으로 누구나 로그인 없이 일정을 넣고 고칠 수 있습니다. 시트에서 읽는 흐름은 그대로 두고 Firestore 일정을 화면에서 합쳐 보여주므로, 시트 사용을 줄여 가면 자연스럽게 자체 DB로 옮겨 갑니다.
+
+- Firebase 프로젝트 `goseong-calendar`(서울 `asia-northeast3`)의 Firestore `events` 컬렉션에 저장합니다. 호스팅은 계속 GitHub Pages이고, 브라우저가 Firestore SDK(CDN)로 직접 읽고 씁니다. 연결 정보는 `docs/app.js` 하단 `FIREBASE` 상수에 있으며, 웹 API 키는 공개용이라 저장소에 두어도 됩니다.
+- 문서 필드는 시트 일정과 같은 `date`·`title`·`kind`·`team`·`time`·`place`·`owner`·`description`에 `createdAt`·`updatedAt`·`deleted`·`client`(브라우저 식별용 난수)를 더한 것입니다. 화면은 `source_id: 'firestore'`로 구분하며 상세 화면에 원문 링크 대신 "이 일정 수정" 버튼을 보여줍니다.
+- 로그인 없이 쓰기를 허용하는 대신 `firestore.rules`가 날짜 형식, 제목 1~100자, 구분 값, 각 항목의 최대 길이, 허용 필드 목록, 서버 시각 사용을 검사합니다. 실제 삭제는 규칙에서 막고 `deleted: true`로 숨기기만 하므로 Firebase 콘솔에서 되돌릴 수 있습니다.
+- 규칙을 고친 뒤에는 `firebase deploy --only firestore:rules`로 올립니다(Firebase CLI 로그인 필요). `firebase.json`, `.firebaserc`, `firestore.indexes.json`이 CLI 설정입니다.
+- Firestore에 연결하지 못하면 시트 일정만 표시하고, 일정 추가 버튼을 누를 때 안내합니다.
+- 무료(Spark) 요금제 기준 하루 쓰기 2만 건·읽기 5만 건까지 무료입니다. 공개 사이트라 누구나 쓸 수 있으므로 장난 입력이 잦아지면 Firebase App Check나 로그인 제한을 추가합니다.
+
 ## 동작 기준
 
 - 시트는 15분마다(매시 7·22·37·52분) 읽습니다. GitHub 사정으로 몇 분에서 수십 분 늦어질 수 있습니다. 즉시 반영하려면 Actions에서 수동 실행합니다.
@@ -107,6 +118,7 @@ Python이 없는 PC에서는 `node tools/serve.mjs 8080`으로 `docs/`를 띄울
 ```bash
 python3 -m unittest discover -s tests -v
 node --check docs/app.js
+node tests/test_calendar.cjs
 ```
 
 ## 담당 분야별 주간 화면
