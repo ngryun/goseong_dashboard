@@ -281,10 +281,11 @@ editorForm.elements.kind.addEventListener('change',syncTeamField);
 // Time is stored as 'HH:MM' or 'HH:MM~HH:MM', the same shape the sheet importer produces.
 const parseTimeRange=t=>{const m=/^(\d{1,2}):(\d{2})(?:\s*[~\-–]\s*(\d{1,2}):(\d{2}))?$/.exec(t||'');if(!m)return ['',''];const p=(h,mm)=>h.padStart(2,'0')+':'+mm;return [p(m[1],m[2]),m[3]?p(m[3],m[4]):''];};
 const syncPresets=()=>{const s=editorForm.elements.start.value;editorForm.querySelectorAll('[data-time]').forEach(b=>{b.classList.toggle('active',b.dataset.time===s);b.setAttribute('aria-pressed',b.dataset.time===s);});};
-editorForm.elements.start.addEventListener('input',syncPresets);
-// 10-minute granularity: pickers follow step=600, and a typed 14:03 is rounded to 14:00 when the field is left.
-const roundTen=v=>{const m=/^(\d{2}):(\d{2})$/.exec(v);if(!m)return v;const t=Math.min(Math.round((Number(m[1])*60+Number(m[2]))/10)*10,1430);return String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');};
-['start','end'].forEach(k=>editorForm.elements[k].addEventListener('change',ev=>{ev.target.value=roundTen(ev.target.value);syncPresets();}));
+// Time is chosen from 10-minute steps between 07:00 and 21:00 (native time pickers ignore step on desktop and show 오전/오후).
+const TIME_OPTIONS=Array.from({length:85},(_,i)=>{const t=420+i*10;return String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');});
+['start','end'].forEach(k=>{const sel=editorForm.elements[k];sel.innerHTML=`<option value="">${k==='start'?'시작 시각':'종료 시각 (선택)'}</option>`+TIME_OPTIONS.map(t=>`<option>${t}</option>`).join('');sel.addEventListener('change',syncPresets);});
+// A stored value outside the list (e.g. 06:30) is still shown when editing.
+const setTimeValue=(sel,v)=>{if(v&&![...sel.options].some(o=>o.value===v))sel.add(new Option(v,v),[...sel.options].find(o=>o.value>v)||null);sel.value=v;};
 editorForm.addEventListener('click',ev=>{const f=editorForm.elements,p=ev.target.closest('[data-time]');if(p){f.start.value=p.dataset.time;if(f.end.value&&f.end.value<=f.start.value)f.end.value='';syncPresets();f.end.focus();}else if(ev.target.closest('.time-clear')){f.start.value='';f.end.value='';syncPresets();f.start.focus();}});
 function openEditor(id=null,preset=null){
   if(!fb){alert('일정 저장소에 연결하지 못했습니다.'+(fbError?' ('+fbError+')':'')+' 네트워크 연결을 확인한 뒤 새로고침해 주세요.');return;}
@@ -295,7 +296,7 @@ function openEditor(id=null,preset=null){
   // 담당은 정해진 목록에서만 고른다(새 담당 이름은 만들 수 없음). 월중행사는 담당 없이 저장한다.
   if(f.team.options.length<=1)f.team.innerHTML='<option value="">담당 선택</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('');
   f.date.value=e?e.date:selected;f.kind.value=e?e.kind:(preset?.kind||$('#kind').value||(view==='month'?dayKind:'weekly'));
-  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));[f.start.value,f.end.value]=parseTimeRange(e?e.time:'');syncPresets();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
+  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));{const [s,en]=parseTimeRange(e?e.time:'');setTimeValue(f.start,s);setTimeValue(f.end,en);}syncPresets();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
   if(!TEAMS.includes(f.team.value))f.team.value='';syncTeamField();
   $('#editor-delete').hidden=!e;showEditorError('');$('#editor-save').disabled=false;
   editor.showModal();f.title.focus();
