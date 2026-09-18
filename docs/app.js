@@ -278,6 +278,11 @@ const editor=$('#editor'), editorForm=$('#editor-form'), TEAMS=TEAM_GROUPS.flatM
 const showEditorError=msg=>{$('#editor-error').textContent=msg;$('#editor-error').hidden=!msg;};
 const syncTeamField=()=>{$('#team-field').hidden=editorForm.elements.kind.value==='monthly';};
 editorForm.elements.kind.addEventListener('change',syncTeamField);
+// Time is stored as 'HH:MM' or 'HH:MM~HH:MM', the same shape the sheet importer produces.
+const parseTimeRange=t=>{const m=/^(\d{1,2}):(\d{2})(?:\s*[~\-–]\s*(\d{1,2}):(\d{2}))?$/.exec(t||'');if(!m)return ['',''];const p=(h,mm)=>h.padStart(2,'0')+':'+mm;return [p(m[1],m[2]),m[3]?p(m[3],m[4]):''];};
+const syncPresets=()=>{const s=editorForm.elements.start.value;editorForm.querySelectorAll('[data-time]').forEach(b=>{b.classList.toggle('active',b.dataset.time===s);b.setAttribute('aria-pressed',b.dataset.time===s);});};
+editorForm.elements.start.addEventListener('input',syncPresets);
+editorForm.addEventListener('click',ev=>{const f=editorForm.elements,p=ev.target.closest('[data-time]');if(p){f.start.value=p.dataset.time;if(f.end.value&&f.end.value<=f.start.value)f.end.value='';syncPresets();f.end.focus();}else if(ev.target.closest('.time-clear')){f.start.value='';f.end.value='';syncPresets();f.start.focus();}});
 function openEditor(id=null,preset=null){
   if(!fb){alert('일정 저장소에 연결하지 못했습니다.'+(fbError?' ('+fbError+')':'')+' 네트워크 연결을 확인한 뒤 새로고침해 주세요.');return;}
   const e=id?data.events.find(x=>x.id===id&&isOwn(x)):null;if(id&&!e)return;
@@ -287,15 +292,15 @@ function openEditor(id=null,preset=null){
   // 담당은 정해진 목록에서만 고른다(새 담당 이름은 만들 수 없음). 월중행사는 담당 없이 저장한다.
   if(f.team.options.length<=1)f.team.innerHTML='<option value="">담당 선택</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('');
   f.date.value=e?e.date:selected;f.kind.value=e?e.kind:(preset?.kind||$('#kind').value||(view==='month'?dayKind:'weekly'));
-  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));f.time.value=e?e.time:'';f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
+  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));[f.start.value,f.end.value]=parseTimeRange(e?e.time:'');syncPresets();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
   if(!TEAMS.includes(f.team.value))f.team.value='';syncTeamField();
   $('#editor-delete').hidden=!e;showEditorError('');$('#editor-save').disabled=false;
   editor.showModal();f.title.focus();
 }
 editorForm.addEventListener('submit',async ev=>{
   ev.preventDefault();const f=editorForm.elements,v=k=>f[k].value.trim();
-  const rec={date:v('date'),kind:v('kind'),title:v('title'),team:v('kind')==='monthly'?'':v('team'),time:v('time'),place:v('place'),owner:v('owner'),description:v('description')};
-  const problem=!/^\d{4}-\d{2}-\d{2}$/.test(rec.date)?'날짜를 선택해 주세요.':!rec.title?'제목을 입력해 주세요.':rec.title.length>100?'제목은 100자 이내로 적어 주세요.':!['monthly','weekly'].includes(rec.kind)?'구분을 선택해 주세요.':rec.kind==='weekly'&&!TEAMS.includes(rec.team)?'담당을 목록에서 선택해 주세요.':'';
+  const rec={date:v('date'),kind:v('kind'),title:v('title'),team:v('kind')==='monthly'?'':v('team'),time:v('start')?(v('end')?v('start')+'~'+v('end'):v('start')):'',place:v('place'),owner:v('owner'),description:v('description')};
+  const problem=!/^\d{4}-\d{2}-\d{2}$/.test(rec.date)?'날짜를 선택해 주세요.':!rec.title?'제목을 입력해 주세요.':rec.title.length>100?'제목은 100자 이내로 적어 주세요.':!['monthly','weekly'].includes(rec.kind)?'구분을 선택해 주세요.':rec.kind==='weekly'&&!TEAMS.includes(rec.team)?'담당을 목록에서 선택해 주세요.':!v('start')&&v('end')?'종료 시각만 있습니다. 시작 시각을 먼저 선택해 주세요.':v('end')&&v('end')<=v('start')?'종료 시각은 시작 시각보다 뒤여야 합니다.':'';
   if(problem){showEditorError(problem);return;}
   $('#editor-save').disabled=true;showEditorError('');
   try{
