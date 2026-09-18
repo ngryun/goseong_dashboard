@@ -282,6 +282,9 @@ editorForm.elements.kind.addEventListener('change',syncTeamField);
 const parseTimeRange=t=>{const m=/^(\d{1,2}):(\d{2})(?:\s*[~\-–]\s*(\d{1,2}):(\d{2}))?$/.exec(t||'');if(!m)return ['',''];const p=(h,mm)=>h.padStart(2,'0')+':'+mm;return [p(m[1],m[2]),m[3]?p(m[3],m[4]):''];};
 const syncPresets=()=>{const s=editorForm.elements.start.value;editorForm.querySelectorAll('[data-time]').forEach(b=>{b.classList.toggle('active',b.dataset.time===s);b.setAttribute('aria-pressed',b.dataset.time===s);});};
 editorForm.elements.start.addEventListener('input',syncPresets);
+// 10-minute granularity: pickers follow step=600, and a typed 14:03 is rounded to 14:00 when the field is left.
+const roundTen=v=>{const m=/^(\d{2}):(\d{2})$/.exec(v);if(!m)return v;const t=Math.min(Math.round((Number(m[1])*60+Number(m[2]))/10)*10,1430);return String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');};
+['start','end'].forEach(k=>editorForm.elements[k].addEventListener('change',ev=>{ev.target.value=roundTen(ev.target.value);syncPresets();}));
 editorForm.addEventListener('click',ev=>{const f=editorForm.elements,p=ev.target.closest('[data-time]');if(p){f.start.value=p.dataset.time;if(f.end.value&&f.end.value<=f.start.value)f.end.value='';syncPresets();f.end.focus();}else if(ev.target.closest('.time-clear')){f.start.value='';f.end.value='';syncPresets();f.start.focus();}});
 function openEditor(id=null,preset=null){
   if(!fb){alert('일정 저장소에 연결하지 못했습니다.'+(fbError?' ('+fbError+')':'')+' 네트워크 연결을 확인한 뒤 새로고침해 주세요.');return;}
