@@ -299,7 +299,7 @@ body.dark .brand-symbol{filter:brightness(1.3) saturate(1.05)}
 .is-school #add-event{display:none}
 .editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin-top:6px}
 .editor-grid label{display:grid;gap:6px;font-size:12px;font-weight:600;color:var(--secondary)}
-.editor-grid label.wide{grid-column:1/-1}
+.editor-grid .wide{grid-column:1/-1}
 .editor-grid input,.editor-grid select,.editor-grid textarea{font:inherit;font-size:13px;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:9px 11px;width:100%;font-weight:400}
 .editor-grid textarea{resize:vertical;min-height:88px;line-height:1.6}
 .editor-grid textarea:focus-visible{outline:3px solid #1795d166;outline-offset:3px}
@@ -313,7 +313,7 @@ body.dark .form-error{background:#4a2325;color:#ffb4b4}
 #detail-source-note{font-size:12px;color:var(--secondary);margin-bottom:10px}
 .detail-actions{display:flex;gap:8px;flex-wrap:wrap}
 .related-event button{font-size:12px;padding:5px 10px;margin-top:6px}
-@media(max-width:560px){.editor-grid{grid-template-columns:1fr}.editor-grid label.wide{grid-column:auto}}
+@media(max-width:560px){.editor-grid{grid-template-columns:1fr}.editor-grid .wide{grid-column:auto}}
 /* 월간 달력: 날짜 칸에 마우스를 올리면 우측 상단에 일정 추가 버튼 */
 .day-add{position:absolute;top:6px;right:6px;width:24px;height:24px;padding:0;border-radius:50%;font-size:16px;line-height:1;color:var(--accent);background:var(--surface);border-color:var(--border);opacity:0;transition:opacity .12s,background .15s,border-color .15s;z-index:1}
 .day:hover .day-add,.day:focus-within .day-add{opacity:1}
@@ -328,11 +328,20 @@ body.dark .form-error{background:#4a2325;color:#ffb4b4}
 /* 일정 입력 폼: 시간은 시작·종료 시각 선택기와 자주 쓰는 시각 버튼 */
 .editor-grid .field{display:grid;gap:6px;font-size:12px;font-weight:600;color:var(--secondary)}
 .editor-grid .field-label small{font-weight:400;margin-left:4px}
-.time-range{display:flex;align-items:center;gap:8px}
-.time-range select{flex:1;min-width:0;width:auto;font-variant-numeric:tabular-nums}
-.time-sep{color:var(--secondary);font-weight:400}
-.time-clear{font-size:11px;padding:6px 10px;white-space:nowrap;font-weight:400}
-.time-presets{display:flex;flex-wrap:wrap;gap:6px}
-.time-presets button{padding:3px 10px;font-size:11px;border-radius:999px;font-weight:400;font-variant-numeric:tabular-nums}
-@media(max-width:560px){.time-range{flex-wrap:wrap}.time-range select{flex:1 1 40%}.time-clear{flex-basis:100%}}
-.time-presets button.active{background:var(--accent-light);border-color:var(--accent);color:var(--accent);font-weight:600}
+/* 일정 입력 폼: 시간은 시작·종료 중 활성화된 쪽에 시·분 버튼을 눌러 고른다 */
+.time-picker{display:grid;gap:8px}
+.time-targets{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.time-target{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;font-weight:400;background:var(--surface2)}
+.time-target span{font-size:12px;color:var(--secondary)}
+.time-target strong{font-size:15px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.time-target.active{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 2px var(--accent-light)}
+.time-target.active span{color:var(--accent);font-weight:700}
+.time-target:disabled{cursor:default;opacity:.5}
+.time-target:disabled:hover{background:var(--surface2);border-color:var(--border)}
+.time-pad{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.time-pad button{padding:7px 0;font-size:12px;font-weight:400;border-radius:8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.time-pad button.active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+.time-pad button.active:hover{background:#117fb5;color:#fff}
+.time-pad button:disabled{cursor:default;opacity:.3}
+.time-pad button:disabled:hover{background:var(--surface);border-color:var(--border);color:var(--secondary)}
+.time-pad .time-clear{font-size:11px}

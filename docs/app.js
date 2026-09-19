@@ -280,13 +280,31 @@ const syncTeamField=()=>{$('#team-field').hidden=editorForm.elements.kind.value=
 editorForm.elements.kind.addEventListener('change',syncTeamField);
 // Time is stored as 'HH:MM' or 'HH:MM~HH:MM', the same shape the sheet importer produces.
 const parseTimeRange=t=>{const m=/^(\d{1,2}):(\d{2})(?:\s*[~\-–]\s*(\d{1,2}):(\d{2}))?$/.exec(t||'');if(!m)return ['',''];const p=(h,mm)=>h.padStart(2,'0')+':'+mm;return [p(m[1],m[2]),m[3]?p(m[3],m[4]):''];};
-const syncPresets=()=>{const s=editorForm.elements.start.value;editorForm.querySelectorAll('[data-time]').forEach(b=>{b.classList.toggle('active',b.dataset.time===s);b.setAttribute('aria-pressed',b.dataset.time===s);});};
-// Time is chosen from 10-minute steps between 07:00 and 21:00 (native time pickers ignore step on desktop and show 오전/오후).
-const TIME_OPTIONS=Array.from({length:85},(_,i)=>{const t=420+i*10;return String(Math.floor(t/60)).padStart(2,'0')+':'+String(t%60).padStart(2,'0');});
-['start','end'].forEach(k=>{const sel=editorForm.elements[k];sel.innerHTML=`<option value="">${k==='start'?'시작 시각':'종료 시각 (선택)'}</option>`+TIME_OPTIONS.map(t=>`<option>${t}</option>`).join('');sel.addEventListener('change',syncPresets);});
-// A stored value outside the list (e.g. 06:30) is still shown when editing.
-const setTimeValue=(sel,v)=>{if(v&&![...sel.options].some(o=>o.value===v))sel.add(new Option(v,v),[...sel.options].find(o=>o.value>v)||null);sel.value=v;};
-editorForm.addEventListener('click',ev=>{const f=editorForm.elements,p=ev.target.closest('[data-time]');if(p){f.start.value=p.dataset.time;if(f.end.value&&f.end.value<=f.start.value)f.end.value='';syncPresets();f.end.focus();}else if(ev.target.closest('.time-clear')){f.start.value='';f.end.value='';syncPresets();f.start.focus();}});
+// Time pad: 7~20시 and 10-minute buttons apply to whichever of 시작/종료 is active. Values live in hidden inputs start/end as 'HH:MM'.
+// (Native time pickers ignore step on desktop and show 오전/오후; long select lists truncate and are slow to scan.)
+const HOURS=Array.from({length:14},(_,i)=>String(i+7).padStart(2,'0')), MINUTES=['00','10','20','30','40','50'];
+let timeTarget='start';
+function renderTimePad(){
+  const f=editorForm.elements,start=f.start.value,end=f.end.value;
+  if(!start)timeTarget='start';
+  const cur=timeTarget==='start'?start:end,h=cur.slice(0,2),m=cur.slice(3);
+  editorForm.querySelectorAll('[data-target]').forEach(b=>{const on=b.dataset.target===timeTarget;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);b.disabled=b.dataset.target==='end'&&!start;});
+  $('[data-time-label="start"]').textContent=start||'미정';$('[data-time-label="end"]').textContent=end||'없음';
+  // While choosing 종료, hours and minutes at or before 시작 cannot be pressed.
+  const sh=timeTarget==='end'?start.slice(0,2):'',sm=timeTarget==='end'?start.slice(3):'';
+  $('#time-hours').innerHTML=HOURS.map(x=>`<button type="button" data-hour="${x}" aria-pressed="${x===h}" class="${x===h?'active':''}"${sh&&(x<sh||(x===sh&&sm>='50'))?' disabled':''}>${Number(x)}시</button>`).join('');
+  $('#time-minutes').innerHTML=MINUTES.map(x=>`<button type="button" data-minute="${x}" aria-pressed="${!!h&&x===m}" class="${h&&x===m?'active':''}"${!h||(sh&&h===sh&&x<=sm)?' disabled':''}>${x}분</button>`).join('')+`<button type="button" class="time-clear"${cur?'':' disabled'}>지우기</button>`;
+}
+editorForm.addEventListener('click',ev=>{
+  const f=editorForm.elements,t=ev.target.closest('[data-target]'),hb=ev.target.closest('[data-hour]'),mb=ev.target.closest('[data-minute]'),cl=ev.target.closest('.time-clear');
+  if(t)timeTarget=t.dataset.target;
+  else if(hb){const k=timeTarget,x=hb.dataset.hour,s=f.start.value;let mm=f[k].value?f[k].value.slice(3):'00';if(k==='end'&&x===s.slice(0,2)&&mm<=s.slice(3))mm=String(Number(s.slice(3))+10).padStart(2,'0');f[k].value=x+':'+mm;}
+  else if(mb){const k=timeTarget;if(f[k].value)f[k].value=f[k].value.slice(0,2)+':'+mb.dataset.minute;}
+  else if(cl){if(timeTarget==='start')f.start.value='';f.end.value='';}
+  else return;
+  if(f.start.value&&f.end.value&&f.end.value<=f.start.value)f.end.value='';
+  renderTimePad();
+});
 function openEditor(id=null,preset=null){
   if(!fb){alert('일정 저장소에 연결하지 못했습니다.'+(fbError?' ('+fbError+')':'')+' 네트워크 연결을 확인한 뒤 새로고침해 주세요.');return;}
   const e=id?data.events.find(x=>x.id===id&&isOwn(x)):null;if(id&&!e)return;
@@ -296,7 +314,7 @@ function openEditor(id=null,preset=null){
   // 담당은 정해진 목록에서만 고른다(새 담당 이름은 만들 수 없음). 월중행사는 담당 없이 저장한다.
   if(f.team.options.length<=1)f.team.innerHTML='<option value="">담당 선택</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('');
   f.date.value=e?e.date:selected;f.kind.value=e?e.kind:(preset?.kind||$('#kind').value||(view==='month'?dayKind:'weekly'));
-  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));{const [s,en]=parseTimeRange(e?e.time:'');setTimeValue(f.start,s);setTimeValue(f.end,en);}syncPresets();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
+  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));{const [s,en]=parseTimeRange(e?e.time:'');f.start.value=s;f.end.value=en;}timeTarget='start';renderTimePad();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
   if(!TEAMS.includes(f.team.value))f.team.value='';syncTeamField();
   $('#editor-delete').hidden=!e;showEditorError('');$('#editor-save').disabled=false;
   editor.showModal();f.title.focus();
