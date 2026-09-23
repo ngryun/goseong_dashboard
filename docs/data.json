@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-22T06:45:44+00:00",
+"updated_at": "2026-09-23T06:37:33+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-22T06:45:44+00:00"
+"data_at": "2026-09-23T06:37:33+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-22T06:45:44+00:00"
+"data_at": "2026-09-23T06:37:33+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-22T06:45:44+00:00"
+"data_at": "2026-09-23T06:37:33+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-09-22T06:45:44+00:00"
+"data_at": "2026-09-23T06:37:33+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -80,8 +80,8 @@
 "warnings": [
 "10월 월중행사: 연도를 확인할 수 없어 제외했습니다."
 ],
-"count": 40,
-"data_at": "2026-09-22T06:45:44+00:00"
+"count": 41,
+"data_at": "2026-09-23T06:37:33+00:00"
 }
 ],
 "events": [
@@ -5471,7 +5471,7 @@
 "place": "도학초외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "25cc3ea73a9b56223130f86e",
+"id": "79e228293753a8952c7ebd07",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6039,6 +6039,26 @@
 },
 {
 "date": "2026-09-30",
+"title": "2026 학부모 학교참여 동아리 지원사업 모니터링",
+"description": "2026 학부모 학교참여 동아리 지원사업 모니터링 \n- 18:30, 광산초 \n- 이분현",
+"tab": "교육과3(9월5주)",
+"cell": "G6",
+"kind": "weekly",
+"team": "학부모지원센터",
+"time": "18:30",
+"place": "광산초",
+"owner": "이분현",
+"slots": [
+{
+"time": "18:30",
+"place": "광산초"
+}
+],
+"id": "979c608454ed3acff9ef26f2",
+"source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-09-30",
 "title": "찾아가는 직업교육 설명회",
 "description": "찾아가는 직업교육 설명회",
 "tab": "9월 월중행사",
@@ -6069,7 +6089,7 @@
 "place": "동광초"
 }
 ],
-"id": "64c022afe4c216912c4ca118",
+"id": "630353e38a9a0c1d1cd31dba",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6104,7 +6124,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "9b9f1f0e778a11133ecf546f",
+"id": "782a1e85ef2934b710d259d4",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6124,7 +6144,7 @@
 "place": "인흥초"
 }
 ],
-"id": "5e321a29af2f0cea61d3cac2",
+"id": "d30d238cd68d49a93ec06580",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6144,7 +6164,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "c119f2966fb31b6b61decb82",
+"id": "3850fbe09b40c9d1e88cdbcb",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6184,7 +6204,7 @@
 "place": "대진초"
 }
 ],
-"id": "998e2eb9f3aa3f576623d999",
+"id": "0d9998182ac55f575f0aeadc",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6204,7 +6224,7 @@
 "place": "대진초"
 }
 ],
-"id": "d30d238cd68d49a93ec06580",
+"id": "41d992dc22fc8b850c5e02ef",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6244,7 +6264,7 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "185e146d9d31600b9aa5e2e4",
+"id": "240cf17e389b0aada4d8b830",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
