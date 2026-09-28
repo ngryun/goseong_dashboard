@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-28T01:57:38+00:00",
+"updated_at": "2026-09-28T08:38:04+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-28T01:57:38+00:00"
+"data_at": "2026-09-28T08:38:04+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-28T01:57:38+00:00"
+"data_at": "2026-09-28T08:38:04+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-28T01:57:38+00:00"
+"data_at": "2026-09-28T08:38:04+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-09-28T01:57:38+00:00"
+"data_at": "2026-09-28T08:38:04+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,22 @@
 "10월 월중행사 41행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 93,
-"data_at": "2026-09-28T01:57:38+00:00"
+"data_at": "2026-09-28T08:38:04+00:00"
+},
+{
+"id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
+"url": "https://docs.google.com/spreadsheets/d/16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY/edit",
+"label": "2026년 10월 1주",
+"year": null,
+"tabs": [
+"교육과1(10월1주)",
+"교육과2(10월1주)",
+"교육과3(10월1주)",
+"행정과(10월1주)"
+],
+"warnings": [],
+"count": 16,
+"data_at": "2026-09-28T08:38:04+00:00"
 }
 ],
 "events": [
@@ -6469,6 +6484,21 @@
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
+"date": "2026-10-05",
+"title": "시설관리 미배치교 순회점검",
+"description": "시설관리 미배치교 순회점검\n- 10.06(화)~10.08(목), 도학초 외 9교\n- 박구원, 윤동열",
+"tab": "교육과1(10월1주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "중등교육(중등)",
+"time": "",
+"place": "도학초 외 9교",
+"owner": "박구원, 윤동열",
+"slots": [],
+"id": "b641f944012e049bce790fe9",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
 "date": "2026-10-06",
 "title": "학습종합클리닉센터 그림책 여행 프로그램 운영)",
 "description": "학습종합클리닉센터 그림책 여행 프로그램 운영)",
@@ -6484,6 +6514,210 @@
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
+"date": "2026-10-06",
+"title": "순회보건교육 및 보건업무",
+"description": "순회보건교육 및 보건업무\n- 08:00, 도학초  \n- 이완옥",
+"tab": "교육과3(10월1주)",
+"cell": "C5",
+"kind": "weekly",
+"team": "보건교육",
+"time": "08:00",
+"place": "도학초",
+"owner": "이완옥",
+"slots": [
+{
+"time": "08:00",
+"place": "도학초"
+}
+],
+"id": "aa6b68f6d12de1985dc08f37",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-06",
+"title": "순회상담",
+"description": "순회상담\n- 09:00, 거진고\n- 윤미송",
+"tab": "교육과3(10월1주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "거진고",
+"owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
+"id": "2cfedff9250ddd712438143a",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-06",
+"title": "학업중단숙려제",
+"description": "학업중단숙려제\n- 10:00, 위센터\n- 변고은",
+"tab": "교육과3(10월1주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "10:00",
+"place": "위센터",
+"owner": "변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
+"id": "1c3554ed6e4ebce98659ecfd",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-06",
+"title": "예술강사 모니터링",
+"description": "예술강사 모니터링 \n- 11:40~13:00, 공현진초\n- 남궁연",
+"tab": "교육과2(10월1주)",
+"cell": "D5",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "11:40~13:00",
+"place": "공현진초",
+"owner": "남궁연",
+"slots": [
+{
+"time": "11:40~13:00",
+"place": "공현진초"
+}
+],
+"id": "0f755c4cd6c8225473df294a",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-06",
+"title": "순회상담",
+"description": "순회상담\n- 13:00, 거진초\n- 변고은",
+"tab": "교육과3(10월1주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "13:00",
+"place": "거진초",
+"owner": "변고은",
+"slots": [
+{
+"time": "13:00",
+"place": "거진초"
+}
+],
+"id": "e04e77178c77e0c184847de6",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-06",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
+"tab": "교육과3(10월1주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "대진초",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
+"id": "f5575d1ee2942ad07c6934fc",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
+"title": "순회상담",
+"description": "순회상담\n- 09:00, 거진초\n- 변고은",
+"tab": "교육과3(10월1주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "거진초",
+"owner": "변고은",
+"slots": [
+{
+"time": "09:00",
+"place": "거진초"
+}
+],
+"id": "8c3f696adfc6490bbbf0b3a1",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
+"title": "찾아가는 문화예술공연",
+"description": "찾아가는 문화예술공연\n- 11:40~13:00, 공현진초\n- 남궁연",
+"tab": "교육과2(10월1주)",
+"cell": "D6",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "11:40~13:00",
+"place": "공현진초",
+"owner": "남궁연",
+"slots": [
+{
+"time": "11:40~13:00",
+"place": "공현진초"
+}
+],
+"id": "fe570e2bf9cb61870f2c2b45",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
+"title": "순회상담",
+"description": "순회상담\n- 13:00, 아야진초\n- 윤미송",
+"tab": "교육과3(10월1주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "13:00",
+"place": "아야진초",
+"owner": "윤미송",
+"slots": [
+{
+"time": "13:00",
+"place": "아야진초"
+}
+],
+"id": "80706980327d726fe052f36f",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중",
+"tab": "교육과3(10월1주)",
+"cell": "B6",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "dc3308f25aeb0c1402eef94c",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
 "date": "2026-10-07",
 "title": "2026 고성 초등학교 학적업무 담당자 역량강화연수",
 "description": "2026 고성 초등학교 학적업무 담당자 역량강화연수",
@@ -6497,6 +6731,106 @@
 "slots": [],
 "id": "71ba2bd7248f40507cbe6617",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-08",
+"title": "순회보건교육 및 보건업무",
+"description": "순회보건교육 및 보건업무\n- 08:00, 오호초  \n- 이완옥",
+"tab": "교육과3(10월1주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "보건교육",
+"time": "08:00",
+"place": "오호초",
+"owner": "이완옥",
+"slots": [
+{
+"time": "08:00",
+"place": "오호초"
+}
+],
+"id": "cdc45edc906d5828e4dc1f6c",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-08",
+"title": "순회상담",
+"description": "순회상담\n- 09:00, 인흥초\n- 윤미송",
+"tab": "교육과3(10월1주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "인흥초",
+"owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "인흥초"
+}
+],
+"id": "217bc3616787637c93dc136d",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-08",
+"title": "학업중단숙려제",
+"description": "학업중단숙려제\n- 10:00, 위센터\n- 변고은",
+"tab": "교육과3(10월1주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "10:00",
+"place": "위센터",
+"owner": "변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
+"id": "51c8b33e72539ff255cf713d",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-08",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
+"tab": "교육과3(10월1주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "대진초",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
+"id": "66f74f6c6456febb610243a3",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-08",
+"title": "순회상담",
+"description": "순회상담\n- 14:00, 대진초\n- 변고은",
+"tab": "교육과3(10월1주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "14:00",
+"place": "대진초",
+"owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "대진초"
+}
+],
+"id": "6ff477c8fff27d5c744af73a",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
 "date": "2026-10-09",
