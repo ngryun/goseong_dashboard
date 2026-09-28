@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-23T12:20:05+00:00",
+"updated_at": "2026-09-28T01:57:38+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-23T12:20:05+00:00"
+"data_at": "2026-09-28T01:57:38+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-23T12:20:05+00:00"
+"data_at": "2026-09-28T01:57:38+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-23T12:20:05+00:00"
+"data_at": "2026-09-28T01:57:38+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-09-23T12:20:05+00:00"
+"data_at": "2026-09-28T01:57:38+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 41행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 93,
-"data_at": "2026-09-23T12:20:05+00:00"
+"data_at": "2026-09-28T01:57:38+00:00"
 }
 ],
 "events": [
@@ -5675,6 +5675,26 @@
 "source_id": "1apWukc8SJtPT9JPEqk8oLFT__hqlAiAHSxAKHWTVg0Y"
 },
 {
+"date": "2026-09-28",
+"title": "2026 학부모 학교참여 동아리 지원사업 모니터링",
+"description": "2026 학부모 학교참여 동아리 \n   지원사업 모니터링 \n- 18:30, 광산초 \n- 이분현",
+"tab": "교육과3(9월5주)",
+"cell": "G4",
+"kind": "weekly",
+"team": "학부모지원센터",
+"time": "18:30",
+"place": "광산초",
+"owner": "이분현",
+"slots": [
+{
+"time": "18:30",
+"place": "광산초"
+}
+],
+"id": "47a3ad54f0f640cbf69da563",
+"source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
 "date": "2026-09-29",
 "title": "교육전문직원 더배움공동체(9월)",
 "description": "교육전문직원 \n    더배움공동체(9월) \n- 09:00, 설악산승혜네벌꿀",
@@ -5811,7 +5831,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "347f535ccbe0dd294cdb96a4",
+"id": "b71bcc731241ba48d9cfe646",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -5831,7 +5851,7 @@
 "place": "거진고"
 }
 ],
-"id": "d8660e9102b2da622e8ed6a0",
+"id": "ef2d71ac5691fabcf5739eab",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -5891,7 +5911,7 @@
 "place": "광산초"
 }
 ],
-"id": "ef2d71ac5691fabcf5739eab",
+"id": "3fba49343eb50dd598c56996",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -5911,7 +5931,7 @@
 "place": "파랑뷰호텔"
 }
 ],
-"id": "14dc3846e70dda0d66208592",
+"id": "9001c2d6340023c99dbee90f",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -5971,7 +5991,7 @@
 "place": "거진초"
 }
 ],
-"id": "673183769ab65ab8ee34b388",
+"id": "089658c49920ceb5f8b9ce86",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -5991,7 +6011,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "afe7c2999021c69e8760cb3b",
+"id": "1a63350713b074bdc1de664b",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6071,7 +6091,7 @@
 "place": "아야진초"
 }
 ],
-"id": "089658c49920ceb5f8b9ce86",
+"id": "cfe8d37e76cfb7f1ab4f34fc",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6091,7 +6111,7 @@
 "place": "간성초"
 }
 ],
-"id": "4c560b6c7173e938589b5361",
+"id": "06bc4fe1d26c1b8c6400853c",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6115,27 +6135,7 @@
 "place": "고성중"
 }
 ],
-"id": "06bc4fe1d26c1b8c6400853c",
-"source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
-},
-{
-"date": "2026-09-30",
-"title": "2026 학부모 학교참여 동아리 지원사업 모니터링",
-"description": "2026 학부모 학교참여 동아리 \n   지원사업 모니터링 \n- 18:30, 광산초 \n- 이분현",
-"tab": "교육과3(9월5주)",
-"cell": "G6",
-"kind": "weekly",
-"team": "학부모지원센터",
-"time": "18:30",
-"place": "광산초",
-"owner": "이분현",
-"slots": [
-{
-"time": "18:30",
-"place": "광산초"
-}
-],
-"id": "e4f3839a1ff8146c20a74c0b",
+"id": "42ebe11854a89507b29cfb0b",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
@@ -6470,8 +6470,8 @@
 },
 {
 "date": "2026-10-06",
-"title": "학습종합클리닉센터 그림책 여행 프로그램 운영20, 27일)",
-"description": "학습종합클리닉센터 그림책 여행 프로그램 운영20, 27일)",
+"title": "학습종합클리닉센터 그림책 여행 프로그램 운영)",
+"description": "학습종합클리닉센터 그림책 여행 프로그램 운영)",
 "tab": "10월 월중행사",
 "cell": "F9",
 "kind": "monthly",
@@ -6770,8 +6770,8 @@
 },
 {
 "date": "2026-10-20",
-"title": "학습종합클리닉센터 그림책 여행 프로그램 운영20, 27일)",
-"description": "학습종합클리닉센터 그림책 여행 프로그램 운영20, 27일)",
+"title": "학습종합클리닉센터 그림책 여행 프로그램 운영",
+"description": "학습종합클리닉센터 그림책 여행 프로그램 운영",
 "tab": "10월 월중행사",
 "cell": "F35",
 "kind": "monthly",
@@ -7010,8 +7010,8 @@
 },
 {
 "date": "2026-10-27",
-"title": "학습종합클리닉센터 그림책 여행 프로그램 운영20, 27일)",
-"description": "학습종합클리닉센터 그림책 여행 프로그램 운영20, 27일)",
+"title": "학습종합클리닉센터 그림책 여행 프로그램 운영",
+"description": "학습종합클리닉센터 그림책 여행 프로그램 운영",
 "tab": "10월 월중행사",
 "cell": "F51",
 "kind": "monthly",
