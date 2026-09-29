@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-28T08:38:04+00:00",
+"updated_at": "2026-09-29T02:16:38+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-28T08:38:04+00:00"
+"data_at": "2026-09-29T02:16:38+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-28T08:38:04+00:00"
+"data_at": "2026-09-29T02:16:38+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-28T08:38:04+00:00"
+"data_at": "2026-09-29T02:16:38+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-09-28T08:38:04+00:00"
+"data_at": "2026-09-29T02:16:38+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 41행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 93,
-"data_at": "2026-09-28T08:38:04+00:00"
+"data_at": "2026-09-29T02:16:38+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -96,8 +96,8 @@
 "행정과(10월1주)"
 ],
 "warnings": [],
-"count": 16,
-"data_at": "2026-09-28T08:38:04+00:00"
+"count": 20,
+"data_at": "2026-09-29T02:16:38+00:00"
 }
 ],
 "events": [
@@ -6535,6 +6535,26 @@
 },
 {
 "date": "2026-10-06",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 동광초, 거진초\n- 김제현",
+"tab": "교육과3(10월1주)",
+"cell": "F5",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "동광초, 거진초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
+"id": "f347176cd8c1354cc573f740",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-06",
 "title": "순회상담",
 "description": "순회상담\n- 09:00, 거진고\n- 윤미송",
 "tab": "교육과3(10월1주)",
@@ -6650,7 +6670,27 @@
 "place": "거진초"
 }
 ],
-"id": "8c3f696adfc6490bbbf0b3a1",
+"id": "80706980327d726fe052f36f",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:30, 고성고, 간성초\n- 김제현",
+"tab": "교육과3(10월1주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:30",
+"place": "고성고, 간성초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
+"id": "53149afb052b4f37bd0b8727",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6690,7 +6730,7 @@
 "place": "아야진초"
 }
 ],
-"id": "80706980327d726fe052f36f",
+"id": "432d409ec2ce70c012314460",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6714,7 +6754,7 @@
 "place": "고성중"
 }
 ],
-"id": "dc3308f25aeb0c1402eef94c",
+"id": "bb7f12d9a73965202d9491b1",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6733,6 +6773,26 @@
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
+"date": "2026-10-07",
+"title": "특수교육운영위원회 협의회",
+"description": "특수교육운영위원회 협의회\n- 15:00, 고성교육지원청 2층 소회의실\n- 배준직, 임병철, 김제현",
+"tab": "교육과3(10월1주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "15:00",
+"place": "고성교육지원청 2층 소회의실",
+"owner": "배준직, 임병철, 김제현",
+"slots": [
+{
+"time": "15:00",
+"place": "고성교육지원청 2층 소회의실"
+}
+],
+"id": "4fa24ec01022780c5f8ee417",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
 "date": "2026-10-08",
 "title": "순회보건교육 및 보건업무",
 "description": "순회보건교육 및 보건업무\n- 08:00, 오호초  \n- 이완옥",
@@ -6749,7 +6809,27 @@
 "place": "오호초"
 }
 ],
-"id": "cdc45edc906d5828e4dc1f6c",
+"id": "75797f9d445190f2e6345169",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-08",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 대진초, 고성중\n- 김제현",
+"tab": "교육과3(10월1주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "대진초, 고성중",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
+"id": "53473281bde78d694f797052",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6769,7 +6849,7 @@
 "place": "인흥초"
 }
 ],
-"id": "217bc3616787637c93dc136d",
+"id": "7aa52c9e7134ecd8b836ec05",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6789,7 +6869,7 @@
 "place": "위센터"
 }
 ],
-"id": "51c8b33e72539ff255cf713d",
+"id": "35ec638a53649152bcadd034",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6809,7 +6889,7 @@
 "place": "대진초"
 }
 ],
-"id": "66f74f6c6456febb610243a3",
+"id": "71511dc43251aa5a6558a869",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6829,7 +6909,7 @@
 "place": "대진초"
 }
 ],
-"id": "6ff477c8fff27d5c744af73a",
+"id": "990ba0c6fa0408235a8c1904",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
