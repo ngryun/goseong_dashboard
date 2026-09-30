@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-30T02:28:50+00:00",
+"updated_at": "2026-09-30T08:58:59+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-30T02:28:50+00:00"
+"data_at": "2026-09-30T08:58:59+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-30T02:28:50+00:00"
+"data_at": "2026-09-30T08:58:59+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-30T02:28:50+00:00"
+"data_at": "2026-09-30T08:58:59+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-09-30T02:28:50+00:00"
+"data_at": "2026-09-30T08:58:59+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-09-30T02:28:50+00:00"
+"data_at": "2026-09-30T08:58:59+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -96,8 +96,8 @@
 "행정과(10월1주)"
 ],
 "warnings": [],
-"count": 25,
-"data_at": "2026-09-30T02:28:50+00:00"
+"count": 27,
+"data_at": "2026-09-30T08:58:59+00:00"
 }
 ],
 "events": [
@@ -6760,6 +6760,26 @@
 },
 {
 "date": "2026-10-07",
+"title": "죽왕초 외부환경개선공사 소액수의 견적제출 공고 개찰",
+"description": "죽왕초 외부환경개선공사 소액수의 견적제출 공고 개찰\n- 조동우, 11:00",
+"tab": "행정과(10월1주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "재정팀",
+"time": "11:00",
+"place": "조동우",
+"owner": "",
+"slots": [
+{
+"time": "11:00",
+"place": "조동우"
+}
+],
+"id": "6cd4c6a1e0ecd23535c57750",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
 "title": "찾아가는 문화예술공연",
 "description": "찾아가는 문화예술공연\n- 11:40~13:00, 공현진초\n- 남궁연",
 "tab": "교육과2(10월1주)",
@@ -6975,6 +6995,26 @@
 }
 ],
 "id": "8c96bf2fdeb33284367146fb",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-08",
+"title": "거진고 외부환경개선공사 소액수의 견적제출 공고 개찰",
+"description": "거진고 외부환경개선공사 소액수의 견적제출 공고 개찰\n- 조동우, 11:00",
+"tab": "행정과(10월1주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "재정팀",
+"time": "11:00",
+"place": "조동우",
+"owner": "",
+"slots": [
+{
+"time": "11:00",
+"place": "조동우"
+}
+],
+"id": "0ac20a4fed9a1358c6772702",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
