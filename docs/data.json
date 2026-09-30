@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-09-29T08:43:34+00:00",
+"updated_at": "2026-09-30T02:28:50+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-09-29T08:43:34+00:00"
+"data_at": "2026-09-30T02:28:50+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-09-29T08:43:34+00:00"
+"data_at": "2026-09-30T02:28:50+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-09-29T08:43:34+00:00"
+"data_at": "2026-09-30T02:28:50+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-09-29T08:43:34+00:00"
+"data_at": "2026-09-30T02:28:50+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-09-29T08:43:34+00:00"
+"data_at": "2026-09-30T02:28:50+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -96,8 +96,8 @@
 "행정과(10월1주)"
 ],
 "warnings": [],
-"count": 24,
-"data_at": "2026-09-29T08:43:34+00:00"
+"count": 25,
+"data_at": "2026-09-30T02:28:50+00:00"
 }
 ],
 "events": [
@@ -6515,7 +6515,7 @@
 "place": "도학초"
 }
 ],
-"id": "3b75083d0b90da75a402e4cc",
+"id": "238827bb8d35569bc0235655",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6535,7 +6535,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "db9bbdcac542b0e617f2cec8",
+"id": "93da3662f5e5ed0c7f882ae1",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6555,7 +6555,7 @@
 "place": "거진고"
 }
 ],
-"id": "704dac8bed4e0f0f5783339d",
+"id": "fa4a7c825426fc5ad53e36ca",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6575,7 +6575,7 @@
 "place": "위센터"
 }
 ],
-"id": "fa4a7c825426fc5ad53e36ca",
+"id": "1e6e579dab6d7845a0880629",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6595,7 +6595,7 @@
 "place": "공현진초"
 }
 ],
-"id": "0f755c4cd6c8225473df294a",
+"id": "f8914f8c677bcb16aa0a186d",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6615,7 +6615,7 @@
 "place": "거진초"
 }
 ],
-"id": "1e6e579dab6d7845a0880629",
+"id": "5bc48734941b0424ddc2616e",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6635,7 +6635,7 @@
 "place": "대진초"
 }
 ],
-"id": "847f4e5934653de4eeeeb3de",
+"id": "ec2755044ba8e82e3d8253f6",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6655,7 +6655,7 @@
 "place": "동광산과고"
 }
 ],
-"id": "f8914f8c677bcb16aa0a186d",
+"id": "3e59e3c9e48d725eda010f88",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6675,7 +6675,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "49ed521ce74a4a400ecf7ae7",
+"id": "19a707d4ddd3b1892366f455",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6695,7 +6695,7 @@
 "place": "거진초"
 }
 ],
-"id": "dd71f1ace6e6e8f997234a14",
+"id": "a1db1bfb57268b585d4cf52c",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6715,7 +6715,27 @@
 "place": "광산초"
 }
 ],
-"id": "75616b504e94f3fce2a28776",
+"id": "020a2927c9b9d9e328b33bba",
+"source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
+},
+{
+"date": "2026-10-07",
+"title": "중학교 학교자율시간 과목 설계 연수",
+"description": "중학교 학교자율시간 과목 설계 연수\n- 9:00~18:00, 교육과학정보원(원주)\n- 심은경",
+"tab": "교육과1(10월1주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "중등교육(중등)",
+"time": "09:00~18:00",
+"place": "교육과학정보원(원주)",
+"owner": "심은경",
+"slots": [
+{
+"time": "09:00~18:00",
+"place": "교육과학정보원(원주)"
+}
+],
+"id": "05326d792e75896703b49aa8",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6735,7 +6755,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "6a389684e117e52ceb67105c",
+"id": "8ea91152b03d409eaa6921fe",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6755,7 +6775,7 @@
 "place": "공현진초"
 }
 ],
-"id": "0f85cf1d9346a0b6f25c5d11",
+"id": "debc9aba9533ded4dfcad340",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6775,7 +6795,7 @@
 "place": "아야진초"
 }
 ],
-"id": "a1db1bfb57268b585d4cf52c",
+"id": "d5108777dc2fc285f0d54a33",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6799,7 +6819,7 @@
 "place": "고성중"
 }
 ],
-"id": "bc9fe6a5eec87611792181e4",
+"id": "f2d4b7f82bec9b367aff0f2c",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6854,7 +6874,7 @@
 "place": "2층 소회의실"
 }
 ],
-"id": "debc9aba9533ded4dfcad340",
+"id": "a81fc36d571f61558c889a0e",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6874,7 +6894,7 @@
 "place": "오호초"
 }
 ],
-"id": "13381532e8e2015076425c04",
+"id": "1ca6350985ecb03f97fd0b08",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6894,7 +6914,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "c71ee16b77e06a2d8034c84b",
+"id": "032a8381809a0f7d801af2c3",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6914,7 +6934,7 @@
 "place": "인흥초"
 }
 ],
-"id": "648fcb3001844442a785ee35",
+"id": "ef95f3bcac7580300037681d",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6934,7 +6954,7 @@
 "place": "거진초"
 }
 ],
-"id": "584f9500c6c5ce4c3fa06b8d",
+"id": "9b620b9970e67d4e26ccd417",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6954,7 +6974,7 @@
 "place": "위센터"
 }
 ],
-"id": "ef95f3bcac7580300037681d",
+"id": "8c96bf2fdeb33284367146fb",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6974,7 +6994,7 @@
 "place": "대진초"
 }
 ],
-"id": "6f4777a93560393867e0d071",
+"id": "f2c481a281c948300cda4ddc",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
@@ -6994,7 +7014,7 @@
 "place": "대진초"
 }
 ],
-"id": "8c96bf2fdeb33284367146fb",
+"id": "536858cb52846bfbd3c51054",
 "source_id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY"
 },
 {
