@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-02T02:19:47+00:00",
+"updated_at": "2026-10-02T08:43:51+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-02T02:19:47+00:00"
+"data_at": "2026-10-02T08:43:51+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-02T02:19:47+00:00"
+"data_at": "2026-10-02T08:43:51+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-02T02:19:47+00:00"
+"data_at": "2026-10-02T08:43:51+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-02T02:19:47+00:00"
+"data_at": "2026-10-02T08:43:51+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-02T02:19:47+00:00"
+"data_at": "2026-10-02T08:43:51+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-02T02:19:47+00:00"
+"data_at": "2026-10-02T08:43:51+00:00"
 }
 ],
 "events": [
@@ -6486,7 +6486,7 @@
 {
 "date": "2026-10-05",
 "title": "2026년 수목전정 작업",
-"description": "2026년 수목전정 작업\n- 08:00~, 고성교육지원청\n- 이정옥",
+"description": "2026년 수목전정 작업\n- 08:00, 고성교육지원청\n- 이정옥",
 "tab": "행정과(10월1주)",
 "cell": "G4",
 "kind": "weekly",
@@ -6756,7 +6756,7 @@
 {
 "date": "2026-10-07",
 "title": "중학교 학교자율시간 과목 설계 연수",
-"description": "중학교 학교자율시간 과목 설계 연수\n- 9:00~18:00, 교육과학정보원(원주)\n- 심은경",
+"description": "중학교 학교자율시간 과목 설계 연수\n- 09:00~18:00, 교육과학정보원(원주)\n- 심은경",
 "tab": "교육과1(10월1주)",
 "cell": "F6",
 "kind": "weekly",
@@ -7090,7 +7090,7 @@
 {
 "date": "2026-10-09",
 "title": "2026년 수목전정 작업",
-"description": "2026년 수목전정 작업\n- 08:00~, 대진중.고\n- 이정옥",
+"description": "2026년 수목전정 작업\n- 08:00, 대진중.고\n- 이정옥",
 "tab": "행정과(10월1주)",
 "cell": "G8",
 "kind": "weekly",
@@ -7110,7 +7110,7 @@
 {
 "date": "2026-10-10",
 "title": "2026년 수목전정 작업",
-"description": "2026년 수목전정 작업\n- 08:00~, 거진중, 거진고\n- 이정옥",
+"description": "2026년 수목전정 작업\n- 08:00, 거진중, 거진고\n- 이정옥",
 "tab": "행정과(10월1주)",
 "cell": "G9",
 "kind": "weekly",
