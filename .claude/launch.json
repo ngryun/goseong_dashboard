@@ -4,8 +4,9 @@
     {
       "name": "dashboard",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["tools/serve.mjs", "8765"],
-      "port": 8765
+      "runtimeArgs": ["tools/serve.mjs"],
+      "port": 8765,
+      "autoPort": true
     }
   ]
 }

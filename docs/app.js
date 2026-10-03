@@ -205,26 +205,29 @@ function renderWeek(events) {
   const shown=events.filter(e=>overlaps(e,from,to));
   const allWeek=data.events.filter(e=>overlaps(e,from,to));
   const unknown=[...new Set(allWeek.filter(e=>e.kind==='weekly'&&groupFor(e)==='other').map(e=>e.team||'담당 미기재'))];
-  const groups=[...TEAM_GROUPS,...(unknown.length?[{id:'other',label:'기타 담당',teams:unknown}]:[]),{id:'monthly',label:'월중행사',teams:['월중행사']}];
-  const controls=`<div class="week-group-controls" role="group" aria-label="업무 묶음 필터"><button data-group="" aria-pressed="${!activeGroup}" class="${!activeGroup?'active':''}">전체 담당</button>${groups.map(g=>`<button data-group="${g.id}" aria-pressed="${activeGroup===g.id}" class="category-${g.id} ${activeGroup===g.id?'active':''}"><span class="category-dot"></span>${esc(g.label)}</button>`).join('')}</div><div class="week-guide"><span>담당별 주간업무</span><span>좌우로 이동 · 담당과 요일 고정</span></div>`;
+  // 월중행사 comes first so the office-wide events of the week sit right under the day headers.
+  const groups=[{id:'monthly',label:'월중행사',teams:['월중행사']},...TEAM_GROUPS,...(unknown.length?[{id:'other',label:'기타 담당',teams:unknown}]:[])];
+  const controls=`<div class="week-group-controls" role="group" aria-label="업무 묶음 필터"><button data-group="" aria-pressed="${!activeGroup}" class="${!activeGroup?'active':''}">전체 담당</button>${groups.map(g=>`<button data-group="${g.id}" aria-pressed="${activeGroup===g.id}" class="category-${g.id} ${activeGroup===g.id?'active':''}"><span class="category-dot"></span>${esc(g.label)}</button>`).join('')}</div>`;
   let html='<div class="week-table-scroll" tabindex="0" role="region" aria-label="담당별 주간업무 표, 가로 스크롤 가능"><table class="week-table"><caption class="sr-only">담당 분야별 주간업무, '+esc($('#period-title').textContent)+'</caption><thead><tr><th scope="col" class="team-column">담당 분야 <small>주간 업무 건수</small></th>';
   html+=days.map(d=>{const key=dateKey(d),holiday=holidays.get(key);return `<th scope="col" class="${key===todayKey?'is-today':''}${holiday?' is-holiday':''}"><button data-date="${key}" aria-pressed="${selected===key}"><span>${['일','월','화','수','목','금','토'][d.getDay()]}</span><strong>${d.getMonth()+1}.${d.getDate()}</strong>${key===todayKey?'<em>오늘</em>':''}${holiday?`<em class="holiday-tag">${esc(holiday)}</em>`:''}</button></th>`;}).join('')+'</tr></thead>';
-  let rowCount=0;
+  // A row with no work this week is left out, unless that team is picked in the 담당 filter (so its cells can still take new work).
+  let rowCount=0,hidden=0;const picked=$('#team').value;
   for(const g of groups){
     if(activeGroup&&activeGroup!==g.id)continue;
     if($('#kind').value && (g.id==='monthly')!==($('#kind').value==='monthly'))continue;
     const teams=g.teams.filter(t=>!$('#team').value||t===$('#team').value);
     if(!teams.length)continue;
     const groupEvents=shown.filter(e=>groupFor(e)===g.id);
-    if($('#search').value.trim()&&!groupEvents.length)continue;
-    html+=`<tbody class="category-${g.id}"><tr class="group-divider"><th colspan="8" scope="rowgroup"><span><i class="category-dot"></i>${esc(g.label)}<small>${groupEvents.length}건</small></span></th></tr>`;
+    if(!groupEvents.length&&!picked){hidden+=teams.length;continue;}
+    // 월중행사 is a single row, so its own header names it instead of a divider row.
+    html+=`<tbody class="category-${g.id}">${g.id==='monthly'?'':`<tr class="group-divider"><th colspan="8" scope="rowgroup"><span><i class="category-dot"></i>${esc(g.label)}<small>${groupEvents.length}건</small></span></th></tr>`}`;
     for(const team of teams){
       const items=groupEvents.filter(e=>g.id==='monthly'||(e.team||'담당 미기재')===team);
-      if($('#search').value.trim()&&!items.length)continue;
+      if(!items.length&&!picked){hidden++;continue;}
       rowCount++;
       // Multi-day work is one band laid over the days it covers; every cell of the row leaves room for the bands at the top.
       const bars=laneBars(items,from,to),lanes=bars.reduce((n,b)=>Math.max(n,b.lane+1),0);
-      html+=`<tr class="team-row${lanes?' has-spans':''}"${lanes?` style="--lanes:${lanes}"`:''}><th scope="row" class="team-column"><span class="team-name">${esc(team)}</span><small>${items.length}건</small></th>`;
+      html+=`<tr class="team-row${lanes?' has-spans':''}"${lanes?` style="--lanes:${lanes}"`:''}><th scope="row" class="team-column"><span class="team-name">${g.id==='monthly'?'<i class="category-dot"></i>':''}${esc(team)}</span><small>${items.length}건</small></th>`;
       html+=days.map(d=>{
         const key=dateKey(d),daily=items.filter(e=>!isMulti(e)&&e.date===key),spans=bars.filter(b=>b.start===key);
         return `<td class="${key===todayKey?'is-today':''}">${spans.map(weekSpan).join('')}${daily.map(e=>`<button class="week-task" data-event="${e.id}" title="${esc(e.title)}">${!slotsOf(e)&&e.time?`<span class="task-time">${esc(e.time)}</span>`:''}<strong>${esc(e.title)}</strong>${slotsOf(e)?`<span class="task-slots">${slotsOf(e).map(s=>`<span><b>${esc(s.time)}</b>${s.place?esc(s.place):''}</span>`).join('')}</span>`:(e.place?`<span class="task-place">${esc(e.place)}</span>`:'')}</button>`).join('')||(bars.some(b=>b.start<=key&&key<=b.end)?'':'<span class="sr-only">등록된 업무 없음</span>')}<button type="button" class="cell-add" data-add-date="${key}" data-add-kind="${g.id==='monthly'?'monthly':'weekly'}" data-add-team="${g.id==='monthly'||team==='담당 미기재'?'':esc(team)}" aria-label="${key} ${esc(team)}에 일정 추가" title="이 칸에 일정 추가">＋</button></td>`;
@@ -232,7 +235,9 @@ function renderWeek(events) {
     }
     html+='</tbody>';
   }
-  $('#calendar').innerHTML=controls+(rowCount?html+'</table></div>':'<div class="empty">조건에 맞는 업무가 없습니다. 검색 또는 담당 필터를 변경해 주세요.</div>');
+  const guide=`<div class="week-guide"><span>담당별 주간업무${hidden?` <small>· 업무 없는 행 ${hidden}개 숨김</small>`:''}</span><span>좌우로 이동 · 담당과 요일 고정</span></div>`;
+  const filtered=$('#search').value.trim()||$('#kind').value||activeGroup;
+  $('#calendar').innerHTML=controls+guide+(rowCount?html+'</table></div>':`<div class="empty">${filtered?'조건에 맞는 업무가 없습니다. 검색 또는 담당 필터를 변경해 주세요.':'이 주에 등록된 업무가 없습니다.'}</div>`);
   return shown;
 }
 const weekSpan = b => `<button class="week-span category-${groupFor(b.e)}${b.start>b.e.date?' cont-left':''}${b.end<lastDay(b.e)?' cont-right':''}" style="--span:${b.span};--lane:${b.lane}" data-event="${esc(b.e.id)}" title="${esc(rangeText(b.e)+' '+b.e.title)}">${b.e.time?`<span class="task-time">${esc(b.e.time)}</span>`:''}<strong>${esc(b.e.title)}</strong></button>`;
