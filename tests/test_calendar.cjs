@@ -91,3 +91,57 @@ const real = JSON.parse(fs.readFileSync('docs/schools.json','utf8'));
 assert.ok(real.schools.length >= 20 && real.events.every(e => real.schools.some(s => s.code === e.school)), 'every event belongs to a listed school');
 assert.ok(real.events.every(e => !e.title.includes('토요휴업일')), 'Saturday closures are not shipped');
 console.log('School grouping and filters verified:', {schools: real.schools.length, events: real.events.length});
+
+// Multi-day events (direct input with endDate) cover every day of their range and share lanes within a row.
+context.input = [
+  {id:'a',date:'2026-10-06',endDate:'2026-10-08',kind:'monthly',title:'컨설팅 주간'},
+  {id:'b',date:'2026-10-07',endDate:'2026-10-09',kind:'monthly',title:'직무연수'},
+  {id:'c',date:'2026-10-09',endDate:'2026-10-13',kind:'monthly',title:'안전점검'},
+  {id:'d',date:'2026-10-08',kind:'monthly',title:'하루 행사'},
+  {id:'e',date:'2026-10-08',endDate:'2026-10-08',kind:'weekly',title:'같은 날 종료'}
+];
+assert.equal(JSON.stringify(vm.runInContext('input.map(isMulti)',context)), JSON.stringify([true,true,true,false,false]), 'an end date equal to the start is a one-day event');
+assert.equal(vm.runInContext('monthItems(input,"2026-10-08").monthly.length',context), 3, 'a day lists the multi-day events that cover it');
+assert.equal(vm.runInContext('input.filter(e=>overlaps(e,"2026-10-10","2026-10-16")).map(e=>e.id).join()',context), 'c');
+const lanes = vm.runInContext('laneBars(input,"2026-10-04","2026-10-10").map(b=>[b.e.id,b.start,b.end,b.lane,b.span].join(":"))',context);
+assert.deepEqual([...lanes], ['a:2026-10-06:2026-10-08:0:3','b:2026-10-07:2026-10-09:1:3','c:2026-10-09:2026-10-10:0:2'], 'overlapping bars take separate lanes; a bar is clipped to its week');
+assert.equal(vm.runInContext('laneBars(input,"2026-10-11","2026-10-17").map(b=>b.start+"/"+b.span).join()',context), '2026-10-11/3', 'the next week continues the bar from Sunday');
+assert.equal(vm.runInContext('rangeText(input[0])',context), '10.6(화) – 10.8(목)');
+assert.ok(vm.runInContext('monthPreviewHTML("2026-10-08","monthly",monthItems(input,"2026-10-08").monthly)',context).includes('10.7(수) – 10.9(금)'), 'previews show the range of a multi-day event');
+console.log('Multi-day ranges, lanes and week clipping verified.');
+
+// 공휴일 come from NEIS: a 공휴일 shared by more than half of the schools, never a school's own 재량휴업일.
+context.input = {schools:[{code:'a'},{code:'b'},{code:'c'}],events:[
+  {school:'a',date:'2026-10-09',title:'한글날',type:'공휴일'},{school:'b',date:'2026-10-09',title:'한글날',type:'공휴일'},
+  {school:'a',date:'2026-05-04',title:'학교장재량휴업일',type:'공휴일'},{school:'b',date:'2026-05-04',title:'학교장재량휴업일',type:'공휴일'},
+  {school:'a',date:'2026-10-20',title:'개교기념일',type:'공휴일'},
+  {school:'a',date:'2026-10-21',title:'1회고사',type:''},{school:'b',date:'2026-10-21',title:'1회고사',type:''}
+]};
+assert.equal(JSON.stringify([...vm.runInContext('buildHolidays(input)',context)]), JSON.stringify([['2026-10-09','한글날']]));
+context.input = real;
+const realHolidays = vm.runInContext('buildHolidays(input)', context);
+assert.equal(realHolidays.get('2026-10-03'), '개천절');
+assert.equal(realHolidays.get('2026-10-05'), '대체공휴일');
+assert.equal(realHolidays.get('2026-10-09'), '한글날');
+assert.ok(!realHolidays.has('2026-05-04'), 'school-chosen closures are not public holidays');
+console.log('Holidays from NEIS verified:', realHolidays.size);
+
+// The address keeps the view, the day and (관내 학교) the school or level; anything else is ignored.
+assert.deepEqual({...vm.runInContext('parseRoute("#week/2026-10-05")',context)}, {view:'week',date:'2026-10-05',extra:''});
+assert.deepEqual({...vm.runInContext('parseRoute("#school/2026-10-03/7801234")',context)}, {view:'school',date:'2026-10-03',extra:'7801234'});
+assert.deepEqual({...vm.runInContext('parseRoute("#month/2026-02-30/x")',context)}, {view:'month',date:'',extra:''}, 'impossible dates and extras outside 관내 학교 are dropped');
+assert.equal(vm.runInContext('parseRoute("#calendar")',context), null);
+assert.equal(vm.runInContext('routeHash("school","2026-10-03","elementary")+" "+routeHash("month","2026-10-03","")',context), '#school/2026-10-03/elementary #month/2026-10-03');
+console.log('Routes verified.');
+
+// Search results list every matching day in date order; untimed items first, duplicates grouped per kind.
+context.input = [
+  {id:'1',date:'2026-10-02',kind:'weekly',title:'감사 준비',time:'14:00'},
+  {id:'2',date:'2026-09-16',kind:'monthly',title:'자체감사 실시',time:''},
+  {id:'3',date:'2026-09-16',kind:'weekly',title:'자체감사실시',time:'09:00'},
+  {id:'4',date:'2026-09-16',kind:'weekly',title:'자체감사 실시',time:'10:00'},
+  {id:'5',date:'2026-10-02',kind:'monthly',title:'감사 결과 보고',time:'09:30'}
+];
+const found = vm.runInContext('searchDays(input).map(([d,items])=>d+"="+items.map(e=>e.id+(e.members.length>1?"x"+e.members.length:"")).join(","))',context);
+assert.deepEqual([...found], ['2026-09-16=2,3x2','2026-10-02=5,1']);
+console.log('Search grouping verified.');
