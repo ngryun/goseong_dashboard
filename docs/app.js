@@ -46,19 +46,71 @@ function monthChip(e){
   const times=[...new Set(e.members.map(x=>x.time||''))],time=times.length===1?times[0]:'';
   return `<button class="event-chip month-event" data-event="${esc(e.id)}" data-merged="true" title="${esc(e.title)}">${time?`<span class="month-event-time">${esc(time)}</span>`:''}<span class="month-event-title">${esc(e.title)}</span></button>`;
 }
+// Keep the preview outside the horizontally scrolling calendar so it is never clipped.
+let monthPreviewAnchor = null, monthPreviewTimer = null;
+function monthPreviewItems(date,kind){
+  const items=monthItems(filterEvents(),date);
+  return kind?items[kind]:[...items.monthly,...items.weekly];
+}
+function monthPreviewHTML(date,kind,items){
+  return `<div class="month-preview-heading"><strong>${esc(displayDate(parseDate(date)))}</strong><span>${kind==='monthly'?'월중행사':kind==='weekly'?'주간업무':'전체 일정'} ${items.length}건</span></div><div class="month-preview-list">${items.map(e=>{
+    const members=e.members||[e];
+    const lines=[...new Set(members.map(x=>[x.team,slotsOf(x)?slotsOf(x).map(slotText).join(' / '):[x.time,x.place].filter(Boolean).join(' · '),x.owner].filter(Boolean).join(' · ')).filter(Boolean))];
+    return `<button type="button" class="month-preview-event category-${groupFor(e)}" data-event="${esc(e.id)}" data-merged="true"><span class="badge category-badge">${esc(kindLabel(e))}</span><strong>${esc(e.title)}</strong>${lines.map(line=>`<span class="event-meta">${esc(line)}</span>`).join('')}</button>`;
+  }).join('')}</div><p class="month-preview-hint">일정을 누르면 상세 내용을 확인할 수 있습니다.</p>`;
+}
+function hideMonthPreview(){
+  clearTimeout(monthPreviewTimer);
+  if(monthPreviewAnchor)monthPreviewAnchor.setAttribute('aria-expanded','false');
+  monthPreviewAnchor=null;
+  const box=$('#month-preview');if(box)box.hidden=true;
+}
+function showMonthPreview(anchor){
+  clearTimeout(monthPreviewTimer);
+  if(view!=='month'||monthPreviewAnchor===anchor)return;
+  const date=anchor.dataset.date,kind=anchor.dataset.monthPreview,items=monthPreviewItems(date,kind);
+  if(!items.length)return;
+  hideMonthPreview();
+  let box=$('#month-preview');
+  if(!box){box=document.createElement('section');box.id='month-preview';box.className='month-preview';box.setAttribute('role','region');document.body.append(box);}
+  box.setAttribute('aria-label',displayDate(parseDate(date))+' 일정 미리보기');
+  box.innerHTML=monthPreviewHTML(date,kind,items);box.hidden=false;
+  monthPreviewAnchor=anchor;anchor.setAttribute('aria-expanded','true');
+  positionMonthPreview();
+}
+function positionMonthPreview(){
+  const anchor=monthPreviewAnchor,box=$('#month-preview');
+  if(!anchor||!box||box.hidden)return;
+  const r=anchor.getBoundingClientRect(),gap=8,margin=12;
+  if(r.bottom<=0||r.top>=window.innerHeight||r.right<=0||r.left>=window.innerWidth){hideMonthPreview();return;}
+  const width=box.offsetWidth,height=box.offsetHeight;
+  box.style.left=Math.max(margin,Math.min(r.left,window.innerWidth-width-margin))+'px';
+  const below=window.innerHeight-r.bottom-gap-margin,above=r.top-gap-margin;
+  const top=height<=below||below>=above?r.bottom+gap:r.top-gap-height;
+  box.style.top=Math.max(margin,Math.min(top,window.innerHeight-height-margin))+'px';
+}
+function deferHideMonthPreview(){
+  clearTimeout(monthPreviewTimer);
+  monthPreviewTimer=setTimeout(()=>{
+    const box=$('#month-preview'),focused=document.activeElement;
+    if(monthPreviewAnchor&&(monthPreviewAnchor.matches(':hover')||monthPreviewAnchor.contains(focused)||box?.matches(':hover')||box?.contains(focused)))return;
+    hideMonthPreview();
+  },180);
+}
 function renderMonth(events){
   $('#period-title').textContent=`${cursor.getFullYear()}년 ${cursor.getMonth()+1}월`;
   const first=new Date(cursor.getFullYear(),cursor.getMonth(),1),start=plus(first,-first.getDay());
   const cells=Math.ceil((first.getDay()+new Date(cursor.getFullYear(),cursor.getMonth()+1,0).getDate())/7)*7;
-  let html='<p class="month-guide">월중행사는 제목으로, 주간업무는 건수로 확인하세요.<span>달력을 좌우로 밀어 다른 요일을 확인하세요.</span></p><div class="month-scroll" tabindex="0" role="region" aria-label="월간 달력"><div class="weekdays">'+['일','월','화','수','목','금','토'].map(x=>`<span>${x}</span>`).join('')+'</div><div class="month-grid">';
+  let html='<p class="month-guide">날짜나 일정 건수에 마우스를 올리면 전체 목록을 미리 볼 수 있습니다.<span>달력을 좌우로 밀어 다른 요일을 확인하세요.</span></p><div class="month-scroll" tabindex="0" role="region" aria-label="월간 달력"><div class="weekdays">'+['일','월','화','수','목','금','토'].map(x=>`<span>${x}</span>`).join('')+'</div><div class="month-grid">';
   for(let i=0;i<cells;i++){
     const d=plus(start,i),key=dateKey(d),items=monthItems(events,key);
-    html+=`<div class="day ${d.getMonth()!==cursor.getMonth()?'outside':''} ${selected===key?'selected':''}" data-day="${key}"><button class="day-number ${key===todayKey?'today':''}" data-date="${key}" aria-pressed="${selected===key}" aria-label="${key} 월중행사 ${items.monthly.length}건, 주간업무 ${items.weekly.length}건">${d.getDate()}</button><button type="button" class="day-add" data-add-date="${key}" aria-label="${key}에 일정 추가" title="이 날에 일정 추가">＋</button><div class="month-events">${items.monthly.slice(0,2).map(monthChip).join('')}</div><div class="month-day-footer">${items.monthly.length>2?`<button class="more" data-date="${key}" data-day-kind="monthly">행사 +${items.monthly.length-2}건</button>`:'<span class="more-placeholder" aria-hidden="true"></span>'}${items.weekly.length?`<button class="weekly-count" data-date="${key}" data-day-kind="weekly" aria-label="${key} 주간업무 ${items.weekly.length}건 보기"><span>주간업무</span><strong>${items.weekly.length}건</strong><span aria-hidden="true">›</span></button>`:''}</div></div>`;
+    const previewAttrs=kind=>`data-month-preview="${kind}" aria-controls="month-preview" aria-expanded="false"`;
+    html+=`<div class="day ${d.getMonth()!==cursor.getMonth()?'outside':''} ${selected===key?'selected':''}" data-day="${key}"><button class="day-number ${key===todayKey?'today':''}" data-date="${key}" ${items.monthly.length+items.weekly.length?previewAttrs(''):''} aria-pressed="${selected===key}" aria-label="${key} 월중행사 ${items.monthly.length}건, 주간업무 ${items.weekly.length}건">${d.getDate()}</button><button type="button" class="day-add" data-add-date="${key}" aria-label="${key}에 일정 추가" title="이 날에 일정 추가">＋</button><div class="month-events">${items.monthly.slice(0,2).map(monthChip).join('')}</div><div class="month-day-footer">${items.monthly.length>2?`<button class="more" data-date="${key}" data-day-kind="monthly" ${previewAttrs('monthly')}>행사 +${items.monthly.length-2}건</button>`:'<span class="more-placeholder" aria-hidden="true"></span>'}${items.weekly.length?`<button class="weekly-count" data-date="${key}" data-day-kind="weekly" ${previewAttrs('weekly')} aria-label="${key} 주간업무 ${items.weekly.length}건 보기"><span>주간업무</span><strong>${items.weekly.length}건</strong><span aria-hidden="true">›</span></button>`:''}</div></div>`;
   }
   $('#calendar').innerHTML=html+'</div></div>';
   return groupEvents(events.filter(e=>e.kind==='monthly'&&e.date.startsWith(dateKey(cursor).slice(0,7))));
 }
-function render(preserveScroll=false){const monthScroll=preserveScroll?($('.month-scroll')?.scrollLeft||0):0;const previousScroll=preserveScroll&&$('.week-table-scroll')?{left:$('.week-table-scroll').scrollLeft,top:$('.week-table-scroll').scrollTop}:null;$('.app').classList.toggle('is-week',view==='week');$('.app').classList.toggle('is-month',view==='month');$('.app').classList.toggle('is-school',view==='school');$('#search').placeholder=view==='school'?'행사명, 학교명 검색':'업무명, 담당자, 장소 검색';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const events=filterEvents();const month=dateKey(cursor).slice(0,7);let shown=[];
+function render(preserveScroll=false){hideMonthPreview();const monthScroll=preserveScroll?($('.month-scroll')?.scrollLeft||0):0;const previousScroll=preserveScroll&&$('.week-table-scroll')?{left:$('.week-table-scroll').scrollLeft,top:$('.week-table-scroll').scrollTop}:null;$('.app').classList.toggle('is-week',view==='week');$('.app').classList.toggle('is-month',view==='month');$('.app').classList.toggle('is-school',view==='school');$('#search').placeholder=view==='school'?'행사명, 학교명 검색':'업무명, 담당자, 장소 검색';document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));const events=filterEvents();const month=dateKey(cursor).slice(0,7);let shown=[];
 if(view==='month'){shown=renderMonth(events);}
 else if(view==='week'){shown=renderWeek(events);}
 else{shown=renderSchool();}
@@ -240,7 +292,7 @@ const sourceStatus=s=>status?.sources?.[s.id]||null;
 function renderSources(){$('#source-links').innerHTML=data.sources.map(s=>{const st=sourceStatus(s);return `<a class="source-link${st&&st.ok===false?' has-error':''}" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗<small>${s.tabs.length}개 탭 · ${s.count}건 · 일정 최종 변경 ${esc(fmtTime(s.data_at)||'미상')}${st&&st.ok===false?' · <b>최근 수집 실패</b>':''}</small></a>`;}).join('')||'<div class="empty">등록된 시트가 없습니다.<br>sources.json에 시트 주소를 추가하세요.</div>';const problems=[...(status?.failures||[]),...data.sources.flatMap(s=>(s.warnings||[]).map(w=>s.label+' · '+w)),...(schools.errors||[]).map(w=>'학교 일정 · '+w)];const schoolStatus=schools.checked_at?`관내 학교 학사일정(NEIS) · ${schools.schools.length}개교 · ${schools.events.length}건 · 확인 ${esc(fmtTime(schools.checked_at))} · 내용 변경 ${esc(fmtTime(schools.updated_at)||'미상')}${schools.errors?.length?` · <b>읽지 못한 학교 ${schools.errors.length}</b>`:''}`:'';$('#school-status').hidden=!schoolStatus;$('#school-status').innerHTML=schoolStatus;$('#registry-link').hidden=!data.registry_sheet;if(data.registry_sheet)$('#registry-link').href=data.registry_sheet;$('#sync-warnings').hidden=!problems.length;$('#sync-warnings').innerHTML=problems.length?`<details><summary>확인 사항 ${problems.length}건</summary><ul>${problems.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></details>`:'';const checked=status?.checked_at,updated=data.updated_at;$('#sync-label').textContent=!data.sources.length?'연결된 시트가 없습니다':(checked?`마지막 동기화 ${fmtTime(checked)} · `:'')+`일정 최종 변경 ${fmtTime(updated)||'미상'}`+(fsEvents.length?` · 직접 입력 ${fsEvents.length}건`:'');}
 function staleHours(){if(!status?.checked_at)return 0;return (Date.now()-new Date(status.checked_at).getTime())/36e5;}
 async function load(){try{const stamp=Date.now();const [r,rs,rv,rk]=await Promise.all([fetch('data.json?t='+stamp,{cache:'no-store'}),fetch('status.json?t='+stamp,{cache:'no-store'}).catch(()=>null),fetch('version.json?t='+stamp,{cache:'no-store'}).catch(()=>null),fetch('schools.json?t='+stamp,{cache:'no-store'}).catch(()=>null)]);if(rv&&rv.ok){const live=await rv.json().catch(()=>null);const mine=new URL(document.querySelector('script[src*="app.js"]').src).searchParams.get('v');if(live&&live['app.js']&&mine&&live['app.js']!==mine){location.reload();return;}}if(!r.ok)throw Error();data=await r.json();sheetEvents=data.events;mergeEvents();status=rs&&rs.ok?await rs.json().catch(()=>null):null;if(rk&&rk.ok){const got=await rk.json().catch(()=>null);if(got&&Array.isArray(got.schools))schools=got;}refreshToday();const old=$('#team').value;$('#team').innerHTML='<option value="">전체 담당</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('')+[...new Set(data.events.map(e=>e.team).filter(t=>t&&!TEAM_GROUPS.some(g=>g.teams.includes(t))))].map(t=>`<option>${esc(t)}</option>`).join('');if([...$('#team').options].some(o=>o.value===old))$('#team').value=old;const hours=staleHours();notice(!data.sources.length?'아직 연결된 시트가 없습니다. sources.json에 업무계획 시트 주소를 등록하세요.':hours>3?`마지막 자동 확인은 ${fmtTime(status.checked_at)}입니다. 그 뒤 원본 시트에 생긴 변경은 아직 반영되지 않았을 수 있습니다.`:status&&status.ok===false?'일부 시트의 최근 수집에 실패했습니다. 해당 시트는 마지막 성공 데이터를 표시합니다. 자세한 내용은 연결된 계획표에서 확인하세요.':'');render(true);renderSources();}catch{notice('데이터를 불러오지 못했습니다. 네트워크 연결을 확인한 후 새로고침해 주세요.');}}
-function showDetail(id,merged=false){const e=data.events.find(e=>e.id===id);if(!e)return;$('#detail-kind').textContent=kindLabel(e);$('#detail-kind').className='badge '+e.kind;$('#detail-title').textContent=e.title;$('#detail-meta').innerHTML=[displayDate(parseDate(e.date))+(!slotsOf(e)&&e.time?' · '+e.time:''),...(slotsOf(e)?slotsOf(e).map(s=>'◷ '+slotText(s)):[]),e.team&&'담당 분야: '+e.team,!slotsOf(e)&&e.place&&'장소: '+e.place,e.owner&&'담당자: '+e.owner,isOwn(e)?'출처: 화면에서 직접 입력'+(e.updated_at?' · 마지막 수정 '+fmtTime(e.updated_at):''):'출처: '+e.tab+' · '+e.cell].filter(Boolean).map(v=>`<div>${esc(v)}</div>`).join('');$('#detail-body').textContent=e.description||e.title;$('#detail-source').href=sourceUrl(e);const members=merged?filterEvents().filter(x=>x.kind===e.kind&&eventKey(x)===eventKey(e)):[e];
+function showDetail(id,merged=false){hideMonthPreview();const e=data.events.find(e=>e.id===id);if(!e)return;$('#detail-kind').textContent=kindLabel(e);$('#detail-kind').className='badge '+e.kind;$('#detail-title').textContent=e.title;$('#detail-meta').innerHTML=[displayDate(parseDate(e.date))+(!slotsOf(e)&&e.time?' · '+e.time:''),...(slotsOf(e)?slotsOf(e).map(s=>'◷ '+slotText(s)):[]),e.team&&'담당 분야: '+e.team,!slotsOf(e)&&e.place&&'장소: '+e.place,e.owner&&'담당자: '+e.owner,isOwn(e)?'출처: 화면에서 직접 입력'+(e.updated_at?' · 마지막 수정 '+fmtTime(e.updated_at):''):'출처: '+e.tab+' · '+e.cell].filter(Boolean).map(v=>`<div>${esc(v)}</div>`).join('');$('#detail-body').textContent=e.description||e.title;$('#detail-source').href=sourceUrl(e);const members=merged?filterEvents().filter(x=>x.kind===e.kind&&eventKey(x)===eventKey(e)):[e];
 const multiple=members.length>1;
 $('#detail-related').hidden=!multiple;$('#detail-body').hidden=multiple;$('#detail-source').hidden=multiple||isOwn(e);$('#detail-edit').hidden=multiple||!isOwn(e);$('#detail-edit').dataset.id=e.id;
 if(multiple){
@@ -249,6 +301,19 @@ if(multiple){
   $('#detail-related').innerHTML=members.map(x=>`<article class="related-event"><h3>${esc(x.team||kindLabel(x))}</h3><p>${esc([slotsOf(x)?slotsOf(x).map(slotText).join(' / '):x.time,slotsOf(x)?'':x.place,x.owner].filter(Boolean).join(' · '))}</p><pre>${esc(x.description||x.title)}</pre>${isOwn(x)?`<button type="button" data-edit="${esc(x.id)}">화면에서 직접 입력한 일정 · 수정 ✎</button>`:`<a href="${esc(sourceUrl(x))}" target="_blank" rel="noopener">${esc(x.tab)} · ${esc(x.cell)} 원문 보기 ↗</a>`}</article>`).join('');
 }else $('#detail-related').innerHTML='';
 $('#detail').showModal();}
+document.addEventListener('pointerover',e=>{
+  if(e.pointerType==='touch')return;
+  const anchor=e.target.closest('[data-month-preview]');
+  if(anchor)showMonthPreview(anchor);
+  else if(e.target.closest('#month-preview'))clearTimeout(monthPreviewTimer);
+});
+document.addEventListener('pointerout',e=>{if(e.target.closest('[data-month-preview],#month-preview'))deferHideMonthPreview();});
+document.addEventListener('focusin',e=>{const anchor=e.target.closest('[data-month-preview]');if(anchor)showMonthPreview(anchor);else if(!e.target.closest('#month-preview'))hideMonthPreview();});
+document.addEventListener('focusout',e=>{if(e.target.closest('[data-month-preview],#month-preview'))deferHideMonthPreview();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&monthPreviewAnchor){const anchor=monthPreviewAnchor;if($('#month-preview')?.contains(document.activeElement))anchor.focus({preventScroll:true});hideMonthPreview();}});
+document.addEventListener('pointerdown',e=>{if(monthPreviewAnchor&&!e.target.closest('[data-month-preview],#month-preview'))hideMonthPreview();});
+document.addEventListener('scroll',e=>{if(!e.target.closest?.('#month-preview'))positionMonthPreview();},true);
+window.addEventListener('resize',hideMonthPreview);
 document.addEventListener('click',e=>{const ed=e.target.closest('[data-edit]');if(ed){$('#detail').close();openEditor(ed.dataset.edit);return;}const add=e.target.closest('[data-add-date]');if(add){selected=add.dataset.addDate;render(true);openEditor(null,{kind:add.dataset.addKind,team:add.dataset.addTeam});return;}const dayControl=e.target.closest('[data-day-kind]');if(dayControl){dayKind=dayControl.dataset.dayKind;if(dayControl.dataset.date)selected=dayControl.dataset.date;render(true);$('#day-events').scrollTop=0;if(dayControl.dataset.date){$('#selected-title').focus({preventScroll:true});if(window.matchMedia('(max-width:850px)').matches)$('.day-panel').scrollIntoView({behavior:'smooth',block:'start'});}return;}const group=e.target.closest('[data-group]');if(group){activeGroup=group.dataset.group;$('#team').value='';$('#kind').value='';render();return;}const sg=e.target.closest('[data-school-group]');if(sg)return showSchoolDetail(sg.dataset.schoolGroup);const lv=e.target.closest('[data-level]');if(lv){schoolLevel=lv.dataset.level;schoolCode='';render(true);return;}const cl=e.target.closest('[data-class]');if(cl&&lastTimetable){classChoice.set(lastTimetable.school.code,cl.dataset.class);drawTimetable(lastTimetable.school,lastTimetable.start,lastTimetable.rows);return;}const ev=e.target.closest('[data-event]');if(ev)return showDetail(ev.dataset.event,ev.dataset.merged==='true');const d=e.target.closest('[data-date]');if(d){selected=d.dataset.date;dayKind=$('#kind').value||'monthly';render(true);return;}const cell=e.target.closest('.day[data-day]');if(cell&&!e.target.closest('button')){selected=cell.dataset.day;dayKind=$('#kind').value||'monthly';render(true);return;}const v=e.target.closest('[data-view]');if(v){view=v.dataset.view;activeGroup='';dayKind=$('#kind').value||'monthly';render();}});
 document.addEventListener('change',e=>{if(e.target.id==='school-select'){schoolCode=e.target.value;schoolLevel='';render(true);}});
 $('#prev').onclick=()=>move(-1);$('#next').onclick=()=>move(1);

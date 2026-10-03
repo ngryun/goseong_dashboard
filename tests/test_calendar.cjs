@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('docs/app.js', 'utf8');
 const context = vm.createContext({Intl, Date});
-vm.runInContext(source.slice(0, source.indexOf("document.addEventListener('click'")), context);
+vm.runInContext(source.slice(0, source.indexOf('document.addEventListener(')), context);
 const events = [
   {id:'1',date:'2026-09-18',title:'자체감사 실시',team:'총무팀',time:'09:00'},
   {id:'2',date:'2026-09-18',title:'자체감사실시',team:'월중행사',time:'14:00'},
@@ -35,6 +35,32 @@ assert.equal(split.weekly[0].members.length,2);
 assert.equal(vm.runInContext('monthItems(input.filter(e=>e.kind==="monthly"),"2026-09-18").weekly.length',context),0);
 assert.equal(vm.runInContext('monthItems(input,"2026-09-20").monthly.length',context),0);
 console.log('Monthly titles and weekly counts stay separate; filters and empty dates verified.');
+
+// Hover previews include hidden events, preserve grouped metadata, and follow active filters.
+context.input.push(
+  {id:'m2',date:'2026-09-18',kind:'monthly',title:'두 번째 행사'},
+  {id:'m3',date:'2026-09-18',kind:'monthly',title:'숨겨진 <행사>',time:'09:00',place:'회의실',owner:'홍길동'},
+  {id:'w4',date:'2026-09-18',kind:'weekly',title:'공동 행사',team:'총무팀',slots:[{time:'10:00',place:'간성초'},{time:'14:00',place:'거진초'}]}
+);
+const controls={search:{value:''},kind:{value:''},team:{value:''}};
+context.document={querySelector:selector=>controls[selector.slice(1)]};
+vm.runInContext('data.events=input',context);
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-18","").length',context),4);
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-18","monthly").length',context),3);
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-18","weekly")[0].members.length',context),3);
+const preview=vm.runInContext('monthPreviewHTML("2026-09-18","monthly",monthPreviewItems("2026-09-18","monthly"))',context);
+assert.ok(preview.includes('숨겨진 &lt;행사&gt;')&&preview.includes('09:00 · 회의실 · 홍길동'));
+assert.ok(!preview.includes('다음날 업무'));
+assert.ok(vm.runInContext('monthPreviewHTML("2026-09-18","weekly",monthPreviewItems("2026-09-18","weekly"))',context).includes('10:00 간성초 / 14:00 거진초'));
+controls.search.value='숨겨진';
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-18","").length',context),1);
+controls.search.value='';controls.kind.value='weekly';
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-18","monthly").length',context),0);
+controls.kind.value='';controls.team.value='총무팀';
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-18","weekly")[0].members.length',context),1);
+controls.team.value='';
+assert.equal(vm.runInContext('monthPreviewItems("2026-09-20","").length',context),0);
+console.log('Hover preview contents, duplicate metadata, escaping, and filters verified.');
 
 // School view: same date + same event name across schools is one entry; filters follow level and school.
 context.input = {schools:[
