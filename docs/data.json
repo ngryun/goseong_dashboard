@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-06T09:23:37+00:00",
+"updated_at": "2026-10-06T16:14:42+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-06T09:23:37+00:00"
+"data_at": "2026-10-06T16:14:42+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-06T09:23:37+00:00"
+"data_at": "2026-10-06T16:14:42+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-06T09:23:37+00:00"
+"data_at": "2026-10-06T16:14:42+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-06T09:23:37+00:00"
+"data_at": "2026-10-06T16:14:42+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-06T09:23:37+00:00"
+"data_at": "2026-10-06T16:14:42+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-06T09:23:37+00:00"
+"data_at": "2026-10-06T16:14:42+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -111,8 +111,8 @@
 "행정과(10월2주)"
 ],
 "warnings": [],
-"count": 44,
-"data_at": "2026-10-06T09:23:37+00:00"
+"count": 46,
+"data_at": "2026-10-06T16:14:42+00:00"
 }
 ],
 "events": [
@@ -7154,7 +7154,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "d95164874116fd99abceca7c",
+"id": "84ebe55e20ab6ab364dc6061",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7189,7 +7189,7 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "0280d1ddf91d97470d9c8922",
+"id": "2286ce964259ae7cdf3842d9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7269,7 +7269,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "2bedb3a7ec68f842851a2b55",
+"id": "ee4bbc53e206054d550d8cd1",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7289,7 +7289,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "1a9e76d8ef05787890691a9b",
+"id": "f612d715a7037c98a0e9f196",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7309,7 +7309,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "153039bdad8ab28089bd4ece",
+"id": "a861918e163806746cdae68e",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7349,7 +7349,7 @@
 "place": "대진고"
 }
 ],
-"id": "d1c7bd28dd332db76ab259e9",
+"id": "05d2ebc55176c41a12b4f8bf",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7434,7 +7434,7 @@
 "place": "",
 "owner": "박성진",
 "slots": [],
-"id": "abbf15b183c54ee815115a06",
+"id": "b49445587d38da882e717c4e",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7469,7 +7469,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "9381359f6e339ef7276e14e5",
+"id": "526731a0fd205c74340208fe",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7489,7 +7489,7 @@
 "place": "공현진초"
 }
 ],
-"id": "e370c3732165eb4ba56bab81",
+"id": "abdc67427c840681b0a4821f",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7539,7 +7539,27 @@
 "place": "3층대회의실"
 }
 ],
-"id": "0a9ea31ccf4c34116cef0f43",
+"id": "332303a8b1ac268bb49c1f32",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-13",
+"title": "양성평등교육,성희롱성폭력업무전달 연수",
+"description": "양성평등교육,성희롱성폭력업무전달 연수\n- 14:30, 대회의실\n- 이현숙",
+"tab": "교육과2(10월2주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "인성생활",
+"time": "14:30",
+"place": "대회의실",
+"owner": "이현숙",
+"slots": [
+{
+"time": "14:30",
+"place": "대회의실"
+}
+],
+"id": "f96253ab8dab2b1d2fe3e507",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7574,7 +7594,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "51a311dc1a464ce33cbdff5c",
+"id": "f4b549a4f87d27ecbf5766d6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7589,7 +7609,7 @@
 "place": "서울특별시교육청",
 "owner": "",
 "slots": [],
-"id": "7b74d4333a225db8d8658df2",
+"id": "4949f29944e5418264e92956",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7604,7 +7624,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "e523548b422a4164df450fed",
+"id": "ed6fb43081408d7d3c67bad2",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7624,7 +7644,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "7c1711690f7d87ab4a10d556",
+"id": "319084c0680bfb7e4be34d88",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7644,7 +7664,7 @@
 "place": "대진고"
 }
 ],
-"id": "2a9fc38502d695a9ebcc53e8",
+"id": "1480a068ef2e89beb6afa465",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7734,7 +7754,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "39870c0c5ccee98ac7499596",
+"id": "a3900282945834b3077611f9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7754,7 +7774,7 @@
 "place": "오호초"
 }
 ],
-"id": "001ab053ecc078839389878f",
+"id": "87d1e8b3001a78b51cdea182",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7774,7 +7794,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "765e8f34deb17568e448d3df",
+"id": "a23f3bc7ade4db09cc56263e",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7879,7 +7899,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "4d69bf2952ca5c0172af9a88",
+"id": "d15eabc791d3232e9595bc4f",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7894,7 +7914,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "f3cd865c9ac0aa644d07e975",
+"id": "2dc7f5da2f8ccd35cbfe8fb2",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7909,7 +7929,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "94145080b5363c62e561ffbe",
+"id": "d305a1a0e3a884792d840cb6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7924,7 +7944,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "7b76a7ab68f1f1b8dae6d46d",
+"id": "78029ebde264f955d784667e",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7944,7 +7964,7 @@
 "place": "대진초"
 }
 ],
-"id": "4cc43fbddc0b4379a83ed3ea",
+"id": "72a687619e39b08f00bc1066",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7964,7 +7984,7 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "ec8538e19d08cdc6b44da0c2",
+"id": "fe5f47469f4f0c6670e2c1b9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8049,7 +8069,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "20110ddd6f64a31b447d8c90",
+"id": "56b695545b314657a7b16908",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8069,7 +8089,7 @@
 "place": "동광중.고"
 }
 ],
-"id": "84531d1967968248c7176069",
+"id": "c170c39d71c428101747f208",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8174,7 +8194,27 @@
 "place": "고성고체육관"
 }
 ],
-"id": "6890332b556b8d88b25a51b4",
+"id": "c4d3ce2afe2aa974aebadda8",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-17",
+"title": "청소년단체 연합캠프",
+"description": "청소년단체 연합캠프\n- 10:00, 춘천교대\n- 이현숙",
+"tab": "교육과2(10월2주)",
+"cell": "E9",
+"kind": "weekly",
+"team": "인성생활",
+"time": "10:00",
+"place": "춘천교대",
+"owner": "이현숙",
+"slots": [
+{
+"time": "10:00",
+"place": "춘천교대"
+}
+],
+"id": "73c77e4daf996e08ea66f2d1",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8209,7 +8249,7 @@
 "place": "고성고 체육관"
 }
 ],
-"id": "969eddcbb29147aecfa12e60",
+"id": "9b5074567ea391149b7cb85b",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8229,7 +8269,7 @@
 "place": "고성고 체육관"
 }
 ],
-"id": "9b5074567ea391149b7cb85b",
+"id": "fbee361929985f25af78d951",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
