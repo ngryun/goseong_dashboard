@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-06T16:14:42+00:00",
+"updated_at": "2026-10-07T06:36:50+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-06T16:14:42+00:00"
+"data_at": "2026-10-07T06:36:50+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-06T16:14:42+00:00"
+"data_at": "2026-10-07T06:36:50+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-06T16:14:42+00:00"
+"data_at": "2026-10-07T06:36:50+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-06T16:14:42+00:00"
+"data_at": "2026-10-07T06:36:50+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-06T16:14:42+00:00"
+"data_at": "2026-10-07T06:36:50+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-06T16:14:42+00:00"
+"data_at": "2026-10-07T06:36:50+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -111,8 +111,8 @@
 "행정과(10월2주)"
 ],
 "warnings": [],
-"count": 46,
-"data_at": "2026-10-06T16:14:42+00:00"
+"count": 58,
+"data_at": "2026-10-07T06:36:50+00:00"
 }
 ],
 "events": [
@@ -7154,7 +7154,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "84ebe55e20ab6ab364dc6061",
+"id": "3165d5f6c2e83202b9d8c680",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7189,7 +7189,7 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "2286ce964259ae7cdf3842d9",
+"id": "8f9e7031780bcfcf7c9ee10f",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7269,7 +7269,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "ee4bbc53e206054d550d8cd1",
+"id": "b653e9234055666d259431c0",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7289,7 +7289,27 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "f612d715a7037c98a0e9f196",
+"id": "d3ca65941a61d493c6eec435",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-12",
+"title": "폐교재산 활용 설명회 참석",
+"description": "폐교재산 활용 설명회 참석\n- 10:30, 도교육청 \n- 연로사,이정인",
+"tab": "행정과(10월2주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "재정팀",
+"time": "10:30",
+"place": "도교육청",
+"owner": "연로사, 이정인",
+"slots": [
+{
+"time": "10:30",
+"place": "도교육청"
+}
+],
+"id": "6b2b70c50d77e66fb7174ff7",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7309,7 +7329,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "a861918e163806746cdae68e",
+"id": "41eb7fa61389afe3db2496f0",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7349,7 +7369,31 @@
 "place": "대진고"
 }
 ],
-"id": "05d2ebc55176c41a12b4f8bf",
+"id": "83ef66eda752ec154a4b9e2f",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-12",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(10월2주)",
+"cell": "B4",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "52faeff5b21bf78fd9f78c34",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7419,7 +7463,7 @@
 "place": "고성고"
 }
 ],
-"id": "d374efde7e0a37b7afdc8fcb",
+"id": "0d4e8afaea9d1aa81bfb8885",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7434,7 +7478,22 @@
 "place": "",
 "owner": "박성진",
 "slots": [],
-"id": "b49445587d38da882e717c4e",
+"id": "21daf66a7cbcf2c38fc0d88e",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-13",
+"title": "폐교재산 정기 점검",
+"description": "폐교재산 정기 점검\n- 광산초 흘리분교장 외 6개소\n- 연로사,이정인",
+"tab": "행정과(10월2주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "연로사, 이정인",
+"slots": [],
+"id": "98d33730c21aaa50c6cafb16",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7469,7 +7528,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "526731a0fd205c74340208fe",
+"id": "7c9af8d33835ed564f014f46",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7489,7 +7548,7 @@
 "place": "공현진초"
 }
 ],
-"id": "abdc67427c840681b0a4821f",
+"id": "20c312329d75c412dbaae601",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7506,6 +7565,26 @@
 "slots": [],
 "id": "4e86c0985259346bbddb2114",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-13",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
+"tab": "교육과3(10월2주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "대진초",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
+"id": "b3b0edf0841d575965ed3e47",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
 "date": "2026-10-13",
@@ -7539,7 +7618,7 @@
 "place": "3층대회의실"
 }
 ],
-"id": "332303a8b1ac268bb49c1f32",
+"id": "0c13d30cadb3f0c8f47ae5a4",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7559,7 +7638,7 @@
 "place": "대회의실"
 }
 ],
-"id": "f96253ab8dab2b1d2fe3e507",
+"id": "8ecdd722ffae6b80e604e931",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7594,7 +7673,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "f4b549a4f87d27ecbf5766d6",
+"id": "6a06ea89fc3ead78ba69462a",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7609,7 +7688,7 @@
 "place": "서울특별시교육청",
 "owner": "",
 "slots": [],
-"id": "4949f29944e5418264e92956",
+"id": "148c0e51d3bad4a45f46f880",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7624,7 +7703,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "ed6fb43081408d7d3c67bad2",
+"id": "80fa376927c32db828f33603",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7644,7 +7723,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "319084c0680bfb7e4be34d88",
+"id": "0e3ed6c5be1b27cd81b5afed",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7664,7 +7743,51 @@
 "place": "대진고"
 }
 ],
-"id": "1480a068ef2e89beb6afa465",
+"id": "6420c95a6c348ca0572f26a2",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-14",
+"title": "2027년 본예산 및 2026년 3추 예산편성(안) 심의",
+"description": "2027년 본예산 및 2026년 3추 예산편성(안) 심의\n- 13:00, 예산과\n- 박성진",
+"tab": "행정과(10월2주)",
+"cell": "D6",
+"kind": "weekly",
+"team": "예산팀",
+"time": "13:00",
+"place": "예산과",
+"owner": "박성진",
+"slots": [
+{
+"time": "13:00",
+"place": "예산과"
+}
+],
+"id": "65d4dae0fe34e08e7880ecd8",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-14",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(10월2주)",
+"cell": "B6",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "197b3682e491d490cdba1851",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7754,7 +7877,42 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "a3900282945834b3077611f9",
+"id": "b06c194c814d8a7844bd590b",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
+"title": "폐교재산 중장기 활용계획 수립을 위한 기초자료 조사표 제출",
+"description": "폐교재산 중장기 활용계획 \n수립을 위한 기초자료 조사표 제출\n- 제출처: 행정과 \n- 이정인",
+"tab": "행정과(10월2주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "이정인",
+"slots": [],
+"id": "e8d495e333dad5c40794cf66",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
+"title": "2026 강원특별자치도 노사민정 한마음체육대회 참석",
+"description": "2026 강원특별자치도 노사민정 한마음체육대회 참석  \n- 07:30~19:00, 춘천 송암스포츠타운 보조경기장\n- 주무관 김대식",
+"tab": "교육과1(10월2주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "장학행정",
+"time": "07:30~19:00",
+"place": "춘천 송암스포츠타운 보조경기장",
+"owner": "",
+"slots": [
+{
+"time": "07:30~19:00",
+"place": "춘천 송암스포츠타운 보조경기장"
+}
+],
+"id": "82431c5b4f8e63d46e8987f2",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7774,7 +7932,7 @@
 "place": "오호초"
 }
 ],
-"id": "87d1e8b3001a78b51cdea182",
+"id": "f505482a003765792a1babf8",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7794,7 +7952,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "a23f3bc7ade4db09cc56263e",
+"id": "d3a86804319dcf04ccac91fe",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7814,6 +7972,26 @@
 },
 {
 "date": "2026-10-15",
+"title": "학교급식 위생점검 및 운영평가",
+"description": "학교급식 위생점검 및 \n   운영평가\n- 9:00, 천진초\n- 이경영, 이모란",
+"tab": "교육과2(10월2주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "급식지원",
+"time": "09:00",
+"place": "천진초",
+"owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "천진초"
+}
+],
+"id": "847ee100c9b23b0e1aed5144",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
 "title": "2027 수능 시험장학교 점검(2차)",
 "description": "2027 수능 시험장학교 점검(2차)\n- 13:30, 고성고\n- 심은경",
 "tab": "교육과1(10월2주)",
@@ -7829,7 +8007,27 @@
 "place": "고성고"
 }
 ],
-"id": "83b7f7c65071eaf68a8ca9e5",
+"id": "25f3d9d682f8edf0b5ce8499",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
+"title": "경계선지능 아동청소년 종사자 교육 참",
+"description": "경계선지능 아동청소년 종사자 교육 참 \n- 13:30, 한림대\n- 임금선",
+"tab": "교육과3(10월2주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "한림대",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "한림대"
+}
+],
+"id": "4c4e05f9f0d41958a71dd1d9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7899,37 +8097,37 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "d15eabc791d3232e9595bc4f",
+"id": "2fb57f78959f9256c8cd65fe",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
 "date": "2026-10-16",
-"title": "공무원 급여 지급 (주무관 최명심)",
-"description": "공무원 급여 지급\n   (주무관 최명심)",
+"title": "10월 공무원 급여 지급",
+"description": "10월 공무원 급여 지급\n- 최명심",
 "tab": "행정과(10월2주)",
 "cell": "E8",
 "kind": "weekly",
 "team": "재정팀",
 "time": "",
 "place": "",
-"owner": "",
+"owner": "최명심",
 "slots": [],
-"id": "2dc7f5da2f8ccd35cbfe8fb2",
+"id": "d0b793bd5e21d5581c923def",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
 "date": "2026-10-16",
-"title": "교육공무직 급여 지급 (주무관 윤성원)",
-"description": "교육공무직 급여 지급\n   (주무관 윤성원)",
+"title": "10월 교육공무직 급여 지급",
+"description": "10월 교육공무직 급여 지급\n- 윤성원",
 "tab": "행정과(10월2주)",
 "cell": "E8",
 "kind": "weekly",
 "team": "재정팀",
 "time": "",
 "place": "",
-"owner": "",
+"owner": "윤성원",
 "slots": [],
-"id": "d305a1a0e3a884792d840cb6",
+"id": "0f2de5841c8357a3977438cb",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7944,7 +8142,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "78029ebde264f955d784667e",
+"id": "4cf8d8f6b7a31644032e68d6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7964,7 +8162,7 @@
 "place": "대진초"
 }
 ],
-"id": "72a687619e39b08f00bc1066",
+"id": "49ffebd73230fd92b6298f71",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7984,7 +8182,27 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "fe5f47469f4f0c6670e2c1b9",
+"id": "4b87e4fa15cd60239bf84ec3",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-16",
+"title": "학교급식 위생점검 및 운영평가",
+"description": "학교급식 위생점검 및 \n   운영평가\n- 9:00, 도학초\n- 이경영, 이모란",
+"tab": "교육과2(10월2주)",
+"cell": "F8",
+"kind": "weekly",
+"team": "급식지원",
+"time": "09:00",
+"place": "도학초",
+"owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "도학초"
+}
+],
+"id": "8f6204364ca28e395a185d78",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8019,7 +8237,27 @@
 "place": "강원도교육청교육연수원"
 }
 ],
-"id": "92143617e256334cbead9de1",
+"id": "14c3ff5ee8f225981d926bf1",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-16",
+"title": "학습클리닉전문가 더 배움 학습공동체 운영",
+"description": "학습클리닉전문가 더 배움 학습공동체 운영 \n- 13:00, 파랑뷰호텔\n- 임금선",
+"tab": "교육과3(10월2주)",
+"cell": "B8",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:00",
+"place": "파랑뷰호텔",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:00",
+"place": "파랑뷰호텔"
+}
+],
+"id": "12377c5675ded54eb63e7736",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8039,7 +8277,7 @@
 "place": "강릉교육지원청"
 }
 ],
-"id": "14c3ff5ee8f225981d926bf1",
+"id": "13f96687e2630d2567683cda",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8069,7 +8307,7 @@
 "place": "",
 "owner": "남궁연, 김연우",
 "slots": [],
-"id": "56b695545b314657a7b16908",
+"id": "24ee4df6426b4641eb0f53a9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8089,7 +8327,7 @@
 "place": "동광중.고"
 }
 ],
-"id": "c170c39d71c428101747f208",
+"id": "e32d4811da647720de18cb34",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8109,7 +8347,7 @@
 "place": "고성고"
 }
 ],
-"id": "572e081c44099938c6b4ff19",
+"id": "2ca767f5a6e8197286227cb4",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8129,7 +8367,7 @@
 "place": "고성청소년수련관"
 }
 ],
-"id": "88c4000074231c26c0b58ee6",
+"id": "dfd1deb7582f113ef8ef6670",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8194,7 +8432,7 @@
 "place": "고성고체육관"
 }
 ],
-"id": "c4d3ce2afe2aa974aebadda8",
+"id": "edb9e25da46edbb1863fefc6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8214,7 +8452,7 @@
 "place": "춘천교대"
 }
 ],
-"id": "73c77e4daf996e08ea66f2d1",
+"id": "067fe3e923939175a8008fad",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8249,7 +8487,7 @@
 "place": "고성고 체육관"
 }
 ],
-"id": "9b5074567ea391149b7cb85b",
+"id": "c5d5690434f0948825253b22",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8269,7 +8507,7 @@
 "place": "고성고 체육관"
 }
 ],
-"id": "fbee361929985f25af78d951",
+"id": "d0beeb52b84600a5132c3bc2",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
