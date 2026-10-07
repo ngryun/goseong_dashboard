@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-07T06:36:50+00:00",
+"updated_at": "2026-10-07T13:56:23+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-07T06:36:50+00:00"
+"data_at": "2026-10-07T13:56:23+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-07T06:36:50+00:00"
+"data_at": "2026-10-07T13:56:23+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-07T06:36:50+00:00"
+"data_at": "2026-10-07T13:56:23+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-07T06:36:50+00:00"
+"data_at": "2026-10-07T13:56:23+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-07T06:36:50+00:00"
+"data_at": "2026-10-07T13:56:23+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-07T06:36:50+00:00"
+"data_at": "2026-10-07T13:56:23+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -111,8 +111,8 @@
 "행정과(10월2주)"
 ],
 "warnings": [],
-"count": 58,
-"data_at": "2026-10-07T06:36:50+00:00"
+"count": 69,
+"data_at": "2026-10-07T13:56:23+00:00"
 }
 ],
 "events": [
@@ -7144,6 +7144,21 @@
 },
 {
 "date": "2026-10-12",
+"title": "2026년 3분기 도내 지역업체 계약현황 제출",
+"description": "2026년 3분기 도내 지역업체 계약현황 제출\n- 조동우",
+"tab": "행정과(10월2주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "조동우",
+"slots": [],
+"id": "04957d63a6b6c26edfd951ed",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-12",
 "title": "시설관리 미배치교 순회점검",
 "description": "시설관리 미배치교 순회점검\n- 10.12(월)~10.15(목), 도학초 외 9교\n- 박구원, 윤동열",
 "tab": "행정과(10월2주)",
@@ -7154,7 +7169,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "3165d5f6c2e83202b9d8c680",
+"id": "215a2df558463a076ed0aa3f",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7189,7 +7204,27 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "8f9e7031780bcfcf7c9ee10f",
+"id": "c18b966c13328ef35b793b5a",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-12",
+"title": "정서행동특성검사",
+"description": "정서행동특성검사\n- 10:00, 위센터\n- 이은혜",
+"tab": "교육과3(10월2주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "10:00",
+"place": "위센터",
+"owner": "이은혜",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
+"id": "5d9713bfbb4e7948d52f1a55",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7269,7 +7304,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "b653e9234055666d259431c0",
+"id": "3dcd82d6e20d18ffd2105540",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7289,7 +7324,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "d3ca65941a61d493c6eec435",
+"id": "0733c9d0606a5b8c43649ce9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7309,7 +7344,7 @@
 "place": "도교육청"
 }
 ],
-"id": "6b2b70c50d77e66fb7174ff7",
+"id": "cd0c5585e34451a754b1f904",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7329,7 +7364,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "41eb7fa61389afe3db2496f0",
+"id": "25477e84d3cdefc0cf4069fc",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7398,6 +7433,26 @@
 },
 {
 "date": "2026-10-12",
+"title": "학업중단숙려제",
+"description": "학업중단숙려제\n- 14:00, 위센터\n- 변고은",
+"tab": "교육과3(10월2주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "14:00",
+"place": "위센터",
+"owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "위센터"
+}
+],
+"id": "d424ab7f84f954d76622ae88",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-12",
 "title": "현장체험학습 컨설팅",
 "description": "현장체험학습 컨설팅",
 "tab": "10월 월중행사",
@@ -7410,6 +7465,26 @@
 "slots": [],
 "id": "a402fcc2e117145238b8c981",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-12",
+"title": "내방상담",
+"description": "내방상담\n- 15:10, 위센터\n- 윤미송",
+"tab": "교육과3(10월2주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "15:10",
+"place": "위센터",
+"owner": "윤미송",
+"slots": [
+{
+"time": "15:10",
+"place": "위센터"
+}
+],
+"id": "8a836cef83d2b7cca00ce393",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
 "date": "2026-10-12",
@@ -7478,7 +7553,7 @@
 "place": "",
 "owner": "박성진",
 "slots": [],
-"id": "21daf66a7cbcf2c38fc0d88e",
+"id": "77e4b8ac59ea0694660c10ab",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7493,7 +7568,7 @@
 "place": "",
 "owner": "연로사, 이정인",
 "slots": [],
-"id": "98d33730c21aaa50c6cafb16",
+"id": "d1f3dcdb35de3faef91cd296",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7528,7 +7603,27 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "7c9af8d33835ed564f014f46",
+"id": "9df7d76a2da2752dfc8e1b75",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-13",
+"title": "순회상담",
+"description": "순회상담\n- 09:00, 거진고\n- 윤미송",
+"tab": "교육과3(10월2주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "거진고",
+"owner": "윤미송",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고"
+}
+],
+"id": "bf13ea468f2c069003e665c2",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7548,7 +7643,27 @@
 "place": "공현진초"
 }
 ],
-"id": "20c312329d75c412dbaae601",
+"id": "e0dfa6bb2e019120a3631924",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-13",
+"title": "학업중단숙려제",
+"description": "학업중단숙려제\n- 10:00, 위센터\n- 변고은",
+"tab": "교육과3(10월2주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "10:00",
+"place": "위센터",
+"owner": "변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "위센터"
+}
+],
+"id": "3016f114d2a1ec5bd23a933b",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7583,7 +7698,7 @@
 "place": "대진초"
 }
 ],
-"id": "b3b0edf0841d575965ed3e47",
+"id": "a5f1a806160fe6dba09a9056",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7603,6 +7718,26 @@
 },
 {
 "date": "2026-10-13",
+"title": "순회상담",
+"description": "순회상담\n- 14:00, 광산초\n- 변고은",
+"tab": "교육과3(10월2주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "14:00",
+"place": "광산초",
+"owner": "변고은",
+"slots": [
+{
+"time": "14:00",
+"place": "광산초"
+}
+],
+"id": "45ba4983647266c1994e9db6",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-13",
 "title": "양성평등 및 성희롱,성폭력예방 연수 참석",
 "description": "양성평등 및 성희롱,성폭력예방 연수 참석\n- 14:00, 3층대회의실\n- 이완옥",
 "tab": "교육과3(10월2주)",
@@ -7618,7 +7753,7 @@
 "place": "3층대회의실"
 }
 ],
-"id": "0c13d30cadb3f0c8f47ae5a4",
+"id": "09e24b20c81ec2ea346c7192",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7688,7 +7823,7 @@
 "place": "서울특별시교육청",
 "owner": "",
 "slots": [],
-"id": "148c0e51d3bad4a45f46f880",
+"id": "2defd4477122c37cf0f4d6ac",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7708,6 +7843,26 @@
 },
 {
 "date": "2026-10-14",
+"title": "현장중심 위기개입 연수",
+"description": "현장중심 위기개입 연수\n- 07:00, 강릉 탑스텐호텔\n- 윤미송, 변고은",
+"tab": "교육과3(10월2주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "07:00",
+"place": "강릉 탑스텐호텔",
+"owner": "윤미송, 변고은",
+"slots": [
+{
+"time": "07:00",
+"place": "강릉 탑스텐호텔"
+}
+],
+"id": "b559e60d4ef0013c405a620c",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-14",
 "title": "순회미술치료 및 상담",
 "description": "순회미술치료 및 상담\n- 09:30, 고성고, 간성초\n- 김제현",
 "tab": "교육과3(10월2주)",
@@ -7723,7 +7878,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "0e3ed6c5be1b27cd81b5afed",
+"id": "562fc445f3641b61651a4d33",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7743,27 +7898,7 @@
 "place": "대진고"
 }
 ],
-"id": "6420c95a6c348ca0572f26a2",
-"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
-},
-{
-"date": "2026-10-14",
-"title": "2027년 본예산 및 2026년 3추 예산편성(안) 심의",
-"description": "2027년 본예산 및 2026년 3추 예산편성(안) 심의\n- 13:00, 예산과\n- 박성진",
-"tab": "행정과(10월2주)",
-"cell": "D6",
-"kind": "weekly",
-"team": "예산팀",
-"time": "13:00",
-"place": "예산과",
-"owner": "박성진",
-"slots": [
-{
-"time": "13:00",
-"place": "예산과"
-}
-],
-"id": "65d4dae0fe34e08e7880ecd8",
+"id": "6dcb0e78025c4f6a436cfd12",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7787,7 +7922,27 @@
 "place": "고성중"
 }
 ],
-"id": "197b3682e491d490cdba1851",
+"id": "1f47a72765942f43f812bb32",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-14",
+"title": "정서행동특성검사 결과안내",
+"description": "정서행동특성검사 결과안내\n- 16:30, 위센터\n- 이은혜",
+"tab": "교육과3(10월2주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "16:30",
+"place": "위센터",
+"owner": "이은혜",
+"slots": [
+{
+"time": "16:30",
+"place": "위센터"
+}
+],
+"id": "33cd7586188a526f71d1be92",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7892,7 +8047,27 @@
 "place": "",
 "owner": "이정인",
 "slots": [],
-"id": "e8d495e333dad5c40794cf66",
+"id": "d5740b382293119464a9be52",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
+"title": "현장중심 위기개입 연수",
+"description": "현장중심 위기개입 연수\n- 07:00, 강릉 탑스텐호텔\n- 윤미송, 변고은",
+"tab": "교육과3(10월2주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "07:00",
+"place": "강릉 탑스텐호텔",
+"owner": "윤미송, 변고은",
+"slots": [
+{
+"time": "07:00",
+"place": "강릉 탑스텐호텔"
+}
+],
+"id": "9437352fce0f74ea23728445",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7932,7 +8107,7 @@
 "place": "오호초"
 }
 ],
-"id": "f505482a003765792a1babf8",
+"id": "783db7241879458d5b7b68fa",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7952,7 +8127,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "d3a86804319dcf04ccac91fe",
+"id": "786d18b56f43590e0f06894c",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7973,18 +8148,18 @@
 {
 "date": "2026-10-15",
 "title": "학교급식 위생점검 및 운영평가",
-"description": "학교급식 위생점검 및 \n   운영평가\n- 9:00, 천진초\n- 이경영, 이모란",
+"description": "학교급식 위생점검 및 \n   운영평가\n- 9:00, 도학초\n- 이경영, 이모란",
 "tab": "교육과2(10월2주)",
 "cell": "F7",
 "kind": "weekly",
 "team": "급식지원",
 "time": "09:00",
-"place": "천진초",
+"place": "도학초",
 "owner": "이경영, 이모란",
 "slots": [
 {
 "time": "09:00",
-"place": "천진초"
+"place": "도학초"
 }
 ],
 "id": "847ee100c9b23b0e1aed5144",
@@ -8027,7 +8202,7 @@
 "place": "한림대"
 }
 ],
-"id": "4c4e05f9f0d41958a71dd1d9",
+"id": "b20f8d66b3f2a115846e6d07",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8112,7 +8287,7 @@
 "place": "",
 "owner": "최명심",
 "slots": [],
-"id": "d0b793bd5e21d5581c923def",
+"id": "da280dab1f8bed65fdfbe97d",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8127,7 +8302,7 @@
 "place": "",
 "owner": "윤성원",
 "slots": [],
-"id": "0f2de5841c8357a3977438cb",
+"id": "c24a567d0f242cd3bc0a7fa6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8162,7 +8337,7 @@
 "place": "대진초"
 }
 ],
-"id": "49ffebd73230fd92b6298f71",
+"id": "463dc7a30a0250cb30b2bb61",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8182,24 +8357,24 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "4b87e4fa15cd60239bf84ec3",
+"id": "ffbd80457f162bf951da5e23",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
 "date": "2026-10-16",
 "title": "학교급식 위생점검 및 운영평가",
-"description": "학교급식 위생점검 및 \n   운영평가\n- 9:00, 도학초\n- 이경영, 이모란",
+"description": "학교급식 위생점검 및 \n   운영평가\n- 9:00, 천진초\n- 이경영, 이모란",
 "tab": "교육과2(10월2주)",
 "cell": "F8",
 "kind": "weekly",
 "team": "급식지원",
 "time": "09:00",
-"place": "도학초",
+"place": "천진초",
 "owner": "이경영, 이모란",
 "slots": [
 {
 "time": "09:00",
-"place": "도학초"
+"place": "천진초"
 }
 ],
 "id": "8f6204364ca28e395a185d78",
@@ -8257,7 +8432,7 @@
 "place": "파랑뷰호텔"
 }
 ],
-"id": "12377c5675ded54eb63e7736",
+"id": "6ae7857f0a40d3a6e2030b6c",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8296,6 +8471,26 @@
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
 },
 {
+"date": "2026-10-16",
+"title": "내방상담 및 심리검사",
+"description": "내방상담 및 심리검사\n- 16:30, 위센터\n- 윤미송, 이은혜",
+"tab": "교육과3(10월2주)",
+"cell": "E8",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "16:30",
+"place": "위센터",
+"owner": "윤미송, 이은혜",
+"slots": [
+{
+"time": "16:30",
+"place": "위센터"
+}
+],
+"id": "f7b77207d925708e4315b2be",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
 "date": "2026-10-17",
 "title": "전국체육대회",
 "description": "전국체육대회\n- 10.14.~10.18\n- 남궁연, 김연우",
@@ -8327,7 +8522,7 @@
 "place": "동광중.고"
 }
 ],
-"id": "e32d4811da647720de18cb34",
+"id": "7cf0abadb0ae809956e0a90c",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8432,7 +8627,27 @@
 "place": "고성고체육관"
 }
 ],
-"id": "edb9e25da46edbb1863fefc6",
+"id": "38275c143198fb19eae59e21",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-17",
+"title": "미래톡톡체험한마당 행사지원",
+"description": "미래톡톡체험한마당 행사지원\n- 10:00, 고성고체육관\n- 윤미송, 변고은",
+"tab": "교육과3(10월2주)",
+"cell": "E9",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "10:00",
+"place": "고성고체육관",
+"owner": "윤미송, 변고은",
+"slots": [
+{
+"time": "10:00",
+"place": "고성고체육관"
+}
+],
+"id": "dcf5e414d885dd3a1671b442",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
