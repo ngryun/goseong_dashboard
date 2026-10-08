@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-07T13:56:23+00:00",
+"updated_at": "2026-10-08T00:08:58+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-07T13:56:23+00:00"
+"data_at": "2026-10-08T00:08:58+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-07T13:56:23+00:00"
+"data_at": "2026-10-08T00:08:58+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-07T13:56:23+00:00"
+"data_at": "2026-10-08T00:08:58+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-07T13:56:23+00:00"
+"data_at": "2026-10-08T00:08:58+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-07T13:56:23+00:00"
+"data_at": "2026-10-08T00:08:58+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-07T13:56:23+00:00"
+"data_at": "2026-10-08T00:08:58+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -111,8 +111,8 @@
 "행정과(10월2주)"
 ],
 "warnings": [],
-"count": 69,
-"data_at": "2026-10-07T13:56:23+00:00"
+"count": 74,
+"data_at": "2026-10-08T00:08:58+00:00"
 }
 ],
 "events": [
@@ -7154,7 +7154,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "04957d63a6b6c26edfd951ed",
+"id": "fc8faa850f767daf8b1766c8",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7169,7 +7169,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "215a2df558463a076ed0aa3f",
+"id": "049de7068bcee730845d9fa8",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7304,7 +7304,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "3dcd82d6e20d18ffd2105540",
+"id": "4a9d1a0901e4d69f962b8993",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7324,7 +7324,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "0733c9d0606a5b8c43649ce9",
+"id": "6bb0faf0d882c239acc0570c",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7344,7 +7344,7 @@
 "place": "도교육청"
 }
 ],
-"id": "cd0c5585e34451a754b1f904",
+"id": "181c418aff03c65115362d55",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7364,7 +7364,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "25477e84d3cdefc0cf4069fc",
+"id": "87b5ba10361d134e7d1b42ee",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7553,7 +7553,7 @@
 "place": "",
 "owner": "박성진",
 "slots": [],
-"id": "77e4b8ac59ea0694660c10ab",
+"id": "b495e7b1d5d4bf4e96f4de0b",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7568,7 +7568,7 @@
 "place": "",
 "owner": "연로사, 이정인",
 "slots": [],
-"id": "d1f3dcdb35de3faef91cd296",
+"id": "0935d98acbb82c62c5fb7364",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7603,7 +7603,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "9df7d76a2da2752dfc8e1b75",
+"id": "72c3d94d80fdb10db674df29",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7623,7 +7623,27 @@
 "place": "거진고"
 }
 ],
-"id": "bf13ea468f2c069003e665c2",
+"id": "3016f114d2a1ec5bd23a933b",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-13",
+"title": "2026 단단가족공동체 체험교육활동",
+"description": "2026 단단가족공동체 체험교육활동\n- 10:00, 속초워터피아\n- 신선일",
+"tab": "교육과3(10월2주)",
+"cell": "D5",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "10:00",
+"place": "속초워터피아",
+"owner": "신선일",
+"slots": [
+{
+"time": "10:00",
+"place": "속초워터피아"
+}
+],
+"id": "d38b8da7fc7d1005189d5049",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7643,7 +7663,7 @@
 "place": "공현진초"
 }
 ],
-"id": "e0dfa6bb2e019120a3631924",
+"id": "00a8eb86ef6b46b874f2b9c6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7663,7 +7683,7 @@
 "place": "위센터"
 }
 ],
-"id": "3016f114d2a1ec5bd23a933b",
+"id": "45ba4983647266c1994e9db6",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7733,7 +7753,7 @@
 "place": "광산초"
 }
 ],
-"id": "45ba4983647266c1994e9db6",
+"id": "25acafc9d28afa18e7d614ad",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7823,7 +7843,7 @@
 "place": "서울특별시교육청",
 "owner": "",
 "slots": [],
-"id": "2defd4477122c37cf0f4d6ac",
+"id": "706c29f7980281f15019fd47",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7858,7 +7878,7 @@
 "place": "강릉 탑스텐호텔"
 }
 ],
-"id": "b559e60d4ef0013c405a620c",
+"id": "33cd7586188a526f71d1be92",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7878,7 +7898,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "562fc445f3641b61651a4d33",
+"id": "c3803bfd5c70bb8f2b6d34b9",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7898,7 +7918,7 @@
 "place": "대진고"
 }
 ],
-"id": "6dcb0e78025c4f6a436cfd12",
+"id": "a861d768ba49e821bf51e34a",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7922,7 +7942,7 @@
 "place": "고성중"
 }
 ],
-"id": "1f47a72765942f43f812bb32",
+"id": "bc9da230d22a0e9c42c6c7bb",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -7942,7 +7962,7 @@
 "place": "위센터"
 }
 ],
-"id": "33cd7586188a526f71d1be92",
+"id": "a302f2dc4d82e120a73d4503",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8047,7 +8067,7 @@
 "place": "",
 "owner": "이정인",
 "slots": [],
-"id": "d5740b382293119464a9be52",
+"id": "c7cbac0dee6327d8092f717f",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8067,7 +8087,7 @@
 "place": "강릉 탑스텐호텔"
 }
 ],
-"id": "9437352fce0f74ea23728445",
+"id": "05e76d144c7791bd6699cfe7",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8107,7 +8127,7 @@
 "place": "오호초"
 }
 ],
-"id": "783db7241879458d5b7b68fa",
+"id": "b2193b3e9673da53a1604982",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8127,7 +8147,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "786d18b56f43590e0f06894c",
+"id": "2dd2b4584e1bd10ff5d86e79",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8202,7 +8222,7 @@
 "place": "한림대"
 }
 ],
-"id": "b20f8d66b3f2a115846e6d07",
+"id": "6f218bd0b6896eee2d6ec3ab",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8242,6 +8262,26 @@
 },
 {
 "date": "2026-10-15",
+"title": "교육취약, 집중관리 학생가정 심리정서 프로그램 협의회",
+"description": "교육취약, 집중관리 학생가정 심리정서 프로그램 협의회\n- 15:00, 꿈동산지역아동센터\n- 신선일",
+"tab": "교육과3(10월2주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "15:00",
+"place": "꿈동산지역아동센터",
+"owner": "신선일",
+"slots": [
+{
+"time": "15:00",
+"place": "꿈동산지역아동센터"
+}
+],
+"id": "11a7bc736369437c0fd2b062",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
 "title": "초등학교 수업장학(수업설계)",
 "description": "초등학교 수업장학(수업설계)",
 "tab": "10월 월중행사",
@@ -8254,6 +8294,26 @@
 "slots": [],
 "id": "c878b9073b92df0a59d74d60",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-15",
+"title": "학원 업무편람 개정 3차 협의회 참석",
+"description": "학원 업무편람 개정 3차 협의회 참석\n-15:00, 강원특별자치도교육청 유아교육원\n- 주무관 김혜윤",
+"tab": "행정과(10월2주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "예산팀",
+"time": "15:00",
+"place": "강원특별자치도교육청 유아교육원",
+"owner": "",
+"slots": [
+{
+"time": "15:00",
+"place": "강원특별자치도교육청 유아교육원"
+}
+],
+"id": "14a700a1d1dc367440f21e85",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
 "date": "2026-10-15",
@@ -8287,7 +8347,7 @@
 "place": "",
 "owner": "최명심",
 "slots": [],
-"id": "da280dab1f8bed65fdfbe97d",
+"id": "bd42050b46c5980f335865a7",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8302,7 +8362,7 @@
 "place": "",
 "owner": "윤성원",
 "slots": [],
-"id": "c24a567d0f242cd3bc0a7fa6",
+"id": "b7d8ad5f98af44c761c91d6c",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8337,7 +8397,7 @@
 "place": "대진초"
 }
 ],
-"id": "463dc7a30a0250cb30b2bb61",
+"id": "5e9cd048e81df3d2a3ad24cd",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8357,7 +8417,7 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "ffbd80457f162bf951da5e23",
+"id": "a91b44484c0638053a33f43b",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8397,6 +8457,26 @@
 },
 {
 "date": "2026-10-16",
+"title": "2026년 학원·법인·평생교육시설 업무 담당자 워크숍 참석",
+"description": "2026년 학원·법인·평생교육시설 업무 담당자 워크숍 참석\n-9:30~ 16:00강원특별자치도교육청 유아교육원\n- 주무관 김혜윤",
+"tab": "행정과(10월2주)",
+"cell": "D8",
+"kind": "weekly",
+"team": "예산팀",
+"time": "09:30~16:00",
+"place": "강원특별자치도교육청 유아교육원",
+"owner": "",
+"slots": [
+{
+"time": "09:30~16:00",
+"place": "강원특별자치도교육청 유아교육원"
+}
+],
+"id": "dfaac4e8b9200d50da4e0775",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-16",
 "title": "고등학교 교육과정 편제 시스템 연수",
 "description": "고등학교 교육과정 편제 시스템 연수\n- 10:00, 강원도교육청교육연수원\n- 심은경",
 "tab": "교육과1(10월2주)",
@@ -8432,7 +8512,7 @@
 "place": "파랑뷰호텔"
 }
 ],
-"id": "6ae7857f0a40d3a6e2030b6c",
+"id": "9a0bc8a92c09118244e5b7c2",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8487,7 +8567,7 @@
 "place": "위센터"
 }
 ],
-"id": "f7b77207d925708e4315b2be",
+"id": "e319bf8ec53ab0dd6c57d351",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8522,7 +8602,7 @@
 "place": "동광중.고"
 }
 ],
-"id": "7cf0abadb0ae809956e0a90c",
+"id": "2de3f34bbae5f5445a0a14d8",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8597,6 +8677,26 @@
 },
 {
 "date": "2026-10-17",
+"title": "2026 단단가족공동체 체험교육활동",
+"description": "2026 단단가족공동체 체험교육활동\n- 10:00, 속초워터피아\n- 신선일",
+"tab": "교육과3(10월2주)",
+"cell": "D9",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "10:00",
+"place": "속초워터피아",
+"owner": "신선일",
+"slots": [
+{
+"time": "10:00",
+"place": "속초워터피아"
+}
+],
+"id": "b3f69eafafd9429b3965c145",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-17",
 "title": "2026 청소년단체 연합캠프(대진초, 간성초)",
 "description": "2026 청소년단체 연합캠프(대진초, 간성초)",
 "tab": "10월 월중행사",
@@ -8627,7 +8727,7 @@
 "place": "고성고체육관"
 }
 ],
-"id": "38275c143198fb19eae59e21",
+"id": "d76475e73bd216fc08ffaac0",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8647,7 +8747,7 @@
 "place": "고성고체육관"
 }
 ],
-"id": "dcf5e414d885dd3a1671b442",
+"id": "58e132e60149011c2b87ae51",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
