@@ -131,6 +131,11 @@ assert.deepEqual({...vm.runInContext('parseRoute("#week/2026-10-05")',context)},
 assert.deepEqual({...vm.runInContext('parseRoute("#school/2026-10-03/7801234")',context)}, {view:'school',date:'2026-10-03',extra:'7801234'});
 assert.deepEqual({...vm.runInContext('parseRoute("#month/2026-02-30/x")',context)}, {view:'month',date:'',extra:''}, 'impossible dates and extras outside 관내 학교 are dropped');
 assert.equal(vm.runInContext('parseRoute("#calendar")',context), null);
+for(const hash of ['#month/%', '#school/%E0%A4%A', '#week/%FF']){
+  context.hash=hash;
+  assert.equal(vm.runInContext('parseRoute(hash)',context),null,'malformed shared links must not stop initialization');
+}
+assert.deepEqual({...vm.runInContext('parseRoute("#week%2F2026-10-05")',context)}, {view:'week',date:'2026-10-05',extra:''});
 assert.equal(vm.runInContext('routeHash("school","2026-10-03","elementary")+" "+routeHash("month","2026-10-03","")',context), '#school/2026-10-03/elementary #month/2026-10-03');
 console.log('Routes verified.');
 
