@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-08T06:19:45+00:00",
+"updated_at": "2026-10-12T02:30:01+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-08T06:19:45+00:00"
+"data_at": "2026-10-12T02:30:01+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-08T06:19:45+00:00"
+"data_at": "2026-10-12T02:30:01+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-08T06:19:45+00:00"
+"data_at": "2026-10-12T02:30:01+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-08T06:19:45+00:00"
+"data_at": "2026-10-12T02:30:01+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-08T06:19:45+00:00"
+"data_at": "2026-10-12T02:30:01+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-08T06:19:45+00:00"
+"data_at": "2026-10-12T02:30:01+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -111,8 +111,8 @@
 "행정과(10월2주)"
 ],
 "warnings": [],
-"count": 73,
-"data_at": "2026-10-08T06:19:45+00:00"
+"count": 76,
+"data_at": "2026-10-12T02:30:01+00:00"
 }
 ],
 "events": [
@@ -7868,6 +7868,21 @@
 },
 {
 "date": "2026-10-14",
+"title": "오호초 자체감사 실시",
+"description": "오호초 자체감사 실시\n- 10.14~10.16\n- 박기철, 최창원",
+"tab": "행정과(10월2주)",
+"cell": "C6",
+"kind": "weekly",
+"team": "총무팀",
+"time": "",
+"place": "",
+"owner": "박기철, 최창원",
+"slots": [],
+"id": "706c29f7980281f15019fd47",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-14",
 "title": "전국체육대회",
 "description": "전국체육대회\n- 10.14.~10.18\n- 남궁연, 김연우",
 "tab": "교육과2(10월2주)",
@@ -8062,6 +8077,21 @@
 },
 {
 "date": "2026-10-15",
+"title": "오호초 자체감사 실시",
+"description": "오호초 자체감사 실시\n- 10.14~10.16\n- 박기철, 최창원",
+"tab": "행정과(10월2주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "총무팀",
+"time": "",
+"place": "",
+"owner": "박기철, 최창원",
+"slots": [],
+"id": "fe545ed0680921454072a7ca",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-15",
 "title": "전국체육대회",
 "description": "전국체육대회\n- 10.15.~10.18, 제주특별자치도",
 "tab": "교육과1(10월2주)",
@@ -8087,7 +8117,7 @@
 "place": "",
 "owner": "이정인",
 "slots": [],
-"id": "d2aa3734be348d01a51bfc07",
+"id": "ada7025c76e3652241e43650",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8332,7 +8362,7 @@
 "place": "유아교육원"
 }
 ],
-"id": "c7be054516bd6d21c980b018",
+"id": "72b0cdbfe070e9c0185f1d0b",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8367,7 +8397,7 @@
 "place": "",
 "owner": "최명심",
 "slots": [],
-"id": "63609f8e33cbc0a725a32508",
+"id": "d839371b03c49581e3280d75",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8382,7 +8412,22 @@
 "place": "",
 "owner": "윤성원",
 "slots": [],
-"id": "bd42050b46c5980f335865a7",
+"id": "2f71e99089a01b3d1c308550",
+"source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
+},
+{
+"date": "2026-10-16",
+"title": "오호초 자체감사 실시",
+"description": "오호초 자체감사 실시\n- 10.14~10.16\n- 박기철, 최창원",
+"tab": "행정과(10월2주)",
+"cell": "C8",
+"kind": "weekly",
+"team": "총무팀",
+"time": "",
+"place": "",
+"owner": "박기철, 최창원",
+"slots": [],
+"id": "ccba1aa1ea63e004f9db6f26",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8477,7 +8522,7 @@
 "place": "유아교육원"
 }
 ],
-"id": "e796736d25989f2309a0f12b",
+"id": "d2672f507005ab56d4c43875",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
@@ -8592,7 +8637,7 @@
 "place": "동광중.고"
 }
 ],
-"id": "41995755a218d903caf01602",
+"id": "eadd9f0268f653741c9bbe7f",
 "source_id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU"
 },
 {
