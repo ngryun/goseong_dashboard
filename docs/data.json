@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-13T01:36:18+00:00",
+"updated_at": "2026-10-13T08:26:04+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -112,7 +112,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-13T01:36:18+00:00"
+"data_at": "2026-10-13T08:26:04+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -126,8 +126,8 @@
 "행정과(10월3주)"
 ],
 "warnings": [],
-"count": 45,
-"data_at": "2026-10-13T01:36:18+00:00"
+"count": 54,
+"data_at": "2026-10-13T08:26:04+00:00"
 }
 ],
 "events": [
@@ -8887,7 +8887,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "37c913a173f7491ea8a9c0fd",
+"id": "6e1e3746d9af804b1486ddeb",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8907,7 +8907,7 @@
 "place": "거지고"
 }
 ],
-"id": "9493e89d37faebb3a841b8d2",
+"id": "a1f791ed85c6b3bfb9c8ccd5",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8927,7 +8927,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "d1ac77c236a2295c7f66b6b5",
+"id": "967017f255d20d7c8f15abc6",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8962,7 +8962,31 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "98de7d177648bdf52fcc09a0",
+"id": "9487eb37392a095bd8bdd4f5",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-19",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B4",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "efd06bfdbdcd83693ee142d0",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8979,6 +9003,26 @@
 "slots": [],
 "id": "61dd64900cfbb52797c81084",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-19",
+"title": "센터 협력 워크숍 장소 사전 답사",
+"description": "센터 협력 워크숍 장소 사전 답사\n- 17:00, 르네블루 호텔\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B4",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "17:00",
+"place": "르네블루 호텔",
+"owner": "임금선",
+"slots": [
+{
+"time": "17:00",
+"place": "르네블루 호텔"
+}
+],
+"id": "fb8a918b0d33eaa25789ca8b",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
 "date": "2026-10-20",
@@ -9012,7 +9056,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "b32eff0a6ce2ef641fba2b58",
+"id": "7ba8e7ded3c437a92dd259a7",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9032,7 +9076,7 @@
 "place": "거진고"
 }
 ],
-"id": "1d2d98a97c2248bff09f422a",
+"id": "a5e0c571870df78984a04012",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9052,7 +9096,7 @@
 "place": "느루독서심리연구센터"
 }
 ],
-"id": "350116268417471a343407ab",
+"id": "ac4ed62ed68db6735c9a3391",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9092,7 +9136,7 @@
 "place": "광산초"
 }
 ],
-"id": "240b8e14f9028a9e2907e241",
+"id": "e22030daab279968ea7dbf61",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9133,6 +9177,26 @@
 }
 ],
 "id": "91803bf613959ce14058a21c",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-20",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "대진초",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
+"id": "326b127f1b382c40e7466822",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9187,7 +9251,7 @@
 "place": "토성공공도서관, 아야진초등학교"
 }
 ],
-"id": "77a68fc750653145c6aa44b4",
+"id": "ac75c5a60a3b63f748d0a9a2",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9237,7 +9301,7 @@
 "place": "",
 "owner": "신선일",
 "slots": [],
-"id": "99552f9f8c141bc2c310d1b3",
+"id": "53ef59feaa7fedeb18e20bc0",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9257,7 +9321,7 @@
 "place": "느루독서심리연구센터"
 }
 ],
-"id": "114169b76817da990c59cd1c",
+"id": "e3be19751d78868e7bc63b20",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9277,7 +9341,7 @@
 "place": "거진초"
 }
 ],
-"id": "49a1c28ab86c22ecac914799",
+"id": "84898552d0408a72f8050ec5",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9297,7 +9361,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "3d56b5942e2ba4b97e698177",
+"id": "5231d25380b064b3846ec6c7",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9337,7 +9401,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "b58e56874d1dd64a0cfa7b16",
+"id": "4bff1619a2df55e684c5c8ac",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9397,7 +9461,7 @@
 "place": "아야진초"
 }
 ],
-"id": "fdb472dbb2e4207304d26630",
+"id": "f1f86ec4f8c51dd345b25669",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9437,6 +9501,30 @@
 },
 {
 "date": "2026-10-21",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B6",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "97eb0d797035efa42b98c691",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-21",
 "title": "약물오.남용예방 교직원 연수",
 "description": "약물오.남용예방 교직원 연수\n- 15:00, 3층대회의실\n- 이완옥",
 "tab": "교육과3(10월3주)",
@@ -9452,7 +9540,7 @@
 "place": "3층대회의실"
 }
 ],
-"id": "2511347d7239507fc948f255",
+"id": "139a6b33cf00d7b174bd9773",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9469,6 +9557,26 @@
 "slots": [],
 "id": "d2ce36317c26cb95ba0da9d3",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-21",
+"title": "하반기(수시) 기간제교원 채용 면접 실시(예정)",
+"description": "하반기(수시) 기간제교원 채용 \n면접 실시(예정)\n- 15:00(예정)\n- 조태현",
+"tab": "행정과(10월3주)",
+"cell": "G6",
+"kind": "weekly",
+"team": "학교지원팀",
+"time": "15:00",
+"place": "(예정)",
+"owner": "조태현",
+"slots": [
+{
+"time": "15:00",
+"place": "(예정)"
+}
+],
+"id": "bd974d1b2385fa4b2fd17f73",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
 "date": "2026-10-21",
@@ -9502,7 +9610,7 @@
 "place": "고성군가족센터"
 }
 ],
-"id": "e5a95cc53266017c8ffe991e",
+"id": "54ba7fb01325619305f6d584",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9537,7 +9645,7 @@
 "place": "동광초"
 }
 ],
-"id": "efe44c68654d1e87aae254ea",
+"id": "474b0eadf0756e73b41b3751",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9557,7 +9665,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "65127f0a8e748b76f2b73dd9",
+"id": "13d386570f876d2e3fbd2b8c",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9577,7 +9685,7 @@
 "place": "인흥초"
 }
 ],
-"id": "8afd6cdffa00dfb2f2e000ff",
+"id": "4dca873e834bc9a34fe6db89",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9597,7 +9705,7 @@
 "place": "고성르네블루 바이 쏠비치"
 }
 ],
-"id": "9b7508456c5a8aa0bad56920",
+"id": "43527db8801fce00d2fa36e6",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9622,6 +9730,26 @@
 },
 {
 "date": "2026-10-22",
+"title": "학생 맞춤 성장지원 센터 협력 워크숍 운영",
+"description": "학생 맞춤 성장지원 센터 협력 워크숍 운영\n- 09:30, 르네블루 호텔\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "09:30",
+"place": "르네블루 호텔",
+"owner": "임금선",
+"slots": [
+{
+"time": "09:30",
+"place": "르네블루 호텔"
+}
+],
+"id": "dfd5cb9c88e499b15a1bfdc0",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-22",
 "title": "학생 맞춤형 성장지원 센터 협력 워크숍(~23)",
 "description": "학생 맞춤형 성장지원 센터 협력 워크숍(~23) \n- 09:30,  고성 르네블루 쏠비치\n- 김미경, 유승희, 강민하",
 "tab": "교육과1(10월3주)",
@@ -9642,6 +9770,46 @@
 },
 {
 "date": "2026-10-22",
+"title": "하반기(수시) 기간제교원 채용 최종 합격자 발표(예정)",
+"description": "하반기(수시) 기간제교원 채용 \n최종 합격자 발표(예정)\n- 10:00(예정)\n- 조태현",
+"tab": "행정과(10월3주)",
+"cell": "G7",
+"kind": "weekly",
+"team": "학교지원팀",
+"time": "10:00",
+"place": "(예정)",
+"owner": "조태현",
+"slots": [
+{
+"time": "10:00",
+"place": "(예정)"
+}
+],
+"id": "19dedb662d2f6deecb53f8f8",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-22",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "대진초",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
+"id": "af137bc74e2fe2f96ad28a08",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-22",
 "title": "순회상담",
 "description": "순회상담 \n- 14:00, 대진초\n- 변고은",
 "tab": "교육과3(10월3주)",
@@ -9657,7 +9825,7 @@
 "place": "대진초"
 }
 ],
-"id": "f9ba6b2f318916e2ecf84dd6",
+"id": "24857dd0c3284576360f1638",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9677,7 +9845,7 @@
 "place": ""
 }
 ],
-"id": "3f049d2d3736fdaeff614e2e",
+"id": "17804c46f20c25907f2c3eaf",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9767,7 +9935,7 @@
 "place": "대진초"
 }
 ],
-"id": "f957fb6e4f4a10230d809a1f",
+"id": "f2c5660ba1d3d78a9ee3baeb",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9802,7 +9970,7 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "cb1b85cc2a458f6622bddb1d",
+"id": "c91209ca04041544842b71e2",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9822,7 +9990,27 @@
 "place": "위센터"
 }
 ],
-"id": "5424c336878dc7631020a802",
+"id": "6615b9f0e8a795d07cb7f5b2",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-23",
+"title": "학생 맞춤 성장지원 센터 협력 워크숍 운영",
+"description": "학생 맞춤 성장지원 센터 협력 워크숍 운영\n- 10:00, 르네블루 호텔\n- 임금선",
+"tab": "교육과3(10월3주)",
+"cell": "B8",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "10:00",
+"place": "르네블루 호텔",
+"owner": "임금선",
+"slots": [
+{
+"time": "10:00",
+"place": "르네블루 호텔"
+}
+],
+"id": "642802bfecfa15cddf70e741",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9857,7 +10045,7 @@
 "place": "서울 롯데월드"
 }
 ],
-"id": "6420980eba19a00eaf289137",
+"id": "b3b1cdbc7aed4367ae76f0c3",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9932,7 +10120,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "c11800268a099f85460d4a06",
+"id": "2c0899b3b27d6b3e1a58e096",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10017,7 +10205,7 @@
 "place": "공현진초"
 }
 ],
-"id": "0429417b0febf7fddeb796c2",
+"id": "b0d90b4f1ff86cea4f8e5ed8",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
