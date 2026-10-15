@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-14T10:34:12+00:00",
+"updated_at": "2026-10-15T05:51:19+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -82,7 +82,7 @@
 "10월 월중행사 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 97,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -97,7 +97,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -112,7 +112,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-14T10:34:12+00:00"
+"data_at": "2026-10-15T05:51:19+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -126,8 +126,8 @@
 "행정과(10월3주)"
 ],
 "warnings": [],
-"count": 65,
-"data_at": "2026-10-14T10:34:12+00:00"
+"count": 70,
+"data_at": "2026-10-15T05:51:19+00:00"
 }
 ],
 "events": [
@@ -8887,7 +8887,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "7b23f70118d6f406537fd430",
+"id": "5007209c669042e540948db7",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8907,7 +8907,7 @@
 "place": "거지고"
 }
 ],
-"id": "5148c3fa0d7b66ebded78951",
+"id": "42f7c594749f6c0b8d1304dd",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8927,7 +8927,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "f650389f54d848d39bbf996a",
+"id": "ca9efd73fe11da8851300b15",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8962,7 +8962,7 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "8dc03a282b4ab1e9cbe6a4fe",
+"id": "058b9950fbb496fd9b3e37dc",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -8982,7 +8982,47 @@
 "place": "소회의실"
 }
 ],
-"id": "37f49ffbb72bd3147f91ce26",
+"id": "6adeb3552fd889aaea0e778c",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-19",
+"title": "학생맞춤통합지원센터 사례협의",
+"description": "학생맞춤통합지원센터 사례협의\n- 10:30, 소회의실\n- 신선일",
+"tab": "교육과3(10월3주)",
+"cell": "D4",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "10:30",
+"place": "소회의실",
+"owner": "신선일",
+"slots": [
+{
+"time": "10:30",
+"place": "소회의실"
+}
+],
+"id": "fb1d8511bbc471a608ba414b",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-19",
+"title": "찾아가는 문화예술 공연",
+"description": "찾아가는 문화예술 공연\n- 11:00, 아야진초\n- 남궁연",
+"tab": "교육과2(10월3주)",
+"cell": "D4",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "11:00",
+"place": "아야진초",
+"owner": "남궁연",
+"slots": [
+{
+"time": "11:00",
+"place": "아야진초"
+}
+],
+"id": "1e8885f0894a621aab61c84f",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9006,7 +9046,7 @@
 "place": "고성중"
 }
 ],
-"id": "8af5e27b4b0ea438e3a74173",
+"id": "573a4359f52f847feadb4718",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9041,7 +9081,7 @@
 "place": "르네블루 호텔"
 }
 ],
-"id": "8e4fcf0fd109ee1dcc72af07",
+"id": "f58394a85ad4268336c8cd3d",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9076,7 +9116,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "341c5d2c5fb768a9369c7518",
+"id": "954e79e18e88f668ddcd9b75",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9100,7 +9140,7 @@
 "place": "광산초 / 변고은"
 }
 ],
-"id": "b499df9895a4338e09cceb70",
+"id": "178c04d1fd7ce5da28bde02e",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9120,7 +9160,7 @@
 "place": "느루독서심리연구센터"
 }
 ],
-"id": "1070248ed1a4e59f723c9f54",
+"id": "858b27a25d9d4eb3a43e41c3",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9200,7 +9240,7 @@
 "place": "도학초"
 }
 ],
-"id": "3b658498b08ebcd984766fd1",
+"id": "bc8adda9ece652dbc4a9376f",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9220,7 +9260,7 @@
 "place": "도학초"
 }
 ],
-"id": "c491242035f32f21e8f3eba4",
+"id": "3b70a7528df7044ee5309245",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9240,7 +9280,7 @@
 "place": "도학초"
 }
 ],
-"id": "1eb6f0df8763a32c753505a2",
+"id": "c255dad071ea4078474f8da4",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9260,7 +9300,7 @@
 "place": "대진초"
 }
 ],
-"id": "c10340e90884619f99257ffd",
+"id": "26529aff8cd98b7c91e44c9f",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9315,7 +9355,7 @@
 "place": "토성공공도서관, 아야진초"
 }
 ],
-"id": "d0d17ba55da09c2701f8ce26",
+"id": "f31e2541e503ac7043d798ef",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9335,7 +9375,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "9b62c8cf2ec45ba9fc36d4ea",
+"id": "b51bfe3d382d3b74312d904a",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9365,7 +9405,7 @@
 "place": "",
 "owner": "신선일",
 "slots": [],
-"id": "2e3e92c1d42c284224607b98",
+"id": "02798dc01cff1f927a6acba7",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9385,7 +9425,7 @@
 "place": "느루독서심리연구센터"
 }
 ],
-"id": "04c96477bf9db6ceb3ac355a",
+"id": "81a8efa153e53f3ebae4da46",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9409,7 +9449,7 @@
 "place": "아야진초 / 윤미송"
 }
 ],
-"id": "f6888aa7070085538041adf1",
+"id": "f675c52ad1a39aba6a75814d",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9429,7 +9469,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "951b527b2a96eeb5d1b32ede",
+"id": "070da7aa6b7323d80730dc5c",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9509,7 +9549,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "013f60868d9b9cb901b17ef3",
+"id": "e8cb9685a410405e0b53e7c3",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9544,7 +9584,7 @@
 "place": "대회의실"
 }
 ],
-"id": "2b9e900d06460cdd0a3e1de9",
+"id": "5ea1fb73c1d9473c0625930b",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9588,7 +9628,7 @@
 "place": "고성중"
 }
 ],
-"id": "1412f409b448319bbe71dc96",
+"id": "2870886ef05389ad7d96d03c",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9608,7 +9648,7 @@
 "place": "3층대회의실"
 }
 ],
-"id": "477f6ffb679f412e21caac24",
+"id": "56d62b8f546229ae0158e24b",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9663,7 +9703,7 @@
 "place": "(예정)"
 }
 ],
-"id": "deb68664d2ddd3fe03fead81",
+"id": "42eb2d7a0313595c6f1694ab",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9698,7 +9738,27 @@
 "place": "고성군가족센터"
 }
 ],
-"id": "6f8e2ec4101c434e92d14f95",
+"id": "84a22d66ee987e75ec8c939d",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-21",
+"title": "고성체육회 인사위원회",
+"description": "고성체육회 인사위원회\n- 16:00\n- 남궁연",
+"tab": "교육과2(10월3주)",
+"cell": "D6",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "16:00",
+"place": "",
+"owner": "남궁연",
+"slots": [
+{
+"time": "16:00",
+"place": ""
+}
+],
+"id": "18374c8c147cb7521a350444",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9733,7 +9793,7 @@
 "place": "동광초"
 }
 ],
-"id": "e63b44bff08bd4d9acbce993",
+"id": "e7141e34f0d4dbbace5cc840",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9753,7 +9813,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "11bef96240414ec92d6ac5d6",
+"id": "94b481c22cbbaefc28d9b8bb",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9777,7 +9837,7 @@
 "place": "대진초 / 변고은"
 }
 ],
-"id": "5f2f43b2c3333c2ab283716e",
+"id": "8e2d0e3f6be7bff26088b7b6",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9797,7 +9857,7 @@
 "place": "고성르네블루 바이 쏠비치"
 }
 ],
-"id": "3786c1025c7c96d3690b2181",
+"id": "02a112a61796cbeaa324c97a",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9817,7 +9877,7 @@
 "place": "도교육청교육연수원(횡성)"
 }
 ],
-"id": "226522a7dd3eae30f1dab361",
+"id": "80a637f56ab1fa9e2193ef26",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9837,7 +9897,7 @@
 "place": "르네블루 호텔"
 }
 ],
-"id": "280268e81ae669d01b63bfeb",
+"id": "7a3ade9bbc681353080e205f",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9857,7 +9917,7 @@
 "place": "고성르네블루 바이 쏠비치"
 }
 ],
-"id": "a7830766b575108b36c1841f",
+"id": "2b6542fbed7f84759efcc860",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9877,7 +9937,7 @@
 "place": "고성 르네블루 쏠비치"
 }
 ],
-"id": "7d2cadb137f06f5c9d500b48",
+"id": "c7caf05e1ce626d9fabf2f9f",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9897,7 +9957,7 @@
 "place": "(예정)"
 }
 ],
-"id": "aa70972528da067d16ebf78e",
+"id": "54b80b90372c5f9619048e6e",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9917,7 +9977,7 @@
 "place": "아야진초"
 }
 ],
-"id": "c7caf05e1ce626d9fabf2f9f",
+"id": "099936070523aa56965a20ab",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9937,7 +9997,7 @@
 "place": "대진초"
 }
 ],
-"id": "c96398e53fd1c0c03d96df18",
+"id": "c68ab412310bb67f4d725490",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9957,7 +10017,7 @@
 "place": ""
 }
 ],
-"id": "46c599ff29a568f57e5918d3",
+"id": "f8f764b395fd611e22bb22c3",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -9977,7 +10037,7 @@
 "place": "공현진초"
 }
 ],
-"id": "25a4ee9ec7ce20a5d19b3dea",
+"id": "0974f9f7b035df18970b3010",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10012,6 +10072,46 @@
 },
 {
 "date": "2026-10-22",
+"title": "통합교육이해증진연수",
+"description": "통합교육이해증진연수\n- 15:00, 대회의실",
+"tab": "교육과1(10월3주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "교육과장",
+"time": "15:00",
+"place": "대회의실",
+"owner": "",
+"slots": [
+{
+"time": "15:00",
+"place": "대회의실"
+}
+],
+"id": "0cbeec623de56c19e748f6fd",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-22",
+"title": "통합교육이해증진연수",
+"description": "통합교육이해증진연수\n- 15:00, 대회의실\n- 남궁연",
+"tab": "교육과2(10월3주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "15:00",
+"place": "대회의실",
+"owner": "남궁연",
+"slots": [
+{
+"time": "15:00",
+"place": "대회의실"
+}
+],
+"id": "2d3881158336c3d53754abcd",
+"source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
+},
+{
+"date": "2026-10-22",
 "title": "초등고급발명교실 수업",
 "description": "초등고급발명교실 수업\n- 15:40, 초계종합교육센터\n- 김두현",
 "tab": "교육과2(10월3주)",
@@ -10027,7 +10127,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "8257a06b1adcd0ad0bf198f8",
+"id": "4ef24910bde50c587d344b99",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10047,7 +10147,7 @@
 "place": "서울일대"
 }
 ],
-"id": "f06cd909019f7c59a3215cde",
+"id": "56264acc67f128e638c24bac",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10067,7 +10167,7 @@
 "place": "대진초"
 }
 ],
-"id": "72a601a491b5885060cd210b",
+"id": "68befd62d58be22e1234ecdc",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10102,7 +10202,7 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "a8723e4664b64741e5248456",
+"id": "18d0914f06c703ae98dd69bf",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10122,7 +10222,7 @@
 "place": "위센터"
 }
 ],
-"id": "11555065a2c7eb582050c209",
+"id": "f7ddfc05400ac458649c4908",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10142,7 +10242,7 @@
 "place": "르네블루 호텔"
 }
 ],
-"id": "4fafa594296289c4aeadf06a",
+"id": "3595d4c17edf730e52376c09",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10162,7 +10262,7 @@
 "place": "대진고"
 }
 ],
-"id": "f1e2e9233153ee0ee300a587",
+"id": "b53f510e41a8a3b8dbc58aff",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10197,7 +10297,7 @@
 "place": "고성군문화의집"
 }
 ],
-"id": "cf9c221d2d3f4b6aea69658a",
+"id": "d286e1c6ea1fb9f9dc612ec8",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10217,7 +10317,7 @@
 "place": "광산초"
 }
 ],
-"id": "d5c9784119acccc6723d1e7e",
+"id": "082a862e2557744280036fd7",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10252,7 +10352,7 @@
 "place": "서울 롯데월드"
 }
 ],
-"id": "0c3ec1eb61602c2cf1e5dc49",
+"id": "0fd5d1e7d3e9f05a4325f173",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10272,7 +10372,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "caafc73f87e27bfc3a325f8b",
+"id": "7f6e08150625357c58a9c118",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10292,7 +10392,7 @@
 "place": "대회의실"
 }
 ],
-"id": "5160d4ca7ed44c01815f6402",
+"id": "deca5e0fd08eff68ab1540b2",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10312,7 +10412,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "09a44a1ba0ea64dad1f35acc",
+"id": "5b32960e93bd12994fa3ce41",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10347,7 +10447,7 @@
 "place": "고성청소년수련관"
 }
 ],
-"id": "5e02765509bd4b2f2c08ff39",
+"id": "a01de07aeec61dc706e52b69",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10382,7 +10482,7 @@
 "place": "속초 카시아 호텔"
 }
 ],
-"id": "a01de07aeec61dc706e52b69",
+"id": "c5f4c07f52ba18db01af6b16",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10417,7 +10517,7 @@
 "place": "공현진초"
 }
 ],
-"id": "d91e7b27d1d069d7b29ea842",
+"id": "b6f149afd60c977974bbc5b2",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
@@ -10437,7 +10537,7 @@
 "place": "강원대 삼척캠퍼스"
 }
 ],
-"id": "08f6ba6430ee6daf2ca8a7e5",
+"id": "a45f6d36207b899d62173f74",
 "source_id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0"
 },
 {
