@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-19T23:54:58+00:00",
+"updated_at": "2026-10-20T04:41:14+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -85,7 +85,7 @@
 "10월 월중행사의 사본 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 148,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -100,7 +100,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -115,7 +115,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -130,7 +130,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-19T23:54:58+00:00"
+"data_at": "2026-10-20T04:41:14+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -144,8 +144,8 @@
 "행정과(10월4주)"
 ],
 "warnings": [],
-"count": 27,
-"data_at": "2026-10-19T23:54:58+00:00"
+"count": 34,
+"data_at": "2026-10-20T04:41:14+00:00"
 }
 ],
 "events": [
@@ -11285,32 +11285,32 @@
 },
 {
 "date": "2026-10-26",
-"title": "2026년 교육청 수납담당자 협의회 참석",
-"description": "2026년 교육청 수납담당자 협의회 참석 \n- 10. 26.~27. 쉐라톤 제주\n- 최명심",
+"title": "2026년 교육청 수납담당자 협의회",
+"description": "2026년 교육청 수납담당자\n   협의회 \n- 10.26.~10.27. 쉐라톤 제주\n- 최명심",
 "tab": "행정과(10월4주)",
 "cell": "E4",
 "kind": "weekly",
 "team": "재정팀",
 "time": "",
-"place": "27. 쉐라톤 제주",
+"place": "쉐라톤 제주",
 "owner": "최명심",
 "slots": [],
-"id": "39a6dd869ae49937a07ff2b4",
+"id": "bfe9e92dab7c998467d9ca61",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
 "date": "2026-10-26",
 "title": "시설관리 미배치교 순회점검",
-"description": "시설관리 미배치교 순회점검\n- 10.26(월)~10.29(목), 도학초 외 9교\n- 박구원, 윤동열",
+"description": "시설관리 미배치교 순회점검\n- 10.26,~10.29, 도학초 외 9교\n- 박구원, 윤동열",
 "tab": "행정과(10월4주)",
 "cell": "G4",
 "kind": "weekly",
 "team": "학교지원팀",
 "time": "",
-"place": "도학초 외 9교",
+"place": "10.29, 도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "6e4c5debf6a0ebf7b58cc2d7",
+"id": "24f31c98f40421e85d5f9108",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11450,7 +11450,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "e65915133cbcf6fa31395883",
+"id": "29eba5e23447d7b00d7c7509",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11470,7 +11470,27 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "42a57c8fe5891d9a91ab887e",
+"id": "3fd60ea042a4657bc0ca5210",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-26",
+"title": "학맞통 사례 협의회 참석",
+"description": "학맞통 사례 협의회 참석\n- 11:00, 2층 소회의실\n- 임금선",
+"tab": "교육과3(10월4주)",
+"cell": "B4",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "11:00",
+"place": "2층 소회의실",
+"owner": "임금선",
+"slots": [
+{
+"time": "11:00",
+"place": "2층 소회의실"
+}
+],
+"id": "c1be90559d1c73c5d17af914",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11490,7 +11510,7 @@
 "place": "대진고"
 }
 ],
-"id": "6d7128d21db53f76c0313313",
+"id": "ae9331980c3464e58ede2737",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11551,6 +11571,30 @@
 }
 ],
 "id": "480a72801ef89304860f554a",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-26",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(10월4주)",
+"cell": "B4",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "60a9bfd48f508cb6bc5d9310",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11635,7 +11679,7 @@
 "place": "도학초"
 }
 ],
-"id": "27a841e3ead651e0e4d3642d",
+"id": "554b1897a9f255dc250c6b03",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11656,6 +11700,26 @@
 }
 ],
 "id": "ff0289072c2c43caa0031ee4",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-27",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 13:30, 대진초\n- 임금선",
+"tab": "교육과3(10월4주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "대진초",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "대진초"
+}
+],
+"id": "873a59162d78d35f5bfb698c",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11730,6 +11794,30 @@
 },
 {
 "date": "2026-10-28",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(10월4주)",
+"cell": "B6",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "6d599d5c556e5db1822a7845",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-28",
 "title": "초등학교 책임장학",
 "description": "초등학교 책임장학",
 "tab": "10월 월중행사",
@@ -11760,17 +11848,17 @@
 },
 {
 "date": "2026-10-29",
-"title": "2026년 비상대비(보안) 및 민방위 업무담당자 협의회 참석",
-"description": "2026년 비상대비(보안) 및 민방위 업무담당자 협의회 참석\n- 2026. 10. 29.(목)~10. 30.(금), 영월산업진흥원\n- 주무관 최창원, 임예지",
+"title": "2026년 비상대비(보안) 및 민방위 업무담당자 협의회",
+"description": "2026년 비상대비(보안) 및 \n   민방위 업무담당자 협의회\n- 10.29.~10.30, 영월산업진흥원\n- 최창원, 임예지",
 "tab": "행정과(10월4주)",
 "cell": "C7",
 "kind": "weekly",
 "team": "총무팀",
 "time": "",
-"place": "",
-"owner": "",
+"place": "영월산업진흥원",
+"owner": "최창원, 임예지",
 "slots": [],
-"id": "36edf5591d069823460436aa",
+"id": "277e4170b0f48a75deadace8",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11790,7 +11878,7 @@
 "place": "동광산과고"
 }
 ],
-"id": "0bb5784ec40951b98aab65e7",
+"id": "9d51fe9d2f79219af1b006ad",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11810,7 +11898,7 @@
 "place": "동광산과고"
 }
 ],
-"id": "f099418dad84d97fa0cda490",
+"id": "6ac27f4af59f3ee7ba0453b5",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11875,8 +11963,8 @@
 },
 {
 "date": "2026-10-29",
-"title": "고성학생맞춤통합지원센터 유관기관 워크숍 참석",
-"description": "고성학생맞춤통합지원센터 유관기관 워크숍 참석\n- 10:30, 윈덤강원고성 \n- 이분현",
+"title": "고성학생맞춤통합지원센터 유관기관 워크숍",
+"description": "고성학생맞춤통합지원센터 \n   유관기관 워크숍\n- 10:30, 윈덤강원고성 \n- 이분현",
 "tab": "교육과3(10월4주)",
 "cell": "G7",
 "kind": "weekly",
@@ -11890,7 +11978,47 @@
 "place": "윈덤강원고성"
 }
 ],
-"id": "d5055e8d921d258ace4b8320",
+"id": "49f587eb63c0e84522d12629",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-29",
+"title": "고성학생맞춤형통합지원센터 워크숍",
+"description": "고성학생맞춤형통합지원센터\n    워크숍\n- 10:30, 윈덤호텔\n- 임금선",
+"tab": "교육과3(10월4주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "10:30",
+"place": "윈덤호텔",
+"owner": "임금선",
+"slots": [
+{
+"time": "10:30",
+"place": "윈덤호텔"
+}
+],
+"id": "15b955104587eb9932939f7d",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-29",
+"title": "유관기관 단체장 협의회",
+"description": "유관기관 단체장 협의회\n- 18:30, 고성관내음식점",
+"tab": "교육과1(10월4주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "교육장",
+"time": "18:30",
+"place": "고성관내음식점",
+"owner": "",
+"slots": [
+{
+"time": "18:30",
+"place": "고성관내음식점"
+}
+],
+"id": "a7ddf5a0a08d51e326bf377d",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11910,7 +12038,27 @@
 "place": "대진초"
 }
 ],
-"id": "07229df7bcbf3d637887729f",
+"id": "7f4a6a510af9f67375e3a05a",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-30",
+"title": "학습클리닉전문가 더 배움 학습 공동체",
+"description": "학습클리닉전문가 더 배움\n   학습 공동체\n- 13:00, 강릉시 1인 미디어센터 \n- 임금선",
+"tab": "교육과3(10월4주)",
+"cell": "B8",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:00",
+"place": "강릉시 1인 미디어센터",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:00",
+"place": "강릉시 1인 미디어센터"
+}
+],
+"id": "89647fe9317ade6f04129d99",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11960,7 +12108,7 @@
 "place": "춘천교대 석우관"
 }
 ],
-"id": "d4146c2f61700a93e9412d3f",
+"id": "b7828cd583299198f19dd12a",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11980,7 +12128,7 @@
 "place": "춘천교육대학교"
 }
 ],
-"id": "2eb95a8049c1304b6274640a",
+"id": "807f0fb024d5b4e6c54598a0",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12000,7 +12148,7 @@
 "place": "춘천교육대학교 석우관"
 }
 ],
-"id": "feb0cf58a31b33af083f0f6b",
+"id": "9263ad92d99ab5b7a409759e",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12020,7 +12168,7 @@
 "place": "춘천교대 석우관"
 }
 ],
-"id": "ca36d0644d1581cff8e0990a",
+"id": "55453401377e9aab88b3ef74",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12056,7 +12204,7 @@
 {
 "date": "2026-10-31",
 "title": "학부모 학교참여 동아리 지원사업 모니터링(죽왕초)",
-"description": "학부모 학교참여 동아리 지원사업 모니터링(죽왕초)\n- 09:40~12:00, 능파대, 서낭바위   \n- 이분현",
+"description": "학부모 학교참여 동아리 \n   지원사업 모니터링(죽왕초)\n- 09:40~12:00, 능파대, 서낭바위   \n- 이분현",
 "tab": "교육과3(10월4주)",
 "cell": "G9",
 "kind": "weekly",
@@ -12070,7 +12218,7 @@
 "place": "능파대, 서낭바위"
 }
 ],
-"id": "733cf576c133904d754e8bfa",
+"id": "c7f4f6dfff723284487d557f",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 }
 ]
