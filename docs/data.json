@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-20T04:41:14+00:00",
+"updated_at": "2026-10-20T09:40:49+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -85,7 +85,7 @@
 "10월 월중행사의 사본 44행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 148,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -100,7 +100,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -115,7 +115,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -130,7 +130,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-20T04:41:14+00:00"
+"data_at": "2026-10-20T09:40:49+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -144,8 +144,8 @@
 "행정과(10월4주)"
 ],
 "warnings": [],
-"count": 34,
-"data_at": "2026-10-20T04:41:14+00:00"
+"count": 42,
+"data_at": "2026-10-20T09:40:49+00:00"
 }
 ],
 "events": [
@@ -11295,7 +11295,7 @@
 "place": "쉐라톤 제주",
 "owner": "최명심",
 "slots": [],
-"id": "bfe9e92dab7c998467d9ca61",
+"id": "f2a192426b768facf2794756",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11310,7 +11310,7 @@
 "place": "10.29, 도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "24f31c98f40421e85d5f9108",
+"id": "f699e7d7bcf9ea4f972297ff",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11342,6 +11342,26 @@
 "slots": [],
 "id": "612d0d22626d81276da500a3",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-26",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 10:00, 거진중, 거진고\n- 김제현",
+"tab": "교육과3(10월4주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "10:00",
+"place": "거진중, 거진고",
+"owner": "김제현",
+"slots": [
+{
+"time": "10:00",
+"place": "거진중, 거진고"
+}
+],
+"id": "b0e7f8c830f499f4cfc70354",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
 "date": "2026-10-26",
@@ -11450,7 +11470,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "29eba5e23447d7b00d7c7509",
+"id": "9f3b0b4da131398abc5b0f1f",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11470,7 +11490,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "3fd60ea042a4657bc0ca5210",
+"id": "8b6dad50e475690bc320983d",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11490,7 +11510,7 @@
 "place": "2층 소회의실"
 }
 ],
-"id": "c1be90559d1c73c5d17af914",
+"id": "39cae64a6db7915b07e998d4",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11510,7 +11530,7 @@
 "place": "대진고"
 }
 ],
-"id": "ae9331980c3464e58ede2737",
+"id": "d70dc231672fb192222792cf",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11594,7 +11614,7 @@
 "place": "고성중"
 }
 ],
-"id": "60a9bfd48f508cb6bc5d9310",
+"id": "b83d89d6750b3ade27ddcc68",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11679,7 +11699,27 @@
 "place": "도학초"
 }
 ],
-"id": "554b1897a9f255dc250c6b03",
+"id": "e463342f2a82d9b95384b985",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-27",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 동광초, 거진초\n- 김제현",
+"tab": "교육과3(10월4주)",
+"cell": "F5",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "동광초, 거진초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
+"id": "a35c380f576222af3fe08795",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11719,7 +11759,27 @@
 "place": "대진초"
 }
 ],
-"id": "873a59162d78d35f5bfb698c",
+"id": "36fa63055e35ee57ba08f3a8",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-27",
+"title": "영재교육원 수업",
+"description": "영재교육원 수업\n- 15:40, 초계종합교육센터\n- 김정호, 서명원",
+"tab": "교육과2(10월4주)",
+"cell": "G5",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "15:40",
+"place": "초계종합교육센터",
+"owner": "김정호, 서명원",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
+"id": "bf46e6094f9ca6fab680a405",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11751,6 +11811,26 @@
 "slots": [],
 "id": "2d853595feee03a1ba4e2896",
 "source_id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs"
+},
+{
+"date": "2026-10-28",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:30, 고성고, 간성초\n- 김제현",
+"tab": "교육과3(10월4주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:30",
+"place": "고성고, 간성초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
+"id": "f696e4bf5dd4d0a331bd181a",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
 "date": "2026-10-28",
@@ -11813,7 +11893,7 @@
 "place": "고성중"
 }
 ],
-"id": "6d599d5c556e5db1822a7845",
+"id": "d7d637e3de57394ef5a438aa",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11858,7 +11938,27 @@
 "place": "영월산업진흥원",
 "owner": "최창원, 임예지",
 "slots": [],
-"id": "277e4170b0f48a75deadace8",
+"id": "8a9f23d4395965a700732d3f",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-29",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 대진초, 고성중\n- 김제현",
+"tab": "교육과3(10월4주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "대진초, 고성중",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
+"id": "6f3260fa860887d1d2fe0bc7",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11978,7 +12078,7 @@
 "place": "윈덤강원고성"
 }
 ],
-"id": "49f587eb63c0e84522d12629",
+"id": "e3f96e854945af459732dcee",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -11998,7 +12098,27 @@
 "place": "윈덤호텔"
 }
 ],
-"id": "15b955104587eb9932939f7d",
+"id": "44f8a8bf58e4e70f2970f67b",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-29",
+"title": "초등고급발명교실 수업",
+"description": "초등고급발명교실 수업\n- 15:40, 초계종합교육센터\n- 김두현",
+"tab": "교육과2(10월4주)",
+"cell": "G7",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "15:40",
+"place": "초계종합교육센터",
+"owner": "김두현",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
+"id": "6e54061c60b01c1b4a97d5c2",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12038,7 +12158,27 @@
 "place": "대진초"
 }
 ],
-"id": "7f4a6a510af9f67375e3a05a",
+"id": "90551e5fed2d09d4a9385b2b",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-30",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 광산초, 고성중\n- 김제현",
+"tab": "교육과3(10월4주)",
+"cell": "F8",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "광산초, 고성중",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "광산초, 고성중"
+}
+],
+"id": "7b3c3b205e51362075d867d4",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12058,7 +12198,7 @@
 "place": "강릉시 1인 미디어센터"
 }
 ],
-"id": "89647fe9317ade6f04129d99",
+"id": "ba1c9057f33b53eb3c1e2a65",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12128,7 +12268,7 @@
 "place": "춘천교육대학교"
 }
 ],
-"id": "807f0fb024d5b4e6c54598a0",
+"id": "201d869b7696fb0de0f0f5db",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12169,6 +12309,26 @@
 }
 ],
 "id": "55453401377e9aab88b3ef74",
+"source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
+},
+{
+"date": "2026-10-31",
+"title": "발명 특별교육과정 수업",
+"description": "발명 특별교육과정 수업\n- 09:00, 초계종합교육센터\n- 김강진, 김진영",
+"tab": "교육과2(10월4주)",
+"cell": "G9",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "09:00",
+"place": "초계종합교육센터",
+"owner": "김강진, 김진영",
+"slots": [
+{
+"time": "09:00",
+"place": "초계종합교육센터"
+}
+],
+"id": "f477e2e6b4cce2ab7da910f6",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 },
 {
@@ -12218,7 +12378,7 @@
 "place": "능파대, 서낭바위"
 }
 ],
-"id": "c7f4f6dfff723284487d557f",
+"id": "c7a6c50968e07bee2938d8eb",
 "source_id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4"
 }
 ]
