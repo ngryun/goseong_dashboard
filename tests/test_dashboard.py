@@ -161,6 +161,25 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(len(status['failures']), 1)
         self.assertFalse(status['ok'])
 
+    def test_copied_tab_is_read_once(self):
+        head = [['2026년 10월 월중행사'], [], ['', '일', '요일', '시간', '행사명', '', '장소', '담당자']]
+        rows = [['', '1', '목', '10:00', '', '취임식', '대회의실', '홍길동'], ['', '2', '금', '14:00', '', '연수', '회의실', '김담당']]
+        copied = workbook([('10월 월중행사', head + rows), ('10월 월중행사의 사본', head + rows)])
+        first, status = build_data.build(self.ENTRIES, {}, fetch=lambda sid: copied, now='t1')
+        self.assertTrue(status['ok'])
+        self.assertEqual([e['tab'] for e in first['events']], ['10월 월중행사'] * 2)
+        self.assertEqual(first['sources'][0]['count'], 2)
+        self.assertIn('10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 2건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요.', first['sources'][0]['warnings'])
+        # the emptied copy must not be "kept from the previous run" on the next sync
+        second, _ = build_data.build(self.ENTRIES, first, fetch=lambda sid: copied, now='t2')
+        self.assertIs(second, first)
+        # rows the copy changed are its own events; identical rows inside one tab stay as written
+        edited = workbook([('10월 월중행사', head + rows + rows[:1]), ('10월 월중행사의 사본', head + rows[:1] + [['', '3', '토', '09:00', '', '체육대회', '운동장', '박담당']])])
+        third, _ = build_data.build(self.ENTRIES, first, fetch=lambda sid: edited, now='t3')
+        self.assertEqual([(e['tab'], e['title']) for e in third['events']],
+                         [('10월 월중행사', '취임식'), ('10월 월중행사', '취임식'), ('10월 월중행사', '연수'), ('10월 월중행사의 사본', '체육대회')])
+        self.assertTrue(any('같은 일정 1건은 한 번만' in w for w in third['sources'][0]['warnings']))
+
     def test_registry_sheet_rows(self):
         reg = workbook([('등록', [['주소', '표시 이름', '기준 연도', '사용'], [URL, '9월 1주', '2026', ''], [URL2, '옛 시트', '2025', '중지'], ['메모만 있는 행']])])
         self.assertEqual(build_data.registry_from_sheet(reg), [dict(url=URL, label='9월 1주', year=2026)])

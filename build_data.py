@@ -65,6 +65,28 @@ def _content(source):
     return {k: source.get(k) for k in CONTENT_KEYS}
 
 
+EVENT_KEYS = ('date', 'title', 'kind', 'team', 'time', 'place', 'owner', 'description', 'slots')
+
+
+def _drop_copied_tabs(events, warnings):
+    """Read an event once when a later tab repeats it unchanged: a tab duplicated in Google Sheets
+    keeps every row under a name like '10월 월중행사의 사본'. Repeats inside one tab stay as written.
+    Returns the kept events and the names of tabs that had nothing of their own."""
+    first_tab, kept, dropped = {}, [], {}
+    for e in events:
+        key = json.dumps([e[k] for k in EVENT_KEYS], ensure_ascii=False, sort_keys=True)
+        origin = first_tab.setdefault(key, e['tab'])
+        if origin == e['tab']:
+            kept.append(e)
+            continue
+        count, _ = dropped.get(e['tab'], (0, origin))
+        dropped[e['tab']] = (count + 1, origin)
+    own = {e['tab'] for e in kept}
+    for tab, (count, origin) in dropped.items():
+        warnings.append(f'{tab}: {origin} 탭과 같은 일정 {count}건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요.')
+    return kept, {tab for tab in dropped if tab not in own}
+
+
 def _events_by_tab(events):
     grouped = {}
     for e in events:
@@ -76,11 +98,12 @@ def collect(sid, blob, year, previous_events):
     """Parse one workbook. Tabs that used to hold schedules but now yield nothing keep
     their previous events, with a warning, so a changed tab layout cannot silently drop data."""
     parsed, warnings, tabs = parse_workbook(blob, year)
+    parsed, copied = _drop_copied_tabs(parsed, warnings)
     items = [dict(e, id=hashlib.sha256(f'{sid}:{e["tab"]}:{e["cell"]}:{i}'.encode()).hexdigest()[:24], source_id=sid)
              for i, e in enumerate(parsed)]
     now_by_tab, old_by_tab = _events_by_tab(items), _events_by_tab(previous_events)
     for tab, old_items in old_by_tab.items():
-        if tab in now_by_tab:
+        if tab in now_by_tab or tab in copied:
             continue
         reason = '이번 수집에서 일정을 찾지 못해' if tab in tabs else '탭이 사라져'
         warnings.append(f'{tab}: {reason} 이전 데이터 {len(old_items)}건을 유지했습니다. 탭 양식 변경 여부를 확인하세요.')
