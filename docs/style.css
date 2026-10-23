@@ -764,3 +764,14 @@ body.dark .notice{background:#322d22;border-color:#655337;color:#e5c786}
 .week-table tbody.category-monthly .team-column{box-shadow:inset 3px 0 0 var(--accent),1px 0 0 var(--border)}
 .week-table tbody.category-monthly .team-name{color:var(--accent);font-weight:700}
 .week-table tbody.category-monthly .week-task:hover{background:var(--surface)}
+/* 보기 전환 탭은 달력 카드의 왼쪽 끝에 고정한다. 오른쪽 정렬이면 주간 업무(옆 패널 숨김으로 카드가 넓어짐)와
+   관내 학교(일정 추가 버튼 숨김)로 바꿀 때마다 탭이 옆으로 밀려 같은 자리를 누를 수 없었다. 휴대전화는 탭이 한 줄 전체라 그대로 둔다. */
+@media(min-width:561px){
+  .toolbar{justify-content:flex-start}
+  .toolbar-tools{display:contents}
+  .toolbar .tabs{order:-2;flex:none}
+  .toolbar .date-nav{order:-1;flex:0 1 auto;min-width:0}
+  .toolbar .calendar-filters{order:0;margin-left:auto}
+  .toolbar #add-event{order:1}
+  .is-school .toolbar #add-event{display:none}
+}
