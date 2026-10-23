@@ -751,3 +751,9 @@ body.dark .notice{background:#322d22;border-color:#655337;color:#e5c786}
 .week-table.time-grid.single-day{min-width:0}
 .time-grid.single-day thead button{pointer-events:none}
 @media(max-width:560px){.week-table.time-grid.single-day{min-width:0}.time-grid .team-column{width:78px}.time-grid .team-name{font-size:11px}.time-grid .week-task strong{-webkit-line-clamp:4}}
+/* 담당자: 카드에 바로 보이는 마지막 줄. 길면 두 줄까지 보이고 나머지는 상세 카드에서 확인한다. */
+.week-task .task-owner{display:flex;align-items:flex-start;gap:4px;margin-top:3px;font-size:11px;line-height:1.5;color:var(--secondary)}
+.week-task .task-owner .ui-icon{width:12px;height:12px;flex-shrink:0;margin-top:2px}
+.week-task .task-owner>span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.is-compact .week-task .task-owner{margin-top:1px;font-size:10px}
+.is-compact .week-task .task-owner>span{-webkit-line-clamp:1}

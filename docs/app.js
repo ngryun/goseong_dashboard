@@ -54,6 +54,8 @@ const kindLabel = e => e.kind==='monthly'?'월중행사':'주간업무';
 // Tasks with several '- HH:MM, place' lines carry them as slots; render those line by line.
 const slotsOf = e => (e.slots&&e.slots.length>1)?e.slots:null;
 const slotText = s => s.time+(s.place?' '+s.place:'');
+// 담당자는 마우스를 올리지 않아도 보이도록 카드 맨 아래 줄에 둔다(길면 두 줄까지).
+const ownerLine = owner => owner?`<span class="task-owner">${icon('person')}<span>${esc(owner)}</span></span>`:'';
 // Direct-input events may carry endDate: they cover every day from date to endDate and are drawn as one bar per week row.
 const isMulti = e => !!e.endDate && e.endDate > e.date;
 const lastDay = e => isMulti(e) ? e.endDate : e.date;
@@ -269,7 +271,7 @@ function renderWeek(events) {
       html+=`<tr class="team-row${lanes?' has-spans':''}"${lanes?` style="--lanes:${lanes}"`:''}><th scope="row" class="team-column"><span class="team-name">${g.id==='monthly'?'<i class="category-dot"></i>':''}${esc(team)}</span><small>${items.length}건</small></th>`;
       html+=days.map(d=>{
         const key=dateKey(d),daily=items.filter(e=>!isMulti(e)&&e.date===key),spans=bars.filter(b=>b.start===key);
-        return `<td class="${key===todayKey?'is-today':''}">${spans.map(weekSpan).join('')}${daily.map(e=>`<button class="week-task" data-event="${e.id}" title="${esc(e.title)}">${!slotsOf(e)&&e.time?`<span class="task-time">${esc(e.time)}</span>`:''}<strong>${esc(e.title)}</strong>${slotsOf(e)?`<span class="task-slots">${slotsOf(e).map(s=>`<span><b>${esc(s.time)}</b>${s.place?esc(s.place):''}</span>`).join('')}</span>`:(e.place?`<span class="task-place">${esc(e.place)}</span>`:'')}</button>`).join('')||(bars.some(b=>b.start<=key&&key<=b.end)?'':'<span class="sr-only">등록된 업무 없음</span>')}<button type="button" class="cell-add" data-add-date="${key}" data-add-kind="${g.id==='monthly'?'monthly':'weekly'}" data-add-team="${g.id==='monthly'||team==='담당 미기재'?'':esc(team)}" aria-label="${key} ${esc(team)}에 일정 추가" title="이 칸에 일정 추가">${icon('plus')}</button></td>`;
+        return `<td class="${key===todayKey?'is-today':''}">${spans.map(weekSpan).join('')}${daily.map(e=>`<button class="week-task" data-event="${e.id}" title="${esc(e.title)}">${!slotsOf(e)&&e.time?`<span class="task-time">${esc(e.time)}</span>`:''}<strong>${esc(e.title)}</strong>${slotsOf(e)?`<span class="task-slots">${slotsOf(e).map(s=>`<span><b>${esc(s.time)}</b>${s.place?esc(s.place):''}</span>`).join('')}</span>`:(e.place?`<span class="task-place">${esc(e.place)}</span>`:'')}${ownerLine(e.owner)}</button>`).join('')||(bars.some(b=>b.start<=key&&key<=b.end)?'':'<span class="sr-only">등록된 업무 없음</span>')}<button type="button" class="cell-add" data-add-date="${key}" data-add-kind="${g.id==='monthly'?'monthly':'weekly'}" data-add-team="${g.id==='monthly'||team==='담당 미기재'?'':esc(team)}" aria-label="${key} ${esc(team)}에 일정 추가" title="이 칸에 일정 추가">${icon('plus')}</button></td>`;
       }).join('')+'</tr>';
     }
     html+='</tbody>';
@@ -312,7 +314,7 @@ function timeTask(b){
   const e=b.e,teams=[...new Map(b.members.map(x=>[x.team||kindLabel(x),groupFor(x)])).entries()];
   const times=[...new Set(b.members.map(x=>x.time))],time=times.length===1&&e.time?e.time:b.start?.time||'';
   const shownTeams=teams.length>3?teams.slice(0,2):teams;
-  return `<button class="week-task time-task category-${groupFor(e)}" data-event="${esc(e.id)}"${b.members.length>1?` data-members="${esc(b.members.map(x=>x.id).join(' '))}"`:''} title="${esc([time,e.title,teams.map(t=>t[0]).join(', ')].filter(Boolean).join(' · '))}">${!slotsOf(e)&&time?`<span class="task-time">${esc(time)}</span>`:''}<strong>${esc(e.title)}</strong><span class="task-teams">${shownTeams.map(([team,group])=>`<span class="category-${group}"><i class="category-dot"></i>${esc(team)}</span>`).join('')}${teams.length>shownTeams.length?`<span>외 ${teams.length-shownTeams.length}</span>`:''}</span>${slotsOf(e)?`<span class="task-slots">${slotsOf(e).map(s=>`<span><b>${esc(s.time)}</b>${s.place?esc(s.place):''}</span>`).join('')}</span>`:(e.place?`<span class="task-place">${esc(e.place)}</span>`:'')}</button>`;
+  return `<button class="week-task time-task category-${groupFor(e)}" data-event="${esc(e.id)}"${b.members.length>1?` data-members="${esc(b.members.map(x=>x.id).join(' '))}"`:''} title="${esc([time,e.title,teams.map(t=>t[0]).join(', ')].filter(Boolean).join(' · '))}">${!slotsOf(e)&&time?`<span class="task-time">${esc(time)}</span>`:''}<strong>${esc(e.title)}</strong><span class="task-teams">${shownTeams.map(([team,group])=>`<span class="category-${group}"><i class="category-dot"></i>${esc(team)}</span>`).join('')}${teams.length>shownTeams.length?`<span>외 ${teams.length-shownTeams.length}</span>`:''}</span>${slotsOf(e)?`<span class="task-slots">${slotsOf(e).map(s=>`<span><b>${esc(s.time)}</b>${s.place?esc(s.place):''}</span>`).join('')}</span>`:(e.place?`<span class="task-place">${esc(e.place)}</span>`:'')}${ownerLine([...new Set(b.members.flatMap(x=>(x.owner||'').split(/\s*,\s*/)).filter(Boolean))].join(', '))}</button>`;
 }
 function weekTimeGrid(events,days){
   const phone=compactScreen.matches,current=currentWeekDay(days);

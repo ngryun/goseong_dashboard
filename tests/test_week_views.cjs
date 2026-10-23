@@ -41,14 +41,16 @@ html=nodes.calendar.innerHTML;
 assert.ok(html.includes('week-table-scroll is-compact'));
 assert.ok(html.includes('data-event="span"')&&html.includes('data-event="early"'),'compact density retains event detail links');
 assert.ok(html.includes('간성초')&&html.includes('거진초'),'compact styling does not discard metadata');
+assert.ok(/data-event="early"[^]*?<span class="task-owner"><svg[^]*?<\/svg><span>김담당<\/span><\/span><\/button>/.test(html),'the owner is shown on the card, not only on hover');
+assert.ok(!html.slice(html.indexOf('data-event="late"'),html.indexOf('</button>',html.indexOf('data-event="late"'))).includes('task-owner'),'no empty owner line');
 run('weekLayout="list";');
 assert.equal(run('weekPresentation()'),'list','an explicit choice overrides the responsive default');
 
 // 시간대 보기
 context.input=[
   {id:'span',date:'2026-10-12',endDate:'2026-10-14',kind:'monthly',title:'여러 날 행사',time:''},
-  {id:'m1',date:'2026-10-13',kind:'monthly',title:'통합교육이해 증진 연수',time:'15:00',place:'3층 대회의실'},
-  {id:'w1',date:'2026-10-13',kind:'weekly',team:'교육과장',title:'통합교육이해증진연수',time:'15:00',place:'대회의실'},
+  {id:'m1',date:'2026-10-13',kind:'monthly',title:'통합교육이해 증진 연수',time:'15:00',place:'3층 대회의실',owner:'남궁연'},
+  {id:'w1',date:'2026-10-13',kind:'weekly',team:'교육과장',title:'통합교육이해증진연수',time:'15:00',place:'대회의실',owner:'남궁연, 김교사'},
   {id:'w2',date:'2026-10-13',kind:'weekly',team:'문화체육특수',title:'통합교육이해 증진연수',time:'15:00~17:00'},
   {id:'later',date:'2026-10-13',kind:'weekly',team:'총무팀',title:'통합교육이해 증진 연수',time:'16:00'},
   {id:'early',date:'2026-10-13',kind:'weekly',team:'총무팀',title:'<새벽 점검>',time:'07:30'},
@@ -72,6 +74,7 @@ assert.ok(!html.includes('data-event="w1"')&&!html.includes('data-event="w2"'));
 assert.ok(html.includes('data-event="later"'),'a different start time stays a separate block');
 const block=html.slice(html.indexOf('data-event="m1"'),html.indexOf('</button>',html.indexOf('data-event="m1"')));
 assert.ok(block.includes('월중행사')&&block.includes('교육과장')&&block.includes('문화체육특수'),'every team of the merged block is named');
+assert.ok(block.includes('<span>남궁연, 김교사</span>'),'merged blocks list each owner once');
 assert.ok(block.includes('<span class="task-time">15:00</span>'),'mixed time strings fall back to the shared start');
 assert.ok(html.includes('여러 담당에 같은 일정 1건 묶음'));
 assert.ok(html.includes('&lt;새벽 점검&gt;')&&!html.includes('<새벽 점검>'),'escape titles in the time view');
