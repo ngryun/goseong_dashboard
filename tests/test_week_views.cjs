@@ -99,5 +99,21 @@ nodes.search.value='없는 검색어';
 run('renderWeek(filterEvents());');
 assert.ok(nodes.calendar.innerHTML.includes('조건에 맞는 업무가 없습니다'));
 nodes.search.value='';
+// 월간 달력 오른쪽 패널: 주간업무가 기본, 그날 주간업무가 없고 월중행사만 있으면 월중행사, 구분 필터가 있으면 그것.
+context.input=[
+  {id:'a',date:'2026-10-01',kind:'monthly',title:'월례조회',time:'09:50'},
+  {id:'b',date:'2026-10-01',kind:'weekly',team:'총무팀',title:'급식 워크숍',time:'10:00'},
+  {id:'c',date:'2026-10-02',kind:'monthly',title:'사제동행',time:'09:00'},
+  {id:'d',date:'2026-10-03',kind:'weekly',team:'총무팀',title:'체험',time:'08:30'}
+];
+run('data.events=input;activeGroup="";');
+assert.equal(run('new Function("return dayKind")()'),'weekly','the side panel opens on 주간업무');
+assert.equal(run('kindFor("2026-10-01")'),'weekly','a day with both kinds shows 주간업무 first');
+assert.equal(run('kindFor("2026-10-02")'),'monthly','a day with only 월중행사 shows those');
+assert.equal(run('kindFor("2026-10-03")'),'weekly');
+assert.equal(run('kindFor("2026-10-04")'),'weekly','an empty day stays on 주간업무');
+nodes.kind.value='monthly';
+assert.equal(run('kindFor("2026-10-01")'),'monthly','the 구분 filter wins');
+nodes.kind.value='';
 console.log('Weekly responsive defaults, day selection, filters, ranges, metadata, escaping and compact-table content verified.');
 console.log('Time view hours, untimed row, cross-team merging, filters, slots, hour presets and phone single-day verified.');

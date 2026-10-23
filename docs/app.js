@@ -45,7 +45,7 @@ const TEAM_GROUPS = [
   {id:'support',label:'학생·학부모 지원',teams:['학습종합클리닉센터','보건교육','교육복지센터','Wee센터','특수교육지원센터','학부모지원센터']},
   {id:'personnel',label:'인사·교육지원',teams:['초등인사','중등인사','문화체육특수','인성생활','급식지원','초계종합교육센터']}
 ];
-let activeGroup = '', dayKind = 'monthly';
+let activeGroup = '', dayKind = 'weekly';
 const groupFor = e => e.kind==='monthly'?'monthly':(TEAM_GROUPS.find(g=>g.teams.includes(e.team))?.id||'other');
 const weekStart = d => {const n=new Date(d);n.setDate(n.getDate()-((n.getDay()+6)%7));return n;};
 const plus = (d,n) => {const r=new Date(d);r.setDate(r.getDate()+n);return r;};
@@ -475,14 +475,14 @@ function drawTimetable(school,start,rows){
   box.innerHTML=chips+table;
 }
 
-// Picking a day lists its 월중행사, or its 주간업무 when the day has only those (the 구분 filter wins when set).
-const kindFor = date => {if($('#kind').value)return $('#kind').value;const n=monthItems(filterEvents(),date);return !n.monthly.length&&n.weekly.length?'weekly':'monthly';};
+// Picking a day lists its 주간업무, or its 월중행사 when the day has only those (the 구분 filter wins when set).
+const kindFor = date => {if($('#kind').value)return $('#kind').value;const n=monthItems(filterEvents(),date);return !n.weekly.length&&n.monthly.length?'monthly':'weekly';};
 function renderDay(events){
   if(view==='school')return renderSchoolDay();
   const daily=events.filter(e=>covers(e,selected)&&(view!=='month'||e.kind===dayKind)),items=view==='month'?groupEvents(daily):daily;
   const counts=monthItems(events,selected);
   $('#day-kind-controls').hidden=view!=='month';
-  $('#day-kind-controls').innerHTML=view==='month'?['monthly','weekly'].map(kind=>`<button data-day-kind="${kind}" aria-pressed="${dayKind===kind}">${kind==='monthly'?'월중행사':'주간업무'} <strong>${counts[kind].length}</strong></button>`).join(''):'';
+  $('#day-kind-controls').innerHTML=view==='month'?['weekly','monthly'].map(kind=>`<button data-day-kind="${kind}" aria-pressed="${dayKind===kind}">${kind==='monthly'?'월중행사':'주간업무'} <strong>${counts[kind].length}</strong></button>`).join(''):'';
   setDayTitle();
   $('#selected-count').textContent=`${view==='month'?(dayKind==='weekly'?'주간업무':'월중행사'):(selected===todayKey?'오늘의 업무':'선택한 날의 업무')} · ${items.length}건${view==='month'&&items.length<daily.length?' · 중복 묶음':''}`;
   $('#day-events').innerHTML=items.map(e=>{
@@ -609,7 +609,7 @@ document.addEventListener('click',e=>{const layout=e.target.closest('[data-week-
 document.addEventListener('change',e=>{if(e.target.id==='school-select'){schoolCode=e.target.value;schoolLevel='';render(true);}});
 $('#prev').onclick=()=>move(-1);$('#next').onclick=()=>move(1);
 function move(n){if(view==='week')cursor=plus(cursor,n*7);else cursor=new Date(cursor.getFullYear(),cursor.getMonth()+n,1,12);selected=dateKey(cursor);render();}
-$('#today').onclick=()=>{cursor=new Date(today);selected=todayKey;render();};$('#refresh').onclick=load;['search','kind','team'].forEach(id=>$('#'+id).addEventListener('input',()=>{if(id!=='search')activeGroup='';if(id==='kind')dayKind=$('#kind').value||'monthly';render();}));$('#search').addEventListener('keydown',e=>{if(e.key==='Escape'&&e.target.value){e.preventDefault();e.stopPropagation();e.target.value='';render();}});$('#open-sources').onclick=()=>$('#sources').showModal();document.querySelectorAll('dialog').forEach(d=>{d.querySelectorAll('.close-dialog').forEach(b=>b.onclick=()=>d.close());if(d.id==='editor')return;d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
+$('#today').onclick=()=>{cursor=new Date(today);selected=todayKey;render();};$('#refresh').onclick=load;['search','kind','team'].forEach(id=>$('#'+id).addEventListener('input',()=>{if(id!=='search')activeGroup='';if(id==='kind')dayKind=$('#kind').value||'weekly';render();}));$('#search').addEventListener('keydown',e=>{if(e.key==='Escape'&&e.target.value){e.preventDefault();e.stopPropagation();e.target.value='';render();}});$('#open-sources').onclick=()=>$('#sources').showModal();document.querySelectorAll('dialog').forEach(d=>{d.querySelectorAll('.close-dialog').forEach(b=>b.onclick=()=>d.close());if(d.id==='editor')return;d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
 function updateFilterToggle(){
   const group=activeGroup&&(TEAM_GROUPS.find(g=>g.id===activeGroup)?.label||(activeGroup==='monthly'?'월중행사':'기타 담당'));
   const choices=[$('#kind').value&&$('#kind').selectedOptions?.[0]?.textContent,$('#team').value,group].filter(Boolean);
