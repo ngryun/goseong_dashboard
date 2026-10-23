@@ -757,3 +757,10 @@ body.dark .notice{background:#322d22;border-color:#655337;color:#e5c786}
 .week-task .task-owner>span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
 .is-compact .week-task .task-owner{margin-top:1px;font-size:10px}
 .is-compact .week-task .task-owner>span{-webkit-line-clamp:1}
+/* 담당별 표의 월중행사 행: 기관 전체 행사라 아래 담당 행들과 구분되게 옅은 파란 바탕, 왼쪽 강조선, 아래 굵은 경계선을 둔다. */
+.week-table{--monthly-row:var(--surface2);--monthly-row:color-mix(in srgb,var(--accent-light) 60%,var(--surface))}
+.week-table tbody.category-monthly td,.week-table tbody.category-monthly .team-column{background:var(--monthly-row);border-bottom:2px solid var(--selected-border)}
+.week-table tbody.category-monthly td.is-today{background:var(--accent-light)}
+.week-table tbody.category-monthly .team-column{box-shadow:inset 3px 0 0 var(--accent),1px 0 0 var(--border)}
+.week-table tbody.category-monthly .team-name{color:var(--accent);font-weight:700}
+.week-table tbody.category-monthly .week-task:hover{background:var(--surface)}
