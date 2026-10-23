@@ -24,7 +24,7 @@ const ICON_PATHS={
   phone:'<path d="m5 3 4 1 1 5-3 2a14 14 0 0 0 6 6l2-3 5 1 1 4c-1 5-9 1-13-3S0 4 5 3Z"/>'
 };
 const icon=name=>`<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${ICON_PATHS[name]||''}</svg>`;
-let weekLayout=['table','list'].includes(readPreference('goseong-week-layout'))?readPreference('goseong-week-layout'):'';
+let weekLayout=['table','time','list'].includes(readPreference('goseong-week-layout'))?readPreference('goseong-week-layout'):'';
 let weekCompact=readPreference('goseong-week-compact')==='true';
 const weekPresentation=()=>weekLayout||(compactScreen.matches?'list':'table');
 const dateKey = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
@@ -237,14 +237,18 @@ function renderWeek(events) {
   const groups=[{id:'monthly',label:'월중행사',teams:['월중행사']},...TEAM_GROUPS,...(unknown.length?[{id:'other',label:'기타 담당',teams:unknown}]:[])];
   const groupControls=`<div class="week-group-controls" role="group" aria-label="업무 묶음 필터"><button data-group="" aria-pressed="${!activeGroup}" class="${!activeGroup?'active':''}">전체 담당</button>${groups.map(g=>`<button data-group="${g.id}" aria-pressed="${activeGroup===g.id}" class="category-${g.id} ${activeGroup===g.id?'active':''}"><span class="category-dot"></span>${esc(g.label)}</button>`).join('')}</div>`;
   const layout=weekPresentation();
-  const options=`<div class="week-options"><div class="week-layout" role="group" aria-label="주간 표시 방식">${[['table','table','표'],['list','list','목록']].map(([value,glyph,label])=>`<button type="button" data-week-layout="${value}" aria-pressed="${layout===value}">${icon(glyph)}${label}</button>`).join('')}</div>${layout==='table'?`<button type="button" class="density-toggle" data-week-density aria-label="촘촘히 보기" aria-pressed="${weekCompact}" title="일정 제목을 두 줄로 줄이고 장소는 상세 카드에서 확인합니다">${icon('density')}촘촘히</button>`:''}</div>`;
+  const options=`<div class="week-options"><div class="week-layout" role="group" aria-label="주간 표시 방식">${[['table','table','표'],['time','clock','시간대'],['list','list','목록']].map(([value,glyph,label])=>`<button type="button" data-week-layout="${value}" aria-pressed="${layout===value}">${icon(glyph)}${label}</button>`).join('')}</div>${layout!=='list'?`<button type="button" class="density-toggle" data-week-density aria-label="촘촘히 보기" aria-pressed="${weekCompact}" title="일정 제목을 두 줄로 줄이고 장소는 상세 카드에서 확인합니다">${icon('density')}촘촘히</button>`:''}</div>`;
   const controls=`<div class="week-tools">${groupControls}${options}</div>`;
   if(layout==='list'){
     $('#calendar').innerHTML=controls+`<div class="week-guide"><span>날짜별 일정 <small>· 이번 주 ${shown.length}건</small></span><span>일정을 누르면 상세 보기</span></div>`+weekAgenda(shown,days);
     return shown;
   }
+  if(layout==='time'){
+    $('#calendar').innerHTML=controls+weekTimeGrid(shown,days);
+    return shown;
+  }
   let html='<div class="week-table-scroll'+(weekCompact?' is-compact':'')+'" tabindex="0" role="region" aria-label="담당별 주간업무 표, 가로 스크롤 가능"><table class="week-table"><caption class="sr-only">담당 분야별 주간업무, '+esc($('#period-title').textContent)+'</caption><thead><tr><th scope="col" class="team-column">담당 분야 <small>주간 업무 건수</small></th>';
-  html+=days.map(d=>{const key=dateKey(d),holiday=holidays.get(key);return `<th scope="col" class="${key===todayKey?'is-today':''}${holiday?' is-holiday':''}"><button data-date="${key}" aria-pressed="${selected===key}"><span>${['일','월','화','수','목','금','토'][d.getDay()]}</span><strong>${d.getMonth()+1}.${d.getDate()}</strong>${key===todayKey?'<em>오늘</em>':''}${holiday?`<em class="holiday-tag">${esc(holiday)}</em>`:''}</button></th>`;}).join('')+'</tr></thead>';
+  html+=weekHeadCells(days)+'</tr></thead>';
   // A row with no work this week is left out, unless that team is picked in the 담당 filter (so its cells can still take new work).
   let rowCount=0,hidden=0;const picked=$('#team').value;
   for(const g of groups){
@@ -275,15 +279,68 @@ function renderWeek(events) {
   $('#calendar').innerHTML=controls+guide+(rowCount?html+'</table></div>':`<div class="empty">${filtered?'조건에 맞는 업무가 없습니다. 검색 또는 담당 필터를 변경해 주세요.':'이 주에 등록된 업무가 없습니다.'}</div>`);
   return shown;
 }
+const weekHeadCells = days => days.map(d=>{const key=dateKey(d),holiday=holidays.get(key);return `<th scope="col" class="${key===todayKey?'is-today':''}${holiday?' is-holiday':''}"><button data-date="${key}" aria-pressed="${selected===key}"><span>${WEEKDAY[d.getDay()]}</span><strong>${d.getMonth()+1}.${d.getDate()}</strong>${key===todayKey?'<em>오늘</em>':''}${holiday?`<em class="holiday-tag">${esc(holiday)}</em>`:''}</button></th>`;}).join('');
+const currentWeekDay = days => days.some(d=>dateKey(d)===selected)?selected:dateKey(days[0]);
+// One button per day with its count; the list view and the phone time view show only the chosen day.
+const weekDayNav = (counts,days,current,label) => `<div class="agenda-nav" role="group" aria-label="${esc(label)}">${days.map(d=>{const key=dateKey(d),count=counts(key);return `<button type="button" data-date="${key}" aria-pressed="${key===current}" aria-label="${esc(displayDate(d))}, ${count}건" class="${key===todayKey?'is-today':''}${holidays.has(key)?' holiday':''}"><span>${WEEKDAY[d.getDay()]}</span><strong>${d.getDate()}</strong><small>${count}건</small></button>`;}).join('')}</div>`;
 function weekAgenda(events,days){
-  const current=days.some(d=>dateKey(d)===selected)?selected:dateKey(days[0]);
-  const navigation=`<div class="agenda-nav" role="group" aria-label="주간 목록 날짜 선택">${days.map(d=>{const key=dateKey(d),count=events.filter(e=>covers(e,key)).length;return `<button type="button" data-date="${key}" aria-pressed="${key===current}" aria-label="${esc(displayDate(d))}, ${count}건" class="${key===todayKey?'is-today':''}${holidays.has(key)?' holiday':''}"><span>${WEEKDAY[d.getDay()]}</span><strong>${d.getDate()}</strong><small>${count}건</small></button>`;}).join('')}</div>`;
+  const current=currentWeekDay(days);
+  const navigation=weekDayNav(key=>events.filter(e=>covers(e,key)).length,days,current,'주간 목록 날짜 선택');
   return navigation+`<div class="week-agenda">${days.filter(d=>dateKey(d)===current).map(d=>{
     const key=dateKey(d),holiday=holidays.get(key),items=events.filter(e=>covers(e,key)).sort((a,b)=>(a.time||'').localeCompare(b.time||'')||a.title.localeCompare(b.title,'ko'));
     return `<section class="agenda-day${key===todayKey?' is-today':''}${selected===key?' is-selected':''}${holiday?' holiday':''}"><div class="agenda-heading"><button type="button" data-date="${key}" aria-pressed="${selected===key}" aria-label="${esc(displayDate(d))} 선택"><strong>${d.getDate()}</strong><span>${d.getMonth()+1}월 ${WEEKDAY[d.getDay()]}요일${key===todayKey?' · 오늘':''}${holiday?' · '+esc(holiday):''}</span><small>${items.length}건</small></button><button type="button" class="agenda-add" data-add-date="${key}" aria-label="${key}에 일정 추가">${icon('plus')}</button></div><div class="agenda-items">${items.map(e=>`<button type="button" class="agenda-event category-${groupFor(e)}" data-event="${esc(e.id)}"><span class="agenda-time">${esc(e.time||'시간 미정').replace('~','<br>– ')}${isMulti(e)?'<small>여러 날</small>':''}</span><span class="agenda-main"><strong>${esc(e.title)}</strong><span class="agenda-team"><i class="category-dot"></i>${esc(e.team||kindLabel(e))}</span>${isMulti(e)?`<span class="event-meta">${esc(rangeText(e))}</span>`:''}${slotsOf(e)?`<span class="agenda-slots">${slotsOf(e).map(slot=>`<span>${icon('clock')}${esc(slotText(slot))}</span>`).join('')}</span>`:e.place?`<span class="agenda-meta">${icon('pin')}${esc(e.place)}</span>`:''}${e.owner?`<span class="agenda-meta">${icon('person')}${esc(e.owner)}</span>`:''}</span>${icon('right')}</button>`).join('')||'<p class="agenda-empty">등록된 일정이 없습니다.</p>'}</div></section>`;
   }).join('')}</div>`;
 }
 const weekSpan = b => `<button class="week-span category-${groupFor(b.e)}${b.start>b.e.date?' cont-left':''}${b.end<lastDay(b.e)?' cont-right':''}" style="--span:${b.span};--lane:${b.lane}" data-event="${esc(b.e.id)}" title="${esc(rangeText(b.e)+' '+b.e.title)}">${b.e.time?`<span class="task-time">${esc(b.e.time)}</span>`:''}<strong>${esc(b.e.title)}</strong></button>`;
+// 시간대 보기: 요일 열 × 시작 시각 행. 시간이 없는 일정과 여러 날 일정은 맨 위 '종일·미정' 행에 둔다.
+// 여러 담당 행에 같은 날·같은 시작 시각·같은 제목으로 적힌 일정은 한 칸으로 합치고 담당을 함께 적는다.
+const startTime = e => {const m=/^(\d{1,2}):(\d{2})/.exec(e.time||slotsOf(e)?.[0]?.time||'');return m&&+m[1]<24?{hour:+m[1],time:m[1].padStart(2,'0')+':'+m[2]}:null;};
+const hourLabel = h => h<12?`오전 ${h||12}시`:h===12?'낮 12시':`오후 ${h-12}시`;
+function timeBlocks(events){
+  const blocks=new Map();
+  for(const e of events){
+    if(isMulti(e))continue;
+    const start=startTime(e),key=JSON.stringify([e.date,start?.time||'',e.title.normalize('NFC').replace(/\s+/gu,'').toLowerCase()]);
+    if(!blocks.has(key))blocks.set(key,{date:e.date,start,members:[]});
+    blocks.get(key).members.push(e);
+  }
+  // 월중행사를 대표로 두어 기관 전체 행사가 먼저 읽히게 한다.
+  for(const b of blocks.values()){b.members.sort((x,y)=>(x.kind==='monthly'?0:1)-(y.kind==='monthly'?0:1));b.e=b.members[0];}
+  return [...blocks.values()].sort((a,b)=>(a.start?.time||'').localeCompare(b.start?.time||'')||(a.e.kind==='monthly'?0:1)-(b.e.kind==='monthly'?0:1)||a.e.title.localeCompare(b.e.title,'ko'));
+}
+function timeTask(b){
+  const e=b.e,teams=[...new Map(b.members.map(x=>[x.team||kindLabel(x),groupFor(x)])).entries()];
+  const times=[...new Set(b.members.map(x=>x.time))],time=times.length===1&&e.time?e.time:b.start?.time||'';
+  const shownTeams=teams.length>3?teams.slice(0,2):teams;
+  return `<button class="week-task time-task category-${groupFor(e)}" data-event="${esc(e.id)}"${b.members.length>1?` data-members="${esc(b.members.map(x=>x.id).join(' '))}"`:''} title="${esc([time,e.title,teams.map(t=>t[0]).join(', ')].filter(Boolean).join(' · '))}">${!slotsOf(e)&&time?`<span class="task-time">${esc(time)}</span>`:''}<strong>${esc(e.title)}</strong><span class="task-teams">${shownTeams.map(([team,group])=>`<span class="category-${group}"><i class="category-dot"></i>${esc(team)}</span>`).join('')}${teams.length>shownTeams.length?`<span>외 ${teams.length-shownTeams.length}</span>`:''}</span>${slotsOf(e)?`<span class="task-slots">${slotsOf(e).map(s=>`<span><b>${esc(s.time)}</b>${s.place?esc(s.place):''}</span>`).join('')}</span>`:(e.place?`<span class="task-place">${esc(e.place)}</span>`:'')}</button>`;
+}
+function weekTimeGrid(events,days){
+  const phone=compactScreen.matches,current=currentWeekDay(days);
+  const cols=phone?days.filter(d=>dateKey(d)===current):days,from=dateKey(cols[0]),to=dateKey(cols[cols.length-1]);
+  const all=timeBlocks(events),multi=events.filter(isMulti);
+  const nav=phone?weekDayNav(key=>all.filter(b=>b.date===key).length+multi.filter(e=>covers(e,key)).length,days,current,'시간대 보기 날짜 선택'):'';
+  const merged=all.filter(b=>b.members.length>1).length;
+  const guide=`<div class="week-guide"><span>시간대별 일정 <small>· 이번 주 ${all.length+multi.length}건${merged?` · 여러 담당에 같은 일정 ${merged}건 묶음`:''}</small></span><span>${phone?'날짜를 골라 하루씩 보기 · ':''}시작 시각 기준 · 일정을 누르면 상세 보기</span></div>`;
+  if(!all.length&&!multi.length){
+    const filtered=$('#search').value.trim()||$('#kind').value||$('#team').value||activeGroup;
+    return guide+nav+`<div class="empty">${filtered?'조건에 맞는 업무가 없습니다. 검색 또는 담당 필터를 변경해 주세요.':'이 주에 등록된 업무가 없습니다.'}</div>`;
+  }
+  const blocks=all.filter(b=>from<=b.date&&b.date<=to),hours=all.filter(b=>b.start).map(b=>b.start.hour);
+  const first=Math.min(9,...hours),last=Math.max(17,...hours);
+  const cell=(key,items,spans,time,label)=>`<td class="${key===todayKey?'is-today':''}">${spans.map(weekSpan).join('')}${items.map(timeTask).join('')||(spans.length?'':'<span class="sr-only">일정 없음</span>')}<button type="button" class="cell-add" data-add-date="${key}"${time?` data-add-time="${time}"`:''} aria-label="${key} ${esc(label)}에 일정 추가" title="이 시간에 일정 추가">${icon('plus')}</button></td>`;
+  const row=(cls,label,count,lanes,cells)=>`<tr class="team-row ${cls}${lanes?' has-spans':''}"${lanes?` style="--lanes:${lanes}"`:''}><th scope="row" class="team-column"><span class="team-name">${label}</span><small>${count}건</small></th>${cells}</tr>`;
+  let body='';
+  const bars=laneBars(multi,from,to),untimed=blocks.filter(b=>!b.start);
+  if(bars.length||untimed.length){
+    const lanes=bars.reduce((n,b)=>Math.max(n,b.lane+1),0);
+    body+=row('time-untimed','종일·시간 미정',untimed.length+bars.length,lanes,cols.map(d=>{const key=dateKey(d);return cell(key,untimed.filter(b=>b.date===key),bars.filter(b=>b.start===key),'','시간 미정');}).join(''));
+  }
+  for(let h=first;h<=last;h++){
+    const items=blocks.filter(b=>b.start&&b.start.hour===h),time=String(h).padStart(2,'0')+':00';
+    body+=row(`time-hour${items.length?'':' is-empty'}${h===12?' is-noon':''}`,`<time>${hourLabel(h)}</time>`,items.length,0,cols.map(d=>{const key=dateKey(d);return cell(key,items.filter(b=>b.date===key),[],time,hourLabel(h));}).join(''));
+  }
+  return guide+nav+`<div class="week-table-scroll${weekCompact?' is-compact':''}" tabindex="0" role="region" aria-label="시간대별 주간 일정 표${phone?'':', 가로 스크롤 가능'}"><table class="week-table time-grid${phone?' single-day':''}"><caption class="sr-only">시간대별 주간 일정, ${esc($('#period-title').textContent)}</caption><thead><tr><th scope="col" class="team-column">시간대 <small>일정 건수</small></th>${weekHeadCells(cols)}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
 
 // --- 관내 학교: docs/schools.json (NEIS 학사일정, GitHub Actions가 6시간마다 갱신) + 시간표는 NEIS에서 바로 읽음 ---
 let schools = {schools:[],events:[]}, schoolLevel = '', schoolCode = '', schoolGroups = [], lastTimetable = null;
@@ -485,7 +542,7 @@ async function loadData(){
     if(!data.updated_at)$('#sync-label').textContent='데이터를 불러오지 못했습니다';
   }
 }
-function showDetail(id,merged=false,anchor=null){const rect=anchor?.getBoundingClientRect();hideMonthPreview();const e=data.events.find(e=>e.id===id);if(!e)return;$('#detail-kind').textContent=kindLabel(e);$('#detail-kind').className='badge '+e.kind;$('#detail-title').textContent=e.title;$('#detail-meta').innerHTML=[displayDate(parseDate(e.date))+(isMulti(e)?' – '+displayDate(parseDate(e.endDate)):'')+(!slotsOf(e)&&e.time?' · '+e.time:''),...(slotsOf(e)?slotsOf(e).map(s=>'시간: '+slotText(s)):[]),e.team&&'담당 분야: '+e.team,!slotsOf(e)&&e.place&&'장소: '+e.place,e.owner&&'담당자: '+e.owner,isOwn(e)?'출처: 화면에서 직접 입력'+(e.updated_at?' · 마지막 수정 '+fmtTime(e.updated_at):''):'출처: '+e.tab+' · '+e.cell].filter(Boolean).map(v=>`<div>${esc(v)}</div>`).join('');$('#detail-body').textContent=e.description||e.title;$('#detail-source').href=sourceUrl(e);const members=merged?filterEvents().filter(x=>x.kind===e.kind&&eventKey(x)===eventKey(e)):[e];
+function showDetail(id,merged=false,anchor=null){const rect=anchor?.getBoundingClientRect();hideMonthPreview();const e=data.events.find(e=>e.id===id);if(!e)return;$('#detail-kind').textContent=kindLabel(e);$('#detail-kind').className='badge '+e.kind;$('#detail-title').textContent=e.title;$('#detail-meta').innerHTML=[displayDate(parseDate(e.date))+(isMulti(e)?' – '+displayDate(parseDate(e.endDate)):'')+(!slotsOf(e)&&e.time?' · '+e.time:''),...(slotsOf(e)?slotsOf(e).map(s=>'시간: '+slotText(s)):[]),e.team&&'담당 분야: '+e.team,!slotsOf(e)&&e.place&&'장소: '+e.place,e.owner&&'담당자: '+e.owner,isOwn(e)?'출처: 화면에서 직접 입력'+(e.updated_at?' · 마지막 수정 '+fmtTime(e.updated_at):''):'출처: '+e.tab+' · '+e.cell].filter(Boolean).map(v=>`<div>${esc(v)}</div>`).join('');$('#detail-body').textContent=e.description||e.title;$('#detail-source').href=sourceUrl(e);const members=Array.isArray(merged)?merged.map(id=>data.events.find(x=>x.id===id)).filter(Boolean):merged?filterEvents().filter(x=>x.kind===e.kind&&eventKey(x)===eventKey(e)):[e];
 const multiple=members.length>1;
 $('#detail-related').hidden=!multiple;$('#detail-body').hidden=multiple;$('#detail-source').hidden=multiple||isOwn(e);$('#detail-edit').hidden=$('#detail-delete').hidden=multiple||!isOwn(e);$('#detail-edit').dataset.id=$('#detail-delete').dataset.id=e.id;
 if(multiple){
@@ -546,7 +603,7 @@ function writeRoute(){
   routeKey=period;
 }
 window.addEventListener('popstate',()=>{applyRoute();render();});
-document.addEventListener('click',e=>{const layout=e.target.closest('[data-week-layout]');if(layout){weekLayout=layout.dataset.weekLayout;savePreference('goseong-week-layout',weekLayout);render(true);$(`[data-week-layout="${weekLayout}"]`)?.focus({preventScroll:true});return;}const density=e.target.closest('[data-week-density]');if(density){weekCompact=!weekCompact;savePreference('goseong-week-compact',String(weekCompact));render(true);$('[data-week-density]')?.focus({preventScroll:true});return;}const ed=e.target.closest('[data-edit]');if(ed){$('#detail').close();openEditor(ed.dataset.edit);return;}const add=e.target.closest('[data-add-date]');if(add){selected=add.dataset.addDate;render(true);openEditor(null,{kind:add.dataset.addKind,team:add.dataset.addTeam});return;}const dayControl=e.target.closest('[data-day-kind]');if(dayControl){dayKind=dayControl.dataset.dayKind;if(dayControl.dataset.date)selected=dayControl.dataset.date;render(true);$('#day-events').scrollTop=0;if(dayControl.dataset.date){$('#selected-title').focus({preventScroll:true});if(window.matchMedia('(max-width:850px)').matches)$('.day-panel').scrollIntoView({behavior:'smooth',block:'start'});}return;}const group=e.target.closest('[data-group]');if(group){activeGroup=group.dataset.group;$('#team').value='';$('#kind').value='';render();return;}const sg=e.target.closest('[data-school-group]');if(sg)return showSchoolDetail(sg.dataset.schoolGroup,sg);const go=e.target.closest('[data-goto]');if(go){$('#search').value='';selected=go.dataset.goto;cursor=parseDate(selected);dayKind=kindFor(selected);render();$('#selected-title').focus({preventScroll:true});return;}const lv=e.target.closest('[data-level]');if(lv){schoolLevel=lv.dataset.level;schoolCode='';render(true);return;}const cl=e.target.closest('[data-class]');if(cl&&lastTimetable){classChoice.set(lastTimetable.school.code,cl.dataset.class);drawTimetable(lastTimetable.school,lastTimetable.start,lastTimetable.rows);return;}const ev=e.target.closest('[data-event]');if(ev)return showDetail(ev.dataset.event,ev.dataset.merged==='true',ev);const d=e.target.closest('[data-date]');if(d){selected=d.dataset.date;dayKind=kindFor(selected);render(true);return;}const cell=e.target.closest('.day[data-day]');if(cell&&!e.target.closest('button')){selected=cell.dataset.day;dayKind=kindFor(selected);render(true);return;}const v=e.target.closest('[data-view]');if(v){view=v.dataset.view;cursor=parseDate(selected);activeGroup='';dayKind=kindFor(selected);render();}});
+document.addEventListener('click',e=>{const layout=e.target.closest('[data-week-layout]');if(layout){weekLayout=layout.dataset.weekLayout;savePreference('goseong-week-layout',weekLayout);render(true);$(`[data-week-layout="${weekLayout}"]`)?.focus({preventScroll:true});return;}const density=e.target.closest('[data-week-density]');if(density){weekCompact=!weekCompact;savePreference('goseong-week-compact',String(weekCompact));render(true);$('[data-week-density]')?.focus({preventScroll:true});return;}const ed=e.target.closest('[data-edit]');if(ed){$('#detail').close();openEditor(ed.dataset.edit);return;}const add=e.target.closest('[data-add-date]');if(add){selected=add.dataset.addDate;render(true);openEditor(null,{kind:add.dataset.addKind,team:add.dataset.addTeam,time:add.dataset.addTime});return;}const dayControl=e.target.closest('[data-day-kind]');if(dayControl){dayKind=dayControl.dataset.dayKind;if(dayControl.dataset.date)selected=dayControl.dataset.date;render(true);$('#day-events').scrollTop=0;if(dayControl.dataset.date){$('#selected-title').focus({preventScroll:true});if(window.matchMedia('(max-width:850px)').matches)$('.day-panel').scrollIntoView({behavior:'smooth',block:'start'});}return;}const group=e.target.closest('[data-group]');if(group){activeGroup=group.dataset.group;$('#team').value='';$('#kind').value='';render();return;}const sg=e.target.closest('[data-school-group]');if(sg)return showSchoolDetail(sg.dataset.schoolGroup,sg);const go=e.target.closest('[data-goto]');if(go){$('#search').value='';selected=go.dataset.goto;cursor=parseDate(selected);dayKind=kindFor(selected);render();$('#selected-title').focus({preventScroll:true});return;}const lv=e.target.closest('[data-level]');if(lv){schoolLevel=lv.dataset.level;schoolCode='';render(true);return;}const cl=e.target.closest('[data-class]');if(cl&&lastTimetable){classChoice.set(lastTimetable.school.code,cl.dataset.class);drawTimetable(lastTimetable.school,lastTimetable.start,lastTimetable.rows);return;}const ev=e.target.closest('[data-event]');if(ev)return showDetail(ev.dataset.event,ev.dataset.members?ev.dataset.members.split(' '):ev.dataset.merged==='true',ev);const d=e.target.closest('[data-date]');if(d){selected=d.dataset.date;dayKind=kindFor(selected);render(true);return;}const cell=e.target.closest('.day[data-day]');if(cell&&!e.target.closest('button')){selected=cell.dataset.day;dayKind=kindFor(selected);render(true);return;}const v=e.target.closest('[data-view]');if(v){view=v.dataset.view;cursor=parseDate(selected);activeGroup='';dayKind=kindFor(selected);render();}});
 document.addEventListener('change',e=>{if(e.target.id==='school-select'){schoolCode=e.target.value;schoolLevel='';render(true);}});
 $('#prev').onclick=()=>move(-1);$('#next').onclick=()=>move(1);
 function move(n){if(view==='week')cursor=plus(cursor,n*7);else cursor=new Date(cursor.getFullYear(),cursor.getMonth()+n,1,12);selected=dateKey(cursor);render();}
@@ -651,7 +708,7 @@ function openEditor(id=null,preset=null){
   // 담당은 정해진 목록에서만 고른다(새 담당 이름은 만들 수 없음). 월중행사는 담당 없이 저장한다.
   if(f.team.options.length<=1)f.team.innerHTML='<option value="">담당 선택</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('');
   f.date.value=e?e.date:selected;f.endDate.value=e?e.endDate:'';syncEndDate();f.kind.value=e?e.kind:(preset?.kind||$('#kind').value||(view==='month'?dayKind:'weekly'));
-  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));{const [s,en]=parseTimeRange(e?e.time:'');f.start.value=s;f.end.value=en;}timeTarget='start';renderTimePad();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
+  f.title.value=e?e.title:'';f.team.value=e?e.team:(preset&&preset.team!==undefined?preset.team:($('#team').value||''));{const [s,en]=parseTimeRange(e?e.time:(preset?.time||''));f.start.value=s;f.end.value=en;}timeTarget='start';renderTimePad();f.place.value=e?e.place:'';f.owner.value=e?e.owner:'';f.description.value=e?e.description:'';
   if(!TEAMS.includes(f.team.value))f.team.value='';syncTeamField();
   $('#editor-delete').hidden=!e;showEditorError('');$('#editor-save').disabled=false;
   editor.showModal();f.title.focus();

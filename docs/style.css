@@ -732,3 +732,22 @@ body.dark .notice{background:#322d22;border-color:#655337;color:#e5c786}
   .is-week .date-nav #prev,.is-week .date-nav #next{width:22px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+/* 시간대 보기: 담당별 표의 틀을 그대로 쓰고, 행만 시작 시각으로 바꾼다. */
+.week-table.time-grid{min-width:1180px}
+.time-grid .team-column{width:112px}
+.time-grid .team-name time{font-variant-numeric:tabular-nums;white-space:nowrap}
+.time-grid .time-untimed .team-name{font-size:12px}
+.time-grid td{height:58px}
+.time-grid tr.is-empty td{height:38px;padding-top:6px;padding-bottom:6px}
+.time-grid tr.is-empty .team-column{padding-top:10px;padding-bottom:10px;color:var(--secondary);font-weight:500}
+.time-grid tr.is-empty .team-column small{display:none}
+.time-grid tr.is-noon td,.time-grid tr.is-noon .team-column{background-image:linear-gradient(var(--surface2),var(--surface2))}
+.time-task .task-teams{display:flex;flex-wrap:wrap;gap:2px 9px;margin-top:4px;font-size:11px;line-height:1.5;color:var(--secondary)}
+.time-task .task-teams>span{display:inline-flex;align-items:center;gap:4px;min-width:0;white-space:nowrap}
+.time-task .task-teams .category-dot{width:5px;height:5px}
+.is-compact .time-task .task-teams{font-size:10px;margin-top:2px}
+.is-compact .time-grid td{height:44px}
+.is-compact .time-grid tr.is-empty td{height:30px}
+.week-table.time-grid.single-day{min-width:0}
+.time-grid.single-day thead button{pointer-events:none}
+@media(max-width:560px){.week-table.time-grid.single-day{min-width:0}.time-grid .team-column{width:78px}.time-grid .team-name{font-size:11px}.time-grid .week-task strong{-webkit-line-clamp:4}}
