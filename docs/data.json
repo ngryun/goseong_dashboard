@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-27T12:27:59+00:00",
+"updated_at": "2026-10-27T22:25:38+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-10-27T12:27:59+00:00"
+"data_at": "2026-10-27T22:25:38+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -163,8 +163,8 @@
 "warnings": [
 "11월 월중행사 5행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
-"count": 62,
-"data_at": "2026-10-27T12:27:59+00:00"
+"count": 67,
+"data_at": "2026-10-27T22:25:38+00:00"
 }
 ],
 "events": [
@@ -12077,7 +12077,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "24d055cd8b6ca077603d39b5",
+"id": "053ea5e81c544046388bfbea",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12092,7 +12092,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "72286eb35992d61dc58450a4",
+"id": "d3cddb657a26da34f02a3b7d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12107,7 +12107,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "eda15b78c30999657a660b91",
+"id": "ef6e0e81fa15a5f5c74f7a5f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12123,6 +12123,26 @@
 "owner": "임예지",
 "slots": [],
 "id": "5820a2afa0f7ec6c0c98071d",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-02",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 10:00, 거진중, 거진고\n- 김제현",
+"tab": "교육과3(11월1주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "10:00",
+"place": "거진중, 거진고",
+"owner": "김제현",
+"slots": [
+{
+"time": "10:00",
+"place": "거진중, 거진고"
+}
+],
+"id": "e05070a5fefe8e5dcc588e51",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12206,7 +12226,27 @@
 "place": "도학초"
 }
 ],
-"id": "50d194dc8c772a606f2bb42b",
+"id": "16e0eb8c7b3cca5acc6701e8",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-03",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 동광초, 거진초\n- 김제현",
+"tab": "교육과3(11월1주)",
+"cell": "F5",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "동광초, 거진초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
+"id": "2ab491a7f97b6f9f60c803e8",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12226,7 +12266,7 @@
 "place": "거진고"
 }
 ],
-"id": "f0567fc03071e58a93d32d09",
+"id": "e2ff3fcc0fb50828cdc9d6ad",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12266,7 +12306,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "24e21c32fbba8e03076df0a1",
+"id": "d7e4ca084e3e512ff9ca9ebc",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12286,7 +12326,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "7b0314c5d364c80ad3a26b93",
+"id": "14d9063759949ffcf6708edb",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12326,7 +12366,7 @@
 "place": "광산초"
 }
 ],
-"id": "e2ff3fcc0fb50828cdc9d6ad",
+"id": "0b5e3951637a7a0d7dff89aa",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12346,7 +12386,7 @@
 "place": "대진초"
 }
 ],
-"id": "a90636448c86a7dd229b5d57",
+"id": "c914627ee4a199fb7b97cfd7",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12381,7 +12421,7 @@
 "place": "",
 "owner": "임예지",
 "slots": [],
-"id": "abd9a9bca6217381ffae644a",
+"id": "1967d16af19a00e5e9dfb602",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12401,7 +12441,7 @@
 "place": "거성초"
 }
 ],
-"id": "30eeb7e068d5659a8c500801",
+"id": "3b031bd23307f362d47c8df9",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12436,7 +12476,7 @@
 "place": "거진초"
 }
 ],
-"id": "88e4bdde80da8a2d6520c188",
+"id": "4012513829c745c26988ed58",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12457,6 +12497,26 @@
 }
 ],
 "id": "f4112155278e6e533f87b3b2",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-04",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:30, 고성고, 간성초\n- 김제현",
+"tab": "교육과3(11월1주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:30",
+"place": "고성고, 간성초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
+"id": "5d47cd04e56811d928f5e080",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12516,7 +12576,7 @@
 "place": "아야진초"
 }
 ],
-"id": "9349108555fa20ab36a4c1ca",
+"id": "838340e30328e75e2383f33b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12540,7 +12600,7 @@
 "place": "고성중"
 }
 ],
-"id": "5d49e98eb7e96278fe88cd2d",
+"id": "9e93edb54cdb66087c586772",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12560,7 +12620,7 @@
 "place": "속초양양교육지원청"
 }
 ],
-"id": "2e025d6fcd2adea08e853645",
+"id": "585b06d713aa527b2a419e9c",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12580,7 +12640,27 @@
 "place": "동광초"
 }
 ],
-"id": "d41f897445ce826f964d1d44",
+"id": "abf3ad0f4c365e08762d4f04",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-05",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 대진초, 고성중\n- 김제현",
+"tab": "교육과3(11월1주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "대진초, 고성중",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
+"id": "0d8c155dfcdda0b2592264f2",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12600,7 +12680,7 @@
 "place": "인흥초"
 }
 ],
-"id": "99e54331bdc89b0ea3669908",
+"id": "0a206ad13474fddbcd7af6d1",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12660,7 +12740,7 @@
 "place": "강원북부아동보호전문기관 교육실"
 }
 ],
-"id": "8c6aab2bf4d572ed7ee544d9",
+"id": "da2b8ba460a96feeee0c3559",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12680,7 +12760,7 @@
 "place": "대진초"
 }
 ],
-"id": "67f6a9f7730671feb0da2364",
+"id": "c31ecba854f21ab05f5104cf",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12730,7 +12810,7 @@
 "place": "",
 "owner": "예산과",
 "slots": [],
-"id": "81ac5852d5929be45f4ed12d",
+"id": "96e9d602a185278e09e24e16",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12750,7 +12830,27 @@
 "place": "대진초"
 }
 ],
-"id": "6235a9b88fe80c242d3cf268",
+"id": "9b6a77cfdcca089cf21a2b99",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-06",
+"title": "특수교육대상학생 행동중재지 원 후속 프로그램 사전교육 참석",
+"description": "특수교육대상학생 행동중재지\n원 후속 프로그램 사전교육 참석\n- 09:00, 한국장애인공단 강원지사\n   (원주시 호저로 47)\n- 김제현, 임병철, 배준직",
+"tab": "교육과3(11월1주)",
+"cell": "F8",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "한국장애인공단 강원지사",
+"owner": "김제현, 임병철, 배준직",
+"slots": [
+{
+"time": "09:00",
+"place": "한국장애인공단 강원지사"
+}
+],
+"id": "f01142e1a656da6b58d5af62",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12770,7 +12870,7 @@
 "place": "한국여성수련원"
 }
 ],
-"id": "bbe8ec52a38f7f876b7e3b7b",
+"id": "acf40e8ab896e7d617dc8f03",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12870,7 +12970,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "63e267af79a98054dde60b58",
+"id": "b80e1d02b102bca740ddf97d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
