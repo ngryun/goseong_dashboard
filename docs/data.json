@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-27T00:55:48+00:00",
+"updated_at": "2026-10-27T06:12:37+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-10-27T00:55:48+00:00"
+"data_at": "2026-10-27T06:12:37+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -164,8 +164,8 @@
 "11월 월중행사 5행: 행사명 앞의 추가 기재를 상세에 보존했습니다.",
 "11월 월중행사 12행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
-"count": 45,
-"data_at": "2026-10-27T00:55:48+00:00"
+"count": 49,
+"data_at": "2026-10-27T06:12:37+00:00"
 }
 ],
 "events": [
@@ -12078,7 +12078,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "f8001d16426952dc1f641103",
+"id": "fd7ef961b46762c31a76a94e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12093,7 +12093,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "a3099fff936eccbb4eb07bfa",
+"id": "42caa0f1ceb567beaceb9b67",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12108,7 +12108,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "acbf5127920871687ecb9007",
+"id": "0223ab4c8dada77f25afa31d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12143,7 +12143,7 @@
 "place": "대진고"
 }
 ],
-"id": "15c5b3da7744a1bd60ff4a9c",
+"id": "97b6e0999a65e866e8fd3d6f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12167,7 +12167,7 @@
 "place": "고성중"
 }
 ],
-"id": "afb906219f9d9647afc173e7",
+"id": "6ff72826add7a2aa9a81b6a0",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12207,7 +12207,7 @@
 "place": "도학초"
 }
 ],
-"id": "b52d2d7387372eda43ddab76",
+"id": "99c2710ce5141c1689752b3e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12227,7 +12227,27 @@
 "place": "거진고"
 }
 ],
-"id": "b7c35012eb105bbde58dcf4a",
+"id": "30acb7ea9afdc0d690c2d759",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-03",
+"title": "하반기 학교급식 위생점검 및 운영평가",
+"description": "하반기 학교급식 위생점검 및\n   운영평가  \n-  9:00, 간성초\n-  이경영, 이모란",
+"tab": "교육과2(11월1주)",
+"cell": "F5",
+"kind": "weekly",
+"team": "급식지원",
+"time": "09:00",
+"place": "간성초",
+"owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "간성초"
+}
+],
+"id": "0a59fd44bcc111dc172b1d27",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12247,7 +12267,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "2904b77271de915fb30c4632",
+"id": "638068512170242cdf9f11b3",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12267,7 +12287,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "d88f5dcecb8e8bab369e6631",
+"id": "d2eed4988cde32b821d8f85e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12287,7 +12307,7 @@
 "place": "광산초"
 }
 ],
-"id": "227fe709f80310df9a5af8dd",
+"id": "37c31df42b281c4659694b88",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12307,7 +12327,7 @@
 "place": "대진초"
 }
 ],
-"id": "2beb37f7978be17a2c17731c",
+"id": "17dca183685c69968bb8e19a",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12327,7 +12347,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "8ce1b6ba0b8fce09a7d9bcaf",
+"id": "9ac905bca57fd67d453fb7da",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12342,7 +12362,7 @@
 "place": "",
 "owner": "임예지",
 "slots": [],
-"id": "21f360a63f2d7e394c176277",
+"id": "ecfd05605a608fab72924717",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12362,7 +12382,7 @@
 "place": "거성초"
 }
 ],
-"id": "37db1660aa0ac878e210a62d",
+"id": "972518f7420b8260d1b5040f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12382,7 +12402,27 @@
 "place": "거진초"
 }
 ],
-"id": "56ff835e6a369f706308308b",
+"id": "aee8aee398e0c574b89a8554",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-04",
+"title": "하반기 학교급식 위생점검 및 운영평가",
+"description": "하반기 학교급식 위생점검 및\n   운영평가  \n-  9:00, 거진중\n-  이경영, 이모란",
+"tab": "교육과2(11월1주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "급식지원",
+"time": "09:00",
+"place": "거진중",
+"owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "거진중"
+}
+],
+"id": "67a8ebbeac85a75d303bb627",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12402,7 +12442,7 @@
 "place": "아야진초"
 }
 ],
-"id": "89a16c30568296e04030f7b8",
+"id": "c37f5eca8c7610783990c836",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12426,7 +12466,27 @@
 "place": "고성중"
 }
 ],
-"id": "903361134bd26fa34c29c4e4",
+"id": "3e8c2b2f91bf56be31bd5a64",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-04",
+"title": "2027학년도 중학교 입학 배정 업무 설명회(속초) 참석",
+"description": "2027학년도 중학교 입학 배정 업무 설명회(속초) 참석\n- 15:00 속초양양교육지원청\n- 김혜윤",
+"tab": "행정과(11월1주)",
+"cell": "D6",
+"kind": "weekly",
+"team": "예산팀",
+"time": "15:00",
+"place": "속초양양교육지원청",
+"owner": "김혜윤",
+"slots": [
+{
+"time": "15:00",
+"place": "속초양양교육지원청"
+}
+],
+"id": "2f94569e7820de8143cae1a3",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12446,7 +12506,7 @@
 "place": "동광초"
 }
 ],
-"id": "6dc2987f7b3345cb12b62815",
+"id": "b52b43673c568eb43f1c489b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12466,7 +12526,27 @@
 "place": "인흥초"
 }
 ],
-"id": "061db6028580f50d53f22fda",
+"id": "8190272eef875bea411ff4e2",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-05",
+"title": "하반기 학교급식 위생점검 및 운영평가",
+"description": "하반기 학교급식 위생점검 및\n   운영평가  \n-  9:00, 공현진초\n-  이경영, 이모란",
+"tab": "교육과2(11월1주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "급식지원",
+"time": "09:00",
+"place": "공현진초",
+"owner": "이경영, 이모란",
+"slots": [
+{
+"time": "09:00",
+"place": "공현진초"
+}
+],
+"id": "f57af19c48710f8418c466c9",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12486,7 +12566,7 @@
 "place": "강원북부아동보호전문기관 교육실"
 }
 ],
-"id": "720b4481954707874d7b3b4b",
+"id": "664e533185d71f2b4107282b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12506,7 +12586,7 @@
 "place": "대진초"
 }
 ],
-"id": "14228131407c61e400a6c190",
+"id": "69ed7c09bc62a84ce1909429",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12526,7 +12606,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "c6fda43f338ff1172f3a2675",
+"id": "9033ee12f809716ebe263cac",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12556,7 +12636,7 @@
 "place": "",
 "owner": "예산과",
 "slots": [],
-"id": "4b1ddddc9991a24b4eabf00e",
+"id": "bc695c380e300c69b4e94f1a",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12576,7 +12656,7 @@
 "place": "대진초"
 }
 ],
-"id": "c321eb7df1aa2f37cfeebec2",
+"id": "b1d76ada31461f95f153a9f2",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12596,7 +12676,7 @@
 "place": "한국여성수련원"
 }
 ],
-"id": "5014cd9c761ecdd474a02856",
+"id": "2d587e491a4519248f21df12",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12636,7 +12716,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "42226bb22215e0b1a8d8c013",
+"id": "2b4da5577da5eff4f63e770f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12676,7 +12756,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "4330c4485c7b9ccc7a26ebf3",
+"id": "4664d5836295ad134ad54851",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12778,7 +12858,7 @@
 "kind": "monthly",
 "team": "",
 "time": "09:30",
-"place": "외부장소",
+"place": "파랑뷰호텔",
 "owner": "이분현",
 "slots": [],
 "id": "209dac47ddfbbae163ae737e",
