@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-27T06:12:37+00:00",
+"updated_at": "2026-10-27T12:27:59+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-10-27T06:12:37+00:00"
+"data_at": "2026-10-27T12:27:59+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -161,11 +161,10 @@
 "행정과(11월1주)"
 ],
 "warnings": [
-"11월 월중행사 5행: 행사명 앞의 추가 기재를 상세에 보존했습니다.",
-"11월 월중행사 12행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
+"11월 월중행사 5행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
-"count": 49,
-"data_at": "2026-10-27T06:12:37+00:00"
+"count": 62,
+"data_at": "2026-10-27T12:27:59+00:00"
 }
 ],
 "events": [
@@ -12078,7 +12077,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "fd7ef961b46762c31a76a94e",
+"id": "24d055cd8b6ca077603d39b5",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12093,7 +12092,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "42caa0f1ceb567beaceb9b67",
+"id": "72286eb35992d61dc58450a4",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12108,7 +12107,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "0223ab4c8dada77f25afa31d",
+"id": "eda15b78c30999657a660b91",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12143,7 +12142,7 @@
 "place": "대진고"
 }
 ],
-"id": "97b6e0999a65e866e8fd3d6f",
+"id": "eee1650ce1c27c497b4b432f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12167,7 +12166,7 @@
 "place": "고성중"
 }
 ],
-"id": "6ff72826add7a2aa9a81b6a0",
+"id": "a7181f636a88806e4c4945c0",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12187,7 +12186,7 @@
 "place": "도학초, 동광초"
 }
 ],
-"id": "f2a3d253f55668d03335893c",
+"id": "89dcdd78923bf0bbabfc624a",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12207,7 +12206,7 @@
 "place": "도학초"
 }
 ],
-"id": "99c2710ce5141c1689752b3e",
+"id": "50d194dc8c772a606f2bb42b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12227,7 +12226,7 @@
 "place": "거진고"
 }
 ],
-"id": "30acb7ea9afdc0d690c2d759",
+"id": "f0567fc03071e58a93d32d09",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12247,7 +12246,7 @@
 "place": "간성초"
 }
 ],
-"id": "0a59fd44bcc111dc172b1d27",
+"id": "d39c0eba1e772606dc4605b8",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12267,7 +12266,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "638068512170242cdf9f11b3",
+"id": "24e21c32fbba8e03076df0a1",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12287,7 +12286,27 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "d2eed4988cde32b821d8f85e",
+"id": "7b0314c5d364c80ad3a26b93",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-03",
+"title": "교육감기육상대회 학생인솔",
+"description": "교육감기육상대회 학생인솔\n-  13:30, 양양\n-  남궁연, 김연우",
+"tab": "교육과2(11월1주)",
+"cell": "D5",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "13:30",
+"place": "양양",
+"owner": "남궁연, 김연우",
+"slots": [
+{
+"time": "13:30",
+"place": "양양"
+}
+],
+"id": "13d3a57c7a6c7d29583884cc",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12307,7 +12326,7 @@
 "place": "광산초"
 }
 ],
-"id": "37c31df42b281c4659694b88",
+"id": "e2ff3fcc0fb50828cdc9d6ad",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12327,7 +12346,7 @@
 "place": "대진초"
 }
 ],
-"id": "17dca183685c69968bb8e19a",
+"id": "a90636448c86a7dd229b5d57",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12347,7 +12366,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "9ac905bca57fd67d453fb7da",
+"id": "7963ce3fa305bef287efc233",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12362,7 +12381,7 @@
 "place": "",
 "owner": "임예지",
 "slots": [],
-"id": "ecfd05605a608fab72924717",
+"id": "abd9a9bca6217381ffae644a",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12382,7 +12401,22 @@
 "place": "거성초"
 }
 ],
-"id": "972518f7420b8260d1b5040f",
+"id": "30eeb7e068d5659a8c500801",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-04",
+"title": "2026 교육감기 학년별 육상대회(~7일)",
+"description": "2026 교육감기 학년별 육상대회(~7일)",
+"tab": "11월 월중행사",
+"cell": "F7",
+"kind": "monthly",
+"team": "",
+"time": "09:00",
+"place": "양양종합운동장",
+"owner": "남궁연",
+"slots": [],
+"id": "36a35873581b04c1e333b73d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12402,7 +12436,7 @@
 "place": "거진초"
 }
 ],
-"id": "aee8aee398e0c574b89a8554",
+"id": "88e4bdde80da8a2d6520c188",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12422,7 +12456,47 @@
 "place": "거진중"
 }
 ],
-"id": "67a8ebbeac85a75d303bb627",
+"id": "f4112155278e6e533f87b3b2",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-04",
+"title": "교육감기육상대회 감담회",
+"description": "교육감기육상대회 감담회\n-  12:00, 양양\n-  관내 5개교 교장참석",
+"tab": "교육과1(11월1주)",
+"cell": "B6",
+"kind": "weekly",
+"team": "교육장",
+"time": "12:00",
+"place": "양양",
+"owner": "",
+"slots": [
+{
+"time": "12:00",
+"place": "양양"
+}
+],
+"id": "affff09e13f700fa81b2360e",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-04",
+"title": "교육감기육상대회 학생인솔",
+"description": "교육감기육상대회 학생인솔\n-  13:30, 양양\n-  남궁연, 김연우",
+"tab": "교육과2(11월1주)",
+"cell": "D6",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "13:30",
+"place": "양양",
+"owner": "남궁연, 김연우",
+"slots": [
+{
+"time": "13:30",
+"place": "양양"
+}
+],
+"id": "a44e9aa8c33dfe61b1bb827e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12442,7 +12516,7 @@
 "place": "아야진초"
 }
 ],
-"id": "c37f5eca8c7610783990c836",
+"id": "9349108555fa20ab36a4c1ca",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12466,7 +12540,7 @@
 "place": "고성중"
 }
 ],
-"id": "3e8c2b2f91bf56be31bd5a64",
+"id": "5d49e98eb7e96278fe88cd2d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12486,7 +12560,7 @@
 "place": "속초양양교육지원청"
 }
 ],
-"id": "2f94569e7820de8143cae1a3",
+"id": "2e025d6fcd2adea08e853645",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12506,7 +12580,7 @@
 "place": "동광초"
 }
 ],
-"id": "b52b43673c568eb43f1c489b",
+"id": "d41f897445ce826f964d1d44",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12526,7 +12600,7 @@
 "place": "인흥초"
 }
 ],
-"id": "8190272eef875bea411ff4e2",
+"id": "99e54331bdc89b0ea3669908",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12546,7 +12620,27 @@
 "place": "공현진초"
 }
 ],
-"id": "f57af19c48710f8418c466c9",
+"id": "11fe0cfc28d7998c31ba5d1f",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-05",
+"title": "교육감기육상대회 학생인솔",
+"description": "교육감기육상대회 학생인솔\n-  13:30, 양양\n-  남궁연, 김연우",
+"tab": "교육과2(11월1주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "13:30",
+"place": "양양",
+"owner": "남궁연, 김연우",
+"slots": [
+{
+"time": "13:30",
+"place": "양양"
+}
+],
+"id": "7ae2a3258b1808008ecab264",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12566,7 +12660,7 @@
 "place": "강원북부아동보호전문기관 교육실"
 }
 ],
-"id": "664e533185d71f2b4107282b",
+"id": "8c6aab2bf4d572ed7ee544d9",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12586,7 +12680,7 @@
 "place": "대진초"
 }
 ],
-"id": "69ed7c09bc62a84ce1909429",
+"id": "67f6a9f7730671feb0da2364",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12606,7 +12700,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "9033ee12f809716ebe263cac",
+"id": "2dd56a0acb2f38381993d977",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12621,7 +12715,7 @@
 "place": "한국여성수련원",
 "owner": "임금선",
 "slots": [],
-"id": "9df613108137832dc6b54b31",
+"id": "72a65d3be1de7f0482a3ed94",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12636,7 +12730,7 @@
 "place": "",
 "owner": "예산과",
 "slots": [],
-"id": "bc695c380e300c69b4e94f1a",
+"id": "81ac5852d5929be45f4ed12d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12656,7 +12750,7 @@
 "place": "대진초"
 }
 ],
-"id": "b1d76ada31461f95f153a9f2",
+"id": "6235a9b88fe80c242d3cf268",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12676,7 +12770,7 @@
 "place": "한국여성수련원"
 }
 ],
-"id": "2d587e491a4519248f21df12",
+"id": "bbe8ec52a38f7f876b7e3b7b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12696,7 +12790,27 @@
 "place": "영월스포츠파크실내체육관"
 }
 ],
-"id": "0fe7a90bd7e2edd7576eac5c",
+"id": "43d82dcd55ec5a7935c623b3",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-06",
+"title": "교육감기육상대회 학생인솔",
+"description": "교육감기육상대회 학생인솔\n-  13:30, 양양\n-  남궁연, 김연우",
+"tab": "교육과2(11월1주)",
+"cell": "D8",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "13:30",
+"place": "양양",
+"owner": "남궁연, 김연우",
+"slots": [
+{
+"time": "13:30",
+"place": "양양"
+}
+],
+"id": "c7f011241cd6784365ba9027",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12716,7 +12830,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "2b4da5577da5eff4f63e770f",
+"id": "e5252741894570686e34bc05",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12736,7 +12850,7 @@
 "place": "고성청소년수련관"
 }
 ],
-"id": "af291e8a19b901b419850596",
+"id": "67df085da051ad38146b7c9d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12756,7 +12870,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "4664d5836295ad134ad54851",
+"id": "63e267af79a98054dde60b58",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12771,22 +12885,57 @@
 "place": "3층 대회의실",
 "owner": "이분현",
 "slots": [],
-"id": "4a4373465f701bb2836bb31a",
+"id": "2909a0dfa67372914e8a971f",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-07",
+"title": "교육감기육상대회 학생인솔",
+"description": "교육감기육상대회 학생인솔\n-  13:30, 양양\n-  남궁연, 김연우",
+"tab": "교육과2(11월1주)",
+"cell": "D9",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "13:30",
+"place": "양양",
+"owner": "남궁연, 김연우",
+"slots": [
+{
+"time": "13:30",
+"place": "양양"
+}
+],
+"id": "6d83f798e5c46e2897529503",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
 "date": "2026-11-09",
-"title": "행정사무감사 수감\n대진고등학교 책임장학",
-"description": "행정사무감사 수감\n대진고등학교 책임장학\n원문 추가 기재: 행정사무감사 수감",
+"title": "행정사무감사 수감",
+"description": "행정사무감사 수감",
 "tab": "11월 월중행사",
 "cell": "F12",
 "kind": "monthly",
 "team": "",
 "time": "10:00",
-"place": "강원특별자치도의회\n대진고",
-"owner": "최창원\n심은경, 남궁연",
+"place": "강원특별자치도의회",
+"owner": "최창원",
 "slots": [],
-"id": "34886592375cd99f69e91b49",
+"id": "a2f72a5de8ef4e23bf2ed601",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-09",
+"title": "대진고등학교 책임장학",
+"description": "대진고등학교 책임장학",
+"tab": "11월 월중행사",
+"cell": "F13",
+"kind": "monthly",
+"team": "",
+"time": "13:30",
+"place": "대진고",
+"owner": "심은경, 남궁연",
+"slots": [],
+"id": "f70c40c04900b9cf269a7b8e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12794,14 +12943,14 @@
 "title": "학력향상 사업 현장 방문 및 모니터링",
 "description": "학력향상 사업 현장 방문 및 모니터링",
 "tab": "11월 월중행사",
-"cell": "F13",
+"cell": "F14",
 "kind": "monthly",
 "team": "",
 "time": "14:00",
 "place": "동광중",
 "owner": "심은경",
 "slots": [],
-"id": "8a978ac1c2ab727bb56037e5",
+"id": "15c70c8313826ca314bcd35e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12809,14 +12958,29 @@
 "title": "학부모 학교참여 동아리 지원사업 모니터링",
 "description": "학부모 학교참여 동아리 지원사업 모니터링",
 "tab": "11월 월중행사",
-"cell": "F15",
+"cell": "F16",
 "kind": "monthly",
 "team": "",
 "time": "13:00",
 "place": "고성중",
 "owner": "이분현",
 "slots": [],
-"id": "cace2c67d150a070ff38e8a3",
+"id": "bd7c755a0af2a1b5a0e33117",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-13",
+"title": "2026 교육감기 학생사격대회(~15일)",
+"description": "2026 교육감기 학생사격대회(~15일)",
+"tab": "11월 월중행사",
+"cell": "F18",
+"kind": "monthly",
+"team": "",
+"time": "",
+"place": "고성중·고 사격장",
+"owner": "남궁연",
+"slots": [],
+"id": "a1f4fdb1af1632179edbd85e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12824,14 +12988,29 @@
 "title": "찾아가는 진로 학습코칭",
 "description": "찾아가는 진로 학습코칭",
 "tab": "11월 월중행사",
-"cell": "F16",
+"cell": "F17",
 "kind": "monthly",
 "team": "",
 "time": "09:00",
 "place": "고성중",
 "owner": "심은경",
 "slots": [],
-"id": "2117134042fcdcc51ca88681",
+"id": "35a369cb9982fd090ba4162a",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-14",
+"title": "2026 특수교육대상학생 가족지원프로그램",
+"description": "2026 특수교육대상학생 가족지원프로그램",
+"tab": "11월 월중행사",
+"cell": "F19",
+"kind": "monthly",
+"team": "",
+"time": "10:00",
+"place": "속초",
+"owner": "남궁연, 임병철",
+"slots": [],
+"id": "3372082d6b6a42e425d04557",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12839,14 +13018,14 @@
 "title": "스마트폰 OFF 배움의 즐거움 ON-보드게임 어울림 리그",
 "description": "스마트폰 OFF 배움의 즐거움 ON-보드게임 어울림 리그",
 "tab": "11월 월중행사",
-"cell": "F17",
+"cell": "F20",
 "kind": "monthly",
 "team": "",
 "time": "13:00",
 "place": "3층 대회의실",
 "owner": "이분현",
 "slots": [],
-"id": "8a9fd865217b75e9ddd6dbb1",
+"id": "0cc7ff403a9957cad0f3143f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12854,14 +13033,14 @@
 "title": "도란도란 그림책 학부모 더배움학습공동체 활동 및 협의회",
 "description": "도란도란 그림책 학부모 더배움학습공동체 활동 및 협의회",
 "tab": "11월 월중행사",
-"cell": "F19",
+"cell": "F22",
 "kind": "monthly",
 "team": "",
 "time": "09:30",
 "place": "파랑뷰호텔",
 "owner": "이분현",
 "slots": [],
-"id": "209dac47ddfbbae163ae737e",
+"id": "480b062728d2cfde39d4aa52",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12869,14 +13048,14 @@
 "title": "2026 영재교육원 산출물 발표대회 및 수료식",
 "description": "2026 영재교육원 산출물 발표대회 및 수료식",
 "tab": "11월 월중행사",
-"cell": "F20",
+"cell": "F23",
 "kind": "monthly",
 "team": "",
 "time": "15:30",
 "place": "초계종합교육센터",
 "owner": "소희",
 "slots": [],
-"id": "5ef0d1132c38dde0289a8c98",
+"id": "d12488cce3b8b5b93fd5a1d4",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12884,14 +13063,29 @@
 "title": "2027학년도 대학수학능력시험",
 "description": "2027학년도 대학수학능력시험",
 "tab": "11월 월중행사",
-"cell": "F22",
+"cell": "F25",
 "kind": "monthly",
 "team": "",
 "time": "08:00",
 "place": "고성고",
 "owner": "심은경",
 "slots": [],
-"id": "4d35f8bebfe5d58735d0bac6",
+"id": "2c7802ccec9c63d11618fe91",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-21",
+"title": "강원교직원배드민턴대회(~22일)",
+"description": "강원교직원배드민턴대회(~22일)",
+"tab": "11월 월중행사",
+"cell": "F27",
+"kind": "monthly",
+"team": "",
+"time": "08:00",
+"place": "삼척복합체육공원",
+"owner": "남궁연",
+"slots": [],
+"id": "a2cd2f15e913eb614408afe9",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12899,14 +13093,29 @@
 "title": "부모와 자녀가 함께하는 바이브 코딩(2차)",
 "description": "부모와 자녀가 함께하는 바이브 코딩(2차)",
 "tab": "11월 월중행사",
-"cell": "F24",
+"cell": "F28",
 "kind": "monthly",
 "team": "",
 "time": "10:00",
 "place": "3층 대회의실",
 "owner": "이분현",
 "slots": [],
-"id": "92ee34fb3f167dac0b352cee",
+"id": "577734c70da85d6cf80ca078",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-24",
+"title": "제1회 관내 초등학생 배드민턴 축제",
+"description": "제1회 관내 초등학생 배드민턴 축제",
+"tab": "11월 월중행사",
+"cell": "F31",
+"kind": "monthly",
+"team": "",
+"time": "14:00",
+"place": "고성종합운동장",
+"owner": "남궁연",
+"slots": [],
+"id": "3fbe8128bce14c639570ec2d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12914,14 +13123,29 @@
 "title": "학부모 학교참여 동아리 지원사업 모니터링",
 "description": "학부모 학교참여 동아리 지원사업 모니터링",
 "tab": "11월 월중행사",
-"cell": "F28",
+"cell": "F32",
 "kind": "monthly",
 "team": "",
 "time": "09:30",
 "place": "천진초등학교",
 "owner": "이분현",
 "slots": [],
-"id": "43618e545c245c1ca90fe5b9",
+"id": "cd521c911a8df86e35990ed7",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-26",
+"title": "2026 교육감기 학년별 수영대회(~28일)",
+"description": "2026 교육감기 학년별 수영대회(~28일)",
+"tab": "11월 월중행사",
+"cell": "F33",
+"kind": "monthly",
+"team": "",
+"time": "09:30",
+"place": "춘천 국민체육센터",
+"owner": "남궁연",
+"slots": [],
+"id": "3a2cc2cdbab2efd82e7de4a0",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12929,14 +13153,14 @@
 "title": "2026년 고성군교육행정협의회",
 "description": "2026년 고성군교육행정협의회",
 "tab": "11월 월중행사",
-"cell": "F29",
+"cell": "F34",
 "kind": "monthly",
 "team": "",
 "time": "11:00",
 "place": "3층 대회의실",
 "owner": "박성진",
 "slots": [],
-"id": "6a98b2ceaa8b43edb76e3e7b",
+"id": "131b5508d347b17ade83ab65",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12944,14 +13168,14 @@
 "title": "2026년 알수록 힘이 되는 자녀 경제교육",
 "description": "2026년 알수록 힘이 되는 자녀 경제교육",
 "tab": "11월 월중행사",
-"cell": "F30",
+"cell": "F35",
 "kind": "monthly",
 "team": "",
 "time": "14:00",
 "place": "3층 대회의실",
 "owner": "이분현",
 "slots": [],
-"id": "e12e21fb4ec4c11a6d2da032",
+"id": "7217670c81ae8f2585138572",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 }
 ]
