@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-27T22:25:38+00:00",
+"updated_at": "2026-10-28T01:40:03+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-10-27T22:25:38+00:00"
+"data_at": "2026-10-28T01:40:03+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -163,8 +163,8 @@
 "warnings": [
 "11월 월중행사 5행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
-"count": 67,
-"data_at": "2026-10-27T22:25:38+00:00"
+"count": 68,
+"data_at": "2026-10-28T01:40:03+00:00"
 }
 ],
 "events": [
@@ -12097,6 +12097,21 @@
 },
 {
 "date": "2026-11-02",
+"title": "도의회 최재민 의원 서면 질문 답변 요구자료 제출",
+"description": "도의회 최재민 의원 서면 질문 답변 요구자료 제출\n- 조동우",
+"tab": "행정과(11월1주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "조동우",
+"slots": [],
+"id": "0dd0e7d479e63529436a2a9f",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-02",
 "title": "시설관리 미배치교 순회점검",
 "description": "시설관리 미배치교 순회점검\n- 11.02(월)~11.05(목), 도학초 외 9교\n- 박구원, 윤동열",
 "tab": "행정과(11월1주)",
@@ -12107,7 +12122,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "ef6e0e81fa15a5f5c74f7a5f",
+"id": "bcfb8241cbe06fda0755f975",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12306,7 +12321,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "d7e4ca084e3e512ff9ca9ebc",
+"id": "e2a4750b387b02e7e1566f09",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12326,7 +12341,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "14d9063759949ffcf6708edb",
+"id": "5b8e70b3706be961f8b24e4e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12421,7 +12436,7 @@
 "place": "",
 "owner": "임예지",
 "slots": [],
-"id": "1967d16af19a00e5e9dfb602",
+"id": "56a57e7afcb8bf863c4ff180",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12620,7 +12635,7 @@
 "place": "속초양양교육지원청"
 }
 ],
-"id": "585b06d713aa527b2a419e9c",
+"id": "82d07897d3df6f0f3c040f65",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12810,7 +12825,7 @@
 "place": "",
 "owner": "예산과",
 "slots": [],
-"id": "96e9d602a185278e09e24e16",
+"id": "3bf5a0924dc4f66d37e3dd88",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
