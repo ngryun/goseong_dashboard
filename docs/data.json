@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-10-28T01:40:03+00:00",
+"updated_at": "2026-10-28T07:33:20+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-10-28T01:40:03+00:00"
+"data_at": "2026-10-28T07:33:20+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -161,10 +161,11 @@
 "행정과(11월1주)"
 ],
 "warnings": [
-"11월 월중행사 5행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
+"11월 월중행사: 연도를 확인할 수 없어 제외했습니다.",
+"11월 월중행사: 이번 수집에서 일정을 찾지 못해 이전 데이터 22건을 유지했습니다. 탭 양식 변경 여부를 확인하세요."
 ],
-"count": 68,
-"data_at": "2026-10-28T01:40:03+00:00"
+"count": 76,
+"data_at": "2026-10-28T07:33:20+00:00"
 }
 ],
 "events": [
@@ -12077,7 +12078,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "053ea5e81c544046388bfbea",
+"id": "42caa0f1ceb567beaceb9b67",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12092,7 +12093,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "d3cddb657a26da34f02a3b7d",
+"id": "405d734f8a84960bb075c6e4",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12107,7 +12108,7 @@
 "place": "",
 "owner": "조동우",
 "slots": [],
-"id": "0dd0e7d479e63529436a2a9f",
+"id": "994b07cbaf8eeee8e3ab8694",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12122,7 +12123,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "bcfb8241cbe06fda0755f975",
+"id": "c60129bb7c8aa1b051a0bd0e",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12157,7 +12158,7 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "e05070a5fefe8e5dcc588e51",
+"id": "7397889a01b2bc0a3037ec87",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12177,7 +12178,7 @@
 "place": "대진고"
 }
 ],
-"id": "eee1650ce1c27c497b4b432f",
+"id": "ddd0e4e309e9a5a124d31b41",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12201,7 +12202,27 @@
 "place": "고성중"
 }
 ],
-"id": "a7181f636a88806e4c4945c0",
+"id": "04336c2185cb5a7c12a28992",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-02",
+"title": "2027학년도 영재교육 대상자 선정을 위한 선발전형협의회 운영",
+"description": "2027학년도 영재교육 대상자 선정을 위한 선발전형협의회 운영\n- 15:00~, 초계종합교육센터 \n- 소희",
+"tab": "교육과2(11월1주)",
+"cell": "C4",
+"kind": "weekly",
+"team": "중등인사",
+"time": "15:00",
+"place": "초계종합교육센터",
+"owner": "소희",
+"slots": [
+{
+"time": "15:00",
+"place": "초계종합교육센터"
+}
+],
+"id": "5745d64e73babda3ff8775fc",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12221,7 +12242,22 @@
 "place": "도학초, 동광초"
 }
 ],
-"id": "89dcdd78923bf0bbabfc624a",
+"id": "06e9a8ca15ae916b1bd98b50",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-03",
+"title": "2026년 11월 폐교재산 활용현황 제출",
+"description": "2026년 11월 폐교재산 활용현황 제출\n- 도교육청 행정과\n- 이정인",
+"tab": "행정과(11월1주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "이정인",
+"slots": [],
+"id": "04e7b4eccc0f109d6e9bcb3d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12241,7 +12277,7 @@
 "place": "도학초"
 }
 ],
-"id": "16e0eb8c7b3cca5acc6701e8",
+"id": "717520ea3a9072579725d87d",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12261,7 +12297,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "2ab491a7f97b6f9f60c803e8",
+"id": "251d2651d6436052db870854",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12281,7 +12317,7 @@
 "place": "거진고"
 }
 ],
-"id": "e2ff3fcc0fb50828cdc9d6ad",
+"id": "f7d9761c7d67d503f9f22c16",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12301,7 +12337,7 @@
 "place": "간성초"
 }
 ],
-"id": "d39c0eba1e772606dc4605b8",
+"id": "c9dfba6a29b16afecc3e1d0b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12321,7 +12357,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "e2a4750b387b02e7e1566f09",
+"id": "01087106fdb7e80520671fc1",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12341,7 +12377,7 @@
 "place": "고성종합운동장"
 }
 ],
-"id": "5b8e70b3706be961f8b24e4e",
+"id": "f00bc979b26b1d5409bf2311",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12361,7 +12397,7 @@
 "place": "양양"
 }
 ],
-"id": "13d3a57c7a6c7d29583884cc",
+"id": "e179f51b57e25d0bc1855dba",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12381,7 +12417,7 @@
 "place": "광산초"
 }
 ],
-"id": "0b5e3951637a7a0d7dff89aa",
+"id": "2abe7567a8e80f0ac2d6893b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12401,7 +12437,27 @@
 "place": "대진초"
 }
 ],
-"id": "c914627ee4a199fb7b97cfd7",
+"id": "86debd6aa7f2b64400a2e4c4",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-03",
+"title": "교육복지 집중관리 학생 가족 상호 지지체계 활동",
+"description": "교육복지 집중관리 학생 가족 상호 지지체계 활동\n- 15:30, 꿈동산지역아동센터\n- 신선일",
+"tab": "교육과3(11월1주)",
+"cell": "D5",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "15:30",
+"place": "꿈동산지역아동센터",
+"owner": "신선일",
+"slots": [
+{
+"time": "15:30",
+"place": "꿈동산지역아동센터"
+}
+],
+"id": "c13ce7d25b1b7663daca038f",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12421,7 +12477,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "7963ce3fa305bef287efc233",
+"id": "47e26a0664e09941de06249c",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12436,7 +12492,7 @@
 "place": "",
 "owner": "임예지",
 "slots": [],
-"id": "56a57e7afcb8bf863c4ff180",
+"id": "58261d78f8b8a045debb1df5",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12456,7 +12512,7 @@
 "place": "거성초"
 }
 ],
-"id": "3b031bd23307f362d47c8df9",
+"id": "96326970c1bd629d5ead4678",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12491,7 +12547,7 @@
 "place": "거진초"
 }
 ],
-"id": "4012513829c745c26988ed58",
+"id": "058a6a2bd8de622d6199c900",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12511,7 +12567,7 @@
 "place": "거진중"
 }
 ],
-"id": "f4112155278e6e533f87b3b2",
+"id": "9a9d52efbda198e497bb0cc2",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12531,7 +12587,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "5d47cd04e56811d928f5e080",
+"id": "c3faa08612932321c54a7a18",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12551,7 +12607,7 @@
 "place": "양양"
 }
 ],
-"id": "affff09e13f700fa81b2360e",
+"id": "56ee5030decab61c0cf97ecd",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12571,7 +12627,7 @@
 "place": "양양"
 }
 ],
-"id": "a44e9aa8c33dfe61b1bb827e",
+"id": "bf627b37c65574a5f40b2588",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12591,7 +12647,7 @@
 "place": "아야진초"
 }
 ],
-"id": "838340e30328e75e2383f33b",
+"id": "8492fd77b52b5840b700e0e1",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12615,7 +12671,7 @@
 "place": "고성중"
 }
 ],
-"id": "9e93edb54cdb66087c586772",
+"id": "d85f70dad84f5cd3e9c0d7e3",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12635,7 +12691,22 @@
 "place": "속초양양교육지원청"
 }
 ],
-"id": "82d07897d3df6f0f3c040f65",
+"id": "42b537222b0405201ed60bbe",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-05",
+"title": "11월 공무원 급여 변동자료 접수 마감",
+"description": "11월 공무원 급여 변동자료 접수 마감\n- 최명심",
+"tab": "행정과(11월1주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "최명심",
+"slots": [],
+"id": "b56688bdff39cde0383403a8",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12655,7 +12726,7 @@
 "place": "동광초"
 }
 ],
-"id": "abf3ad0f4c365e08762d4f04",
+"id": "0d19f8fbb9cdcf51565bbc71",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12675,7 +12746,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "0d8c155dfcdda0b2592264f2",
+"id": "9fa5b2431c761d1bd96ce563",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12695,7 +12766,7 @@
 "place": "인흥초"
 }
 ],
-"id": "0a206ad13474fddbcd7af6d1",
+"id": "061db6028580f50d53f22fda",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12715,7 +12786,7 @@
 "place": "공현진초"
 }
 ],
-"id": "11fe0cfc28d7998c31ba5d1f",
+"id": "17c971fb7f6b8f02f13a73e4",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12735,7 +12806,7 @@
 "place": "양양"
 }
 ],
-"id": "7ae2a3258b1808008ecab264",
+"id": "34a3aba66ab34db17a579bb7",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12755,7 +12826,27 @@
 "place": "강원북부아동보호전문기관 교육실"
 }
 ],
-"id": "da2b8ba460a96feeee0c3559",
+"id": "24ffc1335bff3c1bd0e31339",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-05",
+"title": "느린 학습자의 안전한 학교 생활을 위한 교육",
+"description": "느린 학습자의 안전한 학교 생활을 위한 교육\n- 13:30, 강원북부아동보호전문기관 \n- 신선일",
+"tab": "교육과3(11월1주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "13:30",
+"place": "강원북부아동보호전문기관",
+"owner": "신선일",
+"slots": [
+{
+"time": "13:30",
+"place": "강원북부아동보호전문기관"
+}
+],
+"id": "31fd5dac0ed993b589d70e95",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12775,7 +12866,7 @@
 "place": "대진초"
 }
 ],
-"id": "c31ecba854f21ab05f5104cf",
+"id": "14228131407c61e400a6c190",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12795,7 +12886,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "2dd56a0acb2f38381993d977",
+"id": "5d4153273dad19e952bdca8b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12815,6 +12906,21 @@
 },
 {
 "date": "2026-11-06",
+"title": "2026년 교육금고 검사 결과 및 조치사항 제출",
+"description": "2026년 교육금고 검사 결과 및 조치사항 제출\n- 도교육청 행정과\n- 윤성원",
+"tab": "행정과(11월1주)",
+"cell": "E8",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "윤성원",
+"slots": [],
+"id": "f0014cee0160cfc2aa00256f",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-06",
 "title": "2026년도 10월 지방교육재정 집행실적 점검자료 제출",
 "description": "2026년도 10월 지방교육재정 집행실적 점검자료 제출\n- 예산과\n- 박성진",
 "tab": "행정과(11월1주)",
@@ -12825,7 +12931,7 @@
 "place": "",
 "owner": "예산과",
 "slots": [],
-"id": "3bf5a0924dc4f66d37e3dd88",
+"id": "5c25fe3d68ea790ff3147d08",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12845,7 +12951,7 @@
 "place": "대진초"
 }
 ],
-"id": "9b6a77cfdcca089cf21a2b99",
+"id": "f1168db98adb9db04c5f203a",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12865,7 +12971,7 @@
 "place": "한국장애인공단 강원지사"
 }
 ],
-"id": "f01142e1a656da6b58d5af62",
+"id": "e3e75342095d7bb69f2b1ad8",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12885,7 +12991,27 @@
 "place": "한국여성수련원"
 }
 ],
-"id": "acf40e8ab896e7d617dc8f03",
+"id": "b8a82427c9ccce8540763333",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-06",
+"title": "2026 행복나눔 교육복지사업 평가및 역량강화 연수",
+"description": "2026 행복나눔 교육복지사업 평가및 역량강화 연수\n- 13:00, 빙하미술관(원주)\n- 신선일",
+"tab": "교육과3(11월1주)",
+"cell": "D8",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "13:00",
+"place": "빙하미술관(원주)",
+"owner": "신선일",
+"slots": [
+{
+"time": "13:00",
+"place": "빙하미술관(원주)"
+}
+],
+"id": "7785ec7739d544e7fafe27c5",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12905,7 +13031,7 @@
 "place": "영월스포츠파크실내체육관"
 }
 ],
-"id": "43d82dcd55ec5a7935c623b3",
+"id": "475b197dcff6982cc5a7f03c",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12925,7 +13051,7 @@
 "place": "양양"
 }
 ],
-"id": "c7f011241cd6784365ba9027",
+"id": "4460b80820814077a79cbc44",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12945,7 +13071,27 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "e5252741894570686e34bc05",
+"id": "3c642540630124233f9e7db7",
+"source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-07",
+"title": "2026 단단가족공동체 프로젝트",
+"description": "2026 단단가족공동체 프로젝트\n- 09:30, 문화예술상상이상\n- 신선일",
+"tab": "교육과3(11월1주)",
+"cell": "D9",
+"kind": "weekly",
+"team": "교육복지센터",
+"time": "09:30",
+"place": "문화예술상상이상",
+"owner": "신선일",
+"slots": [
+{
+"time": "09:30",
+"place": "문화예술상상이상"
+}
+],
+"id": "2b16972fca096e26cb168908",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12965,7 +13111,7 @@
 "place": "고성청소년수련관"
 }
 ],
-"id": "67df085da051ad38146b7c9d",
+"id": "945e305e096eb610d8f0382b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -12985,7 +13131,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "b80e1d02b102bca740ddf97d",
+"id": "72714cfa35493886a3a0dd0b",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
@@ -13020,7 +13166,7 @@
 "place": "양양"
 }
 ],
-"id": "6d83f798e5c46e2897529503",
+"id": "3f1fa46a1073d0c9b6b8db42",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
 },
 {
