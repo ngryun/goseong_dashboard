@@ -117,7 +117,9 @@
 .weekly-count:hover strong{color:var(--accent)}
 .month-preview{position:fixed;z-index:100;width:min(360px,calc(100vw - 24px));max-height:calc(100vh - 24px);display:flex;flex-direction:column;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:0 12px 36px #001c3a26;overflow:hidden}
 .month-preview-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);font-size:13px;flex:none}
-.month-preview-heading span{color:var(--secondary);font-size:11px;white-space:nowrap}
+.month-preview-heading span{color:var(--secondary);font-size:11px;white-space:nowrap;margin-left:auto}
+.month-preview-close{width:28px;height:28px;flex:none;margin:-4px -6px -4px 0}
+.month-preview-close .ui-icon{width:16px;height:16px}
 .month-preview-list{overflow:auto;overscroll-behavior:contain;max-height:360px;padding:4px 12px;min-height:0}
 .month-preview-event{display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:100%;text-align:left;background:transparent;color:var(--text);border:0;border-bottom:1px solid var(--border);border-radius:0;padding:12px 4px;white-space:normal;overflow-wrap:anywhere}
 .month-preview-event:last-child{border-bottom:0}
