@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-11-04T17:57:16+00:00",
+"updated_at": "2026-11-05T11:38:59+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -168,7 +168,7 @@
 "11월 월중행사 68행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 116,
-"data_at": "2026-11-04T17:57:16+00:00"
+"data_at": "2026-11-05T11:38:59+00:00"
 },
 {
 "id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4",
@@ -182,8 +182,8 @@
 "행정과(11월2주)"
 ],
 "warnings": [],
-"count": 61,
-"data_at": "2026-11-04T17:57:16+00:00"
+"count": 63,
+"data_at": "2026-11-05T11:38:59+00:00"
 }
 ],
 "events": [
@@ -13855,6 +13855,46 @@
 },
 {
 "date": "2026-11-10",
+"title": "2026년 11월 고성교육지원청 청렴 소통의 날",
+"description": "2026년 11월 고성교육지원청 \n   청렴 소통의 날\n- 14:00, 고성 화암사 일대",
+"tab": "행정과(11월2주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "행정과장",
+"time": "14:00",
+"place": "고성 화암사 일대",
+"owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "고성 화암사 일대"
+}
+],
+"id": "f71cc2fb1027ad5783c90fdc",
+"source_id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4"
+},
+{
+"date": "2026-11-10",
+"title": "2026년 11월 고성교육지원청 청렴 소통의 날",
+"description": "2026년 11월 고성교육지원청 \n   청렴 소통의 날\n- 14:00, 고성 화암사 일대\n- 고성교육지원청 전직원",
+"tab": "행정과(11월2주)",
+"cell": "C5",
+"kind": "weekly",
+"team": "총무팀",
+"time": "14:00",
+"place": "고성 화암사 일대",
+"owner": "",
+"slots": [
+{
+"time": "14:00",
+"place": "고성 화암사 일대"
+}
+],
+"id": "aa531928dc69f9bf1b39dc7f",
+"source_id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4"
+},
+{
+"date": "2026-11-10",
 "title": "2026년 11월 고성교육지원청 청렴 소통의 날 행사",
 "description": "2026년 11월 고성교육지원청 청렴 소통의 날 행사",
 "tab": "11월 월중행사",
@@ -14184,7 +14224,7 @@
 "place": "비영리(공익) 법인 3곳"
 }
 ],
-"id": "8d8dfe4301ac43f0c24c34f2",
+"id": "fa6fea87e9be55314c9b2498",
 "source_id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4"
 },
 {
@@ -14339,7 +14379,7 @@
 "place": "나이스 중앙상담센터 교육장(서울)"
 }
 ],
-"id": "8a142aadc1674f82f5845de9",
+"id": "a5d1566d82005a472a75eecd",
 "source_id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4"
 },
 {
@@ -14464,7 +14504,7 @@
 "place": "",
 "owner": "윤성원",
 "slots": [],
-"id": "1ff70e34a730b022e235e9c3",
+"id": "cecf71c8ee268b5e72ff0891",
 "source_id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4"
 },
 {
