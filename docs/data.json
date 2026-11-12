@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-11-06T07:01:46+00:00",
+"updated_at": "2026-11-12T10:14:20+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -168,7 +168,7 @@
 "11월 월중행사 68행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 116,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
 },
 {
 "id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4",
@@ -183,7 +183,22 @@
 ],
 "warnings": [],
 "count": 67,
-"data_at": "2026-11-06T07:01:46+00:00"
+"data_at": "2026-11-12T10:14:20+00:00"
+},
+{
+"id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE",
+"url": "https://docs.google.com/spreadsheets/d/16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE/edit",
+"label": "2026년 11월 3주",
+"year": null,
+"tabs": [
+"교육과1(11월3주)",
+"교육과2(11월3주)",
+"교육과3(11월3주)",
+"행정과(11월3주)"
+],
+"warnings": [],
+"count": 51,
+"data_at": "2026-11-12T10:14:20+00:00"
 }
 ],
 "events": [
@@ -14906,6 +14921,81 @@
 },
 {
 "date": "2026-11-16",
+"title": "시설관리 미배치교 순회점검",
+"description": "시설관리 미배치교 순회점검\n- 11.16.~11.19, 도학초 외 9교\n- 박구원, 윤동열",
+"tab": "행정과(11월3주)",
+"cell": "G4",
+"kind": "weekly",
+"team": "학교지원팀",
+"time": "",
+"place": "도학초 외 9교",
+"owner": "박구원, 윤동열",
+"slots": [],
+"id": "23961b17581c868a8797e68d",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
+"title": "순회보건교육 및 보건업무",
+"description": "순회보건교육 및 보건업무\n-  08:30, 거진고 \n- 이완옥",
+"tab": "교육과3(11월3주)",
+"cell": "C4",
+"kind": "weekly",
+"team": "보건교육",
+"time": "08:30",
+"place": "거진고",
+"owner": "이완옥",
+"slots": [
+{
+"time": "08:30",
+"place": "거진고"
+}
+],
+"id": "7531100ad64a6526fa78ff5b",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
+"title": "2027 대수능 수능시험장 5차 점검",
+"description": "2027 대수능 수능시험장 5차 점검\n- 08:50, 고성고\n- 심은경",
+"tab": "교육과1(11월3주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "중등교육(중등)",
+"time": "08:50",
+"place": "고성고",
+"owner": "심은경",
+"slots": [
+{
+"time": "08:50",
+"place": "고성고"
+}
+],
+"id": "3a345f7c6699a8a84b36caa2",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
+"title": "로르샤흐 연수",
+"description": "로르샤흐 연수\n- 09:00\n- 이은혜",
+"tab": "교육과3(11월3주)",
+"cell": "E4",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "",
+"owner": "이은혜",
+"slots": [
+{
+"time": "09:00",
+"place": ""
+}
+],
+"id": "7fd1e2c9f723d2cfb8e9e12b",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
 "title": "도란도란 그림책 학부모 더배움학습공동체 활동 및 협의회",
 "description": "도란도란 그림책 학부모 더배움학습공동체 활동 및 협의회",
 "tab": "11월 월중행사",
@@ -14921,6 +15011,46 @@
 },
 {
 "date": "2026-11-16",
+"title": "도란도란 그림책 학부모 더배움학습공동체 활동 및 협의회",
+"description": "도란도란 그림책 학부모 \n   더배움학습공동체 활동 및 \n   협의회 \n- 09:40, 파랑뷰 호텔\n- 이분현",
+"tab": "교육과3(11월3주)",
+"cell": "G4",
+"kind": "weekly",
+"team": "학부모지원센터",
+"time": "09:40",
+"place": "파랑뷰 호텔",
+"owner": "이분현",
+"slots": [
+{
+"time": "09:40",
+"place": "파랑뷰 호텔"
+}
+],
+"id": "c511df881bb6e86a72962d55",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 10:00, 거진중, 거진고\n- 김제현",
+"tab": "교육과3(11월3주)",
+"cell": "F4",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "10:00",
+"place": "거진중, 거진고",
+"owner": "김제현",
+"slots": [
+{
+"time": "10:00",
+"place": "거진중, 거진고"
+}
+],
+"id": "8d3e5eaefe34045bb5df6a9a",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
 "title": "찾아가는 다문화교육-온누리다(중국)",
 "description": "찾아가는 다문화교육-온누리다(중국)",
 "tab": "11월 월중행사",
@@ -14933,6 +15063,149 @@
 "slots": [],
 "id": "ddafe0e0b272e94e51563756",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-16",
+"title": "영재 및 발명 지도교사 선발 선정위원회",
+"description": "영재 및 발명 지도교사 선발 \n   선정위원회\n- 14:00, 소회의실\n- 남궁연",
+"tab": "교육과2(11월3주)",
+"cell": "D4",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "14:00",
+"place": "소회의실",
+"owner": "남궁연",
+"slots": [
+{
+"time": "14:00",
+"place": "소회의실"
+}
+],
+"id": "c5abb6baa50ad71b781a5a9c",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(11월3주)",
+"cell": "B4",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "fd61c9a279fa9e900cf261f9",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-16",
+"title": "영재교육원 창의산출물 발표대회 사전점검",
+"description": "영재교육원 창의산출물\n    발표대회 사전점검\n- 15:40, 초계종합교육센터\n- 영재 지도교사 11명",
+"tab": "교육과2(11월3주)",
+"cell": "G4",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "15:40",
+"place": "초계종합교육센터",
+"owner": "",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
+"id": "1a0f58487e91d4e0ef86b3a8",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
+"title": "2026년 11월 공무원,공무직 급여 지급",
+"description": "2026년 11월 공무원,공무직\n    급여 지급\n- 최명심, 윤성원",
+"tab": "행정과(11월3주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "최명심, 윤성원",
+"slots": [],
+"id": "174c8d35c6d5c72f783aa444",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
+"title": "순회보건교육 및 보건업무",
+"description": "순회보건교육 및 보건업무\n-  08:30, 도학초 \n- 이완옥",
+"tab": "교육과3(11월3주)",
+"cell": "C5",
+"kind": "weekly",
+"team": "보건교육",
+"time": "08:30",
+"place": "도학초",
+"owner": "이완옥",
+"slots": [
+{
+"time": "08:30",
+"place": "도학초"
+}
+],
+"id": "ab11269c56c36f6a012b7d0f",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 동광초, 거진초\n- 김제현",
+"tab": "교육과3(11월3주)",
+"cell": "F5",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "동광초, 거진초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "동광초, 거진초"
+}
+],
+"id": "1a64c3a96ff1b751bfcf6d0a",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
+"title": "순회상담",
+"description": "순회상담\n- 09:00, 거진고 / 윤미송\n- 13:30, 광산초 / 변고은",
+"tab": "교육과3(11월3주)",
+"cell": "E5",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "거진고 / 윤미송, 광산초 / 변고은",
+"owner": "",
+"slots": [
+{
+"time": "09:00",
+"place": "거진고 / 윤미송"
+},
+{
+"time": "13:30",
+"place": "광산초 / 변고은"
+}
+],
+"id": "f997bacaf2c43bcdd4a92b07",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
 },
 {
 "date": "2026-11-17",
@@ -14966,6 +15239,46 @@
 },
 {
 "date": "2026-11-17",
+"title": "2026년 기록물평가심의회",
+"description": "2026년 기록물평가심의회\n- 10:30, 2층 소회의실",
+"tab": "행정과(11월3주)",
+"cell": "B5",
+"kind": "weekly",
+"team": "행정과장",
+"time": "10:30",
+"place": "2층 소회의실",
+"owner": "",
+"slots": [
+{
+"time": "10:30",
+"place": "2층 소회의실"
+}
+],
+"id": "e182c5f2c44703b06df0c4be",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
+"title": "2026년 기록물평가심의회",
+"description": "2026년 기록물평가심의회\n- 10:30, 2층 소회의실\n- 권영극, 문지환",
+"tab": "행정과(11월3주)",
+"cell": "C5",
+"kind": "weekly",
+"team": "총무팀",
+"time": "10:30",
+"place": "2층 소회의실",
+"owner": "권영극, 문지환",
+"slots": [
+{
+"time": "10:30",
+"place": "2층 소회의실"
+}
+],
+"id": "6bafbebb7c17bec09e6c5142",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
 "title": "2026년 기록물평가심의회 개최",
 "description": "2026년 기록물평가심의회 개최",
 "tab": "11월 월중행사",
@@ -14996,6 +15309,46 @@
 },
 {
 "date": "2026-11-17",
+"title": "2027 대수능 문답지 분류 입회",
+"description": "2027 대수능 문답지 분류 입회\n- 15:00, 속초양양교육지원청",
+"tab": "교육과1(11월3주)",
+"cell": "C5",
+"kind": "weekly",
+"team": "교육과장",
+"time": "15:00",
+"place": "속초양양교육지원청",
+"owner": "",
+"slots": [
+{
+"time": "15:00",
+"place": "속초양양교육지원청"
+}
+],
+"id": "29331228d059c7efc1dd61ad",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
+"title": "2027 대수능 문답지 분류 입회",
+"description": "2027 대수능 문답지 분류 입회\n- 15:00, 속초양양교육지원청\n- 심은경",
+"tab": "교육과1(11월3주)",
+"cell": "F5",
+"kind": "weekly",
+"team": "중등교육(중등)",
+"time": "15:00",
+"place": "속초양양교육지원청",
+"owner": "심은경",
+"slots": [
+{
+"time": "15:00",
+"place": "속초양양교육지원청"
+}
+],
+"id": "caf9155f1483bf469d9035a6",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-17",
 "title": "2026 영재교육원 산출물 발표대회 및 수료식",
 "description": "2026 영재교육원 산출물 발표대회 및 수료식",
 "tab": "11월 월중행사",
@@ -15008,6 +15361,90 @@
 "slots": [],
 "id": "1112f1aa784d286e5c5825bc",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-17",
+"title": "2026 영재교육원 창의 산출물 발표대회 및 수료식",
+"description": "2026 영재교육원 창의 산출물\n   발표대회 및 수료식\n- 15:30, 초계종합교육센터\n- 소희, 김강진",
+"tab": "교육과2(11월3주)",
+"cell": "G5",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "15:30",
+"place": "초계종합교육센터",
+"owner": "소희, 김강진",
+"slots": [
+{
+"time": "15:30",
+"place": "초계종합교육센터"
+}
+],
+"id": "b37176c3ded78e08aa653deb",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "순회보건교육 및 보건업무",
+"description": "순회보건교육 및 보건업무\n-  08:30, 오호초 \n- 이완옥",
+"tab": "교육과3(11월3주)",
+"cell": "C6",
+"kind": "weekly",
+"team": "보건교육",
+"time": "08:30",
+"place": "오호초",
+"owner": "이완옥",
+"slots": [
+{
+"time": "08:30",
+"place": "오호초"
+}
+],
+"id": "4b7ac35eb00a2cd50e0c36ab",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "2027 대수능 운영 연구부장 및 교감 회의",
+"description": "2027 대수능 운영 연구부장 \n   및 교감 회의\n- 09:00, 속초양양교육지원청\n- 심은경",
+"tab": "교육과1(11월3주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "중등교육(중등)",
+"time": "09:00",
+"place": "속초양양교육지원청",
+"owner": "심은경",
+"slots": [
+{
+"time": "09:00",
+"place": "속초양양교육지원청"
+}
+],
+"id": "d2b7a2a34eaf772808757d02",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "순회상담",
+"description": "순회상담\n- 09:00, 거진초 / 변고은\n- 13:30, 아야진초 / 윤미송",
+"tab": "교육과3(11월3주)",
+"cell": "E6",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "거진초 / 변고은, 아야진초 / 윤미송",
+"owner": "",
+"slots": [
+{
+"time": "09:00",
+"place": "거진초 / 변고은"
+},
+{
+"time": "13:30",
+"place": "아야진초 / 윤미송"
+}
+],
+"id": "bfba2fd42d84592e0648c399",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
 },
 {
 "date": "2026-11-18",
@@ -15023,6 +15460,110 @@
 "slots": [],
 "id": "7cdc8a38833afd3e3ea5e644",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-18",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:30, 고성고, 간성초\n- 김제현",
+"tab": "교육과3(11월3주)",
+"cell": "F6",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:30",
+"place": "고성고, 간성초",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:30",
+"place": "고성고, 간성초"
+}
+],
+"id": "b18a1ea27b561e188d8047c6",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "고성문화재단 '고성커리큘럼' 운영 미팅",
+"description": "고성문화재단 '고성커리큘럼' 운영 미팅\n- 10:30, 교육과장실",
+"tab": "교육과1(11월3주)",
+"cell": "C6",
+"kind": "weekly",
+"team": "교육과장",
+"time": "10:30",
+"place": "교육과장실",
+"owner": "",
+"slots": [
+{
+"time": "10:30",
+"place": "교육과장실"
+}
+],
+"id": "c98a2633773f2080cba90ec1",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "고성문화재단 '고성커리큘럼' 운영 미팅",
+"description": "고성문화재단 '고성커리큘럼' 운영 미팅\n- 10:30, 교육과장실\n- 남궁연",
+"tab": "교육과2(11월3주)",
+"cell": "D6",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "10:30",
+"place": "교육과장실",
+"owner": "남궁연",
+"slots": [
+{
+"time": "10:30",
+"place": "교육과장실"
+}
+],
+"id": "76d5d9fd6f18b34fe014f3f8",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "학습클리닉 순회지도",
+"description": "학습클리닉 순회지도\n- 14:00, 동광초\n- 15:30, 고성중\n- 임금선",
+"tab": "교육과3(11월3주)",
+"cell": "B6",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "14:00",
+"place": "동광초, 고성중",
+"owner": "임금선",
+"slots": [
+{
+"time": "14:00",
+"place": "동광초"
+},
+{
+"time": "15:30",
+"place": "고성중"
+}
+],
+"id": "1f24fb01760a964a2a50e564",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-18",
+"title": "2026년 11월 학교안전점검 및 기록물관리 점검",
+"description": "2026년 11월 학교안전점검 및 \n   기록물관리 점검\n- 14:30, 대진초, 대진중고\n- 권영극, 문지환, 임예지",
+"tab": "행정과(11월3주)",
+"cell": "C6",
+"kind": "weekly",
+"team": "총무팀",
+"time": "14:30",
+"place": "대진초, 대진중고",
+"owner": "권영극, 문지환, 임예지",
+"slots": [
+{
+"time": "14:30",
+"place": "대진초, 대진중고"
+}
+],
+"id": "b869d3cd24c8bf4efa6166de",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
 },
 {
 "date": "2026-11-19",
@@ -15041,6 +15582,196 @@
 },
 {
 "date": "2026-11-19",
+"title": "2026년하반기 순회 법제교육",
+"description": "2026년하반기 순회 법제교육\n- 11.19.~11.20, 진로교육원\n- 김대식",
+"tab": "교육과1(11월3주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "장학행정",
+"time": "",
+"place": "진로교육원",
+"owner": "김대식",
+"slots": [],
+"id": "74e25c7bd605130a993019bd",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "폐교재산 점검",
+"description": "폐교재산 점검\n- 대진초 명파분교장 외 3교\n- 연로사, 이정인",
+"tab": "행정과(11월3주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "연로사, 이정인",
+"slots": [],
+"id": "bdf85c2e31da133d964708f5",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당",
+"tab": "교육과1(11월3주)",
+"cell": "B7",
+"kind": "weekly",
+"team": "교육장",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "40fcd02d8c4877536adb17fc",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당",
+"tab": "교육과1(11월3주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "교육과장",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "cbb3078ca22683324498ed39",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당\n- 조영익",
+"tab": "교육과1(11월3주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "장학행정",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "조영익",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "68a0b384a43d9837085397f6",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당\n- 김미경",
+"tab": "교육과1(11월3주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "유초등교육(초등)",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "김미경",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "76d116f2a7f94458aa8633ff",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당\n- 심은경",
+"tab": "교육과1(11월3주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "중등교육(중등)",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "심은경",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "b062817d4acdf64bc0ab0a4f",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당\n- 소희",
+"tab": "교육과2(11월3주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "중등인사",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "소희",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "bc9ebf6a92e03810407a7649",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당\n- 남궁연",
+"tab": "교육과2(11월3주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "남궁연",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "bf3e4072b7f80aa4bea4736f",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "2027 대수능 수험생 격려 및 시험장 학교 업무 지원",
+"description": "2027 대수능 수험생 격려 및 \n   시험장 학교 업무 지원\n- 07:00, 고성고 및 인근 식당\n- 이현숙",
+"tab": "교육과2(11월3주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "인성생활",
+"time": "07:00",
+"place": "고성고 및 인근 식당",
+"owner": "이현숙",
+"slots": [
+{
+"time": "07:00",
+"place": "고성고 및 인근 식당"
+}
+],
+"id": "c84957015ee4ff7cbf21bf0b",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
 "title": "2027학년도 대학수학능력시험",
 "description": "2027학년도 대학수학능력시험",
 "tab": "11월 월중행사",
@@ -15053,6 +15784,66 @@
 "slots": [],
 "id": "6ccaf82c92a876a6146268a3",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-19",
+"title": "순회보건교육 및 보건업무",
+"description": "순회보건교육 및 보건업무\n-  08:30, 동광초 \n- 이완옥",
+"tab": "교육과3(11월3주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "보건교육",
+"time": "08:30",
+"place": "동광초",
+"owner": "이완옥",
+"slots": [
+{
+"time": "08:30",
+"place": "동광초"
+}
+],
+"id": "52f80dd8731f2cc3f0ada88f",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 대진초, 고성중\n- 김제현",
+"tab": "교육과3(11월3주)",
+"cell": "F7",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "대진초, 고성중",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "대진초, 고성중"
+}
+],
+"id": "2e67966b090cd17bbc26fa38",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "청소년 디지털과의존예방연수",
+"description": "청소년 디지털과의존예방연수\n- 09:00, 춘천\n- 윤미송, 변고은",
+"tab": "교육과3(11월3주)",
+"cell": "E7",
+"kind": "weekly",
+"team": "Wee센터",
+"time": "09:00",
+"place": "춘천",
+"owner": "윤미송, 변고은",
+"slots": [
+{
+"time": "09:00",
+"place": "춘천"
+}
+],
+"id": "b1f0b374614dd0bb0d6dd11f",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
 },
 {
 "date": "2026-11-19",
@@ -15071,6 +15862,26 @@
 },
 {
 "date": "2026-11-19",
+"title": "찾아가는 문화예술 교육",
+"description": "찾아가는 문화예술 교육\n- 13:20, 동광중\n- 남궁연",
+"tab": "교육과2(11월3주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "13:20",
+"place": "동광중",
+"owner": "남궁연",
+"slots": [
+{
+"time": "13:20",
+"place": "동광중"
+}
+],
+"id": "e5ffdf63391a1bd2f7b1e65a",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
 "title": "2026 지역사회 연계 함께하는 힘 평가회",
 "description": "2026 지역사회 연계 함께하는 힘 평가회",
 "tab": "11월 월중행사",
@@ -15083,6 +15894,136 @@
 "slots": [],
 "id": "b1dcf26d8dbd025e69f25d49",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-19",
+"title": "고성특수교육운영위원회",
+"description": "고성특수교육운영위원회\n- 15:30, 소회의실\n- 남궁연",
+"tab": "교육과2(11월3주)",
+"cell": "D7",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "15:30",
+"place": "소회의실",
+"owner": "남궁연",
+"slots": [
+{
+"time": "15:30",
+"place": "소회의실"
+}
+],
+"id": "fad3f09021659d571c1ed338",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-19",
+"title": "초등고급발명교실 수업",
+"description": "초등고급발명교실 수업\n- 15:40, 초계종합교육센터\n- 홍성택",
+"tab": "교육과2(11월3주)",
+"cell": "G7",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "15:40",
+"place": "초계종합교육센터",
+"owner": "홍성택",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
+"id": "b294e45acf9b906045c1d643",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-20",
+"title": "2026년 학교지원센터(팀) 담당자 워크숍",
+"description": "2026년 학교지원센터(팀) \n    담당자 워크숍\n- 유아교육원\n- 이정옥, 이영비, 조태현",
+"tab": "행정과(11월3주)",
+"cell": "G8",
+"kind": "weekly",
+"team": "학교지원팀",
+"time": "",
+"place": "",
+"owner": "이정옥, 이영비, 조태현",
+"slots": [],
+"id": "23b6a1f742304345ddf2c2a7",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-20",
+"title": "2026년[강릉권역]지방공무원 역량강화 과정 연수",
+"description": "2026년[강릉권역]지방공무원\n    역량강화 과정 연수\n- 교육연수원\n- 연로사, 최명심",
+"tab": "행정과(11월3주)",
+"cell": "E8",
+"kind": "weekly",
+"team": "재정팀",
+"time": "",
+"place": "",
+"owner": "연로사, 최명심",
+"slots": [],
+"id": "26cd8aa77ac0513dcdcce7cf",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-20",
+"title": "순회미술치료 및 상담",
+"description": "순회미술치료 및 상담\n- 09:00, 광산초, 고성중\n- 김제현",
+"tab": "교육과3(11월3주)",
+"cell": "F8",
+"kind": "weekly",
+"team": "특수교육지원센터",
+"time": "09:00",
+"place": "광산초, 고성중",
+"owner": "김제현",
+"slots": [
+{
+"time": "09:00",
+"place": "광산초, 고성중"
+}
+],
+"id": "767ec77d7dc1160cccf8ca9f",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-20",
+"title": "찾아가는 문화예술 교육",
+"description": "찾아가는 문화예술 교육\n- 10:50, 인흥초\n- 남궁연",
+"tab": "교육과2(11월3주)",
+"cell": "D8",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "10:50",
+"place": "인흥초",
+"owner": "남궁연",
+"slots": [
+{
+"time": "10:50",
+"place": "인흥초"
+}
+],
+"id": "ed2df90851071246196e33ac",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-20",
+"title": "학습클리닉전문가 더 배움 학습 공동체",
+"description": "학습클리닉전문가 더 배움 \n   학습 공동체 \n- 13:30, 강릉시 강원1인 미디어센터\n- 임금선",
+"tab": "교육과3(11월3주)",
+"cell": "B8",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "13:30",
+"place": "강릉시 강원1인 미디어센터",
+"owner": "임금선",
+"slots": [
+{
+"time": "13:30",
+"place": "강릉시 강원1인 미디어센터"
+}
+],
+"id": "c99cec32345dab6e87e555dd",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
 },
 {
 "date": "2026-11-21",
@@ -15101,6 +16042,66 @@
 },
 {
 "date": "2026-11-21",
+"title": "교직원배드민턴대회",
+"description": "교직원배드민턴대회\n- 08:00, 삼척복합체육공원 다목적체육관\n- 남궁연, 김연우",
+"tab": "교육과2(11월3주)",
+"cell": "D9",
+"kind": "weekly",
+"team": "문화체육특수",
+"time": "08:00",
+"place": "삼척복합체육공원 다목적체육관",
+"owner": "남궁연, 김연우",
+"slots": [
+{
+"time": "08:00",
+"place": "삼척복합체육공원 다목적체육관"
+}
+],
+"id": "a84f7ac8a79b9a6aa45989d4",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-21",
+"title": "발명 특별교육과정 수업",
+"description": "발명 특별교육과정 수업\n- 09:00, 초계종합교육센터\n- 김강진, 김진영",
+"tab": "교육과2(11월3주)",
+"cell": "G9",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "09:00",
+"place": "초계종합교육센터",
+"owner": "김강진, 김진영",
+"slots": [
+{
+"time": "09:00",
+"place": "초계종합교육센터"
+}
+],
+"id": "2cfc01f983ee7f096fc0cd96",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-21",
+"title": "고성 학생오케스트라 연습",
+"description": "고성 학생오케스트라 연습            \n- 09:30, 고성청소년수련관   \n- 유승희",
+"tab": "교육과1(11월3주)",
+"cell": "E9",
+"kind": "weekly",
+"team": "유초등교육(초등)",
+"time": "09:30",
+"place": "고성청소년수련관",
+"owner": "유승희",
+"slots": [
+{
+"time": "09:30",
+"place": "고성청소년수련관"
+}
+],
+"id": "33be7a59d958e4a91ff7adb1",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
+},
+{
+"date": "2026-11-21",
 "title": "부모와 자녀가 함께하는 바이브 코딩(2차)",
 "description": "부모와 자녀가 함께하는 바이브 코딩(2차)",
 "tab": "11월 월중행사",
@@ -15113,6 +16114,26 @@
 "slots": [],
 "id": "139c90e2860ca5c9baedf5dd",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-21",
+"title": "부모와 자녀가 함께하는 바이브코딩 2차",
+"description": "부모와 자녀가 함께하는 \n    바이브코딩 2차 \n- 10:00, 3층 대회의실 \n- 이분현",
+"tab": "교육과3(11월3주)",
+"cell": "G9",
+"kind": "weekly",
+"team": "학부모지원센터",
+"time": "10:00",
+"place": "3층 대회의실",
+"owner": "이분현",
+"slots": [
+{
+"time": "10:00",
+"place": "3층 대회의실"
+}
+],
+"id": "d7df2b311545b6ad39c9070c",
+"source_id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE"
 },
 {
 "date": "2026-11-23",
