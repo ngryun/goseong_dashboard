@@ -80,7 +80,7 @@ function buildHolidays(src){
 }
 const sameTitle = (a,b) => a.normalize('NFC').replace(/\s+/gu,'')===b.normalize('NFC').replace(/\s+/gu,'');
 // The address keeps the view, the selected date and (관내 학교) the school or level, e.g. #week/2026-10-05 or #school/2026-10-03/7801234.
-const VIEWS = ['month','week','school'];
+const VIEWS = ['month','week','school','trend'];
 function parseRoute(hash){
   let parts;
   try{parts=decodeURIComponent(String(hash||'').replace(/^#/,'')).split('/');}catch{return null;}
@@ -207,12 +207,13 @@ function fitMonth(){
   }
 }
 let lastQuery = '';
-function render(preserveScroll=false){hideMonthPreview();const monthScroll=preserveScroll?($('.month-scroll')?.scrollLeft||0):0;const previousScroll=preserveScroll&&$('.week-table-scroll')?{left:$('.week-table-scroll').scrollLeft,top:$('.week-table-scroll').scrollTop}:null;const listScroll=preserveScroll?($('.search-results')?.scrollTop??null):null;const q=$('#search').value.trim();$('.app').classList.toggle('is-week',view==='week');$('.app').classList.toggle('is-month',view==='month');$('.app').classList.toggle('is-school',view==='school');$('.app').classList.toggle('is-search',!!q);$('#search').placeholder=view==='school'?'행사명, 학교명 검색':'업무명, 담당자, 장소 검색';$('#day-eyebrow').textContent=view==='school'?'관내 학교':'일일 업무';document.querySelectorAll('[data-view]').forEach(b=>{const on=b.dataset.view===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);});updateFilterToggle();const events=filterEvents();const month=dateKey(cursor).slice(0,7);let shown=[];
+function render(preserveScroll=false){hideMonthPreview();const monthScroll=preserveScroll?($('.month-scroll')?.scrollLeft||0):0;const previousScroll=preserveScroll&&$('.week-table-scroll')?{left:$('.week-table-scroll').scrollLeft,top:$('.week-table-scroll').scrollTop}:null;const listScroll=preserveScroll?($('.search-results')?.scrollTop??null):null;const q=view==='trend'?'':$('#search').value.trim();$('.app').classList.toggle('is-week',view==='week');$('.app').classList.toggle('is-trend',view==='trend');$('.app').classList.toggle('is-month',view==='month');$('.app').classList.toggle('is-school',view==='school');$('.app').classList.toggle('is-search',!!q);$('#search').placeholder=view==='school'?'행사명, 학교명 검색':'업무명, 담당자, 장소 검색';$('#day-eyebrow').textContent=view==='school'?'관내 학교':'일일 업무';document.querySelectorAll('[data-view]').forEach(b=>{const on=b.dataset.view===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);});updateFilterToggle();const events=filterEvents();const month=dateKey(cursor).slice(0,7);let shown=[];
 if(q){shown=view==='school'?renderSchoolSearch(q):renderSearch(events,q);}
 else if(view==='month'){shown=renderMonth(events);}
 else if(view==='week'){shown=renderWeek(events);}
+else if(view==='trend'){shown=renderTrend();}
 else{shown=renderSchool();}
-$('#result-count').textContent=q?`검색 결과 ${shown.length}건 · ${view==='school'?schoolScope()+' · ':activeGroup?([...TEAM_GROUPS,{id:'other',label:'기타 담당'},{id:'monthly',label:'월중행사'}].find(g=>g.id===activeGroup)?.label||'')+' · ':''}전체 기간`:view==='month'?`월중행사 ${shown.length}건 · 주간업무 ${groupEvents(events.filter(e=>e.kind==='weekly'&&overlaps(e,month+'-01',month+'-31'))).length}건 · 중복 제목 묶음`:view==='school'?`학사일정 ${shown.length}건 · ${schoolsShown().length}개교 · 같은 날짜·행사명 묶음`:`현재 기간 ${shown.length}건 · 검색 조건 적용`;renderDay(events);if($('.month-scroll'))$('.month-scroll').scrollLeft=monthScroll;if(previousScroll&&$('.week-table-scroll')){$('.week-table-scroll').scrollLeft=previousScroll.left;$('.week-table-scroll').scrollTop=previousScroll.top;}
+$('#result-count').textContent=q?`검색 결과 ${shown.length}건 · ${view==='school'?schoolScope()+' · ':activeGroup?([...TEAM_GROUPS,{id:'other',label:'기타 담당'},{id:'monthly',label:'월중행사'}].find(g=>g.id===activeGroup)?.label||'')+' · ':''}전체 기간`:view==='trend'?trendSummary():view==='month'?`월중행사 ${shown.length}건 · 주간업무 ${groupEvents(events.filter(e=>e.kind==='weekly'&&overlaps(e,month+'-01',month+'-31'))).length}건 · 중복 제목 묶음`:view==='school'?`학사일정 ${shown.length}건 · ${schoolsShown().length}개교 · 같은 날짜·행사명 묶음`:`현재 기간 ${shown.length}건 · 검색 조건 적용`;renderDay(events);if($('.month-scroll'))$('.month-scroll').scrollLeft=monthScroll;if(previousScroll&&$('.week-table-scroll')){$('.week-table-scroll').scrollLeft=previousScroll.left;$('.week-table-scroll').scrollTop=previousScroll.top;}
 // A new search opens at the first day from today; a refresh of the same search keeps the reading position.
 const list=$('.search-results');if(list){if(listScroll!==null&&q===lastQuery)list.scrollTop=listScroll;else list.scrollTop=list.querySelector('.upcoming')?.offsetTop??list.scrollHeight;}
 lastQuery=q;writeRoute();fitMonth();}
@@ -475,6 +476,74 @@ function drawTimetable(school,start,rows){
   box.innerHTML=chips+table;
 }
 
+// ── 학생 추이(시안): 고성군 전체의 학령인구와 군내 재학생. students.json은 이 탭을 처음 열 때 한 번 읽는다. 일정 새로고침(load)과는 별개다.
+let students = null, studentsState = 'idle';
+const pct = (n,d) => d?Math.round(n/d*100):0;
+const fmtN = n => Math.round(n).toLocaleString('ko-KR');
+async function loadStudents(){
+  if(studentsState==='loading')return;
+  studentsState='loading';
+  try{
+    const next=await fetchJSON('students.json',Date.now());
+    if(!Array.isArray(next?.county?.years)||!Array.isArray(next?.county?.levels))throw Error('학생 자료 형식 오류');
+    students=next;studentsState='ready';
+  }catch{studentsState='error';}
+  if(view==='trend')render(true);
+}
+// 학교급마다 세로 범위의 위치는 다르지만 폭은 같게 잡는다. 세 그림에서 같은 높이 차이는 같은 학생 수다.
+function levelScale(levels){
+  const bounds=l=>{const v=[...l.population,...l.students];return [Math.floor(Math.min(...v)/100)*100,Math.max(...v)];};
+  const span=Math.max(200,...levels.map(l=>{const [min,hi]=bounds(l);return Math.ceil((hi-min)/100)*100;}));
+  return l=>({min:bounds(l)[0],span});
+}
+function levelCard(level,years,scale){
+  const {min,span}=scale(level),n=years.length,last=n-1,W=300,H=190,L=36,R=42,T=10,B=24,pw=W-L-R,ph=H-T-B;
+  const x=i=>+(L+(n>1?i*pw/last:pw/2)).toFixed(1),y=v=>+(T+(1-(v-min)/span)*ph).toFixed(1);
+  const pop=level.population,stu=level.students,diff=pop[last]-stu[last],change=stu[last]-stu[0],w=n>1?pw/last:pw;
+  const gap=d=>d>0?`군내 학교에 없는 학생 ${fmtN(d)}명`:d<0?`재학생이 ${fmtN(-d)}명 더 많음`:'학령인구와 같음';
+  let grid='';
+  for(let v=min;v<=min+span;v+=100)grid+=`<line class="viz-grid" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text class="viz-tick" x="${L-6}" y="${y(v)+3.5}" text-anchor="end">${fmtN(v)}</text>`;
+  const cols=years.map((yr,i)=>{
+    const d=pop[i]-stu[i],tip=`${yr}학년도 ${level.label}\n재학생 ${fmtN(stu[i])}명 · 학령인구 ${fmtN(pop[i])}명\n${gap(d)}${d>0?` (${pct(d,pop[i])}%, 추정)`:''}`;
+    return `<g class="viz-col" data-tip="${esc(tip)}"><rect class="viz-hit" x="${x(i)-w/2}" y="${T}" width="${w}" height="${ph}"/><line class="viz-guide" x1="${x(i)}" x2="${x(i)}" y1="${T}" y2="${T+ph}"/><circle class="viz-dot pop${i===last?' end':''}" cx="${x(i)}" cy="${y(pop[i])}" r="4"/><circle class="viz-dot stu${i===last?' end':''}" cx="${x(i)}" cy="${y(stu[i])}" r="4"/><text class="viz-tick" x="${x(i)}" y="${H-6}" text-anchor="middle">${yr}</text></g>`;
+  }).join('');
+  const line=(a,cls)=>`<polyline class="viz-line ${cls}" points="${a.map((v,i)=>x(i)+','+y(v)).join(' ')}"/>`;
+  // 끝 값 둘이 겹칠 만큼 가까우면 학령인구 쪽은 적지 않는다(표와 툴팁에 있음).
+  const apart=Math.abs(y(stu[last])-y(pop[last]))>=13;
+  const ends=`<text class="viz-end" x="${x(last)+9}" y="${y(stu[last])+4}">${fmtN(stu[last])}</text>${apart?`<text class="viz-end pop" x="${x(last)+9}" y="${y(pop[last])+4}">${fmtN(pop[last])}</text>`:''}`;
+  const ages=level.ages?`(${esc(level.ages)})`:'',note=diff>0?`학령인구${ages} ${fmtN(pop[last])}명 중 <b>${fmtN(diff)}명(${pct(diff,pop[last])}%)</b>은 군내 학교에 없음(추정)`:diff<0?`학령인구${ages} ${fmtN(pop[last])}명보다 <b>${fmtN(-diff)}명</b> 많음(군 밖에서 유입)`:`학령인구${ages} ${fmtN(pop[last])}명과 같음`;
+  return `<article class="trend-level"><div class="trend-level-head"><h4>${esc(level.label)}</h4><span>${years[last]}학년도 재학생</span></div><p class="trend-figure">${fmtN(stu[last])}<small>명</small></p><p class="trend-level-sub">${years[0]}학년도보다 ${change?fmtN(Math.abs(change))+'명 '+(change>0?'늘어남':'줄어듦'):'변동 없음'}</p><p class="trend-level-note">${note}</p><svg class="viz" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(level.label)} 학령인구와 군내 재학생, ${years[0]}~${years[last]}학년도">${grid}${line(pop,'pop')}${line(stu,'stu')}${cols}${ends}</svg></article>`;
+}
+function trendSummary(){
+  if(!students)return '';
+  const c=students.county;
+  return `${c.years[0]}~${c.years.at(-1)}학년도 · 학교급 ${c.levels.length}개${students.draft?' · 시안 자료':''}`;
+}
+function renderTrend(){
+  $('#period-title').textContent='학생 추이';
+  if(!students){
+    if(studentsState!=='error')loadStudents();
+    $('#calendar').innerHTML=studentsState==='error'?'<div class="empty"><strong>학생 자료를 불러오지 못했습니다</strong>네트워크 연결을 확인한 뒤 다시 시도해 주세요.<p><button type="button" data-students-retry>다시 시도</button></p></div>':'<div class="empty">학생 자료를 불러오는 중입니다</div>';
+    return [];
+  }
+  const c=students.county,years=c.years,scale=levelScale(c.levels);
+  const table=`<table class="trend-table"><thead><tr><th scope="col">학교급</th>${years.map(y=>`<th scope="col">${y}</th>`).join('')}</tr></thead><tbody>${c.levels.map(l=>`<tr><th scope="row">${esc(l.label)}</th>${years.map((_,i)=>`<td>${fmtN(l.students[i])} / ${fmtN(l.population[i])}</td>`).join('')}</tr>`).join('')}</tbody></table><p class="trend-source">칸: 군내 재학생 / 학령인구(명)</p>`;
+  const notes=['학령인구는 주민등록 인구에서 학년도 직전 해 12월 말 기준 만 6~11세(초)·12~14세(중)·15~17세(고)를 센 값입니다. 그 학년도 학생의 출생연도와 같습니다.',
+    '학령인구와 재학생의 차이는 단순 추정입니다. 군 밖 학교 재학 외에 대안교육·학교 밖 청소년이 섞이고, 군 밖에서 들어오는 학생 수만큼 작게 잡힙니다.',
+    '읍·면별 만 0~5세 인구와 학년별 학생 수가 더해지면 앞으로의 군 전체 학생 수도 예상할 수 있습니다. 지금은 들어 있지 않습니다.'];
+  $('#calendar').innerHTML=`<div class="trend">
+    <div class="trend-head"><p>고성군 학령인구(주민등록)와 군내 학교 재학생을 학교급별로 견줍니다.</p>${students.draft?'<span class="badge trend-draft">시안 · 자동 갱신 없음</span>':''}</div>
+    <section class="trend-section"><div class="trend-title"><h3>고성군 학령인구와 군내 재학생</h3><span>${years[0]}~${years.at(-1)}학년도 · 학교급별</span></div>
+      <div class="trend-legend"><span><i class="key stu"></i>군내 재학생</span><span><i class="key pop"></i>학령인구(주민등록)</span></div>
+      <div class="trend-levels">${c.levels.map(l=>levelCard(l,years,scale)).join('')}</div>
+      <p class="trend-caption">재학생이 학령인구보다 적으면 그 차이만큼 군 밖 학교에 다니는 것으로 추정합니다. 재학생이 더 많으면 군 밖에서 통학하는 학생(공동학구 등)이 있다는 뜻입니다. 세 그림의 세로 눈금 한 칸은 모두 100명입니다.</p>
+      <details class="trend-details"><summary>숫자 표 보기</summary><div class="trend-scroll">${table}</div></details>
+      ${c.source?`<p class="trend-source">자료: ${esc(c.source)}</p>`:''}</section>
+    <section class="trend-section trend-notes"><div class="trend-title"><h3>자료와 읽는 법</h3></div><ul>${notes.map(n=>`<li>${n}</li>`).join('')}</ul></section>
+    <div id="trend-tip" class="trend-tip" role="tooltip" hidden></div></div>`;
+  return [];
+}
+
 // Picking a day lists its 주간업무, or its 월중행사 when the day has only those (the 구분 filter wins when set).
 const kindFor = date => {if($('#kind').value)return $('#kind').value;const n=monthItems(filterEvents(),date);return !n.weekly.length&&n.monthly.length?'monthly':'weekly';};
 function renderDay(events){
@@ -581,7 +650,7 @@ document.addEventListener('focusout',e=>{if(e.target.closest('[data-month-previe
 const compactScreen = window.matchMedia('(max-width:560px)');
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(monthPreviewAnchor){const anchor=monthPreviewAnchor;if($('#month-preview')?.contains(document.activeElement))anchor.focus({preventScroll:true});hideMonthPreview();return;}const box=$('#detail');if(box.open&&!box.classList.contains('sheet'))box.close();});
 document.addEventListener('pointerdown',e=>{if(monthPreviewAnchor&&!e.target.closest('[data-month-preview],#month-preview'))hideMonthPreview();const box=$('#detail');if(box.open&&!box.classList.contains('sheet')&&!e.target.closest('#detail,#toast'))box.close();});
-document.addEventListener('scroll',e=>{if(e.target.closest?.('#month-preview,#detail'))return;positionMonthPreview();moveDetail();},true);
+document.addEventListener('scroll',e=>{const tip=$('#trend-tip');if(tip)tip.hidden=true;if(e.target.closest?.('#month-preview,#detail'))return;positionMonthPreview();moveDetail();},true);
 let fitFrame = 0;
 window.addEventListener('resize',()=>{hideMonthPreview();const box=$('#detail');if(box.open&&!box.classList.contains('sheet'))box.close();cancelAnimationFrame(fitFrame);fitFrame=requestAnimationFrame(fitMonth);});
 // Closing the card returns focus to the event it came from, unless the click already moved focus somewhere else.
@@ -594,13 +663,15 @@ function applyRoute(){
   schoolLevel=LEVELS.some(l=>l.id===r.extra)?r.extra:'';schoolCode=schoolLevel?'':r.extra;activeGroup='';
 }
 function writeRoute(){
-  const extra=view==='school'?schoolCode||schoolLevel:'',hash=routeHash(view,selected,extra),period=[view,view==='week'?dateKey(weekStart(cursor)):dateKey(cursor).slice(0,7),extra].join('|');
+  const extra=view==='school'?schoolCode||schoolLevel:'',hash=view==='trend'?'#trend':routeHash(view,selected,extra),period=[view,view==='week'?dateKey(weekStart(cursor)):dateKey(cursor).slice(0,7),extra].join('|');
   if(location.hash!==hash)history[routeKey&&routeKey!==period?'pushState':'replaceState'](null,'',hash);
   routeKey=period;
 }
 window.addEventListener('popstate',()=>{applyRoute();render();});
-document.addEventListener('click',e=>{const layout=e.target.closest('[data-week-layout]');if(layout){weekLayout=layout.dataset.weekLayout;savePreference('goseong-week-layout',weekLayout);render(true);$(`[data-week-layout="${weekLayout}"]`)?.focus({preventScroll:true});return;}const density=e.target.closest('[data-week-density]');if(density){weekCompact=!weekCompact;savePreference('goseong-week-compact',String(weekCompact));render(true);$('[data-week-density]')?.focus({preventScroll:true});return;}const ed=e.target.closest('[data-edit]');if(ed){$('#detail').close();openEditor(ed.dataset.edit);return;}const add=e.target.closest('[data-add-date]');if(add){selected=add.dataset.addDate;render(true);openEditor(null,{kind:add.dataset.addKind,team:add.dataset.addTeam,time:add.dataset.addTime});return;}if(e.target.closest('[data-close-preview]')){const anchor=monthPreviewAnchor;hideMonthPreview();anchor?.focus({preventScroll:true});return;}const trigger=e.target.closest('[data-month-preview]');if(trigger&&monthPreviewAnchor===trigger){hideMonthPreview();return;}const dayControl=e.target.closest('[data-day-kind]');if(dayControl){dayKind=dayControl.dataset.dayKind;if(dayControl.dataset.date)selected=dayControl.dataset.date;render(true);$('#day-events').scrollTop=0;if(dayControl.dataset.date){const again=trigger&&$(`[data-month-preview="${trigger.dataset.monthPreview}"][data-date="${trigger.dataset.date}"]`);if(again&&!compactScreen.matches){again.focus({preventScroll:true});showMonthPreview(again);}else{$('#selected-title').focus({preventScroll:true});if(window.matchMedia('(max-width:850px)').matches)$('.day-panel').scrollIntoView({behavior:'smooth',block:'start'});}}return;}const group=e.target.closest('[data-group]');if(group){activeGroup=group.dataset.group;$('#team').value='';$('#kind').value='';render();return;}const sg=e.target.closest('[data-school-group]');if(sg)return showSchoolDetail(sg.dataset.schoolGroup,sg);const go=e.target.closest('[data-goto]');if(go){$('#search').value='';selected=go.dataset.goto;cursor=parseDate(selected);dayKind=kindFor(selected);render();$('#selected-title').focus({preventScroll:true});return;}const lv=e.target.closest('[data-level]');if(lv){schoolLevel=lv.dataset.level;schoolCode='';render(true);return;}const cl=e.target.closest('[data-class]');if(cl&&lastTimetable){classChoice.set(lastTimetable.school.code,cl.dataset.class);drawTimetable(lastTimetable.school,lastTimetable.start,lastTimetable.rows);return;}const ev=e.target.closest('[data-event]');if(ev)return showDetail(ev.dataset.event,ev.dataset.members?ev.dataset.members.split(' '):ev.dataset.merged==='true',ev);const d=e.target.closest('[data-date]');if(d){selected=d.dataset.date;dayKind=kindFor(selected);render(true);return;}const cell=e.target.closest('.day[data-day]');if(cell&&!e.target.closest('button')){selected=cell.dataset.day;dayKind=kindFor(selected);render(true);return;}const v=e.target.closest('[data-view]');if(v){view=v.dataset.view;cursor=parseDate(selected);activeGroup='';dayKind=kindFor(selected);render();}});
+document.addEventListener('click',e=>{if(e.target.closest('[data-students-retry]')){studentsState='idle';render(true);return;}const layout=e.target.closest('[data-week-layout]');if(layout){weekLayout=layout.dataset.weekLayout;savePreference('goseong-week-layout',weekLayout);render(true);$(`[data-week-layout="${weekLayout}"]`)?.focus({preventScroll:true});return;}const density=e.target.closest('[data-week-density]');if(density){weekCompact=!weekCompact;savePreference('goseong-week-compact',String(weekCompact));render(true);$('[data-week-density]')?.focus({preventScroll:true});return;}const ed=e.target.closest('[data-edit]');if(ed){$('#detail').close();openEditor(ed.dataset.edit);return;}const add=e.target.closest('[data-add-date]');if(add){selected=add.dataset.addDate;render(true);openEditor(null,{kind:add.dataset.addKind,team:add.dataset.addTeam,time:add.dataset.addTime});return;}if(e.target.closest('[data-close-preview]')){const anchor=monthPreviewAnchor;hideMonthPreview();anchor?.focus({preventScroll:true});return;}const trigger=e.target.closest('[data-month-preview]');if(trigger&&monthPreviewAnchor===trigger){hideMonthPreview();return;}const dayControl=e.target.closest('[data-day-kind]');if(dayControl){dayKind=dayControl.dataset.dayKind;if(dayControl.dataset.date)selected=dayControl.dataset.date;render(true);$('#day-events').scrollTop=0;if(dayControl.dataset.date){const again=trigger&&$(`[data-month-preview="${trigger.dataset.monthPreview}"][data-date="${trigger.dataset.date}"]`);if(again&&!compactScreen.matches){again.focus({preventScroll:true});showMonthPreview(again);}else{$('#selected-title').focus({preventScroll:true});if(window.matchMedia('(max-width:850px)').matches)$('.day-panel').scrollIntoView({behavior:'smooth',block:'start'});}}return;}const group=e.target.closest('[data-group]');if(group){activeGroup=group.dataset.group;$('#team').value='';$('#kind').value='';render();return;}const sg=e.target.closest('[data-school-group]');if(sg)return showSchoolDetail(sg.dataset.schoolGroup,sg);const go=e.target.closest('[data-goto]');if(go){$('#search').value='';selected=go.dataset.goto;cursor=parseDate(selected);dayKind=kindFor(selected);render();$('#selected-title').focus({preventScroll:true});return;}const lv=e.target.closest('[data-level]');if(lv){schoolLevel=lv.dataset.level;schoolCode='';render(true);return;}const cl=e.target.closest('[data-class]');if(cl&&lastTimetable){classChoice.set(lastTimetable.school.code,cl.dataset.class);drawTimetable(lastTimetable.school,lastTimetable.start,lastTimetable.rows);return;}const ev=e.target.closest('[data-event]');if(ev)return showDetail(ev.dataset.event,ev.dataset.members?ev.dataset.members.split(' '):ev.dataset.merged==='true',ev);const d=e.target.closest('[data-date]');if(d){selected=d.dataset.date;dayKind=kindFor(selected);render(true);return;}const cell=e.target.closest('.day[data-day]');if(cell&&!e.target.closest('button')){selected=cell.dataset.day;dayKind=kindFor(selected);render(true);return;}const v=e.target.closest('[data-view]');if(v){view=v.dataset.view;cursor=parseDate(selected);activeGroup='';dayKind=kindFor(selected);render();}});
 document.addEventListener('change',e=>{if(e.target.id==='school-select'){schoolCode=e.target.value;schoolLevel='';render(true);}});
+// 학생 추이: 그림 위에 올린 표식의 값을 커서 옆에 보여주는 툴팁. 스크롤하면 숨긴다(위 scroll 처리).
+document.addEventListener('mousemove',e=>{const tip=$('#trend-tip');if(!tip)return;const mark=e.target.closest?.('[data-tip]');if(!mark){tip.hidden=true;return;}tip.textContent=mark.dataset.tip;tip.hidden=false;tip.style.left=Math.max(8,Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8))+'px';tip.style.top=(e.clientY+18+tip.offsetHeight>innerHeight?e.clientY-tip.offsetHeight-12:e.clientY+18)+'px';});
 $('#prev').onclick=()=>move(-1);$('#next').onclick=()=>move(1);
 function move(n){if(view==='week')cursor=plus(cursor,n*7);else cursor=new Date(cursor.getFullYear(),cursor.getMonth()+n,1,12);selected=dateKey(cursor);render();}
 $('#today').onclick=()=>{cursor=new Date(today);selected=todayKey;render();};$('#refresh').onclick=load;['search','kind','team'].forEach(id=>$('#'+id).addEventListener('input',()=>{if(id!=='search')activeGroup='';if(id==='kind')dayKind=$('#kind').value||'weekly';render();}));$('#search').addEventListener('keydown',e=>{if(e.key==='Escape'&&e.target.value){e.preventDefault();e.stopPropagation();e.target.value='';render();}});$('#open-sources').onclick=()=>$('#sources').showModal();document.querySelectorAll('dialog').forEach(d=>{d.querySelectorAll('.close-dialog').forEach(b=>b.onclick=()=>d.close());if(d.id==='editor')return;d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
