@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-11-12T10:14:20+00:00",
+"updated_at": "2026-11-12T23:51:06+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -168,7 +168,7 @@
 "11월 월중행사 68행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 116,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4",
@@ -183,7 +183,7 @@
 ],
 "warnings": [],
 "count": 67,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 },
 {
 "id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE",
@@ -198,7 +198,7 @@
 ],
 "warnings": [],
 "count": 51,
-"data_at": "2026-11-12T10:14:20+00:00"
+"data_at": "2026-11-12T23:51:06+00:00"
 }
 ],
 "events": [
@@ -15484,18 +15484,18 @@
 {
 "date": "2026-11-18",
 "title": "고성문화재단 '고성커리큘럼' 운영 미팅",
-"description": "고성문화재단 '고성커리큘럼' 운영 미팅\n- 10:30, 교육과장실",
+"description": "고성문화재단 '고성커리큘럼' 운영 미팅\n- 10:30, 고성문화재단",
 "tab": "교육과1(11월3주)",
 "cell": "C6",
 "kind": "weekly",
 "team": "교육과장",
 "time": "10:30",
-"place": "교육과장실",
+"place": "고성문화재단",
 "owner": "",
 "slots": [
 {
 "time": "10:30",
-"place": "교육과장실"
+"place": "고성문화재단"
 }
 ],
 "id": "c98a2633773f2080cba90ec1",
@@ -15504,18 +15504,18 @@
 {
 "date": "2026-11-18",
 "title": "고성문화재단 '고성커리큘럼' 운영 미팅",
-"description": "고성문화재단 '고성커리큘럼' 운영 미팅\n- 10:30, 교육과장실\n- 남궁연",
+"description": "고성문화재단 '고성커리큘럼' 운영 미팅\n- 10:30, 고성문화재단\n- 남궁연",
 "tab": "교육과2(11월3주)",
 "cell": "D6",
 "kind": "weekly",
 "team": "문화체육특수",
 "time": "10:30",
-"place": "교육과장실",
+"place": "고성문화재단",
 "owner": "남궁연",
 "slots": [
 {
 "time": "10:30",
-"place": "교육과장실"
+"place": "고성문화재단"
 }
 ],
 "id": "76d5d9fd6f18b34fe014f3f8",
