@@ -1,0 +1,28 @@
+name: 테스트
+
+on:
+  pull_request:                    # 병합 전에 확인
+  workflow_call:                   # "시트 동기화"가 배포 전에 호출
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 표 해석·학교 데이터 빌드 검증 (Python)
+        run: python3 -m unittest discover -s tests -v
+
+      - name: 화면 스크립트 문법 검사
+        run: node --check docs/app.js
+
+      - name: 화면 동작 검증 (Node)
+        run: |
+          for t in tests/*.cjs; do
+            echo "== $t"
+            node "$t"
+          done
