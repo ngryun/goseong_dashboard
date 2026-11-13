@@ -17,7 +17,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 코드가 바뀌는 실행(push·수동)에서만 테스트한다. 실패하면 배포하지 않아 화면은 직전 배포를 유지한다.
+  test:
+    if: github.event_name != 'schedule'
+    uses: ./.github/workflows/test.yml
+
   sync:
+    needs: test
+    # 예약 실행에서는 test가 건너뛰어지므로, 실패했을 때만 막는다.
+    if: ${{ !cancelled() && needs.test.result != 'failure' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

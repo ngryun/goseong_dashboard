@@ -19,6 +19,7 @@ NEIS 개방 API ──▶ build_schools.py ──▶ docs/schools.json
 - `build_data.py`: 목록의 시트를 모두 읽어 `docs/data.json`(일정)과 `docs/status.json`(이번 실행의 확인 시각과 시트별 성공·오류)을 만듭니다. 다운로드·해석·설정 오류가 난 시트는 마지막 데이터를 유지합니다.
 - `.github/workflows/sync.yml`: 15분 간격 실행, 수동 실행, `main` push 시 실행. 일정이 바뀐 경우에만 `data.json`을 커밋하고, 매 실행마다 `docs/`를 Pages에 배포합니다.
 - `docs/`: 화면(`index.html`, `app.js`, `style.css`, 로고 이미지)과 데이터(`data.json`, `schools.json`). `status.json`은 실행 때마다 새로 만들어 배포만 하고 Git에는 넣지 않습니다.
+- `.github/workflows/test.yml`: 아래 테스트를 PR마다 실행합니다. `sync.yml`도 push·수동 실행 때 이 테스트를 먼저 돌리고, 실패하면 배포하지 않습니다(예약 실행은 테스트를 건너뜁니다).
 - `tests/test_dashboard.py`: 표 해석 규칙과 빌드 동작 검증. `tests/test_schools.py`: NEIS 응답 해석과 학교 데이터 빌드 검증. `tests/test_calendar.cjs`: 화면의 묶음 규칙 검증. `tests/test_refresh.cjs`: 새로고침·오류 복구·브라우저 저장소 제한·보기 전환 검증. `tests/test_week_views.cjs`: 주간 표·목록, 날짜 선택, 필터와 여러 날 일정 검증.
 - `tools/serve.mjs`: Python이 없는 PC에서 `docs/`를 띄우는 Node 정적 서버.
 - `_legacy/`: 이전 Python 서버 방식의 파일. 사용하지 않으며 Git에도 올라가지 않습니다. 확인 후 삭제하세요.

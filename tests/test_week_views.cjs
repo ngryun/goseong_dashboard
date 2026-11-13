@@ -45,6 +45,20 @@ assert.ok(/data-event="early"[^]*?<span class="task-owner"><svg[^]*?<\/svg><span
 assert.ok(!html.slice(html.indexOf('data-event="late"'),html.indexOf('</button>',html.indexOf('data-event="late"'))).includes('task-owner'),'no empty owner line');
 run('weekLayout="list";');
 assert.equal(run('weekPresentation()'),'list','an explicit choice overrides the responsive default');
+// 직접 입력 일정의 문서 ID는 누구나 정할 수 있으므로 담당별 표의 속성에서도 이스케이프한다.
+context.input=[{id:'x"><img src=x onerror=alert(1)>',date:'2026-10-13',kind:'weekly',team:'총무팀',title:'업무',time:''}];
+run('data.events=input;weekLayout="table";renderWeek(filterEvents());');
+html=nodes.calendar.innerHTML;
+assert.ok(html.includes('data-event="x&quot;&gt;&lt;img src=x onerror=alert(1)&gt;"')&&!html.includes('<img'),'escape event ids in the team table');
+// 시간표: 숫자뿐인 교실 이름(학급 번호와 같은 정보)은 생략하고, 특별실 이름만 과목 아래에 적는다.
+nodes.timetable={innerHTML:''};
+context.lessons=[
+  {date:'2026-10-12',grade:'1',cls:'1',dept:'',room:'3',period:1,subject:'국어'},
+  {date:'2026-10-12',grade:'1',cls:'1',dept:'',room:'과학실',period:2,subject:'과학'}
+];
+run('drawTimetable({code:"7800001",name:"시험초"},parseDate("2026-10-12"),lessons);');
+assert.ok(nodes.timetable.innerHTML.includes('과학<small>과학실</small>'),'named rooms are shown');
+assert.ok(!nodes.timetable.innerHTML.includes('<small>3</small>'),'numeric room names are left out');
 
 // 시간대 보기
 context.input=[

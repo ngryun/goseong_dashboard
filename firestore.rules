@@ -38,7 +38,9 @@ service cloud.firestore {
     }
     match /events/{id} {
       allow read: if true;
-      allow create: if validEvent(request.resource.data)
+      // 문서 ID는 화면의 HTML 속성에 들어가므로 새 문서는 영문·숫자 ID만 받는다(화면이 만드는 자동 ID는 20자 영문·숫자).
+      allow create: if id.matches('^[A-Za-z0-9]{1,40}$')
+        && validEvent(request.resource.data)
         && request.resource.data.createdAt == request.time
         && request.resource.data.deleted == false;
       allow update: if validEvent(request.resource.data)
