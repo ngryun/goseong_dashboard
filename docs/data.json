@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-11-17T02:40:55+00:00",
+"updated_at": "2026-11-17T11:14:53+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -168,7 +168,7 @@
 "11월 월중행사 68행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 116,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4",
@@ -183,7 +183,7 @@
 ],
 "warnings": [],
 "count": 67,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE",
@@ -198,7 +198,7 @@
 ],
 "warnings": [],
 "count": 56,
-"data_at": "2026-11-17T02:40:55+00:00"
+"data_at": "2026-11-17T11:14:53+00:00"
 },
 {
 "id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk",
@@ -212,8 +212,8 @@
 "행정과(11월4주)"
 ],
 "warnings": [],
-"count": 61,
-"data_at": "2026-11-17T02:40:55+00:00"
+"count": 66,
+"data_at": "2026-11-17T11:14:53+00:00"
 }
 ],
 "events": [
@@ -16280,7 +16280,7 @@
 "place": "도학초 외 9교",
 "owner": "박구원, 윤동열",
 "slots": [],
-"id": "6ee116678e2d8d47e0874cfa",
+"id": "77752eb2e99f29ea072532a9",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16315,7 +16315,7 @@
 "place": "거진고"
 }
 ],
-"id": "af0bc7ccd4b1425afb7ec486",
+"id": "875f49610e9e1935d9682503",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16350,6 +16350,26 @@
 },
 {
 "date": "2026-11-23",
+"title": "2026 하반기 발명교육센터 담당자 워크숍",
+"description": "2026 하반기 발명교육센터 담당자 워크숍\n- 10:00, 초계종합교육센터\n- 김강진",
+"tab": "교육과2(11월4주)",
+"cell": "G4",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "10:00",
+"place": "초계종합교육센터",
+"owner": "김강진",
+"slots": [
+{
+"time": "10:00",
+"place": "초계종합교육센터"
+}
+],
+"id": "f4c9cc898112793c850653a3",
+"source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
+},
+{
+"date": "2026-11-23",
 "title": "2026년 학교운영위원회 위원장 역량강화 연수",
 "description": "2026년 학교운영위원회 위원장 역량강화 연수\n- 10:00, 3층 대회의실\n- 총무팀장, 임예지",
 "tab": "행정과(11월4주)",
@@ -16365,7 +16385,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "60bc4481f03707494b95e52e",
+"id": "8cbb7affc8ce9af5d329d714",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16385,7 +16405,7 @@
 "place": "거진중, 거진고"
 }
 ],
-"id": "edf1488c8a540ba4ccd95f2a",
+"id": "249a43bf40db7f6cbee5edba",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16465,7 +16485,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "6804236ba5e6bc244f6a542b",
+"id": "fbb215d896138fade92ceb64",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16485,7 +16505,7 @@
 "place": "3층 중회의실"
 }
 ],
-"id": "a66a3ce4843ca16569d603b3",
+"id": "59cff73b879f288657fe1940",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16520,7 +16540,7 @@
 "place": "대진고"
 }
 ],
-"id": "6ff8d3030294d58f8b872792",
+"id": "600bb74148f6dfe9ba76fbd0",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16615,7 +16635,7 @@
 "place": "",
 "owner": "최명심",
 "slots": [],
-"id": "fb6a6534c25073f34bf05a69",
+"id": "36e362716b642e829ec3a538",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16635,7 +16655,7 @@
 "place": "강릉세인트존스호텔"
 }
 ],
-"id": "1533cd28562f222cd944ab5b",
+"id": "69b67441dec4cb3afda6bf70",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16655,7 +16675,7 @@
 "place": "도학초"
 }
 ],
-"id": "16dfc9d3fa14b41fff634546",
+"id": "f1e0a0d4d43025e26fc863ae",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16690,7 +16710,7 @@
 "place": "동광초, 거진초"
 }
 ],
-"id": "d0bafa83d93598d99c4a3ada",
+"id": "c8ca9f140323efa64a3ab404",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16780,7 +16800,7 @@
 "place": "강릉세인트존스호텔"
 }
 ],
-"id": "d511cae6987e1b3e43fcc31b",
+"id": "f6f0ac271a28846684fbc39a",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16800,7 +16820,7 @@
 "place": "관내 음식점"
 }
 ],
-"id": "00512f09292177e5f3d7979f",
+"id": "32a241e67ef2972ec3725036",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16875,7 +16895,7 @@
 "place": "고성종합체육관"
 }
 ],
-"id": "c5af27b0e8ee9628cda081bb",
+"id": "7fdc5bdac4243dcb80787f22",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16895,7 +16915,7 @@
 "place": "관내 음식점"
 }
 ],
-"id": "79750437aa9f0d8dc8e6d7b7",
+"id": "7a5bcf477f80ec266fd244ee",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16910,7 +16930,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "5fe742e42e9669edcebaa7f6",
+"id": "3eda0255f83019df71f6f661",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16945,7 +16965,7 @@
 "place": "거성초"
 }
 ],
-"id": "31b42e1ebbc35b870447433f",
+"id": "4097383f4d1385f36ebd23a3",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -16980,7 +17000,7 @@
 "place": "거진초"
 }
 ],
-"id": "1f3953bfc86e2b85f752a770",
+"id": "d19be93d4d32922a871a0c8e",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17000,7 +17020,7 @@
 "place": "고성고, 간성초"
 }
 ],
-"id": "8ef89a7af7d6a722cc6db885",
+"id": "812bd2c3529348d48d6a8053",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17020,6 +17040,26 @@
 },
 {
 "date": "2026-11-25",
+"title": "학부모 학교참여 동아리 지원사업 모니터링",
+"description": "학부모 학교참여 동아리 지원사업 모니터링\n- 09:30, 천진초\n- 이분현",
+"tab": "교육과3(11월4주)",
+"cell": "G6",
+"kind": "weekly",
+"team": "학부모지원센터",
+"time": "09:30",
+"place": "천진초",
+"owner": "이분현",
+"slots": [
+{
+"time": "09:30",
+"place": "천진초"
+}
+],
+"id": "6f381d56529c31f13214858f",
+"source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
+},
+{
+"date": "2026-11-25",
 "title": "2026년 고성군교육행정협의회",
 "description": "2026년 고성군교육행정협의회\n- 11:30, 3층 대회의실\n- 교육장, 고성군수 외 위원 6명",
 "tab": "행정과(11월4주)",
@@ -17035,7 +17075,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "8af140f06956f2db99131059",
+"id": "ef8f1fda726b49b003c45aed",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17055,7 +17095,7 @@
 "place": "강원특수교육원 춘천 본원"
 }
 ],
-"id": "ace4b8f75e2063db92465673",
+"id": "d4a1ab4f850e4790246c1546",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17075,7 +17115,7 @@
 "place": "아야진초"
 }
 ],
-"id": "3e5e9d8e4d0b950601dadeab",
+"id": "a804f34cbc6285bea7c1d2e2",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17095,7 +17135,7 @@
 "place": "초계교육센터 2층 시청각실"
 }
 ],
-"id": "38dee693bf6be6f7730eadfb",
+"id": "e1bd5455ea891cae6076d9e7",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17119,7 +17159,7 @@
 "place": "고성중"
 }
 ],
-"id": "41b6ffb91f899d9944523e94",
+"id": "83bf2d2170be89c254e3ae04",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17139,7 +17179,7 @@
 "place": "초계종합교육센터"
 }
 ],
-"id": "3fd9f8cfe0626fb7bcb51e88",
+"id": "c376be364fcdf47d9c433871",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17179,7 +17219,7 @@
 "place": "강원특별자치도교육청"
 }
 ],
-"id": "d4a1ab4f850e4790246c1546",
+"id": "86b45db486197ae9c295cf7e",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17214,7 +17254,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "85dc8187e82f62a273483007",
+"id": "37209e5647214216c9a6026a",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17234,7 +17274,7 @@
 "place": "오호초"
 }
 ],
-"id": "e237895838b271cb73268f0f",
+"id": "4fd96a8e9aad444ce66cff98",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17289,7 +17329,7 @@
 "place": "대진초, 고성중"
 }
 ],
-"id": "1007c997d6a7bab5e4a59491",
+"id": "8668d71f29c70923ba9da580",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17309,7 +17349,7 @@
 "place": "인흥초"
 }
 ],
-"id": "03348e4c22f2f31eccc088b1",
+"id": "9dd3d72bf63770a5073efadb",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17394,7 +17434,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "6940e85a8b55eff642a4ff72",
+"id": "8e812e82de6322d3f9abee6b",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17449,7 +17489,27 @@
 "place": "대진초"
 }
 ],
-"id": "cde85fffbc489d10eb2ae120",
+"id": "77441c8b23fb73674c109a0c",
+"source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
+},
+{
+"date": "2026-11-26",
+"title": "알수록 힘이 되는 자녀 경제교육",
+"description": "알수록 힘이 되는 자녀 경제교육\n- 14:00, 3층 대회의실  \n- 이분현",
+"tab": "교육과3(11월4주)",
+"cell": "G7",
+"kind": "weekly",
+"team": "학부모지원센터",
+"time": "14:00",
+"place": "3층 대회의실",
+"owner": "이분현",
+"slots": [
+{
+"time": "14:00",
+"place": "3층 대회의실"
+}
+],
+"id": "53192c932ab685d6d68e7a7f",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17469,7 +17529,7 @@
 "place": "대진초"
 }
 ],
-"id": "f928600bc3ed5734cff3c2db",
+"id": "11192b499b6692bcacee3fcd",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17486,6 +17546,26 @@
 "slots": [],
 "id": "07a15b9d19ee4f62d1426ca7",
 "source_id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI"
+},
+{
+"date": "2026-11-26",
+"title": "초등고급발명교실 수업",
+"description": "초등고급발명교실 수업\n- 15:40, 초계종합교육센터\n- 김진영",
+"tab": "교육과2(11월4주)",
+"cell": "G7",
+"kind": "weekly",
+"team": "초계종합교육센터",
+"time": "15:40",
+"place": "초계종합교육센터",
+"owner": "김진영",
+"slots": [
+{
+"time": "15:40",
+"place": "초계종합교육센터"
+}
+],
+"id": "a11d5ad69f743d84e999d4f8",
+"source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
 "date": "2026-11-27",
@@ -17514,7 +17594,7 @@
 "place": "28, 서울 일대",
 "owner": "소희",
 "slots": [],
-"id": "faf534b9438c8485b67f9062",
+"id": "e08fe8eb9ea3a26d3e40ccd8",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17529,7 +17609,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "5c4ce488dcf0da7b3aa65f72",
+"id": "deb308dfefbbe08c6a207a4d",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17564,7 +17644,7 @@
 "place": "대진초"
 }
 ],
-"id": "a567bb5c00b183fc1125aa1c",
+"id": "6ce7b4ffb6f2806f2ab52eea",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17599,7 +17679,7 @@
 "place": ""
 }
 ],
-"id": "84c66ab2a5db3d38f69abb3e",
+"id": "768817a1f29e761363b73273",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17619,7 +17699,7 @@
 "place": "광산초, 고성중"
 }
 ],
-"id": "0a7eaedf0f351ea77717077b",
+"id": "bb39d60505f72352269d4697",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17639,7 +17719,7 @@
 "place": "위센터"
 }
 ],
-"id": "996f28835efdc3c5a6f659c5",
+"id": "38e577f9f54341199be17503",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17659,7 +17739,27 @@
 "place": "강원특별자치도교육청교육연수원 횡성분원"
 }
 ],
-"id": "689f5b75f8f5d7b5a0f0bde8",
+"id": "2b067b9cf8a4b109945a2eb0",
+"source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
+},
+{
+"date": "2026-11-27",
+"title": "2026 학습종합클리닉센터 운영 및 학습공동체 성과 공유회",
+"description": "2026 학습종합클리닉센터 운영 및 학습공동체 성과 공유회\n- 10:30, 원주시티호텔(혁신도시점)\n- 임금선",
+"tab": "교육과3(11월4주)",
+"cell": "B8",
+"kind": "weekly",
+"team": "학습종합클리닉센터",
+"time": "10:30",
+"place": "원주시티호텔(혁신도시점)",
+"owner": "임금선",
+"slots": [
+{
+"time": "10:30",
+"place": "원주시티호텔(혁신도시점)"
+}
+],
+"id": "8da01f30e0414bae8e317e8e",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
