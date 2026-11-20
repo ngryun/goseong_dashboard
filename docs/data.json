@@ -1,5 +1,5 @@
 {
-"updated_at": "2026-11-19T18:11:49+00:00",
+"updated_at": "2026-11-20T00:42:23+00:00",
 "registry_sheet": "https://docs.google.com/spreadsheets/d/1CjXKUzHpeibyJXzVM2oZoDonbWYk0wy_vX3hs2FWbhI/edit",
 "sources": [
 {
@@ -18,7 +18,7 @@
 "9월 월중행사 30행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 79,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1GdhmAsE6UtmYZ94MOu5GoZcYX1DZLCFEMlUlQLeTgEk",
@@ -33,7 +33,7 @@
 ],
 "warnings": [],
 "count": 84,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1Wc-_310VglK05imMLdWoKaEQ8KTSH_XXEuaJXAXX9AA",
@@ -48,7 +48,7 @@
 ],
 "warnings": [],
 "count": 75,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1m9jB0Cyky_2tck1H7_4JOeODcQcCsYh8UICoQz6FQ6o",
@@ -63,7 +63,7 @@
 ],
 "warnings": [],
 "count": 48,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1WCO_eZeDauLyRMXl2m9uHxFYYF-cKUpf9LUwf9EIebs",
@@ -86,7 +86,7 @@
 "10월 월중행사의 사본: 10월 월중행사 탭과 같은 일정 51건은 한 번만 읽었습니다. 복사한 탭이면 지우거나 다른 내용으로 바꾸세요."
 ],
 "count": 97,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "16xNW7LltiP454h0zgUAYLeIiYsbf5lm_Pp3dsFImhlY",
@@ -101,7 +101,7 @@
 ],
 "warnings": [],
 "count": 30,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1RBOZ3copMG2zZTgLm1u5cKA0ec3_w3ZwUCGN6ibynoU",
@@ -116,7 +116,7 @@
 ],
 "warnings": [],
 "count": 76,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1z8asSb2jSSUEF4VUbu06QN6E99b5t_lb5Pz1ffA5_s0",
@@ -131,7 +131,7 @@
 ],
 "warnings": [],
 "count": 74,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1EY4vALm5j3MgEoYB0wZDqArtvQF0AMzNEuMPIggI1R4",
@@ -146,7 +146,7 @@
 ],
 "warnings": [],
 "count": 64,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1cNjacrv1Is2VV-Sme-JDPJhNyJOyWfF7jlN6DjWCSwI",
@@ -168,7 +168,7 @@
 "11월 월중행사 68행: 행사명 앞의 추가 기재를 상세에 보존했습니다."
 ],
 "count": 116,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1K7wycVQQ8f9IzLbyFNFTcCNjn9lMvNAClMG2w8RTaU4",
@@ -183,7 +183,7 @@
 ],
 "warnings": [],
 "count": 67,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "16Fa7k846arq4BSe4NQl3D_I7rdLeGjWDmjQRyts4RpE",
@@ -198,7 +198,7 @@
 ],
 "warnings": [],
 "count": 56,
-"data_at": "2026-11-19T18:11:49+00:00"
+"data_at": "2026-11-20T00:42:23+00:00"
 },
 {
 "id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk",
@@ -212,8 +212,8 @@
 "행정과(11월4주)"
 ],
 "warnings": [],
-"count": 73,
-"data_at": "2026-11-19T18:11:49+00:00"
+"count": 74,
+"data_at": "2026-11-20T00:42:23+00:00"
 }
 ],
 "events": [
@@ -17369,6 +17369,26 @@
 },
 {
 "date": "2026-11-26",
+"title": "2026년 기록물 폐기 집행",
+"description": "2026년 기록물 폐기 집행\n- 09:00, 우리 청 주차장\n- 고성교육지원청 기록관, 관내 초, 중 \n- 문지환",
+"tab": "행정과(11월4주)",
+"cell": "C7",
+"kind": "weekly",
+"team": "총무팀",
+"time": "09:00",
+"place": "우리 청 주차장",
+"owner": "문지환",
+"slots": [
+{
+"time": "09:00",
+"place": "우리 청 주차장"
+}
+],
+"id": "1097dcd71ccfd5ad78c28d97",
+"source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
+},
+{
+"date": "2026-11-26",
 "title": "순회미술치료 및 상담",
 "description": "순회미술치료 및 상담\n- 09:00, 대진초, 고성중\n- 김제현",
 "tab": "교육과3(11월4주)",
@@ -17509,7 +17529,7 @@
 "place": "3층 대회의실"
 }
 ],
-"id": "d6dad88b12a514260846a528",
+"id": "c7478f60127497b52c52a5ee",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17684,7 +17704,7 @@
 "place": "",
 "owner": "",
 "slots": [],
-"id": "7f2b57dbe21fcb910d7d7612",
+"id": "8b86eafe524f8786096b249b",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
@@ -17834,7 +17854,7 @@
 "place": "강원특별자치도교육청교육연수원 횡성분원"
 }
 ],
-"id": "8b86eafe524f8786096b249b",
+"id": "0c7da4bc768ad332ed3c9837",
 "source_id": "1MU-4w-zfNnJJ-G9FORe66eiLFD2ABNaFrZOkWY9DtZk"
 },
 {
