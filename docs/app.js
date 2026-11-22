@@ -21,7 +21,15 @@ const ICON_PATHS={
   alert:'<circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 17h.01"/>',
   external:'<path d="M14 3h7v7M21 3l-11 11M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/>',
   edit:'<path d="m15 5 4 4M4 20l5-1L21 7a2.8 2.8 0 0 0-4-4L5 15l-1 5Z"/>',
-  phone:'<path d="m5 3 4 1 1 5-3 2a14 14 0 0 0 6 6l2-3 5 1 1 4c-1 5-9 1-13-3S0 4 5 3Z"/>'
+  phone:'<path d="m5 3 4 1 1 5-3 2a14 14 0 0 0 6 6l2-3 5 1 1 4c-1 5-9 1-13-3S0 4 5 3Z"/>',
+  // 날씨(기상청 단기예보의 하늘 상태·강수 형태). 같은 선 굵기의 단색 아이콘.
+  'wx-clear':'<circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/>',
+  'wx-cloudy':'<path d="M5.4 9.5A3 3 0 1 1 10.8 7M8 2.5V3.6M2.5 8h1.1M4.1 4.1l.8.8M11.9 4.1l-.8.8"/><path d="M9.5 20a3.5 3.5 0 0 1-.5-6.96 4.8 4.8 0 0 1 9.2 1.2A3 3 0 0 1 18 20Z"/>',
+  'wx-overcast':'<path d="M7.5 18.5a4 4 0 0 1-.6-7.96 5.5 5.5 0 0 1 10.5 1.3A3.4 3.4 0 0 1 17 18.5Z"/>',
+  'wx-rain':'<path d="M7.5 15.0a4 4 0 0 1-.6-7.96 5.5 5.5 0 0 1 10.5 1.3A3.4 3.4 0 0 1 17 15.0Z"/><path d="m8.5 18-1 3M12.5 18l-1 3M16.5 18l-1 3"/>',
+  'wx-shower':'<path d="M7.5 15.0a4 4 0 0 1-.6-7.96 5.5 5.5 0 0 1 10.5 1.3A3.4 3.4 0 0 1 17 15.0Z"/><path d="m8.5 18-1 3M12.5 18l-1 3M16.5 18l-1 3"/>',
+  'wx-sleet':'<path d="M7.5 15.0a4 4 0 0 1-.6-7.96 5.5 5.5 0 0 1 10.5 1.3A3.4 3.4 0 0 1 17 15.0Z"/><path d="m8.5 18-1 3M12 18.5h.01M12.5 21h.01M16.5 18l-1 3"/>',
+  'wx-snow':'<path d="M7.5 15.0a4 4 0 0 1-.6-7.96 5.5 5.5 0 0 1 10.5 1.3A3.4 3.4 0 0 1 17 15.0Z"/><path d="M8 18.5h.01M12 18.5h.01M16 18.5h.01M10 21h.01M14 21h.01"/>'
 };
 const icon=name=>`<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${ICON_PATHS[name]||''}</svg>`;
 let weekLayout=['table','time','list'].includes(readPreference('goseong-week-layout'))?readPreference('goseong-week-layout'):'';
@@ -77,6 +85,36 @@ function buildHolidays(src){
   const days=new Map();
   for(const e of src.events||[]){if(e.type!=='공휴일'||/재량|휴업/.test(e.title))continue;if(!days.has(e.date))days.set(e.date,{schools:new Set(),names:new Map()});const d=days.get(e.date);d.schools.add(e.school);d.names.set(e.title,(d.names.get(e.title)||0)+1);}
   return new Map([...days].filter(([,d])=>d.schools.size*2>(src.schools||[]).length).map(([key,d])=>[key,[...d.names].sort((a,b)=>b[1]-a[1])[0][0]]));
+}
+// 날씨: docs/weather.json (기상청 단기예보 · 고성군 간성읍, GitHub Actions가 동기화 때마다 갱신). 오늘부터 약 4일치만 있다.
+// 지난 날짜에는 보이지 않고, 발표한 지 하루가 넘은 예보는 쓰지 않는다(동기화가 오래 멈춘 경우).
+let weather = new Map(), weatherInfo = null;
+const SKY_LABEL = {clear:'맑음',cloudy:'구름많음',overcast:'흐림',rain:'비',sleet:'비/눈',snow:'눈',shower:'소나기'};
+const WET_SKY = ['rain','sleet','snow','shower'];
+const WEATHER_MAX_AGE = 864e5;
+function setWeather(src){
+  if(!src||!Array.isArray(src.days))return;
+  weatherInfo=src;
+  weather=new Map(src.days.filter(d=>d&&/^\d{4}-\d{2}-\d{2}$/.test(d.date)&&SKY_LABEL[d.sky]).map(d=>[d.date,d]));
+}
+const weatherOf = key => key>=todayKey&&weatherInfo&&Date.now()-new Date(weatherInfo.base).getTime()<WEATHER_MAX_AGE?weather.get(key):undefined;
+const degree = v => Number.isFinite(v)?`${Math.round(v)}°`:'';
+const tempRange = w => [degree(w.tmin),degree(w.tmax)].filter(Boolean).join(' / ');
+// "오전 흐림 · 오후 비"처럼 오전·오후가 다르면 나눠 적고, 같으면 한 번만 적는다.
+const skyText = w => {const am=SKY_LABEL[w.am?.sky],pm=SKY_LABEL[w.pm?.sky];return am&&pm&&am!==pm?`오전 ${am} · 오후 ${pm}`:SKY_LABEL[w.sky];};
+const rainText = w => Number.isFinite(w.pop)&&w.pop>0?`강수확률 ${Math.round(w.pop)}%`:'';
+const weatherText = w => [skyText(w),degree(w.tmin)&&`최저 ${degree(w.tmin)}`,degree(w.tmax)&&`최고 ${degree(w.tmax)}`,rainText(w)].filter(Boolean).join(' · ');
+const weatherIssued = () => {const m=/^\d{4}-(\d{2})-(\d{2})T(\d{2})/.exec(weatherInfo?.base||'');return m?`${+m[1]}.${+m[2]} ${+m[3]}시 발표`:'';};
+// 달력 칸·요일 머리글에 넣는 짧은 표시: 아이콘 + 최저/최고. 자세한 내용은 title과 화면 낭독용 글자로 둔다.
+// 좁은 달력 칸에서는 CSS가 최저(wx-low), 그다음 기온 전체(wx-temp)를 감춰 아이콘만 남긴다.
+function weatherTag(key){
+  const w=weatherOf(key);if(!w)return '';
+  return `<span class="weather-tag${WET_SKY.includes(w.sky)?' is-wet':''}" title="${esc(weatherText(w))}">${icon('wx-'+w.sky)}${tempRange(w)?`<span class="wx-temp" aria-hidden="true">${degree(w.tmin)&&degree(w.tmax)?`<span class="wx-low">${degree(w.tmin)} / </span>`:''}${degree(w.tmax)||degree(w.tmin)}</span>`:''}<span class="sr-only">${esc(weatherText(w))}</span></span>`;
+}
+function renderDayWeather(){
+  const box=$('#day-weather');if(!box)return;
+  const w=weatherOf(selected);box.hidden=!w;
+  box.innerHTML=w?`<span class="day-weather-main${WET_SKY.includes(w.sky)?' is-wet':''}">${icon('wx-'+w.sky)}<strong>${esc(skyText(w))}</strong>${tempRange(w)?`<span>${esc(tempRange(w))}</span>`:''}${rainText(w)?`<span>${esc(rainText(w))}</span>`:''}</span><small>${esc([weatherInfo.place,'기상청 단기예보',weatherIssued()].filter(Boolean).join(' · '))}</small>`:'';
 }
 const sameTitle = (a,b) => a.normalize('NFC').replace(/\s+/gu,'')===b.normalize('NFC').replace(/\s+/gu,'');
 // The address keeps the view, the selected date and (관내 학교) the school or level, e.g. #week/2026-10-05 or #school/2026-10-03/7801234.
@@ -177,7 +215,7 @@ function renderMonth(events){
     if(i%7===0){bars=laneBars(monthly,key,dateKey(plus(d,6)));lanes=bars.reduce((n,b)=>Math.max(n,b.lane+1),0);}
     // Multi-day events are bars; a sheet title that only repeats the holiday name stays in the lists but not in the cell.
     const chips=items.monthly.filter(e=>!isMulti(e)&&!(holiday&&sameTitle(e.title,holiday)));
-    html+=`<div class="day${d.getMonth()!==cursor.getMonth()?' outside':''}${selected===key?' selected':''}${holiday?' holiday':''}" data-day="${key}"${lanes?` style="--lanes:${lanes}"`:''}><div class="day-head"><button class="day-number${key===todayKey?' today':''}" data-date="${key}" aria-pressed="${selected===key}" aria-label="${key}${holiday?' '+esc(holiday)+',':''} 월중행사 ${items.monthly.length}건, 주간업무 ${items.weekly.length}건">${d.getDate()}</button>${holiday?`<span class="holiday-name">${esc(holiday)}</span>`:''}</div><button type="button" class="day-add" data-add-date="${key}" aria-label="${key}에 일정 추가" title="이 날에 일정 추가">${icon('plus')}</button>${bars.filter(b=>b.start===key).map(monthBar).join('')}<div class="month-events">${chips.map(monthChip).join('')}<button class="more" data-date="${key}" data-day-kind="monthly" ${previewAttrs('monthly')} hidden></button></div><div class="month-day-footer">${items.weekly.length?`<button class="weekly-count" data-date="${key}" data-day-kind="weekly" ${previewAttrs('weekly')} aria-label="${key} 주간업무 ${items.weekly.length}건 보기"><span>주간업무</span><strong>${items.weekly.length}건</strong><span aria-hidden="true">${icon('right')}</span></button>`:''}</div></div>`;
+    html+=`<div class="day${d.getMonth()!==cursor.getMonth()?' outside':''}${selected===key?' selected':''}${holiday?' holiday':''}" data-day="${key}"${lanes?` style="--lanes:${lanes}"`:''}><div class="day-head"><button class="day-number${key===todayKey?' today':''}" data-date="${key}" aria-pressed="${selected===key}" aria-label="${key}${holiday?' '+esc(holiday)+',':''} 월중행사 ${items.monthly.length}건, 주간업무 ${items.weekly.length}건">${d.getDate()}</button>${holiday?`<span class="holiday-name">${esc(holiday)}</span>`:''}${weatherTag(key)}</div><button type="button" class="day-add" data-add-date="${key}" aria-label="${key}에 일정 추가" title="이 날에 일정 추가">${icon('plus')}</button>${bars.filter(b=>b.start===key).map(monthBar).join('')}<div class="month-events">${chips.map(monthChip).join('')}<button class="more" data-date="${key}" data-day-kind="monthly" ${previewAttrs('monthly')} hidden></button></div><div class="month-day-footer">${items.weekly.length?`<button class="weekly-count" data-date="${key}" data-day-kind="weekly" ${previewAttrs('weekly')} aria-label="${key} 주간업무 ${items.weekly.length}건 보기"><span>주간업무</span><strong>${items.weekly.length}건</strong><span aria-hidden="true">${icon('right')}</span></button>`:''}</div></div>`;
   }
   $('#calendar').innerHTML=html+'</div></div>';
   return groupEvents(events.filter(e=>e.kind==='monthly'&&overlaps(e,dateKey(first),dateKey(last))));
@@ -281,7 +319,7 @@ function renderWeek(events) {
   $('#calendar').innerHTML=controls+guide+(rowCount?html+'</table></div>':`<div class="empty">${filtered?'조건에 맞는 업무가 없습니다. 검색 또는 담당 필터를 변경해 주세요.':'이 주에 등록된 업무가 없습니다.'}</div>`);
   return shown;
 }
-const weekHeadCells = days => days.map(d=>{const key=dateKey(d),holiday=holidays.get(key);return `<th scope="col" class="${key===todayKey?'is-today':''}${holiday?' is-holiday':''}"><button data-date="${key}" aria-pressed="${selected===key}"><span>${WEEKDAY[d.getDay()]}</span><strong>${d.getMonth()+1}.${d.getDate()}</strong>${key===todayKey?'<em>오늘</em>':''}${holiday?`<em class="holiday-tag">${esc(holiday)}</em>`:''}</button></th>`;}).join('');
+const weekHeadCells = days => {const forecast=days.some(d=>weatherOf(dateKey(d)));return days.map(d=>{const key=dateKey(d),holiday=holidays.get(key);return `<th scope="col" class="${key===todayKey?'is-today':''}${holiday?' is-holiday':''}${forecast?' has-weather':''}"><button data-date="${key}" aria-pressed="${selected===key}"><span>${WEEKDAY[d.getDay()]}</span><strong>${d.getMonth()+1}.${d.getDate()}</strong>${key===todayKey?'<em>오늘</em>':''}${holiday?`<em class="holiday-tag">${esc(holiday)}</em>`:''}${weatherTag(key)}</button></th>`;}).join('');};
 const currentWeekDay = days => days.some(d=>dateKey(d)===selected)?selected:dateKey(days[0]);
 // One button per day with its count; the list view and the phone time view show only the chosen day.
 const weekDayNav = (counts,days,current,label) => `<div class="agenda-nav" role="group" aria-label="${esc(label)}">${days.map(d=>{const key=dateKey(d),count=counts(key);return `<button type="button" data-date="${key}" aria-pressed="${key===current}" aria-label="${esc(displayDate(d))}, ${count}건" class="${key===todayKey?'is-today':''}${holidays.has(key)?' holiday':''}"><span>${WEEKDAY[d.getDay()]}</span><strong>${d.getDate()}</strong><small>${count}건</small></button>`;}).join('')}</div>`;
@@ -290,7 +328,7 @@ function weekAgenda(events,days){
   const navigation=weekDayNav(key=>events.filter(e=>covers(e,key)).length,days,current,'주간 목록 날짜 선택');
   return navigation+`<div class="week-agenda">${days.filter(d=>dateKey(d)===current).map(d=>{
     const key=dateKey(d),holiday=holidays.get(key),items=events.filter(e=>covers(e,key)).sort((a,b)=>(a.time||'').localeCompare(b.time||'')||a.title.localeCompare(b.title,'ko'));
-    return `<section class="agenda-day${key===todayKey?' is-today':''}${selected===key?' is-selected':''}${holiday?' holiday':''}"><div class="agenda-heading"><button type="button" data-date="${key}" aria-pressed="${selected===key}" aria-label="${esc(displayDate(d))} 선택"><strong>${d.getDate()}</strong><span>${d.getMonth()+1}월 ${WEEKDAY[d.getDay()]}요일${key===todayKey?' · 오늘':''}${holiday?' · '+esc(holiday):''}</span><small>${items.length}건</small></button><button type="button" class="agenda-add" data-add-date="${key}" aria-label="${key}에 일정 추가">${icon('plus')}</button></div><div class="agenda-items">${items.map(e=>`<button type="button" class="agenda-event category-${groupFor(e)}" data-event="${esc(e.id)}"><span class="agenda-time">${esc(e.time||'시간 미정').replace('~','<br>– ')}${isMulti(e)?'<small>여러 날</small>':''}</span><span class="agenda-main"><strong>${esc(e.title)}</strong><span class="agenda-team"><i class="category-dot"></i>${esc(e.team||kindLabel(e))}</span>${isMulti(e)?`<span class="event-meta">${esc(rangeText(e))}</span>`:''}${slotsOf(e)?`<span class="agenda-slots">${slotsOf(e).map(slot=>`<span>${icon('clock')}${esc(slotText(slot))}</span>`).join('')}</span>`:e.place?`<span class="agenda-meta">${icon('pin')}${esc(e.place)}</span>`:''}${e.owner?`<span class="agenda-meta">${icon('person')}${esc(e.owner)}</span>`:''}</span>${icon('right')}</button>`).join('')||'<p class="agenda-empty">등록된 일정이 없습니다.</p>'}</div></section>`;
+    return `<section class="agenda-day${key===todayKey?' is-today':''}${selected===key?' is-selected':''}${holiday?' holiday':''}"><div class="agenda-heading"><button type="button" data-date="${key}" aria-pressed="${selected===key}" aria-label="${esc(displayDate(d))} 선택"><strong>${d.getDate()}</strong><span>${d.getMonth()+1}월 ${WEEKDAY[d.getDay()]}요일${key===todayKey?' · 오늘':''}${holiday?' · '+esc(holiday):''}</span><small>${items.length}건${weatherTag(key)}</small></button><button type="button" class="agenda-add" data-add-date="${key}" aria-label="${key}에 일정 추가">${icon('plus')}</button></div><div class="agenda-items">${items.map(e=>`<button type="button" class="agenda-event category-${groupFor(e)}" data-event="${esc(e.id)}"><span class="agenda-time">${esc(e.time||'시간 미정').replace('~','<br>– ')}${isMulti(e)?'<small>여러 날</small>':''}</span><span class="agenda-main"><strong>${esc(e.title)}</strong><span class="agenda-team"><i class="category-dot"></i>${esc(e.team||kindLabel(e))}</span>${isMulti(e)?`<span class="event-meta">${esc(rangeText(e))}</span>`:''}${slotsOf(e)?`<span class="agenda-slots">${slotsOf(e).map(slot=>`<span>${icon('clock')}${esc(slotText(slot))}</span>`).join('')}</span>`:e.place?`<span class="agenda-meta">${icon('pin')}${esc(e.place)}</span>`:''}${e.owner?`<span class="agenda-meta">${icon('person')}${esc(e.owner)}</span>`:''}</span>${icon('right')}</button>`).join('')||'<p class="agenda-empty">등록된 일정이 없습니다.</p>'}</div></section>`;
   }).join('')}</div>`;
 }
 const weekSpan = b => `<button class="week-span category-${groupFor(b.e)}${b.start>b.e.date?' cont-left':''}${b.end<lastDay(b.e)?' cont-right':''}" style="--span:${b.span};--lane:${b.lane}" data-event="${esc(b.e.id)}" title="${esc(rangeText(b.e)+' '+b.e.title)}">${b.e.time?`<span class="task-time">${esc(b.e.time)}</span>`:''}<strong>${esc(b.e.title)}</strong></button>`;
@@ -411,7 +449,7 @@ function renderSchoolSearch(q){
   return groups;
 }
 const schoolScope = () => schoolCode?schoolById(schoolCode)?.short:schoolLevel?levelLabel(schoolLevel):'관내 전체';
-const setDayTitle = () => {$('#selected-title').innerHTML=esc(displayDate(parseDate(selected)))+(holidays.has(selected)?` <span class="holiday-tag">${esc(holidays.get(selected))}</span>`:'');};
+const setDayTitle = () => {$('#selected-title').innerHTML=esc(displayDate(parseDate(selected)))+(holidays.has(selected)?` <span class="holiday-tag">${esc(holidays.get(selected))}</span>`:'');renderDayWeather();};
 function renderSchoolDay(){
   const groups=schoolGroups.filter(g=>g.date===selected),scope=schoolScope();
   $('#day-kind-controls').hidden=true;$('#day-kind-controls').innerHTML='';
@@ -494,7 +532,7 @@ function renderDay(events){
 }
 const fmtTime=v=>v?new Date(v).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}):'';
 const sourceStatus=s=>status?.sources?.[s.id]||null;
-function renderSources(){$('#source-links').innerHTML=data.sources.map(s=>{const st=sourceStatus(s);return `<a class="source-link${st&&st.ok===false?' has-error':''}" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ${icon('external')}<small>${s.tabs.length}개 탭 · ${s.count}건 · 일정 최종 변경 ${esc(fmtTime(s.data_at)||'미상')}${st&&st.ok===false?' · <b>최근 수집 실패</b>':''}</small></a>`;}).join('')||'<div class="empty">등록된 시트가 없습니다.<br>sources.json에 시트 주소를 추가하세요.</div>';const problems=[...(status?.failures||[]),...data.sources.flatMap(s=>(s.warnings||[]).map(w=>s.label+' · '+w)),...(schools.errors||[]).map(w=>'학교 일정 · '+w)];const schoolStatus=schools.checked_at?`관내 학교 학사일정(NEIS) · ${schools.schools.length}개교 · ${schools.events.length}건 · 확인 ${esc(fmtTime(schools.checked_at))} · 내용 변경 ${esc(fmtTime(schools.updated_at)||'미상')}${schools.errors?.length?` · <b>읽지 못한 학교 ${schools.errors.length}</b>`:''}`:'';$('#school-status').hidden=!schoolStatus;$('#school-status').innerHTML=schoolStatus;$('#registry-link').hidden=!data.registry_sheet;if(data.registry_sheet)$('#registry-link').href=data.registry_sheet;$('#sync-warnings').hidden=!problems.length;$('#sync-warnings').innerHTML=problems.length?`<details><summary>확인 사항 ${problems.length}건</summary><ul>${problems.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></details>`:'';const checked=status?.checked_at,updated=data.updated_at;$('#sync-label').textContent=!data.sources.length?'연결된 시트가 없습니다':(checked?`마지막 동기화 ${fmtTime(checked)} · `:'')+`일정 최종 변경 ${fmtTime(updated)||'미상'}`+(fsEvents.length?` · 직접 입력 ${fsEvents.length}건`:'');}
+function renderSources(){$('#source-links').innerHTML=data.sources.map(s=>{const st=sourceStatus(s);return `<a class="source-link${st&&st.ok===false?' has-error':''}" href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ${icon('external')}<small>${s.tabs.length}개 탭 · ${s.count}건 · 일정 최종 변경 ${esc(fmtTime(s.data_at)||'미상')}${st&&st.ok===false?' · <b>최근 수집 실패</b>':''}</small></a>`;}).join('')||'<div class="empty">등록된 시트가 없습니다.<br>sources.json에 시트 주소를 추가하세요.</div>';const problems=[...(status?.failures||[]),...data.sources.flatMap(s=>(s.warnings||[]).map(w=>s.label+' · '+w)),...(schools.errors||[]).map(w=>'학교 일정 · '+w),...(weatherInfo?.errors||[]).map(w=>'날씨 · '+w)];const weatherStatus=weatherInfo?`날씨(기상청 단기예보) · ${esc(weatherInfo.place||'')} · ${weather.size?esc(weatherIssued())+' · '+weather.size+'일치':'<b>읽지 못함</b>'} · 확인 ${esc(fmtTime(weatherInfo.checked_at))}`:'';$('#weather-status').hidden=!weatherStatus;$('#weather-status').innerHTML=weatherStatus;const schoolStatus=schools.checked_at?`관내 학교 학사일정(NEIS) · ${schools.schools.length}개교 · ${schools.events.length}건 · 확인 ${esc(fmtTime(schools.checked_at))} · 내용 변경 ${esc(fmtTime(schools.updated_at)||'미상')}${schools.errors?.length?` · <b>읽지 못한 학교 ${schools.errors.length}</b>`:''}`:'';$('#school-status').hidden=!schoolStatus;$('#school-status').innerHTML=schoolStatus;$('#registry-link').hidden=!data.registry_sheet;if(data.registry_sheet)$('#registry-link').href=data.registry_sheet;$('#sync-warnings').hidden=!problems.length;$('#sync-warnings').innerHTML=problems.length?`<details><summary>확인 사항 ${problems.length}건</summary><ul>${problems.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></details>`:'';const checked=status?.checked_at,updated=data.updated_at;$('#sync-label').textContent=!data.sources.length?'연결된 시트가 없습니다':(checked?`마지막 동기화 ${fmtTime(checked)} · `:'')+`일정 최종 변경 ${fmtTime(updated)||'미상'}`+(fsEvents.length?` · 직접 입력 ${fsEvents.length}건`:'');}
 function staleHours(){if(!status?.checked_at)return 0;return (Date.now()-new Date(status.checked_at).getTime())/36e5;}
 // Bound every request (including its JSON body), and share a refresh already in progress.
 async function fetchJSON(path,stamp){
@@ -520,9 +558,9 @@ function load(){
 async function loadData(){
   try{
     const stamp=Date.now();
-    const [next,nextStatus,live,nextSchools]=await Promise.all([
+    const [next,nextStatus,live,nextSchools,nextWeather]=await Promise.all([
       fetchJSON('data.json',stamp),
-      ...['status.json','version.json','schools.json'].map(path=>fetchJSON(path,stamp).catch(()=>null))
+      ...['status.json','version.json','schools.json','weather.json'].map(path=>fetchJSON(path,stamp).catch(()=>null))
     ]);
     const mine=new URL(document.querySelector('script[src*="app.js"]').src).searchParams.get('v');
     if(live&&live['app.js']&&mine&&live['app.js']!==mine){location.reload();return;}
@@ -533,6 +571,7 @@ async function loadData(){
     if(nextSchools&&Array.isArray(nextSchools.schools)&&Array.isArray(nextSchools.events)){
       schools=nextSchools;holidays=buildHolidays(nextSchools);
     }
+    setWeather(nextWeather);
     const old=$('#team').value;
     $('#team').innerHTML='<option value="">전체 담당</option>'+TEAM_GROUPS.map(g=>`<optgroup label="${esc(g.label)}">${g.teams.map(t=>`<option>${esc(t)}</option>`).join('')}</optgroup>`).join('')+[...new Set(data.events.map(e=>e.team).filter(t=>t&&!TEAM_GROUPS.some(g=>g.teams.includes(t))))].map(t=>`<option>${esc(t)}</option>`).join('');
     if([...$('#team').options].some(o=>o.value===old))$('#team').value=old;

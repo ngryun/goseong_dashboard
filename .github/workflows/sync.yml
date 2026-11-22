@@ -41,6 +41,14 @@ jobs:
         if: always()
         run: python3 build_schools.py
 
+      # 키는 저장소 Secret에만 둔다. 없으면 건너뛰고, 실패해도 달력 배포는 계속한다. weather.json은 배포만 하고 커밋하지 않는다.
+      - name: 기상청 단기예보 읽어 weather.json 생성
+        if: always()
+        continue-on-error: true
+        env:
+          KMA_SERVICE_KEY: ${{ secrets.KMA_SERVICE_KEY }}
+        run: python3 build_weather.py
+
       - name: 일정이 바뀐 경우에만 data.json·schools.json 커밋
         if: always()
         run: |

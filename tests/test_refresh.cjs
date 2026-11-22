@@ -8,6 +8,8 @@ const snapshot = {updated_at:'2026-10-09T12:00:00Z',sources:[{id:'sheet'}],event
   {id:'sheet-event',date:'2026-10-09',kind:'monthly',title:'원본 일정',team:''}
 ]};
 const schoolSnapshot = {schools:[{code:'a'}],events:[]};
+const today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul'}).format(new Date());
+const weatherSnapshot = {checked_at:new Date().toISOString(),base:new Date().toISOString(),place:'고성군 간성읍',errors:[],days:[{date:today,tmin:1,tmax:9,sky:'clear',pop:0}]};
 
 function harness({blockedStorage=false}={}){
   const requests=[],timers=new Map(),listeners=new Map(),nodes=new Map(),preferences=new Map();
@@ -46,7 +48,7 @@ function harness({blockedStorage=false}={}){
   run(source.slice(split).replace(/connectFirestore\(\);\s*$/,''));
   function respond(batch,overrides={}){
     const payloads={'data.json':snapshot,'status.json':{checked_at:new Date().toISOString(),ok:true},
-      'version.json':{'app.js':'test'},'schools.json':schoolSnapshot,...overrides};
+      'version.json':{'app.js':'test'},'schools.json':schoolSnapshot,'weather.json':weatherSnapshot,...overrides};
     for(const request of batch){
       const value=payloads[request.url.split('?')[0]];
       if(value instanceof Error)request.reject(value);
@@ -58,12 +60,12 @@ function harness({blockedStorage=false}={}){
 
 (async()=>{
   const h=harness({blockedStorage:true});
-  assert.equal(h.requests.length,4,'malformed route and blocked storage must not prevent initial loading');
+  assert.equal(h.requests.length,5,'malformed route and blocked storage must not prevent initial loading');
   assert.equal(h.renders(),1,'the calendar shell renders before network requests finish');
   assert.equal(h.run('view'),'month');
   const first=h.run('load()');
   assert.equal(h.run('load()'),first,'concurrent refreshes share the same result');
-  assert.equal(h.requests.length,4);
+  assert.equal(h.requests.length,5);
   assert.equal(h.node('#refresh').disabled,true);
   assert.equal(h.node('#refresh').attributes['aria-busy'],'true');
   h.run('fsEvents=[{id:"direct-event",date:"2026-10-09",title:"직접 입력",kind:"monthly"}];');
@@ -72,21 +74,23 @@ function harness({blockedStorage=false}={}){
   assert.equal(h.node('#refresh').disabled,false);
   assert.equal(h.node('#refresh').attributes['aria-busy'],undefined);
   assert.equal(h.timers.size,0,'completed requests clear timeouts');
+  assert.equal(h.run('weatherOf(todayKey).tmax'),9,'the forecast is loaded next to the calendar');
   assert.doesNotThrow(()=>h.run('theme(true)'));
   assert.ok(h.run('clientId().length>0 && clientId()===clientId()'),'blocked storage still has a stable session client id');
 
   h.node('#team').value='총무팀';
   const previousStatus=h.run('status');
   const second=h.run('load()');
-  h.respond(h.requests.slice(4),{'status.json':new Error('offline'),'schools.json':{schools:[]}});
+  h.respond(h.requests.slice(5),{'status.json':new Error('offline'),'schools.json':{schools:[]},'weather.json':undefined});
   await second;
   assert.equal(h.node('#team').value,'총무팀','refresh keeps the selected team');
   assert.equal(h.run('status'),previousStatus,'an optional status failure keeps the last known sync time');
   assert.equal(h.run('schools.schools.length'),1,'an incomplete school response preserves the last snapshot');
+  assert.equal(h.run('weatherOf(todayKey).tmax'),9,'a missing weather file keeps the last forecast and the calendar');
 
   const previous=h.run('data');
   const third=h.run('load()');
-  h.respond(h.requests.slice(8),{'data.json':{events:null,sources:[]}});await third;
+  h.respond(h.requests.slice(10),{'data.json':{events:null,sources:[]}});await third;
   assert.equal(h.run('data'),previous,'invalid responses must not replace usable events');
   assert.match(h.node('#notice-body').textContent,/기존에 불러온 일정은 유지/);
   assert.equal(h.node('#notice-summary').textContent,'일정을 불러오지 못했습니다');
@@ -96,19 +100,19 @@ function harness({blockedStorage=false}={}){
   assert.ok([...h.timers.values()].every(t=>t.ms===15000));
   for(const {fn} of [...h.timers.values()])fn();
   await fourth;
-  assert.ok(h.requests.slice(12).every(r=>r.signal.aborted),'stalled requests are aborted');
+  assert.ok(h.requests.slice(15).every(r=>r.signal.aborted),'stalled requests are aborted');
   assert.equal(h.run('data'),previous);
   assert.equal(h.node('#refresh').disabled,false,'timeout releases the refresh button');
   assert.equal(h.timers.size,0);
 
   h.context.document.hidden=true;
   h.listeners.get('document:visibilitychange')();
-  assert.equal(h.requests.length,16,'hidden tabs do not refresh');
+  assert.equal(h.requests.length,20,'hidden tabs do not refresh');
   h.context.document.hidden=false;
   h.listeners.get('document:visibilitychange')();
   h.listeners.get('window:online')();
-  assert.equal(h.requests.length,20,'returning to the tab refreshes; reconnect shares an active refresh');
-  h.respond(h.requests.slice(16));await h.run('pendingLoad');
+  assert.equal(h.requests.length,25,'returning to the tab refreshes; reconnect shares an active refresh');
+  h.respond(h.requests.slice(20));await h.run('pendingLoad');
   assert.equal(h.node('#notice-body').textContent,'','a successful retry clears the error');
   assert.equal(h.node('#notice').hidden,true);
 
