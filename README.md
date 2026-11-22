@@ -1,6 +1,6 @@
 # 고성교육 캘린더
 
-Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주고, 관내 초·중·고의 학사일정과 시간표를 NEIS에서 가져와 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 15분마다 시트를 읽어 `docs/data.json` 하나로 합치고, 6시간마다 NEIS 학사일정을 `docs/schools.json`으로 만들며, 같은 실행에서 `docs/` 폴더를 GitHub Pages에 직접 배포합니다. 방문자의 브라우저는 JSON 파일(`data.json` 일정, `status.json` 수집 상태, `schools.json` 학교·학사일정)을 읽고, 시간표만 NEIS 개방 API에서 바로 읽습니다.
+Google Sheets에 있는 월중행사·주간업무를 읽어 달력과 담당별 주간 표로 보여주고, 관내 초·중·고의 학사일정과 시간표를 NEIS에서 가져와 보여주는 정적 웹사이트입니다. 서버는 없습니다. GitHub Actions가 15분마다 시트를 읽어 `docs/data.json` 하나로 합치고, 6시간마다 NEIS 학사일정을 `docs/schools.json`으로 만들며, 같은 실행에서 기상청 단기예보를 `docs/weather.json`으로 만들고 `docs/` 폴더를 GitHub Pages에 직접 배포합니다. 방문자의 브라우저는 JSON 파일(`data.json` 일정, `status.json` 수집 상태, `schools.json` 학교·학사일정, `weather.json` 날씨)을 읽고, 시간표만 NEIS 개방 API에서 바로 읽습니다.
 
 ```
 sources.json ──▶ build_data.py    ──▶ docs/data.json + status.json ──▶ GitHub Pages 배포
@@ -9,6 +9,9 @@ sources.json ──▶ build_data.py    ──▶ docs/data.json + status.json �
 NEIS 개방 API ──▶ build_schools.py ──▶ docs/schools.json
  (학교 목록 ·    (6시간마다 조회)        (관내 21개교 · 학사일정)
   학사일정)
+기상청 단기예보 ──▶ build_weather.py ──▶ docs/weather.json
+ (공공데이터포털,  (실행 때마다 조회,      (고성군 간성읍 · 오늘부터 약 4일)
+  키는 Secret)     커밋하지 않음)
 ```
 
 ## 구성 파일
@@ -16,11 +19,12 @@ NEIS 개방 API ──▶ build_schools.py ──▶ docs/schools.json
 - `sources.json`: 읽을 시트 목록. 시트를 추가·제거하는 곳입니다.
 - `importer.py`: Google 시트를 XLSX로 받아 월중행사·주간업무 표를 해석합니다. 표준 라이브러리만 사용합니다.
 - `build_schools.py`: NEIS 개방 API에서 고성군 초·중·고 목록과 학사일정을 읽어 `docs/schools.json`을 만듭니다. 이전 확인이 6시간 안이면 건너뛰고(`--force`로 강제), 읽지 못한 학교는 이전 일정을 유지하며 `errors`에 남깁니다.
+- `build_weather.py`: 기상청 단기예보(공공데이터포털)에서 고성군 간성읍 격자의 예보를 읽어 `docs/weather.json`을 만듭니다. 키는 환경 변수 `KMA_SERVICE_KEY`로만 받습니다. 아래 "날씨" 절을 참고하세요.
 - `build_data.py`: 목록의 시트를 모두 읽어 `docs/data.json`(일정)과 `docs/status.json`(이번 실행의 확인 시각과 시트별 성공·오류)을 만듭니다. 다운로드·해석·설정 오류가 난 시트는 마지막 데이터를 유지합니다.
 - `.github/workflows/sync.yml`: 15분 간격 실행, 수동 실행, `main` push 시 실행. 일정이 바뀐 경우에만 `data.json`을 커밋하고, 매 실행마다 `docs/`를 Pages에 배포합니다.
-- `docs/`: 화면(`index.html`, `app.js`, `style.css`, 로고 이미지)과 데이터(`data.json`, `schools.json`). `status.json`은 실행 때마다 새로 만들어 배포만 하고 Git에는 넣지 않습니다.
+- `docs/`: 화면(`index.html`, `app.js`, `style.css`, 로고 이미지)과 데이터(`data.json`, `schools.json`). `status.json`과 `weather.json`은 실행 때마다 새로 만들어 배포만 하고 Git에는 넣지 않습니다.
 - `.github/workflows/test.yml`: 아래 테스트를 PR마다 실행합니다. `sync.yml`도 push·수동 실행 때 이 테스트를 먼저 돌리고, 실패하면 배포하지 않습니다(예약 실행은 테스트를 건너뜁니다).
-- `tests/test_dashboard.py`: 표 해석 규칙과 빌드 동작 검증. `tests/test_schools.py`: NEIS 응답 해석과 학교 데이터 빌드 검증. `tests/test_calendar.cjs`: 화면의 묶음 규칙 검증. `tests/test_refresh.cjs`: 새로고침·오류 복구·브라우저 저장소 제한·보기 전환 검증. `tests/test_week_views.cjs`: 주간 표·목록, 날짜 선택, 필터와 여러 날 일정 검증.
+- `tests/test_dashboard.py`: 표 해석 규칙과 빌드 동작 검증. `tests/test_schools.py`: NEIS 응답 해석과 학교 데이터 빌드 검증. `tests/test_calendar.cjs`: 화면의 묶음 규칙 검증. `tests/test_refresh.cjs`: 새로고침·오류 복구·브라우저 저장소 제한·보기 전환 검증. `tests/test_week_views.cjs`: 주간 표·목록, 날짜 선택, 필터와 여러 날 일정 검증. `tests/test_weather.py`: 예보 발표 시각 선택, 오전·오후 요약, 오류 처리 검증. `tests/test_weather.cjs`: 날씨 표시, 지난 예보 숨김 검증.
 - `tools/serve.mjs`: Python이 없는 PC에서 `docs/`를 띄우는 Node 정적 서버.
 - `_legacy/`: 이전 Python 서버 방식의 파일. 사용하지 않으며 Git에도 올라가지 않습니다. 확인 후 삭제하세요.
 
@@ -103,6 +107,17 @@ NEIS 개방 API ──▶ build_schools.py ──▶ docs/schools.json
 - 시간표는 양이 많아 저장하지 않고, 학교를 고른 순간 브라우저가 NEIS에서 그 학교·그 주(월~토, 전 학급)를 한 번에 읽어 학급 버튼으로 나눠 봅니다. 달력에서 다른 날짜를 누르면 그 주로 이동합니다. 읽은 시간표는 탭을 닫기 전까지 다시 요청하지 않습니다.
 - 개방 API 인증키는 이전 프로젝트(`ngryun/school_date`)에서 쓰던 키를 `build_schools.py`와 `docs/app.js` 상단에 두었습니다. 키를 바꾸면 두 곳을 함께 고칩니다.
 
+## 날씨 (기상청 단기예보)
+
+오늘부터 약 4일(글피까지)의 날짜에 날씨를 붙입니다. 월간 달력 칸과 주간 표의 요일 머리글에는 아이콘과 최저/최고기온을, 오른쪽 날짜 패널에는 오전·오후 하늘 상태, 기온, 강수확률, 발표 시각을 보여줍니다. 그보다 먼 날짜와 지난 날짜에는 표시하지 않습니다.
+
+- 자료: 공공데이터포털 "기상청_단기예보 조회서비스"의 `getVilageFcst`. 위치는 고성군 간성읍 격자(nx 85, ny 145) 한 곳입니다. 바꾸려면 `build_weather.py`의 `GRID`와 `PLACE`를 고칩니다.
+- 키: 저장소 **Settings → Secrets and variables → Actions → New repository secret**에 이름 `KMA_SERVICE_KEY`, 값에 공공데이터포털의 일반 인증키를 넣습니다. 키는 코드와 화면 어디에도 들어가지 않습니다. 등록하지 않으면 날씨만 빠지고 나머지는 그대로 동작합니다.
+- 갱신: 동기화가 실행될 때마다 가장 최근 발표분(하루 8회 발표)과 그날 02시 발표분을 읽습니다. 02시 발표분은 이미 지난 시간대와 오늘의 최저·최고기온을 채우는 데 씁니다.
+- 요약 기준: 하루의 하늘 상태와 강수확률은 06~18시 예보로 정합니다. 그 시간대에 비·눈 예보가 한 시간이라도 있으면 비·눈으로 표시하고, 강수확률은 가장 높은 값을 씁니다.
+- 실패: 예보를 읽지 못해도 동기화와 배포는 계속됩니다. 그때는 날씨가 표시되지 않고, "연결된 계획표" 창의 확인 사항과 Actions 실행 기록의 경고에 이유가 남습니다. 발표한 지 하루가 넘은 예보는 화면에서 쓰지 않습니다.
+- 활용기간: 현재 키의 활용기간은 2028-03-08까지입니다. 그 전에 공공데이터포털에서 연장 신청을 해야 합니다.
+
 ## 지원하는 시트 형식
 
 ### 월중행사
@@ -127,6 +142,7 @@ A열 `담당` 행을 헤더로 인식하고 B열 이후의 담당 분야를 읽�
 ```bash
 python3 build_data.py
 python3 build_schools.py --force
+KMA_SERVICE_KEY=<공공데이터포털 인증키> python3 build_weather.py   # 생략하면 날씨 없이 표시
 python3 -m http.server -d docs 8080
 ```
 
@@ -138,6 +154,7 @@ node --check docs/app.js
 node tests/test_calendar.cjs
 node tests/test_refresh.cjs
 node tests/test_week_views.cjs
+node tests/test_weather.cjs
 ```
 
 ## 담당 분야별 주간 화면

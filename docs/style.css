@@ -789,3 +789,23 @@ body.dark .notice{background:#322d22;border-color:#655337;color:#e5c786}
 }
 /* 터치 기기: iOS Safari는 16px 미만 입력 칸에 포커스하면 화면을 확대하므로 입력 칸만 16px로 둔다. */
 @media(hover:none) and (pointer:coarse){input,select,textarea{font-size:16px!important}}
+
+/* 날씨(기상청 단기예보 · 고성군 간성읍): 오늘부터 약 4일치 날짜에만 붙는다. */
+.weather-tag{display:inline-flex;align-items:center;gap:3px;flex:none;margin-left:auto;font-size:var(--fs-xs);font-weight:500;line-height:1.3;letter-spacing:0;color:var(--secondary);white-space:nowrap;font-variant-numeric:tabular-nums}
+.weather-tag .ui-icon{width:15px;height:15px}
+.weather-tag.is-wet,.day-weather-main.is-wet .ui-icon,.day-weather-main.is-wet strong{color:var(--accent)}
+/* 주간 표 머리글: 예보가 있는 주에는 요일·날짜 아래 둘째 줄에 날씨를 둔다. */
+.week-table thead th.has-weather button{flex-wrap:wrap;align-content:flex-start;row-gap:0;padding:7px 13px}
+.week-table thead .weather-tag{flex-basis:100%;margin-left:0}
+.agenda-heading small .weather-tag{margin-left:8px;vertical-align:-3px}
+.day-weather{display:grid;gap:2px;margin:8px 0 0;font-size:var(--fs-sm)}
+.day-weather[hidden]{display:none}
+.day-weather-main{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px}
+.day-weather-main strong{font-weight:600}
+.day-weather-main>span{color:var(--secondary);font-variant-numeric:tabular-nums}
+.day-weather small{font-size:var(--fs-xs);color:var(--secondary)}
+/* 월간 달력 칸은 폭이 좁다: 넓은 화면은 최저/최고, 중간은 최고만, 좁으면 아이콘만. 공휴일 이름이 있으면 한 단계 더 줄인다. 휴대폰은 옆 패널에서만 보여준다. */
+.month-grid .day.holiday .wx-low{display:none}
+@media(max-width:1399px){.month-grid .wx-low,.month-grid .day.holiday .wx-temp{display:none}}
+@media(max-width:1150px){.month-grid .wx-temp{display:none}}
+@media(max-width:560px){.month-grid .weather-tag{display:none}}
